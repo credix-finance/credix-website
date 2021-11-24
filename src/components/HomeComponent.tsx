@@ -1,5 +1,5 @@
 import * as React from 'react'
-import SvgIcon, { SVG_COLORS, SVG_ICONS } from '../svg-icon/SvgIcon';
+import SvgIcon, { SVG_COLORS, SVG_ICONS } from './shared/svg-icon/SvgIcon';
 import { Button } from '@mui/material';
 
 export const HomeComponent = () => {
