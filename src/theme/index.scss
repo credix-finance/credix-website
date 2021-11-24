@@ -1,0 +1,16 @@
+/**
+* variables
+*/
+@import 'scss/common/variables';
+
+/**
+* general styling
+*/
+@import 'scss/common/helpers';
+@import 'scss/common/global';
+@import 'scss/common/svg-icons';
+
+/**
+* Components
+ */
+@import "scss/components/home-component";

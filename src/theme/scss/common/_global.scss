@@ -1,0 +1,25 @@
+@import "variables";
+
+* {
+  outline: none;
+}
+
+body {
+  color: $FONT_DEFAULT_COLOR;
+  font-family: $FONT_FAMILY;
+  font-size: $FONT_SIZE_NORMAL;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 100vw;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.font-second {
+  font-family: $FONT_FAMILY_SECOND;
+}

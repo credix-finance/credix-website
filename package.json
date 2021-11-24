@@ -15,10 +15,13 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@emotion/react": "^11.6.0",
+    "@emotion/styled": "^11.6.0",
+    "@mui/material": "^5.2.0",
     "gatsby": "^4.2.0",
-    "gatsby-plugin-google-analytics": "^4.2.0",
     "gatsby-plugin-image": "^2.2.0",
     "gatsby-plugin-react-helmet": "^5.2.0",
+    "gatsby-plugin-react-svg": "^3.1.0",
     "gatsby-plugin-sass": "^5.2.0",
     "gatsby-plugin-sharp": "^4.2.0",
     "gatsby-source-filesystem": "^4.2.0",
@@ -26,6 +29,16 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
-    "sass": "^1.43.4"
+    "sass": "^1.43.4",
+    "typescript": "^4.5.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.36",
+    "@types/react-dom": "^17.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "eslint-plugin-import-quotes": "^0.0.1",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react-hooks": "^4.3.0"
   }
 }

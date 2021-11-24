@@ -1,0 +1,65 @@
+.h-flex-column {
+  display: flex;
+  flex-direction: column;
+
+  &--align-end {
+    align-items: flex-end;
+  }
+
+  &--align-start {
+    align-items: flex-start;
+  }
+
+  &--align-center {
+    align-items: center;
+  }
+
+  &--justify-center {
+    justify-content: center;
+  }
+
+  &--justify-space-between {
+    justify-content: space-between;
+  }
+
+  &--justify-end {
+    justify-content: flex-end;
+  }
+}
+
+.h-flex-row {
+  display: flex;
+  flex-direction: row;
+
+  &--align-center {
+    align-items: center;
+  }
+
+  &--align-start {
+    align-items: flex-start;
+  }
+
+  &--align-end {
+    align-items: flex-end;
+  }
+
+  &--align-end-flex {
+    align-items: end;
+  }
+
+  &--align-baseline {
+    align-items: baseline;
+  }
+
+  &--justify-end {
+    justify-content: flex-end;
+  }
+
+  &--space-between {
+    justify-content: space-between;
+  }
+
+  &--space-around {
+    justify-content: space-around;
+  }
+}
