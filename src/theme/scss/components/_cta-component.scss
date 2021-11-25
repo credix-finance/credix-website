@@ -1,0 +1,24 @@
+.cta-component {
+  background: $COLOR_BLACK;
+  height: 321px;
+
+  @extend .global-padding-left-right;
+
+  &--title {
+    font-size: $FONT_SIZE_SLARGE;
+    font-weight: $FONT_WEIGHT_XNORMAL;
+    line-height: $LINE_HEIGHT_LARGE;
+    width: 358px;
+  }
+
+  &--text {
+    font-size: $FONT_SIZE_XNORMAL;
+    font-weight: $FONT_WEIGHT_NORMAL;
+    font-family: $FONT_FAMILY_SECOND;
+    width: 327px;
+  }
+
+  &--button {
+    width: $BUTTON_WIDTH_NORMAL;
+  }
+}

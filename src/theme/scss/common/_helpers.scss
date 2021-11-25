@@ -30,6 +30,7 @@
 .h-flex-row {
   display: flex;
   flex-direction: row;
+  flex-flow: row wrap;
 
   &--align-center {
     align-items: center;
@@ -61,5 +62,21 @@
 
   &--space-around {
     justify-content: space-around;
+  }
+}
+
+.h-margin {
+  margin: $UNIT;
+}
+
+.h-margin-top {
+  margin-top: $UNIT;
+
+  &--double {
+    margin-top: $UNIT * 2;
+  }
+
+  &--triple {
+    margin-top: $UNIT * 3;
   }
 }

@@ -1,0 +1,21 @@
+.header-component {
+  background-color: #1F1F1F;
+
+  @extend .global-padding-left-right;
+}
+
+.header {
+  margin-top: 43px;
+  width: 100%;
+  z-index: $Z_INDEX_NORMAL;
+
+  &--links {
+    width: 500px;
+    font-weight: $FONT_WEIGHT_XNORMAL;
+    font-size: $FONT_SIZE_NORMAL;
+
+    &--button {
+      width: $BUTTON_WIDTH_NORMAL;
+    }
+  }
+}

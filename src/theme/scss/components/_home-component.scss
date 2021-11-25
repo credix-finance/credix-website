@@ -1,21 +1,42 @@
 .home-component {
   background: linear-gradient(180deg, #1F1F1F 0%, #1F1F1F 43.43%, #000000 100%);
   height: 709px;
-  padding-left: 90px;
-  padding-right: 90px;
+
+  @extend .global-padding-left-right;
+
+  &--background-shape {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(-10px);
+    z-index: $Z_INDEX_BACKGROUND_SHAPE;
+  }
 }
 
-.header {
-  margin-top: 43px;
-  width: 100%;
 
-  &-links {
-    width: 400px;
+.cta-block {
+  margin-top: 88px;
+  z-index: $Z_INDEX_NORMAL;
 
-    Button {
-      background-color: $COLOR_WHITE;
-      color: $COLOR_BLACK;
-      height: $BUTTON_HEIGHT;
-    }
+  &--title {
+    font-size: $FONT_SIZE_XLARGE;
+    font-weight: bold;
+    line-height: $LINE_HEIGHT_XLARGE;
+  }
+
+  &--text {
+    width: 556px;
+    font-size: $FONT_SIZE_XNORMAL;
+    font-weight: $FONT_WEIGHT_NORMAL;
+    line-height: $LINE_HEIGHT_NORMAL;
+
+    @extend .font-second;
+    @extend .h-margin-top;
+  }
+
+  &--button {
+    width: $BUTTON_WIDTH_NORMAL;
+
+    @extend .h-margin-top--triple;
   }
 }

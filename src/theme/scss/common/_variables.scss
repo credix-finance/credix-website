@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Poppins:wght@500;700&display=swap');
 
 /**
 * Fonts
@@ -16,9 +15,27 @@ $FONT_DEFAULT_COLOR: #fff;
 /**
 * Fonts Sizes
  */
-$FONT_SIZE_NORMAL: 16px;
 $FONT_SIZE_XLARGE: 70px;
 $FONT_SIZE_LARGE: 55px;
+$FONT_SIZE_SLARGE: 36px;
+$FONT_SIZE_XNORMAL: 18px;
+$FONT_SIZE_NORMAL: 16px;
+
+/**
+* Font Weights
+ */
+$FONT_WEIGHT_SMALL: 300;
+$FONT_WEIGHT_NORMAL: 400;
+$FONT_WEIGHT_XNORMAL: 500;
+$FONT_WEIGHT_XXNORMAL: 600;
+$FONT_WEIGHT_BOLD: 700;
+
+/**
+* Line Heights
+ */
+$LINE_HEIGHT_NORMAL: 28px;
+$LINE_HEIGHT_LARGE: 42px;
+$LINE_HEIGHT_XLARGE: 80px;
 
 /**
 * Colors
@@ -29,4 +46,14 @@ $COLOR_WHITE: #fff;
 /**
 * UI Elements
  */
-$BUTTON_HEIGHT: 50px
+$UNIT: 10px;
+$BUTTON_HEIGHT: 50px;
+$BUTTON_WIDTH_NORMAL: 160px;
+$GLOBAL_PADDING_LEFT: 90px;
+$GLOBAL_PADDING_RIGHT: 90px;
+
+/**
+* Z Index
+ */
+$Z_INDEX_NORMAL: 100;
+$Z_INDEX_BACKGROUND_SHAPE: 90;
