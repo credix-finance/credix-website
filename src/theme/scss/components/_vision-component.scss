@@ -1,0 +1,51 @@
+.vision-component {
+  height: 1038px;
+  background: linear-gradient(180deg, #000000 0%, #1F1F1F 100%);
+  padding-top: 53px;
+
+  @extend .global-padding-left-right;
+
+  &--text-row {
+    margin-top: 90px;
+  }
+
+  &--left-text {
+    width: 490px;
+    font-family: $FONT_FAMILY_SECOND;
+    font-weight: $FONT_WEIGHT_XNORMAL;
+    font-size: $FONT_SIZE_XXNORMAL;
+    line-height: $LINE_HEIGHT_NORMAL;
+  }
+
+  &--right-text {
+    width: 592px;
+    font-family: $FONT_FAMILY_SECOND;
+    line-height: $LINE_HEIGHT_SNORMAL;
+  }
+
+  &--subtitle {
+    margin-top: 200px;
+    text-transform: uppercase;
+    font-weight: $FONT_WEIGHT_XXNORMAL;
+    font-size: $FONT_SIZE_XXNORMAL;
+    letter-spacing: 1px;
+  }
+
+  &--roadmap-shapes {
+    margin-top: 70px;
+  }
+
+  &--roadmap-shape {
+    transform: translateY(10px);
+
+    &--text {
+      text-transform: uppercase;
+      font-size: $FONT_SIZE_SMALL;
+      font-family: $FONT_FAMILY_SECOND;
+      line-height: $LINE_HEIGHT_XSMALL;
+      letter-spacing: 1px;
+      font-weight: $FONT_WEIGHT_BOLD;
+      text-align: center;
+    }
+  }
+}
