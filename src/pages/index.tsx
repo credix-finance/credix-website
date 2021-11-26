@@ -4,6 +4,7 @@ import { HomeComponent } from '../components/HomeComponent';
 import { CTAComponent } from '../components/CTAComponent';
 import { ThesisComponent } from '../components/ThesisComponent';
 import { HeaderComponent } from '../components/HeaderComponent';
+import { PlatformComponent } from '../components/PlatformComponent';
 
 const IndexPage = () => {
   return (
@@ -13,6 +14,7 @@ const IndexPage = () => {
       <HomeComponent/>
       <CTAComponent/>
       <ThesisComponent/>
+      <PlatformComponent/>
     </main>
   )
 }

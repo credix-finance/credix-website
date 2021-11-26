@@ -1,0 +1,54 @@
+.platform-component {
+  background: linear-gradient(180deg, #1F1F1F 0%, #000000 100%);
+  height: 880px;
+
+  @extend .global-padding-left-right;
+
+  &--about-row {
+    margin-top: 100px;
+  }
+
+  &--about-text {
+    font-weight: $FONT_WEIGHT_BOLD;
+    font-size: $FONT_SIZE_SMALL;
+    text-transform: uppercase;
+    font-family: $FONT_FAMILY_SECOND;
+  }
+
+  &--text {
+    margin-top: $UNIT * 3;
+    width: 842px;
+    @extend .small-text;
+  }
+
+  &--items-row {
+    margin-top: 100px;
+    background: $COLOR_GREY_BACKGROUND;
+    height: auto;
+  }
+
+  &--item-column {
+    text-align: center;
+    align-items: center;
+    width: 296px;
+    height: 260px;
+    margin: 56px;
+  }
+
+  &--item-title {
+    font-weight: $FONT_WEIGHT_BOLD;
+    font-size: $FONT_SIZE_XXNORMAL;
+    line-height: $LINE_HEIGHT_LARGE;
+    font-family: $FONT-FAMILY_SECOND;
+  }
+
+  &--item-text {
+    @extend .h-margin-top;
+    @extend .small-text;
+  }
+
+  &--item-button {
+    @extend .h-margin-top--auto;
+    @extend .h-full-width
+  }
+}

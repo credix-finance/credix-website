@@ -72,6 +72,10 @@
 .h-margin-top {
   margin-top: $UNIT;
 
+  &--auto {
+    margin-top: auto;
+  }
+
   &--double {
     margin-top: $UNIT * 2;
   }
@@ -79,4 +83,8 @@
   &--triple {
     margin-top: $UNIT * 3;
   }
+}
+
+.h-full-width {
+  width: 100%;
 }

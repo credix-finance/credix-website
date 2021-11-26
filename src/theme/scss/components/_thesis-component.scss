@@ -3,4 +3,36 @@
   height: 746px;
 
   @extend .global-padding-left-right;
+
+  &--row {
+    margin-top: 100px;
+  }
+
+  &--title {
+    font-weight: $FONT_WEIGHT_BOLD;
+    font-size: $FONT_SIZE_LARGE;
+  }
+
+  &--column {
+    text-align: center;
+    align-items: center;
+    width: 392px;
+  }
+
+  &--sub-title {
+    font-family: $FONT_FAMILY_SECOND;
+    font-weight: $FONT_WEIGHT_XNORMAL;
+    font-size: $FONT_SIZE_XXNORMAL;
+    line-height: $LINE_HEIGHT_NORMAL;
+  }
+
+  &--text {
+    @extend .small-text;
+    @extend .h-margin-top--double;
+  }
+
+  &--shape {
+    width: 300px;
+    padding-right: 15px;
+  }
 }

@@ -7,6 +7,7 @@
 body {
   color: $FONT_DEFAULT_COLOR;
   font-family: $FONT_FAMILY;
+  font-weight: $FONT_WEIGHT_NORMAL;
   font-size: $FONT_SIZE_NORMAL;
   height: 100vh;
   margin: 0;
@@ -43,4 +44,15 @@ body {
   }
 
   @extend .font-second;
+}
+
+.sub-title {
+  font-weight: $FONT_WEIGHT_BOLD;
+  font-size: $FONT_SIZE_LARGE;
+}
+
+.small-text {
+  font-size: $FONT_SIZE_NORMAL;
+  font-family: $FONT_FAMILY_SECOND;
+  line-height: $LINE_HEIGHT_NORMAL;
 }
