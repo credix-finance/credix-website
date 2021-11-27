@@ -10,6 +10,7 @@ import { CTATeamComponent } from '../components/CTATeamComponent';
 import { CoreTeamComponent } from '../components/CoreTeamComponent';
 import { AdvisorsComponent } from '../components/AdvisorsComponent';
 import { BackedByComponent } from '../components/BackedByComponent';
+import { FooterComponent } from '../components/FooterComponent';
 
 const IndexPage = () => {
   return (
@@ -25,6 +26,7 @@ const IndexPage = () => {
       <CoreTeamComponent/>
       <AdvisorsComponent/>
       <BackedByComponent/>
+      <FooterComponent/>
     </main>
   )
 }

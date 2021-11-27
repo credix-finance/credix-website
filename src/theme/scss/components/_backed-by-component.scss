@@ -1,6 +1,6 @@
 .backed-by-component {
   background-color: $COLOR_BLACK;
-  height: 665px;
+  min-height: 665px;
 
   @extend .global-padding-left-right;
 

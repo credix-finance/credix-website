@@ -1,6 +1,6 @@
 .thesis-component {
   background: linear-gradient(180deg, #000000 0%, #1F1F1F 100%);
-  height: 746px;
+  min-height: 746px;
 
   @extend .global-padding-left-right;
 

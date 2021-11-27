@@ -1,6 +1,6 @@
 .platform-component {
   background: linear-gradient(180deg, #1F1F1F 0%, #000000 100%);
-  height: 880px;
+  min-height: 880px;
 
   @extend .global-padding-left-right;
 

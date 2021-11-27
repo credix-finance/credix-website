@@ -1,6 +1,6 @@
 .cta-component {
   background: $COLOR_BLACK;
-  height: 321px;
+  min-height: 321px;
 
   @extend .global-padding-left-right;
 

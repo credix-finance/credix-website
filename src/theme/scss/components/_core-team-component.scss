@@ -1,5 +1,5 @@
 .core-team-component {
-  height: 800px;
+  min-height: 800px;
   background: linear-gradient(180deg, #000000 0%, #1F1F1F 100%, #1F1F1F 100%);
 
   @extend .global-padding-left-right;

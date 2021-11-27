@@ -1,0 +1,49 @@
+.footer-component {
+  min-height: 384px;
+  background-color: $COLOR_FOOTER_BACKGROUND;
+
+  @extend .global-padding-left-right;
+
+  &--padding {
+    padding: $UNIT * 3;
+  }
+
+  &--row {
+    margin-top: 30px;
+  }
+
+  &--column {
+    border-right: 1px solid rgba(240, 240, 240, 0.35);
+    border-top: 1px solid rgba(240, 240, 240, 0.35);
+    border-bottom: 1px solid rgba(240, 240, 240, 0.35);
+    width: 33%;
+    height: 320px;
+
+    &:first-child {
+      border-left: 1px solid rgba(240, 240, 240, 0.35);
+    }
+  }
+
+  &--logo {
+    @extend .footer-component--padding;
+  }
+
+  &--footer {
+    @extend .footer-component--padding;
+    margin-top: auto;
+
+    &--link {
+      font-family: $FONT_FAMILY_SECOND;
+      font-size: $FONT_SIZE_SMALL;
+      line-height: $LINE_HEIGHT_XSMALL;
+      cursor: pointer;
+    }
+
+    &--text {
+      @extend .footer-component--padding;
+      font-family: $FONT_FAMILY_SECOND;
+      font-size: $FONT_SIZE_SMALL;
+      line-height: $LINE_HEIGHT_XSMALL;
+    }
+  }
+}
