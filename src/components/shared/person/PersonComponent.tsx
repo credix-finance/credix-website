@@ -5,7 +5,7 @@ import { SVG_ICONS } from '../svg-icon/SvgIcon';
 interface IPersonProps {
   image: ReactElement;
   name: string;
-  title: ReactElement;
+  title: ReactElement | string;
   linkedInUrl: string;
   twitterUrl: string;
 }

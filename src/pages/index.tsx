@@ -9,6 +9,7 @@ import { VisionComponent } from '../components/VisionComponent';
 import { CTATeamComponent } from '../components/CTATeamComponent';
 import { CoreTeamComponent } from '../components/CoreTeamComponent';
 import { AdvisorsComponent } from '../components/AdvisorsComponent';
+import { BackedByComponent } from '../components/BackedByComponent';
 
 const IndexPage = () => {
   return (
@@ -23,6 +24,7 @@ const IndexPage = () => {
       <CTATeamComponent/>
       <CoreTeamComponent/>
       <AdvisorsComponent/>
+      <BackedByComponent/>
     </main>
   )
 }
