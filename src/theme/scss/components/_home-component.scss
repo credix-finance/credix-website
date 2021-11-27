@@ -21,7 +21,8 @@
   &--title {
     font-size: $FONT_SIZE_XLARGE;
     font-weight: bold;
-    line-height: $LINE_HEIGHT_XLARGE;
+    line-height: $LINE_HEIGHT_XXLARGE;
+    color: $FONT_SECOND_COLOR;
   }
 
   &--text {

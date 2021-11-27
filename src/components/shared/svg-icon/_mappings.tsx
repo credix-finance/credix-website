@@ -11,6 +11,9 @@ import RoadMap4 from '../../../assets/shapes/roadmap_4.svg'
 import RoadMap5 from '../../../assets/shapes/roadmap_5.svg'
 import RoadMap6 from '../../../assets/shapes/roadmap_6.svg'
 import Line1 from '../../../assets/shapes/line_1.svg'
+import Line2 from '../../../assets/shapes/line_2.svg'
+import LinkedIn from '../../../assets/shapes/Linkedin.svg'
+import Twitter from '../../../assets/shapes/Twitter.svg'
 
 export default {
   CREDIX_LOGO: <CredixLogo/>,
@@ -24,5 +27,8 @@ export default {
   ROADMAP_4: <RoadMap4/>,
   ROADMAP_5: <RoadMap5/>,
   ROADMAP_6: <RoadMap6/>,
-  LINE_1: <Line1/>
+  LINE_1: <Line1/>,
+  LINE_2: <Line2/>,
+  LINKEDIN: <LinkedIn/>,
+  TWITTER: <Twitter/>
 };

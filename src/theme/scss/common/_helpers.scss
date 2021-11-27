@@ -14,6 +14,10 @@
     align-items: center;
   }
 
+  &--align-self-center {
+    align-self: center;
+  }
+
   &--justify-center {
     justify-content: center;
   }
@@ -56,12 +60,20 @@
     justify-content: flex-end;
   }
 
+  &--justify-center {
+    justify-content: center;
+  }
+
   &--space-between {
     justify-content: space-between;
   }
 
   &--space-around {
     justify-content: space-around;
+  }
+
+  &--space-evenly {
+    justify-content: space-evenly;
   }
 }
 
@@ -87,4 +99,8 @@
 
 .h-full-width {
   width: 100%;
+}
+
+.h-cursor-pointer {
+  cursor: pointer;
 }

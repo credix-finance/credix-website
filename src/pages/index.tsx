@@ -6,6 +6,9 @@ import { ThesisComponent } from '../components/ThesisComponent';
 import { HeaderComponent } from '../components/HeaderComponent';
 import { PlatformComponent } from '../components/PlatformComponent';
 import { VisionComponent } from '../components/VisionComponent';
+import { CTATeamComponent } from '../components/CTATeamComponent';
+import { CoreTeamComponent } from '../components/CoreTeamComponent';
+import { AdvisorsComponent } from '../components/AdvisorsComponent';
 
 const IndexPage = () => {
   return (
@@ -17,6 +20,9 @@ const IndexPage = () => {
       <ThesisComponent/>
       <PlatformComponent/>
       <VisionComponent/>
+      <CTATeamComponent/>
+      <CoreTeamComponent/>
+      <AdvisorsComponent/>
     </main>
   )
 }

@@ -32,6 +32,11 @@ body {
   padding-right: $GLOBAL_PADDING_RIGHT;
 }
 
+.team-padding-left-right {
+  padding-left: $GLOBAL_PADDING_LEFT * 2;
+  padding-right: $GLOBAL_PADDING_RIGHT * 2;
+}
+
 .credix-button {
   background-color: $COLOR_WHITE;
   color: $COLOR_BLACK;
@@ -49,6 +54,8 @@ body {
 .sub-title {
   font-weight: $FONT_WEIGHT_BOLD;
   font-size: $FONT_SIZE_LARGE;
+  line-height: $LINE_HEIGHT_XLARGE;
+  color: $FONT_SECOND_COLOR;
 }
 
 .small-text {

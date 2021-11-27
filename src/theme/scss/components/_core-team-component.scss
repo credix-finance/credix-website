@@ -1,0 +1,25 @@
+.core-team-component {
+  height: 800px;
+  background: linear-gradient(180deg, #000000 0%, #1F1F1F 100%, #1F1F1F 100%);
+
+  @extend .global-padding-left-right;
+
+  &--title-row {
+    margin-top: 100px;
+  }
+
+  &--who-we-are {
+    display: flex;
+    margin-top: 40px;
+
+    &--line {
+      transform: translateY(-5px);
+      margin-right: $UNIT * 2;
+    }
+  }
+
+  &--persons {
+    margin-top: 80px;
+    @extend .team-padding-left-right;
+  }
+}

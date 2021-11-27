@@ -1,5 +1,5 @@
 import React from 'react';
-import { CredixButton } from './shared/credix-button/CredixButton';
+import { CredixButton } from './shared/buttons/CredixButton';
 
 export const PlatformComponent = () => {
   return (

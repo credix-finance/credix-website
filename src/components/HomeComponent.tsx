@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { CredixButton } from './shared/credix-button/CredixButton';
+import { CredixButton } from './shared/buttons/CredixButton';
 import SvgIcon, { SVG_COLORS, SVG_ICONS } from './shared/svg-icon/SvgIcon';
 
 

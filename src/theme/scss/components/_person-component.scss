@@ -1,0 +1,18 @@
+.person-component {
+  text-align: center;
+
+  &--name {
+    margin-top: $UNIT * 2;
+    font-weight: $FONT_WEIGHT_BOLD;
+    font-size: $FONT_SIZE_XXNORMAL;
+    line-height: $LINE_HEIGHT_SNORMAL;
+  }
+
+  &--title {
+    font-weight: $FONT_WEIGHT_BOLD;
+    font-size: $FONT_SIZE_SMALL;
+    font-family: $FONT_FAMILY_SECOND;
+    text-transform: uppercase;
+    opacity: 0.3;
+  }
+}

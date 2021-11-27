@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 
 import mappings from './_mappings';
 
@@ -13,7 +13,7 @@ export enum SVG_COLORS {
 }
 
 interface ISvgIconProps {
-    icon: any;
+    icon: ReactElement;
     color?: SVG_COLORS;
     className?: string;
     onClick?: () => void;

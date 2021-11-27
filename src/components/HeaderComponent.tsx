@@ -1,6 +1,6 @@
 import React from 'react';
 import SvgIcon, { SVG_COLORS, SVG_ICONS } from './shared/svg-icon/SvgIcon';
-import { CredixButton } from './shared/credix-button/CredixButton';
+import { CredixButton } from './shared/buttons/CredixButton';
 
 export const HeaderComponent = () => {
   return (

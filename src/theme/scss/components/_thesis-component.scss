@@ -11,6 +11,7 @@
   &--title {
     font-weight: $FONT_WEIGHT_BOLD;
     font-size: $FONT_SIZE_LARGE;
+    color: $FONT_SECOND_COLOR;
   }
 
   &--column {
@@ -22,7 +23,7 @@
   &--sub-title {
     font-family: $FONT_FAMILY_SECOND;
     font-weight: $FONT_WEIGHT_XNORMAL;
-    font-size: $FONT_SIZE_XXNORMAL;
+    font-size: $FONT_SIZE_XXXNORMAL;
     line-height: $LINE_HEIGHT_NORMAL;
   }
 

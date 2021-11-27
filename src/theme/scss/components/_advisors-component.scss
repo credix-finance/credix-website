@@ -1,0 +1,19 @@
+.advisors-component {
+  height: 658px;
+  background: linear-gradient(180deg, #1F1F1F 0%, #000000 100%);
+
+  @extend .global-padding-left-right;
+
+  &--subtitle {
+    margin-top: 100px;
+    text-transform: uppercase;
+    font-weight: $FONT_WEIGHT_XXNORMAL;
+    font-size: $FONT_SIZE_XXXNORMAL;
+    letter-spacing: 1px;
+  }
+
+  &--persons {
+    margin-top: 80px;
+    @extend .team-padding-left-right;
+  }
+}

@@ -1,0 +1,28 @@
+.cta-team-component {
+  height: 264px;
+  background: radial-gradient(43.21% 50% at 47.57% 50%, #1F1F1F 0%, #000000 100%);
+
+  padding-left: $GLOBAL_PADDING_LEFT * 3;
+  padding-right: $GLOBAL_PADDING_RIGHT * 3;
+
+  &--row {
+    margin-top: 80px;
+  }
+
+  &--title {
+    font-weight: $FONT_WEIGHT_BOLD;
+    font-size: $FONT_SIZE_SLARGE;
+    line-height: $LINE_HEIGHT_LARGE;
+  }
+
+  &--text {
+    margin-top: 15px;
+    font-size: $FONT_SIZE_NORMAL;
+    font-family: $FONT_FAMILY_SECOND;
+    line-height: $LINE_HEIGHT_SNORMAL;
+  }
+
+  &--button {
+    width: 180px;
+  }
+}
