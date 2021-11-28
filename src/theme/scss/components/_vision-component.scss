@@ -7,20 +7,40 @@
 
   &--text-row {
     margin-top: 90px;
+
+    @include tablet {
+      flex-direction: column;
+    }
   }
 
   &--left-text {
-    width: 490px;
+    max-width: 490px;
     font-family: $FONT_FAMILY_SECOND;
     font-weight: $FONT_WEIGHT_XNORMAL;
     font-size: $FONT_SIZE_XXXNORMAL;
     line-height: $LINE_HEIGHT_NORMAL;
+
+    @include mobile {
+      font-size: $FONT_SIZE_NORMAL;
+      line-height: $LINE_HEIGHT_XSMALL;
+    }
   }
 
   &--right-text {
-    width: 592px;
+    max-width: 592px;
     font-family: $FONT_FAMILY_SECOND;
     line-height: $LINE_HEIGHT_SNORMAL;
+
+    @include tablet {
+      margin-top: $UNIT * 3;
+    }
+
+    @include mobile {
+      margin-top: $UNIT * 3;
+      font-size: $FONT_SIZE_SMALL;
+      line-height: $LINE_HEIGHT_XSMALL;
+      letter-spacing: -.5px;
+    }
   }
 
   &--subtitle {
@@ -29,14 +49,44 @@
     font-weight: $FONT_WEIGHT_XXNORMAL;
     font-size: $FONT_SIZE_XXXNORMAL;
     letter-spacing: 1px;
+
+    @include tablet {
+      margin-top: 150px;
+    }
+
+    @include mobile {
+      margin-top: 100px;
+    }
   }
 
   &--roadmap-shapes {
     margin-top: 70px;
+    @include tablet {
+      flex-flow: column;
+    }
+  }
+
+  &--roadmap-shape-column {
+    @include tablet {
+      flex-flow: row;
+      align-self: flex-start;
+      margin-left: 40%;
+      margin-top: - $UNIT * 2;
+    }
+
+    @include mobile {
+      align-self: flex-start;
+      margin-left: initial;
+      margin-top: - $UNIT * 4;
+    }
   }
 
   &--roadmap-shape {
     transform: translateY(10px);
+
+    @include mobile {
+      transform: scale(.7);
+    }
 
     &--text {
       text-transform: uppercase;
@@ -46,6 +96,10 @@
       letter-spacing: 1px;
       font-weight: $FONT_WEIGHT_BOLD;
       text-align: center;
+
+      @include tablet {
+        text-align: left;
+      }
     }
   }
 }

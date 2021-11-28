@@ -14,12 +14,14 @@ import { FooterComponent } from '../components/FooterComponent';
 import { useEffect, useState } from 'react';
 
 export interface IWidthProps {
-  isMobile: boolean
+  isMobile: boolean;
+  isTablet?: boolean;
 }
 
 const IndexPage = () => {
   const [width, setWidth] = useState<number>();
   const mobileWidth = 900;
+  const tabletWidth = 1500;
 
   useEffect(() => {
     setWidth(window.innerWidth);
@@ -39,7 +41,7 @@ const IndexPage = () => {
       <CTAComponent/>
       <ThesisComponent isMobile={!!width && width < mobileWidth}/>
       <PlatformComponent/>
-      <VisionComponent/>
+      <VisionComponent isMobile={!!width && width < mobileWidth} isTablet={!!width && width < tabletWidth}/>
       <CTATeamComponent/>
       <CoreTeamComponent/>
       <AdvisorsComponent/>

@@ -1,7 +1,8 @@
 import React from 'react';
 import SvgIcon, { SVG_COLORS, SVG_ICONS } from './shared/svg-icon/SvgIcon';
+import { IWidthProps } from '../pages';
 
-export const VisionComponent = () => {
+export const VisionComponent = ({ isTablet }: IWidthProps) => {
   return (
     <div className="h-flex-column vision-component">
       <div className="h-flex-row">
@@ -22,32 +23,47 @@ export const VisionComponent = () => {
         <span className="vision-component--subtitle">The Roadmap</span>
       </div>
       <div className="h-flex-row h-flex-row--space-between h-flex-row--align-center vision-component--roadmap-shapes">
-        <div className="h-flex-column h-flex-column--align-center">
+        <div className="h-flex-column h-flex-column--align-center vision-component--roadmap-shape-column">
           <SvgIcon icon={SVG_ICONS.ROADMAP_1} color={SVG_COLORS.WHITE} className="vision-component--roadmap-shape"/>
           <span className="vision-component--roadmap-shape--text">DevNet <br/> Launch</span>
         </div>
-        <SvgIcon icon={SVG_ICONS.LINE_1} color={SVG_COLORS.WHITE}/>
-        <div className="h-flex-column h-flex-column--align-center">
+        {
+          !isTablet &&
+          <SvgIcon icon={SVG_ICONS.LINE_1} color={SVG_COLORS.WHITE}/>
+        }
+        <div className="h-flex-column h-flex-column--align-center vision-component--roadmap-shape-column">
           <SvgIcon icon={SVG_ICONS.ROADMAP_2} color={SVG_COLORS.WHITE} className="vision-component--roadmap-shape"/>
           <span className="vision-component--roadmap-shape--text">Closed Alpha <br/> Launch</span>
         </div>
-        <SvgIcon icon={SVG_ICONS.LINE_1} color={SVG_COLORS.WHITE}/>
-        <div className="h-flex-column h-flex-column--align-center">
+        {
+          !isTablet &&
+          <SvgIcon icon={SVG_ICONS.LINE_1} color={SVG_COLORS.WHITE}/>
+        }
+        <div className="h-flex-column h-flex-column--align-center vision-component--roadmap-shape-column">
           <SvgIcon icon={SVG_ICONS.ROADMAP_3} color={SVG_COLORS.WHITE} className="vision-component--roadmap-shape"/>
           <span className="vision-component--roadmap-shape--text">Public <br/> Launch</span>
         </div>
-        <SvgIcon icon={SVG_ICONS.LINE_1} color={SVG_COLORS.WHITE}/>
-        <div className="h-flex-column h-flex-column--align-center">
+        {
+          !isTablet &&
+          <SvgIcon icon={SVG_ICONS.LINE_1} color={SVG_COLORS.WHITE}/>
+        }
+        <div className="h-flex-column h-flex-column--align-center vision-component--roadmap-shape-column">
           <SvgIcon icon={SVG_ICONS.ROADMAP_4} color={SVG_COLORS.WHITE} className="vision-component--roadmap-shape"/>
           <span className="vision-component--roadmap-shape--text">Tokenize <br/> RECEIVABLES</span>
         </div>
-        <SvgIcon icon={SVG_ICONS.LINE_1} color={SVG_COLORS.WHITE}/>
-        <div className="h-flex-column h-flex-column--align-center">
+        {
+          !isTablet &&
+          <SvgIcon icon={SVG_ICONS.LINE_1} color={SVG_COLORS.WHITE}/>
+        }
+        <div className="h-flex-column h-flex-column--align-center vision-component--roadmap-shape-column">
           <SvgIcon icon={SVG_ICONS.ROADMAP_5} color={SVG_COLORS.WHITE} className="vision-component--roadmap-shape"/>
           <span className="vision-component--roadmap-shape--text">Launch <br/> v2</span>
         </div>
-        <SvgIcon icon={SVG_ICONS.LINE_1} color={SVG_COLORS.WHITE}/>
-        <div className="h-flex-column h-flex-column--align-center">
+        {
+          !isTablet &&
+          <SvgIcon icon={SVG_ICONS.LINE_1} color={SVG_COLORS.WHITE}/>
+        }
+        <div className="h-flex-column h-flex-column--align-center vision-component--roadmap-shape-column">
           <SvgIcon icon={SVG_ICONS.ROADMAP_6} color={SVG_COLORS.WHITE} className="vision-component--roadmap-shape"/>
           <span className="vision-component--roadmap-shape--text">RETHINK DEBT <br/> Capital Markets</span>
         </div>
