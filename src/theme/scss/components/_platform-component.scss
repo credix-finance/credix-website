@@ -17,14 +17,27 @@
 
   &--text {
     margin-top: $UNIT * 3;
-    width: 842px;
+    max-width: 842px;
     @extend .small-text;
+
+    @include mobile {
+      font-size: $FONT_SIZE_SMALL;
+      line-height: $LINE_HEIGHT_XSMALL;
+      letter-spacing: -.5px;
+    }
   }
 
   &--items-row {
     margin-top: 100px;
-    background: $COLOR_GREY_BACKGROUND;
+    background-color: $COLOR_GREY_BACKGROUND;
     height: auto;
+
+    @include mobile {
+      margin-top: 50px;
+      background-color: initial;
+      flex-direction: column;
+      align-content: center;
+    }
   }
 
   &--item-column {
@@ -33,6 +46,13 @@
     width: 296px;
     height: 260px;
     margin: 56px;
+
+    @include mobile {
+      margin: 0 0 $UNIT * 3;
+      padding: $UNIT * 3;
+      height: auto;
+      background-color: $COLOR_GREY_BACKGROUND;
+    }
   }
 
   &--item-title {
@@ -40,15 +60,31 @@
     font-size: $FONT_SIZE_XXXNORMAL;
     line-height: $LINE_HEIGHT_LARGE;
     font-family: $FONT-FAMILY_SECOND;
+
+    @include mobile {
+      font-size: $FONT_SIZE_SMALL;
+      line-height: $LINE_HEIGHT_XSMALL;
+      text-transform: uppercase;
+    }
   }
 
   &--item-text {
     @extend .h-margin-top;
     @extend .small-text;
+
+    @include mobile {
+      font-size: $FONT_SIZE_SMALL;
+      line-height: $LINE_HEIGHT_XSMALL;
+      letter-spacing: -.5px;
+    }
   }
 
   &--item-button {
     @extend .h-margin-top--auto;
-    @extend .h-full-width
+    @extend .h-full-width;
+
+    @include mobile {
+      margin-top: $UNIT * 3;
+    }
   }
 }
