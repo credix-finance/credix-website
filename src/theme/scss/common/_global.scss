@@ -1,5 +1,9 @@
 @import "variables";
 
+/**
+* Document
+ */
+
 main {
   overflow-x: hidden;
 }
@@ -17,6 +21,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   padding: 0;
   width: 100vw;
 }
@@ -25,6 +30,26 @@ body {
   height: 100%;
   width: 100%;
 }
+
+/**
+* Responsive Mixins
+ */
+
+@mixin mobile {
+  @media (max-width:$MOBILE_WIDTH) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width:$TABLET_WIDTH) {
+    @content;
+  }
+}
+
+/**
+* Other Globals
+ */
 
 .font-second {
   font-family: $FONT_FAMILY_SECOND;
@@ -65,6 +90,11 @@ body {
   font-size: $FONT_SIZE_LARGE;
   line-height: $LINE_HEIGHT_XLARGE;
   color: $FONT_SECOND_COLOR;
+
+  @include mobile {
+    font-size: $FONT_SIZE_XXXNORMAL;
+    line-height: $LINE_HEIGHT_NORMAL;
+  }
 }
 
 .small-text {

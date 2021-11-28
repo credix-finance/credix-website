@@ -4,11 +4,32 @@
 
   @extend .global-padding-left-right;
 
+  &--row {
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
   &--title {
     font-size: $FONT_SIZE_SLARGE;
     font-weight: $FONT_WEIGHT_XNORMAL;
     line-height: $LINE_HEIGHT_LARGE;
-    width: 358px;
+    max-width: 340px;
+
+    @include tablet {
+      font-size: $FONT_SIZE_XXXNORMAL;
+      line-height: $LINE_HEIGHT_SNORMAL;
+      font-weight: $FONT_WEIGHT_XXNORMAL;
+      letter-spacing: 1px;
+    }
+
+    @include mobile {
+      font-size: $FONT_SIZE_XNORMAL;
+      line-height: $LINE_HEIGHT_XSMALL;
+      font-weight: $FONT_WEIGHT_XXNORMAL;
+      letter-spacing: 1px;
+    }
   }
 
   &--text {
@@ -16,10 +37,25 @@
     font-weight: $FONT_WEIGHT_NORMAL;
     font-family: $FONT_FAMILY_SECOND;
     line-height: $LINE_HEIGHT_SNORMAL;
-    width: 327px;
+    max-width: 340px;
+
+    @include tablet {
+      font-size: $FONT_SIZE_NORMAL;
+      line-height: $LINE_HEIGHT_XSMALL;
+    }
+
+    @include mobile {
+      margin-top: $UNIT * 2;
+      font-size: $FONT_SIZE_SMALL;
+      line-height: $LINE_HEIGHT_XSMALL;
+    }
   }
 
   &--button {
     width: $BUTTON_WIDTH_NORMAL;
+
+    @include mobile {
+      margin-top: $UNIT * 2;
+    }
   }
 }

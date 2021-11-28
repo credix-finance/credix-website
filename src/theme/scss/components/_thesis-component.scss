@@ -4,20 +4,56 @@
 
   @extend .global-padding-left-right;
 
+  @include mobile {
+    min-height: 500px;
+  }
+
   &--row {
     margin-top: 100px;
+
+    @include mobile {
+      margin-top: 50px;
+      justify-content: flex-end;
+      flex-flow: column;
+    }
+  }
+
+  &--image {
+    width: 80px;
+  }
+
+  &--image-column {
+    @include mobile {
+      width: 30%;
+      align-items: center;
+    }
   }
 
   &--title {
     font-weight: $FONT_WEIGHT_BOLD;
     font-size: $FONT_SIZE_LARGE;
     color: $FONT_SECOND_COLOR;
+
+
   }
 
   &--column {
     text-align: center;
     align-items: center;
     width: 392px;
+
+    &--row-mobile {
+      @include mobile {
+        width: 70%;
+        margin-top: $UNIT * 3;
+      }
+    }
+
+    @include mobile {
+      flex-direction: row;
+      width: initial;
+      text-align: left;
+    }
   }
 
   &--sub-title {
@@ -25,15 +61,34 @@
     font-weight: $FONT_WEIGHT_XNORMAL;
     font-size: $FONT_SIZE_XXXNORMAL;
     line-height: $LINE_HEIGHT_NORMAL;
+
+    @include mobile {
+      font-weight: $FONT_WEIGHT_BOLD;
+      text-transform: uppercase;
+      font-size: $FONT_SIZE_SMALL;
+      line-height: $LINE_HEIGHT_XSMALL;
+    }
   }
 
   &--text {
     @extend .small-text;
     @extend .h-margin-top--double;
+
+    @include mobile {
+      font-size: $FONT_SIZE_SMALL;
+      line-height: $LINE_HEIGHT_XSMALL;
+      letter-spacing: -.5px;
+    }
   }
 
   &--shape {
     width: 300px;
     padding-right: 15px;
+
+    @include mobile {
+      transform: scale(.4);
+      padding-right: initial;
+      width: initial;
+    }
   }
 }

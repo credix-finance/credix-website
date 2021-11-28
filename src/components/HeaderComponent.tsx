@@ -2,22 +2,10 @@ import React, { useEffect, useState } from 'react';
 import SvgIcon, { SVG_COLORS, SVG_ICONS } from './shared/svg-icon/SvgIcon';
 import { CredixButton } from './shared/buttons/CredixButton';
 import { Drawer } from '@mui/material';
+import { IWidthProps } from '../pages';
 
-export const HeaderComponent = () => {
-
-  const [width, setWidth] = useState<number>();
+export const HeaderComponent = ({ isMobile }: IWidthProps) => {
   const [isMenuOpen, setMenuOpen] = useState<boolean>();
-  const mobileWidth = 900;
-
-  useEffect(() => {
-    setWidth(window.innerWidth);
-    window.addEventListener('resize', () => {
-      setWidth(window.innerWidth);
-    });
-    return () => {
-      window.removeEventListener('resize', () => {return;});
-    };
-  }, []);
 
   const headerLinks = () => {
     return (
@@ -29,17 +17,16 @@ export const HeaderComponent = () => {
     )
   }
 
-
   return (
     <div className="h-flex-column header-component">
       <div className="h-flex-row h-flex-row--space-between header">
         <SvgIcon icon={SVG_ICONS.CREDIX_LOGO} color={SVG_COLORS.WHITE}/>
         <div className="h-flex-row h-flex-row--space-between h-flex-row--align-baseline header--links">
           {
-            width && width > mobileWidth ?
-              headerLinks()
-              :
+            isMobile ?
               <SvgIcon icon={SVG_ICONS.HAMBURGER_MENU} color={SVG_COLORS.WHITE} className="header-component--menu-button" onClick={() => setMenuOpen(!isMenuOpen)}/>
+              :
+              headerLinks()
           }
         </div>
         <Drawer

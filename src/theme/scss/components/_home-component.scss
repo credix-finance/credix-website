@@ -4,12 +4,21 @@
 
   @extend .global-padding-left-right;
 
+  @include mobile {
+    min-height: 400px;
+  }
+
   &--background-shape {
     position: absolute;
     right: 0;
     top: 0;
     transform: translateY(-10px);
     z-index: $Z_INDEX_BACKGROUND_SHAPE;
+
+    @include mobile {
+      transform: scale(.7);
+      transform-origin: top right;
+    }
   }
 }
 
@@ -23,16 +32,26 @@
     font-weight: bold;
     line-height: $LINE_HEIGHT_XXLARGE;
     color: $FONT_SECOND_COLOR;
+
+    @include mobile {
+      font-size: $FONT_SIZE_SLARGE;
+      line-height: $LINE_HEIGHT_XNORMAL;
+    }
   }
 
   &--text {
-    width: 556px;
+    max-width: 556px;
     font-size: $FONT_SIZE_XNORMAL;
     font-weight: $FONT_WEIGHT_NORMAL;
     line-height: $LINE_HEIGHT_NORMAL;
 
     @extend .font-second;
     @extend .h-margin-top;
+
+    @include mobile {
+      font-size: $FONT_SIZE_SMALL;
+      line-height: $LINE_HEIGHT_XSMALL;
+    }
   }
 
   &--button {

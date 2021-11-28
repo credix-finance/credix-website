@@ -11,15 +11,33 @@ import { CoreTeamComponent } from '../components/CoreTeamComponent';
 import { AdvisorsComponent } from '../components/AdvisorsComponent';
 import { BackedByComponent } from '../components/BackedByComponent';
 import { FooterComponent } from '../components/FooterComponent';
+import { useEffect, useState } from 'react';
+
+export interface IWidthProps {
+  isMobile: boolean
+}
 
 const IndexPage = () => {
+  const [width, setWidth] = useState<number>();
+  const mobileWidth = 900;
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    window.addEventListener('resize', () => {
+      setWidth(window.innerWidth);
+    });
+    return () => {
+      window.removeEventListener('resize', () => {return;});
+    };
+  }, []);
+
   return (
     <main>
       <title>Home Page</title>
-      <HeaderComponent/>
+      <HeaderComponent isMobile={!!width && width < mobileWidth}/>
       <HomeComponent/>
       <CTAComponent/>
-      <ThesisComponent/>
+      <ThesisComponent isMobile={!!width && width < mobileWidth}/>
       <PlatformComponent/>
       <VisionComponent/>
       <CTATeamComponent/>
