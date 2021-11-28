@@ -12,6 +12,7 @@
     letter-spacing: 1px;
 
     @include mobile {
+      margin-top: 30px;
       font-size: $FONT_SIZE_SMALL;
       line-height: $LINE_HEIGHT_SMALL;
     }
@@ -22,6 +23,7 @@
     @extend .team-padding-left-right;
 
     @include mobile {
+      margin-top: 20px;
       padding-left: 0;
       padding-right: 0;
     }

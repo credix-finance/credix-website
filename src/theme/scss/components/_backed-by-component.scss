@@ -15,5 +15,10 @@
 
   &--logo {
     max-height: 100px;
+
+    @include mobile {
+      max-width: 130px;
+      margin: $UNIT;
+    }
   }
 }

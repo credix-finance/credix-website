@@ -16,7 +16,7 @@ export const BackedByComponent = () => {
       <div className="h-flex-row h-flex-row--space-between backed-by-component--logo-row">
         <StaticImage src={'../assets/logos/petrock.png'} alt={'petrock'} className="backed-by-component--logo"/>
         <StaticImage src={'../assets/logos/brz.png'} alt={'brz'} className="backed-by-component--logo"/>
-        <StaticImage src={'../assets/logos/fuse.png'} alt={'fuse'} className="backed-by-component--logo"/>
+        <StaticImage src={'../assets/logos/share.png'} alt={'share'} className="backed-by-component--logo"/>
         <StaticImage src={'../assets/logos/solana.png'} alt={'solana'} className="backed-by-component--logo"/>
       </div>
     </div>

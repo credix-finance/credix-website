@@ -4,6 +4,10 @@
 
   @extend .global-padding-left-right;
 
+  @include mobile {
+    min-height: 700px;
+  }
+
   &--title-row {
     margin-top: 100px;
   }
@@ -23,6 +27,7 @@
     @extend .team-padding-left-right;
 
     @include mobile {
+      margin-top: 20px;
       padding-left: 0;
       padding-right: 0;
     }
