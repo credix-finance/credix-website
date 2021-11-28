@@ -5,14 +5,27 @@
   padding-left: $GLOBAL_PADDING_LEFT * 3;
   padding-right: $GLOBAL_PADDING_RIGHT * 3;
 
+  @include mobile {
+    padding-left: $GLOBAL_PADDING_MOBILE_LEFT;
+    padding-right: $GLOBAL_PADDING_MOBILE_RIGHT;
+  }
+
   &--row {
     margin-top: 80px;
+    @include mobile {
+      flex-flow: column;
+    }
   }
 
   &--title {
     font-weight: $FONT_WEIGHT_BOLD;
     font-size: $FONT_SIZE_SLARGE;
     line-height: $LINE_HEIGHT_LARGE;
+
+    @include mobile {
+      font-size: $FONT_SIZE_XNORMAL;
+      letter-spacing: 1px;
+    }
   }
 
   &--text {
@@ -20,6 +33,21 @@
     font-size: $FONT_SIZE_NORMAL;
     font-family: $FONT_FAMILY_SECOND;
     line-height: $LINE_HEIGHT_SNORMAL;
+
+    @include mobile {
+      font-size: $FONT_SIZE_SMALL;
+      line-height: $LINE_HEIGHT_SMALL;
+      letter-spacing: -.5px;
+    }
+  }
+
+  &--button-column {
+    align-self: center;
+
+    @include mobile {
+      margin-top: $UNIT * 3;
+      align-self: flex-start;
+    }
   }
 
   &--button {

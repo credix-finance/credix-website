@@ -35,7 +35,7 @@
     &--link {
       font-family: $FONT_FAMILY_SECOND;
       font-size: $FONT_SIZE_SMALL;
-      line-height: $LINE_HEIGHT_XSMALL;
+      line-height: $LINE_HEIGHT_SMALL;
       cursor: pointer;
     }
 
@@ -43,7 +43,7 @@
       @extend .footer-component--padding;
       font-family: $FONT_FAMILY_SECOND;
       font-size: $FONT_SIZE_SMALL;
-      line-height: $LINE_HEIGHT_XSMALL;
+      line-height: $LINE_HEIGHT_SMALL;
     }
   }
 }

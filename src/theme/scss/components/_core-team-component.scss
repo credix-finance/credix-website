@@ -21,5 +21,10 @@
   &--persons {
     margin-top: 80px;
     @extend .team-padding-left-right;
+
+    @include mobile {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }

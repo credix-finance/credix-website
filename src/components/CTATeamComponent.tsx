@@ -11,7 +11,7 @@ export const CTATeamComponent = () => {
           Become part of the team and help us build the debt capital markets <br/> infrastructure of the future.
           </span>
         </span>
-        <span className="h-flex-column h-flex-column--align-self-center">
+        <span className="h-flex-column cta-team-component--button-column">
           <CredixButton className="cta-team-component--button">See openings</CredixButton>
         </span>
       </div>

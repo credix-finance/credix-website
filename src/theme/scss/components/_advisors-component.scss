@@ -10,10 +10,20 @@
     font-weight: $FONT_WEIGHT_XXNORMAL;
     font-size: $FONT_SIZE_XXXNORMAL;
     letter-spacing: 1px;
+
+    @include mobile {
+      font-size: $FONT_SIZE_SMALL;
+      line-height: $LINE_HEIGHT_SMALL;
+    }
   }
 
   &--persons {
     margin-top: 80px;
     @extend .team-padding-left-right;
+
+    @include mobile {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }

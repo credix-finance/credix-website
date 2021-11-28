@@ -1,11 +1,22 @@
 .person-component {
   text-align: center;
+  @include mobile {
+    margin-top: $UNIT * 3;
+    flex-flow: row;
+  }
 
   &--name {
     margin-top: $UNIT * 2;
     font-weight: $FONT_WEIGHT_BOLD;
     font-size: $FONT_SIZE_XXNORMAL;
     line-height: $LINE_HEIGHT_SNORMAL;
+
+    @include mobile {
+      margin-top: $UNIT;
+      font-size: $FONT_SIZE_NORMAL;
+      line-height: $LINE_HEIGHT_SMALL;
+      text-align: left;
+    }
   }
 
   &--title {
@@ -14,5 +25,36 @@
     font-family: $FONT_FAMILY_SECOND;
     text-transform: uppercase;
     opacity: 0.3;
+
+    @include mobile {
+      font-size: $FONT_SIZE_XSMALL;
+      line-height: $LINE_HEIGHT_XSMALL;
+      letter-spacing: 1px;
+      text-align: left;
+    }
+  }
+
+  &--info {
+    @include mobile {
+      flex-flow: column;
+      align-items: flex-start;
+      margin-left: $UNIT * 3;
+    }
+  }
+
+  &--image {
+    @include mobile {
+      width: 40%;
+    }
+  }
+
+  &--social-button {
+    @extend .h-margin;
+
+    @include mobile {
+      margin: 0;
+      margin-right: $UNIT;
+      margin-top: $UNIT * 2;
+    }
   }
 }
