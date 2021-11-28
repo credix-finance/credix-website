@@ -1,5 +1,9 @@
 @import "variables";
 
+main {
+  overflow-x: hidden;
+}
+
 * {
   outline: none;
 }
@@ -30,6 +34,11 @@ body {
 .global-padding-left-right {
   padding-left: $GLOBAL_PADDING_LEFT;
   padding-right: $GLOBAL_PADDING_RIGHT;
+
+  @media (max-width:$MOBILE_WIDTH) {
+    padding-left: $GLOBAL_PADDING_MOBILE_LEFT;
+    padding-right: $GLOBAL_PADDING_MOBILE_RIGHT;
+  }
 }
 
 .team-padding-left-right {
