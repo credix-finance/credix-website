@@ -54,7 +54,7 @@
     }
   }
 
-  &--button {
+  &--button.MuiButton-root {
     width: $BUTTON_WIDTH_NORMAL;
 
     @extend .h-margin-top--triple;

@@ -79,7 +79,7 @@
     }
   }
 
-  &--item-button {
+  &--item-button.MuiButton-root {
     @extend .h-margin-top--auto;
     @extend .h-full-width;
 

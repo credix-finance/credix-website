@@ -71,7 +71,7 @@ body {
   padding-right: $GLOBAL_PADDING_RIGHT * 2;
 }
 
-.credix-button {
+.credix-button.MuiButton-root {
   background-color: $COLOR_WHITE;
   color: $COLOR_BLACK;
   height: $BUTTON_HEIGHT;
