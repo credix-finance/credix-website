@@ -1,6 +1,7 @@
 .home-component {
   background: linear-gradient(180deg, #1F1F1F 0%, #1F1F1F 43.43%, #000000 100%);
   min-height: 709px;
+  height: 80vh;
 
   @extend .global-padding-left-right;
 
