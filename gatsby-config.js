@@ -7,7 +7,12 @@ module.exports = {
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-plugin-sharp",
+      options: {
+        icon: "src/assets/logos/favicon-32x32.png"
+      }
+    },
     "gatsby-transformer-sharp",
     "gatsby-plugin-react-helmet",
     {
@@ -16,14 +21,6 @@ module.exports = {
         rule: {
           include: /assets/
         }
-      }
-    },
-    {
-      resolve: 'gatsby-plugin-favicons',
-      options: {
-        logo: './src/assets/logos/favicon.ico',
-        appName: 'Credix',
-        background: '#fff',
       }
     }
   ],
