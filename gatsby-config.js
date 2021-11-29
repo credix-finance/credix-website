@@ -18,5 +18,13 @@ module.exports = {
         }
       }
     },
+    {
+      resolve: 'gatsby-plugin-favicons',
+      options: {
+        logo: './src/assets/logos/favicon.ico',
+        appName: 'Credix',
+        background: '#fff',
+      }
+    }
   ],
 };
