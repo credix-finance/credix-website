@@ -28,7 +28,7 @@ export const ThesisComponent = ({ isMobile }: IWidthProps) => {
           <div className="h-flex-column thesis-component--image-column">
             {
               isMobile ?
-                <StaticImage src={'../assets/shapes/the-bridge-small.png'} alt={'the bridge'}/>
+                <StaticImage src={'../assets/shapes/the-bridge-small.png'} alt={'the bridge'} className="thesis-component--image"/>
                 :
                 <SvgIcon icon={SVG_ICONS.THE_BRIDGE} color={SVG_COLORS.WHITE} className="thesis-component--shape"/>
             }
@@ -42,7 +42,7 @@ export const ThesisComponent = ({ isMobile }: IWidthProps) => {
           <div className="h-flex-column thesis-component--image-column">
             {
               isMobile ?
-                <StaticImage src={'../assets/shapes/defi-small.png'} alt={'defi'}/>
+                <StaticImage src={'../assets/shapes/defi-small.png'} alt={'defi'} className="thesis-component--image"/>
                 :
                 <SvgIcon icon={SVG_ICONS.DEFI_LOGO} color={SVG_COLORS.WHITE} className="thesis-component--shape"/>
             }

@@ -9,8 +9,8 @@ export const FooterComponent = () => {
           <SvgIcon icon={SVG_ICONS.CREDIX_LOGO} color={SVG_COLORS.WHITE} className="footer-component--logo"/>
           <div className="h-flex-row h-flex-row--space-around footer-component--footer">
             <span className="footer-component--footer--link">Support</span>
-            <span className="footer-component--footer--link">Terms of service</span>
-            <span className="footer-component--footer--link">License</span>
+            {/*<span className="footer-component--footer--link">Terms of service</span>*/}
+            {/*<span className="footer-component--footer--link">License</span>*/}
           </div>
         </div>
         <div className="h-flex-column footer-component--column">

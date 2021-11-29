@@ -43,9 +43,10 @@
   }
 
   &--image {
+    max-width: 250px;
     @include mobile {
       width: 40%;
-      min-width: 172px;
+      min-width: 110px;
     }
   }
 

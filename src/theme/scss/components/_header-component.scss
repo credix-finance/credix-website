@@ -5,6 +5,7 @@
 
   &--link {
     @extend .font-second;
+    cursor: pointer;
 
     @include mobile {
       margin-bottom: $UNIT * 2;
@@ -39,6 +40,10 @@
   margin-top: 43px;
   width: 100%;
   z-index: $Z_INDEX_NORMAL;
+
+  @include mobile {
+    margin-top: 30px;
+  }
 
   &--links {
     width: 500px;

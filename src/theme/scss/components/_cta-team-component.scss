@@ -44,8 +44,11 @@
   &--button-column {
     align-self: center;
 
-    @include mobile {
+    @include tablet {
       margin-top: $UNIT * 3;
+    }
+
+    @include mobile {
       align-self: flex-start;
     }
   }

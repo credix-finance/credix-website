@@ -4,6 +4,10 @@
 
   @extend .global-padding-left-right;
 
+  @include mobile {
+    min-height: 400px;
+  }
+
   &--title-row {
     margin-top: 100px;
   }
@@ -11,10 +15,20 @@
   &--logo-row {
     margin-top: 80px;
     align-items: center;
+
+    @include mobile {
+      margin-top: 30px;
+      justify-content: space-evenly;
+      flex-flow: row;
+    }
   }
 
   &--logo {
     max-height: 100px;
+
+    &--solana {
+      max-width: 400px;
+    }
 
     @include mobile {
       max-width: 130px;

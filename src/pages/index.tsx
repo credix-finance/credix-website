@@ -12,6 +12,8 @@ import { AdvisorsComponent } from '../components/AdvisorsComponent';
 import { BackedByComponent } from '../components/BackedByComponent';
 import { FooterComponent } from '../components/FooterComponent';
 import { useEffect, useState } from 'react';
+import Helmet from 'react-helmet'
+import FavIcon from '../assets/logos/favicon-1.png'
 
 export interface IWidthProps {
   isMobile: boolean;
@@ -35,6 +37,12 @@ const IndexPage = () => {
 
   return (
     <main>
+      <Helmet
+        title={'Credix'}
+        link={[
+          { rel: 'shortcut icon', type: 'image/png', href: `${FavIcon}` }
+        ]}
+      />
       <title>Home Page</title>
       <HeaderComponent isMobile={!!width && width < mobileWidth}/>
       <HomeComponent/>
@@ -45,7 +53,7 @@ const IndexPage = () => {
       <CTATeamComponent/>
       <CoreTeamComponent/>
       <AdvisorsComponent/>
-      <BackedByComponent/>
+      <BackedByComponent isMobile={!!width && width < mobileWidth}/>
       <FooterComponent/>
     </main>
   )

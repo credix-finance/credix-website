@@ -61,20 +61,15 @@
 
   &--roadmap-shapes {
     margin-top: 70px;
-    @include tablet {
+    @include mobile {
       flex-flow: column;
     }
   }
 
   &--roadmap-shape-column {
-    @include tablet {
-      flex-flow: row;
-      align-self: flex-start;
-      margin-left: 40%;
-      margin-top: - $UNIT * 2;
-    }
 
     @include mobile {
+      flex-flow: row;
       align-self: flex-start;
       margin-left: initial;
       margin-top: - $UNIT * 4;

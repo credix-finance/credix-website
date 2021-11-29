@@ -12,7 +12,7 @@ export const AdvisorsComponent = () => {
         <div className="h-flex-column">
           <PersonComponent
             name={'Chike Ukaegbu'}
-            image={<StaticImage src={'../assets/people/Ukaegbu.png'} alt={'Chike Ukaegbu'}/>}
+            image={<StaticImage src={'../assets/people/Ukaegbu.jpeg'} alt={'Chike Ukaegbu'}/>}
             linkedInUrl={'https://google.be'}
             twitterUrl={'https://google.be'}
             title={

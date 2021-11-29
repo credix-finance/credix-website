@@ -12,7 +12,7 @@
     margin-top: 100px;
 
     @include mobile {
-      margin-top: 50px;
+      margin-top: 30px;
       justify-content: flex-end;
       flex-flow: column;
     }
@@ -20,6 +20,9 @@
 
   &--image {
     width: 80px;
+    transform: scale(1.1);
+    margin-left: -$UNIT;
+    margin-top: $UNIT * 3;
   }
 
   &--image-column {
@@ -33,8 +36,6 @@
     font-weight: $FONT_WEIGHT_BOLD;
     font-size: $FONT_SIZE_LARGE;
     color: $FONT_SECOND_COLOR;
-
-
   }
 
   &--column {
@@ -75,6 +76,7 @@
     @extend .h-margin-top--double;
 
     @include mobile {
+      margin-top: $UNIT;
       font-size: $FONT_SIZE_SMALL;
       line-height: $LINE_HEIGHT_SMALL;
       letter-spacing: -.5px;

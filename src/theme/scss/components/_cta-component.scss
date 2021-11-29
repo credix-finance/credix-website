@@ -4,6 +4,10 @@
 
   @extend .global-padding-left-right;
 
+  @include mobile {
+    min-height: 270px;
+  }
+
   &--row {
     @include mobile {
       flex-direction: column;
