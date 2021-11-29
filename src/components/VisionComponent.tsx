@@ -1,6 +1,7 @@
 import React from 'react';
 import SvgIcon, { SVG_COLORS, SVG_ICONS } from './shared/svg-icon/SvgIcon';
 import { IWidthProps } from '../pages';
+import { StaticImage } from 'gatsby-plugin-image';
 
 export const VisionComponent = ({ isTablet }: IWidthProps) => {
   return (
@@ -24,7 +25,7 @@ export const VisionComponent = ({ isTablet }: IWidthProps) => {
       </div>
       <div className="h-flex-row h-flex-row--space-between h-flex-row--align-center vision-component--roadmap-shapes">
         <div className="h-flex-column h-flex-column--align-center vision-component--roadmap-shape-column">
-          <SvgIcon icon={SVG_ICONS.ROADMAP_1} color={SVG_COLORS.WHITE} className="vision-component--roadmap-shape"/>
+          <StaticImage src={'../assets/shapes/roadmap_1.png'} alt={'roadmap 1'} className="vision-component--roadmap-shape"/>
           <span className="vision-component--roadmap-shape--text">DevNet <br/> Launch</span>
         </div>
         {
@@ -32,7 +33,7 @@ export const VisionComponent = ({ isTablet }: IWidthProps) => {
           <SvgIcon icon={SVG_ICONS.LINE_1} color={SVG_COLORS.WHITE}/>
         }
         <div className="h-flex-column h-flex-column--align-center vision-component--roadmap-shape-column">
-          <SvgIcon icon={SVG_ICONS.ROADMAP_2} color={SVG_COLORS.WHITE} className="vision-component--roadmap-shape"/>
+          <StaticImage src={'../assets/shapes/roadmap_2.png'} alt={'roadmap 1'} className="vision-component--roadmap-shape"/>
           <span className="vision-component--roadmap-shape--text">Closed Alpha <br/> Launch</span>
         </div>
         {
@@ -40,7 +41,7 @@ export const VisionComponent = ({ isTablet }: IWidthProps) => {
           <SvgIcon icon={SVG_ICONS.LINE_1} color={SVG_COLORS.WHITE}/>
         }
         <div className="h-flex-column h-flex-column--align-center vision-component--roadmap-shape-column">
-          <SvgIcon icon={SVG_ICONS.ROADMAP_3} color={SVG_COLORS.WHITE} className="vision-component--roadmap-shape"/>
+          <StaticImage src={'../assets/shapes/roadmap_3.png'} alt={'roadmap 1'} className="vision-component--roadmap-shape"/>
           <span className="vision-component--roadmap-shape--text">Public <br/> Launch</span>
         </div>
         {
@@ -48,7 +49,7 @@ export const VisionComponent = ({ isTablet }: IWidthProps) => {
           <SvgIcon icon={SVG_ICONS.LINE_1} color={SVG_COLORS.WHITE}/>
         }
         <div className="h-flex-column h-flex-column--align-center vision-component--roadmap-shape-column">
-          <SvgIcon icon={SVG_ICONS.ROADMAP_4} color={SVG_COLORS.WHITE} className="vision-component--roadmap-shape"/>
+          <StaticImage src={'../assets/shapes/roadmap_4.png'} alt={'roadmap 1'} className="vision-component--roadmap-shape"/>
           <span className="vision-component--roadmap-shape--text">Tokenize <br/> RECEIVABLES</span>
         </div>
         {
@@ -56,7 +57,7 @@ export const VisionComponent = ({ isTablet }: IWidthProps) => {
           <SvgIcon icon={SVG_ICONS.LINE_1} color={SVG_COLORS.WHITE}/>
         }
         <div className="h-flex-column h-flex-column--align-center vision-component--roadmap-shape-column">
-          <SvgIcon icon={SVG_ICONS.ROADMAP_5} color={SVG_COLORS.WHITE} className="vision-component--roadmap-shape"/>
+          <StaticImage src={'../assets/shapes/roadmap_5.png'} alt={'roadmap 1'} className="vision-component--roadmap-shape"/>
           <span className="vision-component--roadmap-shape--text">Launch <br/> v2</span>
         </div>
         {
@@ -64,7 +65,7 @@ export const VisionComponent = ({ isTablet }: IWidthProps) => {
           <SvgIcon icon={SVG_ICONS.LINE_1} color={SVG_COLORS.WHITE}/>
         }
         <div className="h-flex-column h-flex-column--align-center vision-component--roadmap-shape-column">
-          <SvgIcon icon={SVG_ICONS.ROADMAP_6} color={SVG_COLORS.WHITE} className="vision-component--roadmap-shape"/>
+          <StaticImage src={'../assets/shapes/roadmap_6.png'} alt={'roadmap 1'} className="vision-component--roadmap-shape"/>
           <span className="vision-component--roadmap-shape--text">RETHINK DEBT <br/> Capital Markets</span>
         </div>
       </div>
