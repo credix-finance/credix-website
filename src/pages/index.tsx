@@ -13,6 +13,7 @@ import { BackedByComponent } from '../components/BackedByComponent';
 import { FooterComponent } from '../components/FooterComponent';
 import { useEffect, useState } from 'react';
 import Helmet from 'react-helmet'
+import fav from '../../static/favicon-32x32.png'
 
 export interface IWidthProps {
   isMobile: boolean;
@@ -38,6 +39,9 @@ const IndexPage = () => {
     <main>
       <Helmet
         title={'Credix'}
+        link={[
+          { rel: 'shortcut icon', type: 'image/png', href: `${fav}` }
+        ]}
       />
       <title>Home Page</title>
       <HeaderComponent isMobile={!!width && width < mobileWidth}/>
