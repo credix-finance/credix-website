@@ -55,7 +55,6 @@ const IndexPage = () => {
         <title lang="en">Credix</title>
         <html lang="en"/>
       </Helmet>
-      <title>Home Page</title>
       <HeaderComponent isMobile={!!width && width < mobileWidth}/>
       <HomeComponent/>
       <CTAComponent/>
