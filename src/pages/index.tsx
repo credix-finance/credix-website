@@ -50,8 +50,25 @@ const IndexPage = () => {
         link={[
           { rel: 'shortcut icon', type: 'image/png', href: `${fav}` }
         ]}
+        meta={[
+          {
+            name: 'description',
+            content: 'CREDIX is a decentralized credit platform that gives borrowers in emerging countries access to previously untapped capital.'
+          },
+          {
+            name: 'keywords',
+            content: 'fintech, finance, capital, blockchain, investors, borrowers, assets, emerging countries, capital markets'
+          },
+          {
+            name: 'robots',
+            content: 'index, nofollow'
+          },
+          {
+            name: 'title',
+            content: 'Credix'
+          }
+        ]}
       >
-        <meta name="Credix" content="Credit investing democratized"/>
         <title lang="en">Credix</title>
         <html lang="en"/>
       </Helmet>
