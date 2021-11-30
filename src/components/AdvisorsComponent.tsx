@@ -9,6 +9,7 @@ export const AdvisorsComponent = () => {
         <span className="advisors-component--subtitle">Our Advisors</span>
       </div>
       <div className="h-flex-row h-flex-row--space-between advisors-component--persons">
+        {/*<div className="h-flex-row h-flex-row--no-wrap advisors-component--persons--sub-row">*/}
         <div className="h-flex-column">
           <PersonComponent
             name={'Chike Ukaegbu'}
@@ -18,6 +19,7 @@ export const AdvisorsComponent = () => {
             title={
               <span>Head crypto <br/> emerging markets @ VISA</span>
             }
+            advisor={true}
           />
         </div>
         <div className="h-flex-column">
@@ -29,8 +31,11 @@ export const AdvisorsComponent = () => {
             title={
               <span>FORMEr MANAGING DIRECTOR <br/> & CTO @ ITAU</span>
             }
+            advisor={true}
           />
         </div>
+        {/*</div>*/}
+        {/*<div className="h-flex-row h-flex-row--no-wrap advisors-component--persons--sub-row">*/}
         <div className="h-flex-column">
           <PersonComponent
             name={'Reginald de Wasseige'}
@@ -40,6 +45,7 @@ export const AdvisorsComponent = () => {
             title={
               <span>INVESTOR <br/>@ AUGMENTUM</span>
             }
+            advisor={true}
           />
         </div>
         <div className="h-flex-column">
@@ -51,8 +57,10 @@ export const AdvisorsComponent = () => {
             title={
               <span>MD BLOCKS <br/> EX GOLDMAN SACHS</span>
             }
+            advisor={true}
           />
         </div>
+        {/*</div>*/}
       </div>
     </div>
   )

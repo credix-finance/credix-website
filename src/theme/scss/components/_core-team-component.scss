@@ -1,5 +1,5 @@
 .core-team-component {
-  min-height: 800px;
+  min-height: 400px;
   background: linear-gradient(180deg, #000000 0%, #1F1F1F 100%, #1F1F1F 100%);
 
   @extend .global-padding-left-right;
@@ -10,11 +10,26 @@
 
   &--title-row {
     margin-top: 100px;
+
+    @include mobile {
+      flex-flow: column;
+    }
+  }
+
+  &--title-column {
+    width: 30%;
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &--persons-column {
+    width: 70%;
   }
 
   &--who-we-are {
     display: flex;
-    margin-top: 40px;
+    margin-top: 20px;
 
     &--line {
       transform: translateY(-5px);
@@ -23,10 +38,10 @@
   }
 
   &--persons {
-    margin-top: 80px;
-    @extend .team-padding-left-right;
+    flex-flow: row;
 
     @include mobile {
+      flex-flow: column;
       margin-top: 20px;
       padding-left: 0;
       padding-right: 0;

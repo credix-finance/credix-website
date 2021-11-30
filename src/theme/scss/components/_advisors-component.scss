@@ -1,5 +1,5 @@
 .advisors-component {
-  min-height: 658px;
+  min-height: 428px;
   background: linear-gradient(180deg, #1F1F1F 0%, #000000 100%);
 
   @extend .global-padding-left-right;
@@ -20,12 +20,24 @@
 
   &--persons {
     margin-top: 80px;
-    @extend .team-padding-left-right;
 
     @include mobile {
+      flex-flow: column;
       margin-top: 20px;
       padding-left: 0;
       padding-right: 0;
+      align-items: flex-start;
+    }
+
+    &--sub-row {
+      @include tablet {
+        justify-content: space-evenly;
+      }
+
+      @include mobile {
+        flex-flow: column;
+        justify-content: initial;
+      }
     }
   }
 }
