@@ -19,12 +19,12 @@ export const PlatformComponent = () => {
         </div>
         <div className="h-flex-column platform-component--item-column">
           <span className="platform-component--item-title">Liquidity Providers</span>
-          <span className="platform-component--item-text">Stable return, flexibility to withdraw at any moment and invest in senior tranche = liquidity pool.</span>
+          <span className="platform-component--item-text">(Retail) investors invest in the liquidity pool, which diversifies across deals. Stable return and flexibility to withdraw at any moment.</span>
           <CredixButton className="platform-component--item-button">Invest</CredixButton>
         </div>
         <div className="h-flex-column platform-component--item-column">
           <span className="platform-component--item-title">Underwriters</span>
-          <span className="platform-component--item-text">HNI, PE and funds who get to choose the deal/credit to invest in, get higher returns in junior tranche and  better risk analysis.</span>
+          <span className="platform-component--item-text">Accredited investors (HNI, PE, funds...) who get to choose the deal/credit to invest in, get higher returns and better risk analysis.</span>
           <CredixButton className="platform-component--item-button">Invest</CredixButton>
         </div>
       </div>
