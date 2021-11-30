@@ -126,3 +126,23 @@ body {
   font-family: $FONT_FAMILY_SECOND;
   line-height: $LINE_HEIGHT_SNORMAL;
 }
+
+.not-found-component {
+  height: calc(80vh - 384px);
+  background-color: #1F1F1F;
+  display: flex;
+  justify-content: center;
+
+  &--title{
+    font-size: $FONT_SIZE_XLARGE;
+    font-family: $FONT_FAMILY_SECOND;
+    font-weight: $FONT_WEIGHT_BOLD;
+    letter-spacing: 1px;
+  }
+}
+
+h1 {
+  margin: 0;
+  margin-block: 0;
+  margin-inline: 0;
+}

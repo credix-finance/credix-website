@@ -16,7 +16,7 @@ import Helmet from 'react-helmet'
 import fav from '../../static/favicon-32x32.png'
 
 export interface IWidthProps {
-  isMobile: boolean;
+  isMobile?: boolean;
   isTablet?: boolean;
 }
 
@@ -46,11 +46,15 @@ const IndexPage = () => {
   return (
     <main>
       <Helmet
-        title={'Credix'}
+        titleTemplate="%s - Credit investing democratized"
         link={[
           { rel: 'shortcut icon', type: 'image/png', href: `${fav}` }
         ]}
-      />
+      >
+        <meta name="Credix" content="Credit investing democratized"/>
+        <title lang="en">Credix</title>
+        <html lang="en"/>
+      </Helmet>
       <title>Home Page</title>
       <HeaderComponent isMobile={!!width && width < mobileWidth}/>
       <HomeComponent/>

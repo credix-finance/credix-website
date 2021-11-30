@@ -50,12 +50,22 @@
   &--footer {
     @extend .footer-component--padding;
     margin-top: auto;
+    justify-content: flex-start;
 
     &--link {
       font-family: $FONT_FAMILY_SECOND;
       font-size: $FONT_SIZE_SMALL;
       line-height: $LINE_HEIGHT_SMALL;
       cursor: pointer;
+    }
+
+    &--typeform {
+      background-color: initial;
+      border: 0;
+      color: $FONT_DEFAULT_COLOR;
+      align-self: flex-start;
+      margin-top: 20px;
+      padding: 0;
     }
 
     &--text {

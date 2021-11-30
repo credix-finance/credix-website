@@ -1,24 +1,34 @@
 import React from 'react';
 import SvgIcon, { SVG_COLORS, SVG_ICONS } from './shared/svg-icon/SvgIcon';
 import { StaticImage } from 'gatsby-plugin-image';
+import { openInNewTab } from '../pages';
+import { PopupButton } from '@typeform/embed-react';
 
 export const FooterComponent = () => {
+
+  const mail = (e: any) => {
+    window.location = 'mailto:info@credix.finance' as unknown as Location;
+    e.preventDefault()
+  }
+
   return (
     <div className="h-flex-column footer-component">
       <div className="h-flex-row footer-component--row">
         <div className="h-flex-column footer-component--column">
           <SvgIcon icon={SVG_ICONS.CREDIX_LOGO} color={SVG_COLORS.WHITE} className="footer-component--logo"/>
           <div className="h-flex-row h-flex-row--space-around footer-component--footer">
-            <span className="footer-component--footer--link">Support</span>
+            <span className="footer-component--footer--link" onClick={mail}>Support</span>
             {/*<span className="footer-component--footer--link">Terms of service</span>*/}
             {/*<span className="footer-component--footer--link">License</span>*/}
           </div>
         </div>
         <div className="h-flex-column footer-component--column">
           <div className="h-flex-column footer-component--padding">
-            <span className="footer-component--footer--link">Twitter</span>
-            <span className="footer-component--footer--link h-margin-top--double">Discord</span>
-            <span className="footer-component--footer--link h-margin-top--double">Alpha Launch</span>
+            <span className="footer-component--footer--link" onClick={() => openInNewTab('https://twitter.com/Credix_finance')}>Twitter</span>
+            <span className="footer-component--footer--link h-margin-top--double" onClick={() => openInNewTab('https://discord.gg/5Ab8b8ueGs')}>Discord</span>
+            <PopupButton id="k1mIGrFE" className="footer-component--footer--link footer-component--footer--typeform">
+              Join Alpha
+            </PopupButton>
           </div>
         </div>
         <div className="h-flex-column footer-component--column">
