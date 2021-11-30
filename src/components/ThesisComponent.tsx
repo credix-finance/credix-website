@@ -16,7 +16,8 @@ export const ThesisComponent = ({ isMobile }: IWidthProps) => {
               isMobile ?
                 <StaticImage src={'../assets/shapes/credit-investing-small.png'} alt={'credit investing'} className="thesis-component--image"/>
                 :
-                <SvgIcon icon={SVG_ICONS.CREDIT_INVESTING} color={SVG_COLORS.WHITE} className="thesis-component--shape"/>
+                <StaticImage src={'../assets/shapes/credit-investing.png'} alt={'credit investing'} className="thesis-component--shape"/>
+              // <SvgIcon icon={SVG_ICONS.CREDIT_INVESTING} color={SVG_COLORS.WHITE} className="thesis-component--shape"/>
             }
           </div>
           <div className="h-flex-column thesis-component--column--row-mobile">
@@ -30,7 +31,8 @@ export const ThesisComponent = ({ isMobile }: IWidthProps) => {
               isMobile ?
                 <StaticImage src={'../assets/shapes/the-bridge-small.png'} alt={'the bridge'} className="thesis-component--image"/>
                 :
-                <SvgIcon icon={SVG_ICONS.THE_BRIDGE} color={SVG_COLORS.WHITE} className="thesis-component--shape"/>
+                <StaticImage src={'../assets/shapes/the-bridge.png'} alt={'the bridge'} className="thesis-component--shape"/>
+              // <SvgIcon icon={SVG_ICONS.THE_BRIDGE} color={SVG_COLORS.WHITE} className="thesis-component--shape"/>
             }
           </div>
           <div className="h-flex-column thesis-component--column--row-mobile">
@@ -44,7 +46,8 @@ export const ThesisComponent = ({ isMobile }: IWidthProps) => {
               isMobile ?
                 <StaticImage src={'../assets/shapes/defi-small.png'} alt={'defi'} className="thesis-component--image"/>
                 :
-                <SvgIcon icon={SVG_ICONS.DEFI_LOGO} color={SVG_COLORS.WHITE} className="thesis-component--shape"/>
+                <StaticImage src={'../assets/shapes/defi.png'} alt={'defi'} className="thesis-component--shape"/>
+              // <SvgIcon icon={SVG_ICONS.DEFI_LOGO} color={SVG_COLORS.WHITE} className="thesis-component--shape"/>
             }
           </div>
           <div className="h-flex-column thesis-component--column--row-mobile">

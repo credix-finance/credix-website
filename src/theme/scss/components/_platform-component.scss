@@ -32,11 +32,16 @@
     background-color: $COLOR_GREY_BACKGROUND;
     height: auto;
 
+    @include tablet {
+      flex-flow: row;
+    }
+
     @include mobile {
       margin-top: 50px;
       background-color: initial;
       flex-direction: column;
       align-content: center;
+      align-items: center;
     }
   }
 
@@ -46,6 +51,12 @@
     width: 296px;
     height: 260px;
     margin: 56px;
+
+    @include tablet {
+      height: auto;
+      margin: 20px;
+      justify-content: space-between;
+    }
 
     @include mobile {
       margin: 0 0 $UNIT * 3;
@@ -82,6 +93,10 @@
   &--item-button.MuiButton-root {
     @extend .h-margin-top--auto;
     @extend .h-full-width;
+
+    @include tablet {
+      margin-top: $UNIT * 2;
+    }
 
     @include mobile {
       margin-top: $UNIT * 3;

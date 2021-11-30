@@ -61,6 +61,11 @@
 
   &--roadmap-shapes {
     margin-top: 70px;
+
+    @include tablet {
+      flex-flow: row;
+    }
+
     @include mobile {
       flex-flow: column;
     }
