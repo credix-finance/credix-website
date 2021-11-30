@@ -85,6 +85,14 @@
   margin: $UNIT;
 }
 
+.h-margin-bottom {
+  margin-bottom: $UNIT;
+
+  &--double {
+    margin-bottom: $UNIT * 2;
+  }
+}
+
 .h-margin-top {
   margin-top: $UNIT;
 

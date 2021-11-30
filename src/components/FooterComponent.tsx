@@ -17,7 +17,7 @@ export const FooterComponent = () => {
         <div className="h-flex-column footer-component--column">
           <SvgIcon icon={SVG_ICONS.CREDIX_LOGO} color={SVG_COLORS.WHITE} className="footer-component--logo"/>
           <div className="h-flex-row h-flex-row--space-around footer-component--footer">
-            <span className="footer-component--footer--link" onClick={mail}>Support</span>
+            {/*<span className="footer-component--footer--link" onClick={mail}>Support</span>*/}
             {/*<span className="footer-component--footer--link">Terms of service</span>*/}
             {/*<span className="footer-component--footer--link">License</span>*/}
           </div>
@@ -25,10 +25,13 @@ export const FooterComponent = () => {
         <div className="h-flex-column footer-component--column">
           <div className="h-flex-column footer-component--padding">
             <span className="footer-component--footer--link" onClick={() => openInNewTab('https://twitter.com/Credix_finance')}>Twitter</span>
-            <span className="footer-component--footer--link h-margin-top--double" onClick={() => openInNewTab('https://discord.gg/5Ab8b8ueGs')}>Discord</span>
+            <span className="footer-component--footer--link" onClick={() => openInNewTab('https://discord.gg/5Ab8b8ueGs')}>Discord</span>
             <PopupButton id="k1mIGrFE" className="footer-component--footer--link footer-component--footer--typeform">
               Join Alpha
             </PopupButton>
+            <span className="footer-component--footer--link" onClick={() => openInNewTab('https://angel.co/company/credix')}>Join The Team</span>
+            <span className="footer-component--footer--link" onClick={() => openInNewTab('https://credix.gitbook.io/credix')}>Documentation</span>
+            <span className="footer-component--footer--link h-margin-bottom--double" onClick={mail}>Support</span>
           </div>
         </div>
         <div className="h-flex-column footer-component--column">
@@ -47,16 +50,6 @@ export const FooterComponent = () => {
                 <div style={{ position: 'absolute', left: '-5000px;', visibility: 'hidden' }} aria-hidden="true">
                   <input type="text" name="b_6501024066e1753c2aa2d692e_e5165ece3c" tabIndex={-1} value=""/>
                 </div>
-                {/*<div className="optionalParent">*/}
-                {/*  <div className="clear foot">*/}
-                {/*    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" className="button"/>*/}
-                {/*    <p className="brandingLogo" style={{ visibility: 'hidden' }}>*/}
-                {/*      <a href="http://eepurl.com/hOMcB9" title="Mailchimp - email marketing made easy and fun">*/}
-                {/*        <img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"/>*/}
-                {/*      </a>*/}
-                {/*    </p>*/}
-                {/*  </div>*/}
-                {/*</div>*/}
               </div>
             </form>
           </div>

@@ -57,6 +57,11 @@
       font-size: $FONT_SIZE_SMALL;
       line-height: $LINE_HEIGHT_SMALL;
       cursor: pointer;
+      margin-bottom: $UNIT * 2;
+
+      @include mobile {
+        margin-bottom: $UNIT;
+      }
     }
 
     &--typeform {
@@ -64,7 +69,6 @@
       border: 0;
       color: $FONT_DEFAULT_COLOR;
       align-self: flex-start;
-      margin-top: 20px;
       padding: 0;
     }
 
