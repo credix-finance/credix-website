@@ -12,7 +12,7 @@ export const CTATeamComponent = () => {
           </span>
         </span>
         <span className="h-flex-column cta-team-component--button-column">
-          <CredixButton className="cta-team-component--button">See openings</CredixButton>
+          <CredixButton className="cta-team-component--button" url={'https://angel.co/company/credix'}>See openings</CredixButton>
         </span>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 import { SocialButton } from '../buttons/SocialButton';
 import { SVG_ICONS } from '../svg-icon/SvgIcon';
+import { openInNewTab } from '../../../pages';
 
 interface IPersonProps {
   image: ReactElement;
@@ -12,11 +13,6 @@ interface IPersonProps {
 }
 
 export const PersonComponent = ({ image, name, title, linkedInUrl, twitterUrl, advisor } : IPersonProps) => {
-
-  const openInNewTab = (url: string): void => {
-    const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
-    if (newWindow) newWindow.opener = null
-  }
 
   return (
     <div className={`h-flex-column person-component ${advisor && 'person-component--advisor'}`}>

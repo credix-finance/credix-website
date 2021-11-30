@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import SvgIcon, { SVG_COLORS, SVG_ICONS } from './shared/svg-icon/SvgIcon';
 import { CredixButton } from './shared/buttons/CredixButton';
 import { Drawer } from '@mui/material';
-import { IWidthProps } from '../pages';
+import { IWidthProps, openInNewTab } from '../pages';
 
 export const HeaderComponent = ({ isMobile }: IWidthProps) => {
   const [isMenuOpen, setMenuOpen] = useState<boolean>();
@@ -10,9 +10,9 @@ export const HeaderComponent = ({ isMobile }: IWidthProps) => {
   const headerLinks = () => {
     return (
       <>
-        <span className="header-component--link">Join The Team</span>
-        <span className="header-component--link">Documentation</span>
-        <CredixButton className="header--links--button">Launch App</CredixButton>
+        <span className="header-component--link" onClick={() => openInNewTab('https://angel.co/company/credix')}>Join The Team</span>
+        <span className="header-component--link" onClick={() => openInNewTab('https://credix.gitbook.io/credix')}>Documentation</span>
+        <CredixButton className="header--links--button" url={'https://app.credix.finance/'}>Launch App</CredixButton>
       </>
     )
   }

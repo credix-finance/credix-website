@@ -79,7 +79,31 @@ body {
   text-transform: none;
 
   &:hover{
-    background-color: $COLOR_WHITE;
+    background-color: $COLOR_BLACK;
+    color: $COLOR_WHITE;
+    border: 1px solid $COLOR_WHITE;
+  }
+
+  @extend .font-second;
+}
+
+
+.credix-button--typeform {
+  background-color: $COLOR_WHITE;
+  color: $COLOR_BLACK;
+  height: $BUTTON_HEIGHT;
+  border-radius: 0;
+  text-transform: none;
+  border: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: $FONT-FAMILY_SECOND;
+  cursor: pointer;
+
+  &:hover{
+    background-color: $COLOR_BLACK;
+    color: $COLOR_WHITE;
+    border: 1px solid $COLOR_WHITE;
   }
 
   @extend .font-second;

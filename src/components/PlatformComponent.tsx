@@ -1,5 +1,5 @@
 import React from 'react';
-import { CredixButton } from './shared/buttons/CredixButton';
+import { PopupButton } from '@typeform/embed-react';
 
 export const PlatformComponent = () => {
   return (
@@ -15,17 +15,23 @@ export const PlatformComponent = () => {
         <div className="h-flex-column platform-component--item-column">
           <span className="platform-component--item-title">Borrowers</span>
           <span className="platform-component--item-text">Credit fintechs in emerging markets with lending history get cheaper credit, less bureaucracy and shorter lead times.</span>
-          <CredixButton className="platform-component--item-button">Borrow</CredixButton>
+          <PopupButton id="k1mIGrFE" className="credix-button--typeform platform-component--item-button">
+            Borrow
+          </PopupButton>
         </div>
         <div className="h-flex-column platform-component--item-column">
           <span className="platform-component--item-title">Liquidity Providers</span>
           <span className="platform-component--item-text">(Retail) investors invest in the liquidity pool, which diversifies across deals. Stable return and flexibility to withdraw at any moment.</span>
-          <CredixButton className="platform-component--item-button">Invest</CredixButton>
+          <PopupButton id="k1mIGrFE" className="credix-button--typeform platform-component--item-button">
+            Invest
+          </PopupButton>
         </div>
         <div className="h-flex-column platform-component--item-column">
           <span className="platform-component--item-title">Underwriters</span>
           <span className="platform-component--item-text">Accredited investors (HNI, PE, funds...) who get to choose the deal/credit to invest in, get higher returns and better risk analysis.</span>
-          <CredixButton className="platform-component--item-button">Invest</CredixButton>
+          <PopupButton id="k1mIGrFE" className="credix-button--typeform platform-component--item-button">
+            Invest
+          </PopupButton>
         </div>
       </div>
     </div>

@@ -9,13 +9,12 @@ export const AdvisorsComponent = () => {
         <span className="advisors-component--subtitle">Our Advisors</span>
       </div>
       <div className="h-flex-row h-flex-row--space-between advisors-component--persons">
-        {/*<div className="h-flex-row h-flex-row--no-wrap advisors-component--persons--sub-row">*/}
         <div className="h-flex-column">
           <PersonComponent
             name={'Chike Ukaegbu'}
             image={<StaticImage src={'../assets/people/Ukaegbu.jpeg'} alt={'Chike Ukaegbu'}/>}
-            linkedInUrl={'https://google.be'}
-            twitterUrl={'https://google.be'}
+            linkedInUrl={'https://www.linkedin.com/in/chikeukaegbu/'}
+            twitterUrl={'https://twitter.com/chikeukaegbu'}
             title={
               <span>Head crypto <br/> emerging markets @ VISA</span>
             }
@@ -26,22 +25,20 @@ export const AdvisorsComponent = () => {
           <PersonComponent
             name={'Joao Bezzerra'}
             image={<StaticImage src={'../assets/people/Bezzerra.png'} alt={'Joao Bezzerra'}/>}
-            linkedInUrl={'https://google.be'}
-            twitterUrl={'https://google.be'}
+            linkedInUrl={'https://www.linkedin.com/in/jo%C3%A3o-bezerra-leite-77b94924/'}
+            twitterUrl={'https://twitter.com/bezerraj10'}
             title={
-              <span>FORMEr MANAGING DIRECTOR <br/> & CTO @ ITAU</span>
+              <span>FORMER MANAGING DIRECTOR <br/> & CTO @ ITAU</span>
             }
             advisor={true}
           />
         </div>
-        {/*</div>*/}
-        {/*<div className="h-flex-row h-flex-row--no-wrap advisors-component--persons--sub-row">*/}
         <div className="h-flex-column">
           <PersonComponent
             name={'Reginald de Wasseige'}
             image={<StaticImage src={'../assets/people/De_Wasseige.png'} alt={'Reginald de Wasseige'}/>}
-            linkedInUrl={'https://google.be'}
-            twitterUrl={'https://google.be'}
+            linkedInUrl={'https://www.linkedin.com/in/reginald-de-wasseige-747ab528/'}
+            twitterUrl={''}
             title={
               <span>INVESTOR <br/>@ AUGMENTUM</span>
             }
@@ -52,8 +49,8 @@ export const AdvisorsComponent = () => {
           <PersonComponent
             name={'Kenneth Bok'}
             image={<StaticImage src={'../assets/people/Bok.png'} alt={'Kenneth Bok'}/>}
-            linkedInUrl={'https://google.be'}
-            twitterUrl={'https://google.be'}
+            linkedInUrl={'https://www.linkedin.com/in/kenbok/'}
+            twitterUrl={'https://twitter.com/BokKenneth'}
             title={
               <span>MD BLOCKS <br/> EX GOLDMAN SACHS</span>
             }

@@ -65,4 +65,28 @@
       line-height: $LINE_HEIGHT_SMALL;
     }
   }
+
+  &--mailchimp-row {
+    margin-top: auto;
+    margin-bottom: 20px;
+  }
+
+  &--mailchimp-sub {
+    display: flex;
+    justify-content: center;
+    input {
+      width: 90%;
+      height: 35px;
+    }
+
+    &--logo-row {
+      display: flex;
+      justify-content: flex-end;
+
+      .footer-component--mailchimp-sub--logo{
+        position: absolute;
+        transform: translateY(12px) translateX(-35px);
+      }
+    }
+  }
 }

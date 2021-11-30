@@ -21,8 +21,8 @@ export const CoreTeamComponent = () => {
                 <PersonComponent
                   name={'Thomas Bohner'}
                   image={<StaticImage src={'../assets/people/Thomas.jpeg'} alt={'Thomas Bohner'}/>}
-                  linkedInUrl={'https://google.be'}
-                  twitterUrl={'https://google.be'}
+                  linkedInUrl={'https://www.linkedin.com/in/thomas-bohner-a0165597/'}
+                  twitterUrl={'https://twitter.com/t_bohner'}
                   title={'FOUNDER, CEO'}
                 />
               </div>
@@ -30,8 +30,8 @@ export const CoreTeamComponent = () => {
                 <PersonComponent
                   name={'Maxim Piessen'}
                   image={<StaticImage src={'../assets/people/Maxim.jpeg'} alt={'Maxim Piessen'}/>}
-                  linkedInUrl={'https://google.be'}
-                  twitterUrl={'https://google.be'}
+                  linkedInUrl={'https://www.linkedin.com/in/maximpiessen/'}
+                  twitterUrl={'https://twitter.com/PiessenMaxim'}
                   title={'CO-FOUNDER, CTO'}
                 />
               </div>
@@ -39,8 +39,8 @@ export const CoreTeamComponent = () => {
                 <PersonComponent
                   name={'Chaim Finizola'}
                   image={<StaticImage src={'../assets/people/Chaim.jpeg'} alt={'Chaim Finizola'}/>}
-                  linkedInUrl={'https://google.be'}
-                  twitterUrl={'https://google.be'}
+                  linkedInUrl={'https://www.linkedin.com/in/chaimfinizola/'}
+                  twitterUrl={'https://twitter.com/chaim_fes'}
                   title={'CO-FOUNDER, CGO'}
                 />
               </div>

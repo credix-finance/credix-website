@@ -1,11 +1,12 @@
 import { Button } from '@mui/material';
 import * as React from 'react';
+import { openInNewTab } from '../../../pages';
 
 interface IProps {
   children: string
-  onClick?: () => void
   className?: string;
+  url?: string
 }
 
-export const CredixButton = ({ children, onClick, className }: IProps) =>
-  <Button variant="contained" className={`credix-button ${className}`} onClick={onClick}>{children}</Button>
+export const CredixButton = ({ children, className, url= '' }: IProps) =>
+  <Button variant="contained" className={`credix-button ${className}`} onClick={() => openInNewTab(url)}>{children}</Button>

@@ -60,7 +60,7 @@
     }
   }
 
-  &--button.MuiButton-root {
+  &--button {
     width: $BUTTON_WIDTH_NORMAL;
 
     @include mobile {

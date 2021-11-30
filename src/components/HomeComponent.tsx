@@ -11,7 +11,7 @@ export const HomeComponent = () => {
         <div className="h-flex-column">
           <span className="cta-block--title">Credit investing<br/> democratized</span>
           <span className="cta-block--text">Be part of the new decentralized credit marketplace connecting investors with FinTechs in emerging markets.</span>
-          <CredixButton className="cta-block--button">Join Discord</CredixButton>
+          <CredixButton className="cta-block--button" url={'https://discord.gg/5Ab8b8ueGs'}>Join Discord</CredixButton>
         </div>
       </div>
     </div>

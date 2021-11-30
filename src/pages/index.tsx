@@ -20,6 +20,14 @@ export interface IWidthProps {
   isTablet?: boolean;
 }
 
+/**
+ * Helper Function
+ */
+export const openInNewTab = (url: string): void => {
+  const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+  if (newWindow) newWindow.opener = null
+}
+
 const IndexPage = () => {
   const [width, setWidth] = useState<number>();
   const mobileWidth = 900;
