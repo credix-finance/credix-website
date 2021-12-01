@@ -41,7 +41,6 @@
     font-size: $FONT_SIZE_SMALL;
     font-family: $FONT_FAMILY_SECOND;
     text-transform: uppercase;
-    opacity: 0.3;
 
     @include mobile {
       font-size: $FONT_SIZE_XSMALL;
@@ -67,6 +66,7 @@
       flex-flow: column;
       align-items: flex-start;
       margin-left: $UNIT * 3;
+      justify-content: space-between;
     }
   }
 
@@ -86,7 +86,8 @@
   }
 
   &--social-button {
-    @extend .h-margin;
+    margin: 10px 10px 0px;
+
 
     @include mobile {
       margin: 0;

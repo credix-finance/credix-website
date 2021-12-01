@@ -39,6 +39,7 @@
 
   &--persons {
     flex-flow: row;
+    justify-content: space-between;
 
     @include mobile {
       flex-flow: column;

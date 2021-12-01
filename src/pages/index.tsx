@@ -34,8 +34,11 @@ const IndexPage = () => {
   const mobileWidth = 900;
   const tabletWidth = 1500;
 
-  ReactGA.initialize('G-2WM77E6YNH');
-  ReactGA.pageview(window.location.pathname + window.location.search);
+  useEffect(() => {
+    ReactGA.initialize('G-2WM77E6YNH');
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, [])
+
 
   useEffect(() => {
     setWidth(window.innerWidth);

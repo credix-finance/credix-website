@@ -1,9 +1,9 @@
 .cta-team-component {
-  min-height: 264px;
+  min-height: 350px;
   background: radial-gradient(43.21% 50% at 47.57% 50%, #1F1F1F 0%, #000000 100%);
 
-  padding-left: $GLOBAL_PADDING_LEFT * 3;
-  padding-right: $GLOBAL_PADDING_RIGHT * 3;
+  padding-left: $GLOBAL_PADDING_LEFT;
+  padding-right: $GLOBAL_PADDING_RIGHT;
 
   @include mobile {
     padding-left: $GLOBAL_PADDING_MOBILE_LEFT;
