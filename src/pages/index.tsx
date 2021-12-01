@@ -109,6 +109,10 @@ const IndexPage = () => {
             content: 'Credix - Credit investing democratized'
           },
           {
+            name: 'twitter:card',
+            content: 'summary_large_image'
+          },
+          {
             name: 'theme-color',
             content: '#1F1F1F'
           }
