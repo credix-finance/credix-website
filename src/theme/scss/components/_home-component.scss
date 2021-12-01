@@ -14,6 +14,7 @@
     justify-content: center;
     margin-top: auto;
     margin-bottom: 80px;
+    z-index: $Z_INDEX_ARROW;
   }
 
   &--arrow {
