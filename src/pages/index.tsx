@@ -98,7 +98,7 @@ const IndexPage = () => {
           },
           {
             name: 'twitter:image',
-            content: twitter_preview
+            content: preview
           },
           {
             name: 'twitter:description',
