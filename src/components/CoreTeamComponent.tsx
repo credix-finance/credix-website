@@ -9,7 +9,7 @@ export const CoreTeamComponent = () => {
       <div className="h-flex-column core-team-component">
         <div className="h-flex-row core-team-component--title-row">
           <div className="h-flex-column core-team-component--title-column">
-            <span className="sub-title">The core <br/> Team</span>
+            <span className="sub-title">The core <br/> team</span>
             <span className="core-team-component--who-we-are">
               <SvgIcon icon={SVG_ICONS.LINE_2} color={SVG_COLORS.WHITE} className="core-team-component--who-we-are--line"/>
               <span className="core-team-component--who-we-are--text">Who we are</span>

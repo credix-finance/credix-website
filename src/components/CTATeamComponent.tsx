@@ -6,7 +6,7 @@ export const CTATeamComponent = () => {
     <div className="h-flex-column cta-team-component">
       <div className="h-flex-row h-flex-row--space-between cta-team-component--row">
         <span className="h-flex-column">
-          <span className="cta-team-component--title">Join The Team</span>
+          <span className="cta-team-component--title">Join the team</span>
           <span className="cta-team-component--text">
           Become part of the team and help us build the debt capital markets <br/> infrastructure of the future.
           </span>

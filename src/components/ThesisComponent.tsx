@@ -21,7 +21,7 @@ export const ThesisComponent = ({ isMobile }: IWidthProps) => {
             }
           </div>
           <div className="h-flex-column thesis-component--column--row-mobile">
-            <span className="thesis-component--sub-title">Credit Investing</span>
+            <span className="thesis-component--sub-title">Credit investing</span>
             <span className="thesis-component--text">Our borrowers provide credit investment opportunities that are currently not accessible to (retail) investors</span>
           </div>
         </div>
@@ -36,7 +36,7 @@ export const ThesisComponent = ({ isMobile }: IWidthProps) => {
             }
           </div>
           <div className="h-flex-column thesis-component--column--row-mobile">
-            <span className="thesis-component--sub-title">The Bridge</span>
+            <span className="thesis-component--sub-title">The bridge</span>
             <span className="thesis-component--text">Investment opportunities are connected to real-world assets,  not linked to crypto volatility</span>
           </div>
         </div>

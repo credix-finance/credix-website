@@ -7,7 +7,7 @@ export const VisionComponent = ({ isTablet }: IWidthProps) => {
   return (
     <div className="h-flex-column vision-component">
       <div className="h-flex-row">
-        <span className="sub-title">Our Vision</span>
+        <span className="sub-title">Our vision</span>
       </div>
       <div className="h-flex-row h-flex-row--space-between vision-component--text-row">
         <div className="vision-component--left-text">
