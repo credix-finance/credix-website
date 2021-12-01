@@ -89,6 +89,10 @@ const IndexPage = () => {
             content: 'Credix - Credit investing democratized'
           },
           {
+            property: 'og:description',
+            content: 'CREDIX is a decentralized credit platform that gives borrowers in emerging countries access to previously untapped capital.'
+          },
+          {
             property: 'og:url',
             content: 'https://credix.finance'
           },
