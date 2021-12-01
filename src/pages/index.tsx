@@ -14,6 +14,7 @@ import { FooterComponent } from '../components/FooterComponent';
 import { useEffect, useState } from 'react';
 import Helmet from 'react-helmet'
 import fav from '../../static/favicon-32x32.png'
+import preview from '../../static/preview_large.png'
 import ReactGA from 'react-ga';
 
 export interface IWidthProps {
@@ -79,6 +80,8 @@ const IndexPage = () => {
         <title lang="en">Credix</title>
         <html lang="en"/>
       </Helmet>
+      <meta property="og:url" content="https://credix.finance"/>
+      <meta property="og:image" content={preview}/>
       <HeaderComponent isMobile={!!width && width < mobileWidth}/>
       <HomeComponent/>
       <CTAComponent/>
