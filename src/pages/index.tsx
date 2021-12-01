@@ -103,6 +103,10 @@ const IndexPage = () => {
           {
             name: 'twitter:title',
             content: 'Credix - Credit investing democratized'
+          },
+          {
+            name: 'theme-color',
+            content: '#1F1F1F'
           }
         ]}
       >
