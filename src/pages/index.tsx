@@ -15,6 +15,7 @@ import { useEffect, useState } from 'react';
 import Helmet from 'react-helmet'
 import fav from '../../static/favicon-32x32.png'
 import preview from '../../static/preview_large.png'
+import twitter_preview from '../../static/twitter.png'
 import ReactGA from 'react-ga';
 
 export interface IWidthProps {
@@ -78,6 +79,30 @@ const IndexPage = () => {
           {
             property: 'og:image',
             content: preview
+          },
+          {
+            property: 'og:image:alt',
+            content: 'Credix - Credit investing democratized'
+          },
+          {
+            property: 'og:title',
+            content: 'Credix - Credit investing democratized'
+          },
+          {
+            property: 'og:url',
+            content: 'https://credix.finance'
+          },
+          {
+            name: 'twitter:image',
+            content: twitter_preview
+          },
+          {
+            name: 'twitter:description',
+            content: 'CREDIX is a decentralized credit platform that gives borrowers in emerging countries access to previously untapped capital.'
+          },
+          {
+            name: 'twitter:title',
+            content: 'Credix - Credit investing democratized'
           }
         ]}
       >
