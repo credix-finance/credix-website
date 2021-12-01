@@ -36,7 +36,7 @@ export const FooterComponent = () => {
         </div>
         <div className="h-flex-column footer-component--column">
           <span className="footer-component--footer--text">
-            Join our mailing list to be updates about our roadmap.
+            Join our mailing list and stay in the loop.
           </span>
           <div id="mc_embed_signup" className="footer-component--mailchimp-row">
             <form action="https://finance.us20.list-manage.com/subscribe/post?u=6501024066e1753c2aa2d692e&amp;id=e5165ece3c"
