@@ -97,15 +97,19 @@ const IndexPage = () => {
             content: 'https://credix.finance'
           },
           {
-            name: 'twitter:image',
+            property: 'og:type',
+            content: 'website'
+          },
+          {
+            property: 'twitter:image',
             content: preview
           },
           {
-            name: 'twitter:description',
+            property: 'twitter:description',
             content: 'CREDIX is a decentralized credit platform that gives borrowers in emerging countries access to previously untapped capital.'
           },
           {
-            name: 'twitter:title',
+            property: 'twitter:title',
             content: 'Credix - Credit investing democratized'
           },
           {
