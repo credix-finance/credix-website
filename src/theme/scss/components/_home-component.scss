@@ -60,7 +60,7 @@
     }
 
     &--mobile {
-      position: absolute;
+      position: absolute !important;
       filter: invert(100%);
       width: 100%;
       align-self: center;
