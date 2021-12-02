@@ -1,13 +1,20 @@
 import * as React from 'react'
 import { CredixButton } from './shared/buttons/CredixButton';
 import SvgIcon, { SVG_COLORS, SVG_ICONS } from './shared/svg-icon/SvgIcon';
+import { StaticImage } from 'gatsby-plugin-image';
+import { IWidthProps } from '../pages';
 
 
-export const HomeComponent = () => {
+export const HomeComponent = ({ isMobile }: IWidthProps) => {
 
   return (
     <div className="h-flex-column home-component">
-      <SvgIcon className="home-component--background-shape" icon={SVG_ICONS.HOME_BACKGROUND_SHAPE} color={SVG_COLORS.BLACK}/>
+      {
+        isMobile ?
+          <StaticImage className="home-component--background-shape--mobile" src="../assets/shapes/home-background-shape.png" alt="background"/>
+          :
+          <SvgIcon className="home-component--background-shape" icon={SVG_ICONS.HOME_BACKGROUND_SHAPE} color={SVG_COLORS.BLACK}/>
+      }
       <div className="h-flex-row cta-block">
         <div className="h-flex-column">
           <h1 className="cta-block--title">Credit investing<br/> democratized</h1>
