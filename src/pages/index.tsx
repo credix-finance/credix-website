@@ -15,8 +15,6 @@ import { useEffect, useState } from 'react';
 import Helmet from 'react-helmet'
 import fav from '../../static/favicon-32x32.png'
 import preview from '../../static/preview_large.png'
-import twitter_preview from '../../static/twitter.png'
-import ReactGA from 'react-ga';
 
 export interface IWidthProps {
   isMobile?: boolean;
@@ -35,12 +33,6 @@ const IndexPage = () => {
   const [width, setWidth] = useState<number>();
   const mobileWidth = 900;
   const tabletWidth = 1500;
-
-  useEffect(() => {
-    ReactGA.initialize('G-2WM77E6YNH');
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, [])
-
 
   useEffect(() => {
     setWidth(window.innerWidth);
