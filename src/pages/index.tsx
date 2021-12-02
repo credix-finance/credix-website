@@ -134,7 +134,7 @@ const IndexPage = () => {
       <CTATeamComponent/>
       <CoreTeamComponent/>
       <AdvisorsComponent/>
-      <BackedByComponent isMobile={!!width && width < mobileWidth}/>
+      {/*<BackedByComponent isMobile={!!width && width < mobileWidth}/>*/}
       <FooterComponent/>
     </main>
   )
