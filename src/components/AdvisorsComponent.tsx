@@ -9,7 +9,7 @@ export const AdvisorsComponent = () => {
         <span className="advisors-component--subtitle">Our Advisors</span>
       </div>
       <div className="h-flex-row h-flex-row--space-between advisors-component--persons">
-        <div className="h-flex-column">
+        <div className="h-flex-column advisors-component--person">
           <PersonComponent
             name={'Chike Ukaegbu'}
             image={<StaticImage src={'../assets/people/Ukaegbu.jpeg'} alt={'Chike Ukaegbu'}/>}
@@ -21,7 +21,7 @@ export const AdvisorsComponent = () => {
             advisor={true}
           />
         </div>
-        <div className="h-flex-column">
+        <div className="h-flex-column advisors-component--person">
           <PersonComponent
             name={'Joao Bezzerra'}
             image={<StaticImage src={'../assets/people/Bezzerra.png'} alt={'Joao Bezzerra'}/>}
@@ -33,7 +33,7 @@ export const AdvisorsComponent = () => {
             advisor={true}
           />
         </div>
-        <div className="h-flex-column">
+        <div className="h-flex-column advisors-component--person">
           <PersonComponent
             name={'Reginald de Wasseige'}
             image={<StaticImage src={'../assets/people/De_Wasseige.png'} alt={'Reginald de Wasseige'}/>}
@@ -45,7 +45,7 @@ export const AdvisorsComponent = () => {
             advisor={true}
           />
         </div>
-        <div className="h-flex-column">
+        <div className="h-flex-column advisors-component--person">
           <PersonComponent
             name={'Kenneth Bok'}
             image={<StaticImage src={'../assets/people/Bok.png'} alt={'Kenneth Bok'}/>}

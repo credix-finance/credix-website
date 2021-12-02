@@ -12,16 +12,32 @@ export const BackedByComponent = ({ isMobile }: IWidthProps) => {
         !isMobile ?
           <>
             <div className="h-flex-row h-flex-row--space-between backed-by-component--logo-row">
-              <StaticImage src={'../assets/logos/cumberland.png'} alt={'cumberland'} className="backed-by-component--logo"/>
-              <StaticImage src={'../assets/logos/parafi.png'} alt={'parafi'} className="backed-by-component--logo"/>
-              <StaticImage src={'../assets/logos/fuse.png'} alt={'fuse'} className="backed-by-component--logo"/>
-              <StaticImage src={'../assets/logos/mgnr.png'} alt={'mgnr'} className="backed-by-component--logo"/>
+              <div className="h-flex-column backed-by-component--logo-column">
+                <StaticImage src={'../assets/logos/cumberland.png'} alt={'cumberland'} className="backed-by-component--logo--cumberland"/>
+              </div>
+              <div className="h-flex-column backed-by-component--logo-column">
+                <StaticImage src={'../assets/logos/parafi.png'} alt={'parafi'} className="backed-by-component--logo--parafi"/>
+              </div>
+              <div className="h-flex-column backed-by-component--logo-column">
+                <StaticImage src={'../assets/logos/fuse.png'} alt={'fuse'} className="backed-by-component--logo--fuse"/>
+              </div>
+              <div className="h-flex-column backed-by-component--logo-column">
+                <StaticImage src={'../assets/logos/mgnr.png'} alt={'mgnr'} className="backed-by-component--logo--mgnr"/>
+              </div>
             </div>
             <div className="h-flex-row h-flex-row--space-between backed-by-component--logo-row">
-              <StaticImage src={'../assets/logos/petrock.png'} alt={'petrock'} className="backed-by-component--logo"/>
-              <StaticImage src={'../assets/logos/brz.png'} alt={'brz'} className="backed-by-component--logo"/>
-              <StaticImage src={'../assets/logos/share.png'} alt={'share'} className="backed-by-component--logo"/>
-              <StaticImage src={'../assets/logos/solana.png'} alt={'solana'} className="backed-by-component--logo--solana"/>
+              <div className="h-flex-column backed-by-component--logo-column">
+                <StaticImage src={'../assets/logos/petrock.png'} alt={'petrock'} className="backed-by-component--logo--petrock"/>
+              </div>
+              <div className="h-flex-column backed-by-component--logo-column">
+                <StaticImage src={'../assets/logos/brz.png'} alt={'brz'} className="backed-by-component--logo--brz"/>
+              </div>
+              <div className="h-flex-column backed-by-component--logo-column">
+                <StaticImage src={'../assets/logos/share.png'} alt={'share'} className="backed-by-component--logo--share"/>
+              </div>
+              <div className="h-flex-column backed-by-component--logo-column">
+                <StaticImage src={'../assets/logos/solana.png'} alt={'solana'} className="backed-by-component--logo--solana"/>
+              </div>
             </div>
           </>
           :

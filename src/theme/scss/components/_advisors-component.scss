@@ -18,6 +18,12 @@
     }
   }
 
+  &--person {
+    @include tablet {
+      flex-basis: 40%;
+    }
+  }
+
   &--persons {
     margin-top: 30px;
     margin-bottom: 80px; 
