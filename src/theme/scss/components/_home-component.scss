@@ -56,8 +56,17 @@
     z-index: $Z_INDEX_BACKGROUND_SHAPE;
 
     @include mobile {
-      transform: scale(.7);
-      transform-origin: top right;
+      display: none;
+    }
+
+    &--mobile {
+      position: absolute;
+      filter: invert(100%);
+      width: 100%;
+      align-self: center;
+      top: 30px;
+      display: initial;
+      height: 80%;
     }
   }
 }

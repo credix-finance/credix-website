@@ -126,7 +126,7 @@ const IndexPage = () => {
         <html lang="en"/>
       </Helmet>
       <HeaderComponent isMobile={!!width && width < mobileWidth}/>
-      <HomeComponent/>
+      <HomeComponent isMobile={!!width && width < mobileWidth}/>
       <CTAComponent/>
       <ThesisComponent isMobile={!!width && width < mobileWidth}/>
       <PlatformComponent/>
