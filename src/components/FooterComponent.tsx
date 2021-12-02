@@ -46,7 +46,7 @@ export const FooterComponent = () => {
                 <StaticImage className="footer-component--mailchimp-sub--logo" src={'../assets/shapes/Send.png'} alt={'Send'}/>
               </div>
               <div id="mc_embed_signup_scroll" className="footer-component--mailchimp-sub">
-                <input type="email" name="EMAIL" className="email" id="mce-EMAIL" placeholder="  Fill out your email and press enter" required/>
+                <input type="email" name="EMAIL" className="email" id="mce-EMAIL" placeholder="  email address & enter" required/>
                 <div style={{ position: 'absolute', left: '-5000px;', visibility: 'hidden' }} aria-hidden="true">
                   <input type="text" name="b_6501024066e1753c2aa2d692e_e5165ece3c" tabIndex={-1} value=""/>
                 </div>
