@@ -5,7 +5,7 @@
   position: relative;
 
   @include mobile {
-    height: 850px;
+    height: 800px;
   }
 
   &--shape {
@@ -27,10 +27,22 @@
     max-width: 750px;
     flex-flow: row;
     z-index: $Z_INDEX_NORMAL;
+
+    &-title {
+      align-self: flex-start;
+      padding-left: $GLOBAL_PADDING_LEFT;
+      padding-right: $GLOBAL_PADDING_RIGHT;
+
+      @include mobile {
+        padding-left: $GLOBAL_PADDING_MOBILE_LEFT;
+        padding-right: $GLOBAL_PADDING_MOBILE_RIGHT;
+      }
+    }
   }
 
   &--sub-shape {
     width: 175px;
+    padding-left: 0px;
 
     @include mobile {
       width: 110px;

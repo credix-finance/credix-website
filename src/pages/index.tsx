@@ -123,7 +123,7 @@ const IndexPage = () => {
       <CTAComponent/>
       <ThesisComponent isMobile={!!width && width < mobileWidth}/>
       <PlatformComponent/>
-      {/*<HowItWorksComponent/>*/}
+      <HowItWorksComponent/>
       <VisionComponent isMobile={!!width && width < mobileWidth} isTablet={!!width && width < tabletWidth}/>
       <CTATeamComponent/>
       <CoreTeamComponent/>

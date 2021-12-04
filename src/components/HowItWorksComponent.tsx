@@ -5,7 +5,7 @@ export const HowItWorksComponent = () => {
   return (
     <div className="h-flex-column h-flex-column--align-center how-it-works-component">
       <StaticImage className="how-it-works-component--shape" src="../assets/shapes/how-it-works.png" alt="how it works"/>
-      <div className="h-flex-row">
+      <div className="h-flex-row how-it-works-component--row-title">
         <span className="sub-title">How it works</span>
       </div>
       <div className="h-flex-row how-it-works-component--row">
