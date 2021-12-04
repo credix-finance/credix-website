@@ -132,6 +132,7 @@ html{
   font-size: $FONT_SIZE_LARGE;
   line-height: $LINE_HEIGHT_XLARGE;
   color: $FONT_SECOND_COLOR;
+  z-index: $Z_INDEX_NORMAL;
 
   @include mobile {
     font-size: $FONT_SIZE_XXXNORMAL;

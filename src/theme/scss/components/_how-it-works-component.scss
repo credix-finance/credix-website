@@ -1,0 +1,75 @@
+.how-it-works-component {
+  height: 1181px;
+  padding-top: $UNIT * 3;
+  background: linear-gradient(180deg, #000000 0%, #1F1F1F 100%);
+  position: relative;
+
+  @include mobile {
+    height: 850px;
+  }
+
+  &--shape {
+    position: absolute !important;
+    width: 1150px;
+    height: 1024px;
+    right: 0;
+    z-index: $Z_INDEX_BACKGROUND_SHAPE;
+
+    @include mobile {
+      width: 600px;
+      height: 577px;
+      transform: translateX(300px);
+    }
+  }
+
+  &--row {
+    margin-top: $UNIT * 5;
+    max-width: 750px;
+    flex-flow: row;
+    z-index: $Z_INDEX_NORMAL;
+  }
+
+  &--sub-shape {
+    width: 175px;
+
+    @include mobile {
+      width: 110px;
+    }
+  }
+
+  &--sub-title {
+    margin-top: 24px;
+    margin-left: 32px;
+    font-weight: $FONT_WEIGHT_XNORMAL;
+    font-size: $FONT_SIZE_XXXNORMAL;
+    line-height: $LINE_HEIGHT_NORMAL;
+    font-family: $FONT_FAMILY_SECOND;
+
+    @include mobile {
+      font-weight: $FONT_WEIGHT_BOLD;
+      font-size: $FONT_SIZE_SMALL;
+      line-height: $LINE_HEIGHT_SMALL;
+      font-family: $FONT_FAMILY_SECOND;
+      margin-left: -35px;
+      text-transform: uppercase;
+    }
+  }
+
+  &--text {
+    margin-top: 18px;
+    margin-left: 32px;
+    font-family: $FONT_FAMILY_SECOND;
+    font-weight: $FONT_WEIGHT_NORMAL;
+    font-size: $FONT_SIZE_NORMAL;
+    line-height: $LINE_HEIGHT_SSNORMAL;
+
+    @include mobile {
+      font-weight: $FONT_WEIGHT_NORMAL;
+      font-size: $FONT_SIZE_XSMALL;
+      line-height: $LINE_HEIGHT_XSMALL;
+      font-family: $FONT_FAMILY_SECOND;
+      margin-left: -35px;
+      padding-right: 10px;
+    }
+  }
+}
