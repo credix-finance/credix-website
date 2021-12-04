@@ -15,6 +15,7 @@ import { useEffect, useState } from 'react';
 import Helmet from 'react-helmet'
 import fav from '../../static/favicon-32x32.png'
 import preview from '../../static/preview_large.png'
+import { HowItWorksComponent } from '../components/HowItWorksComponent';
 
 export interface IWidthProps {
   isMobile?: boolean;
@@ -122,6 +123,7 @@ const IndexPage = () => {
       <CTAComponent/>
       <ThesisComponent isMobile={!!width && width < mobileWidth}/>
       <PlatformComponent/>
+      <HowItWorksComponent/>
       <VisionComponent isMobile={!!width && width < mobileWidth} isTablet={!!width && width < tabletWidth}/>
       <CTATeamComponent/>
       <CoreTeamComponent/>
