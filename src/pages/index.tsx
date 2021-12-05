@@ -16,6 +16,7 @@ import Helmet from 'react-helmet'
 import fav from '../../static/favicon-32x32.png'
 import preview from '../../static/preview_large.png'
 import { HowItWorksComponent } from '../components/HowItWorksComponent';
+import { FAQComponent } from '../components/FAQComponent';
 
 export interface IWidthProps {
   isMobile?: boolean;
@@ -129,6 +130,7 @@ const IndexPage = () => {
       <CoreTeamComponent/>
       <AdvisorsComponent/>
       {/*<BackedByComponent isMobile={!!width && width < mobileWidth}/>*/}
+      {/*<FAQComponent/>*/}
       <FooterComponent/>
     </main>
   )

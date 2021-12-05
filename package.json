@@ -19,6 +19,7 @@
   "dependencies": {
     "@emotion/react": "^11.6.0",
     "@emotion/styled": "^11.6.0",
+    "@mui/icons-material": "^5.2.0",
     "@mui/material": "^5.2.0",
     "@typeform/embed-react": "^1.2.1",
     "gatsby": "^4.2.0",
