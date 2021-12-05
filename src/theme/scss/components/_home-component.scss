@@ -51,7 +51,7 @@
   &--background-shape {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 10px;
     transform: translateY(-10px);
     z-index: $Z_INDEX_BACKGROUND_SHAPE;
 

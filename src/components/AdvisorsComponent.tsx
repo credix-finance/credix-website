@@ -1,8 +1,9 @@
 import React from 'react';
 import { PersonComponent } from './shared/person/PersonComponent';
 import { StaticImage } from 'gatsby-plugin-image';
+import { IComponentProps } from '../pages';
 
-export const AdvisorsComponent = () => {
+export const AdvisorsComponent = ({ isLightTheme }: IComponentProps) => {
   return (
     <div className="h-flex-column advisors-component">
       <div className="h-flex-row">
@@ -19,6 +20,7 @@ export const AdvisorsComponent = () => {
               <span>Head crypto <br/> emerging markets @ VISA</span>
             }
             advisor={true}
+            isLightTheme={isLightTheme}
           />
         </div>
         <div className="h-flex-column advisors-component--person">
@@ -31,6 +33,7 @@ export const AdvisorsComponent = () => {
               <span>FORMER MANAGING DIRECTOR <br/> & CTO @ ITAU</span>
             }
             advisor={true}
+            isLightTheme={isLightTheme}
           />
         </div>
         <div className="h-flex-column advisors-component--person">
@@ -43,6 +46,7 @@ export const AdvisorsComponent = () => {
               <span>INVESTOR <br/>@ AUGMENTUM</span>
             }
             advisor={true}
+            isLightTheme={isLightTheme}
           />
         </div>
         <div className="h-flex-column advisors-component--person">
@@ -55,9 +59,9 @@ export const AdvisorsComponent = () => {
               <span>MD BLOCKS <br/> EX GOLDMAN SACHS</span>
             }
             advisor={true}
+            isLightTheme={isLightTheme}
           />
         </div>
-        {/*</div>*/}
       </div>
     </div>
   )

@@ -12,7 +12,10 @@ export const HeaderComponent = ({ isMobile, isLightTheme, setIsLightTheme }: ICo
   const headerLinks = () => {
     return (
       <>
-        <Switch {...label} color={'default'} value={isLightTheme} onChange={(e, bool) => setIsLightTheme && setIsLightTheme(bool)}/>
+        <div className="h-flex-row h-flex-row--align-center header-component--link">
+          <span>Light Theme</span>
+          <Switch {...label} color={'default'} value={isLightTheme} onChange={(e, bool) => setIsLightTheme && setIsLightTheme(bool)}/>
+        </div>
         <span className="header-component--link" onClick={() => openInNewTab('https://angel.co/company/credix')}>Join The Team</span>
         <span className="header-component--link" onClick={() => openInNewTab('https://credix.gitbook.io/credix')}>Documentation</span>
         <CredixButton className="header--links--button" url={'https://app.credix.finance/'}>Launch App</CredixButton>

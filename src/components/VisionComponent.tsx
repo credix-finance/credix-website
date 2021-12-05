@@ -3,7 +3,7 @@ import SvgIcon, { SVG_COLORS, SVG_ICONS } from './shared/svg-icon/SvgIcon';
 import { IComponentProps } from '../pages';
 import { StaticImage } from 'gatsby-plugin-image';
 
-export const VisionComponent = ({ isTablet }: IComponentProps) => {
+export const VisionComponent = ({ isTablet, isLightTheme }: IComponentProps) => {
   return (
     <div className="h-flex-column vision-component">
       <div className="h-flex-row">
@@ -30,7 +30,7 @@ export const VisionComponent = ({ isTablet }: IComponentProps) => {
         </div>
         {
           !isTablet &&
-          <SvgIcon icon={SVG_ICONS.LINE_1} color={SVG_COLORS.WHITE}/>
+          <SvgIcon icon={SVG_ICONS.LINE_1} color={isLightTheme ? SVG_COLORS.BLACK : SVG_COLORS.WHITE}/>
         }
         <div className="h-flex-column h-flex-column--align-center vision-component--roadmap-shape-column">
           <StaticImage src={'../assets/shapes/roadmap_2.png'} alt={'roadmap 1'} className="vision-component--roadmap-shape"/>
@@ -38,7 +38,7 @@ export const VisionComponent = ({ isTablet }: IComponentProps) => {
         </div>
         {
           !isTablet &&
-          <SvgIcon icon={SVG_ICONS.LINE_1} color={SVG_COLORS.WHITE}/>
+          <SvgIcon icon={SVG_ICONS.LINE_1} color={isLightTheme ? SVG_COLORS.BLACK : SVG_COLORS.WHITE}/>
         }
         <div className="h-flex-column h-flex-column--align-center vision-component--roadmap-shape-column">
           <StaticImage src={'../assets/shapes/roadmap_3.png'} alt={'roadmap 1'} className="vision-component--roadmap-shape"/>
@@ -46,7 +46,7 @@ export const VisionComponent = ({ isTablet }: IComponentProps) => {
         </div>
         {
           !isTablet &&
-          <SvgIcon icon={SVG_ICONS.LINE_1} color={SVG_COLORS.WHITE}/>
+          <SvgIcon icon={SVG_ICONS.LINE_1} color={isLightTheme ? SVG_COLORS.BLACK : SVG_COLORS.WHITE}/>
         }
         <div className="h-flex-column h-flex-column--align-center vision-component--roadmap-shape-column">
           <StaticImage src={'../assets/shapes/roadmap_4.png'} alt={'roadmap 1'} className="vision-component--roadmap-shape"/>
@@ -54,7 +54,7 @@ export const VisionComponent = ({ isTablet }: IComponentProps) => {
         </div>
         {
           !isTablet &&
-          <SvgIcon icon={SVG_ICONS.LINE_1} color={SVG_COLORS.WHITE}/>
+          <SvgIcon icon={SVG_ICONS.LINE_1} color={isLightTheme ? SVG_COLORS.BLACK : SVG_COLORS.WHITE}/>
         }
         <div className="h-flex-column h-flex-column--align-center vision-component--roadmap-shape-column">
           <StaticImage src={'../assets/shapes/roadmap_5.png'} alt={'roadmap 1'} className="vision-component--roadmap-shape"/>
@@ -62,7 +62,7 @@ export const VisionComponent = ({ isTablet }: IComponentProps) => {
         </div>
         {
           !isTablet &&
-          <SvgIcon icon={SVG_ICONS.LINE_1} color={SVG_COLORS.WHITE}/>
+          <SvgIcon icon={SVG_ICONS.LINE_1} color={isLightTheme ? SVG_COLORS.BLACK : SVG_COLORS.WHITE}/>
         }
         <div className="h-flex-column h-flex-column--align-center vision-component--roadmap-shape-column">
           <StaticImage src={'../assets/shapes/roadmap_6.png'} alt={'roadmap 1'} className="vision-component--roadmap-shape"/>

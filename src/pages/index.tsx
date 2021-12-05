@@ -128,10 +128,10 @@ const IndexPage = () => {
       <ThesisComponent isMobile={!!width && width < mobileWidth}/>
       <PlatformComponent/>
       <HowItWorksComponent/>
-      <VisionComponent isMobile={!!width && width < mobileWidth} isTablet={!!width && width < tabletWidth}/>
+      <VisionComponent isMobile={!!width && width < mobileWidth} isTablet={!!width && width < tabletWidth} isLightTheme={isLightTheme}/>
       <CTATeamComponent/>
-      <CoreTeamComponent/>
-      <AdvisorsComponent/>
+      <CoreTeamComponent isLightTheme={isLightTheme}/>
+      <AdvisorsComponent isLightTheme={isLightTheme}/>
       {/*<BackedByComponent isMobile={!!width && width < mobileWidth}/>*/}
       {/*<FAQComponent/>*/}
       <FooterComponent isLightTheme={isLightTheme}/>
