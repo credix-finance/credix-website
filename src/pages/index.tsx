@@ -11,16 +11,18 @@ import { CoreTeamComponent } from '../components/CoreTeamComponent';
 import { AdvisorsComponent } from '../components/AdvisorsComponent';
 import { BackedByComponent } from '../components/BackedByComponent';
 import { FooterComponent } from '../components/FooterComponent';
-import { useEffect, useState } from 'react';
+import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 import Helmet from 'react-helmet'
 import fav from '../../static/favicon-32x32.png'
 import preview from '../../static/preview_large.png'
 import { HowItWorksComponent } from '../components/HowItWorksComponent';
 import { FAQComponent } from '../components/FAQComponent';
 
-export interface IWidthProps {
+export interface IComponentProps {
   isMobile?: boolean;
   isTablet?: boolean;
+  isLightTheme?: boolean;
+  setIsLightTheme?: Dispatch<SetStateAction<boolean>>;
 }
 
 /**
@@ -33,6 +35,7 @@ export const openInNewTab = (url: string): void => {
 
 const IndexPage = () => {
   const [width, setWidth] = useState<number>();
+  const [isLightTheme, setIsLightTheme] = useState<boolean>(false);
   const mobileWidth = 900;
   const tabletWidth = 1500;
 
@@ -47,7 +50,7 @@ const IndexPage = () => {
   }, []);
 
   return (
-    <main>
+    <main className={`${isLightTheme ? 'light' : 'dark'}`}>
       <Helmet
         titleTemplate="%s - Credit investing democratized"
         link={[
@@ -119,7 +122,7 @@ const IndexPage = () => {
         <title lang="en">Credix</title>
         <html lang="en"/>
       </Helmet>
-      <HeaderComponent isMobile={!!width && width < mobileWidth}/>
+      <HeaderComponent isMobile={!!width && width < mobileWidth} isLightTheme={isLightTheme} setIsLightTheme={setIsLightTheme}/>
       <HomeComponent isMobile={!!width && width < mobileWidth}/>
       <CTAComponent/>
       <ThesisComponent isMobile={!!width && width < mobileWidth}/>
@@ -131,7 +134,7 @@ const IndexPage = () => {
       <AdvisorsComponent/>
       {/*<BackedByComponent isMobile={!!width && width < mobileWidth}/>*/}
       {/*<FAQComponent/>*/}
-      <FooterComponent/>
+      <FooterComponent isLightTheme={isLightTheme}/>
     </main>
   )
 }

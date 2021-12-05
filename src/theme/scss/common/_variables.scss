@@ -7,11 +7,85 @@ $FONT_FAMILY: Poppins, 'Open Sans', sans-serif;
 $FONT_FAMILY_SECOND: 'IBM Plex Mono', monospace;
 
 
-/**
-* Fonts Colors
- */
-$FONT_DEFAULT_COLOR: #F0F0F0;
-$FONT_SECOND_COLOR: #FFF;
+
+.dark {
+  /**
+  * Fonts Colors
+  */
+  --font-default-color: #F0F0F0;
+  --font-second-color: #FFF;
+
+  /**
+  * Colors
+  */
+  --color-black: #000;
+  --color-white: #FFF;
+  --color-grey-background: #18191B;
+  --color-footer-background: #050505;
+
+  /**
+  * Backgrounds
+  */
+  --color-background-header: #1F1F1F;
+  --color-background-home: linear-gradient(180deg, #1F1F1F 0%, #1F1F1F 43.43%, #000000 100%);
+  --color-background-thesis: linear-gradient(180deg, #000000 0%, #1F1F1F 100%);
+  --color-background-platform: linear-gradient(180deg, #1F1F1F 0%, #000000 100%);
+  --color-background-how-it-works: linear-gradient(180deg, #000000 0%, #1F1F1F 100%);
+  --color-background-our-vision: linear-gradient(180deg, #1F1F1F 0%, #000000 100%);
+  --color-background-cta-team: radial-gradient(43.21% 50% at 47.57% 50%, #1F1F1F 0%, #000000 100%);
+  --color-background-core-team: linear-gradient(180deg, #000000 0%, #1F1F1F 100%, #1F1F1F 100%);
+  --color-background-advisors: linear-gradient(180deg, #1F1F1F 0%, #000000 100%);
+
+  /**
+  * images
+   */
+  --color-image-filter: invert(0%);
+
+  /**
+  * Footer borders
+   */
+
+  --color-footer-border: 1px solid rgba(240, 240, 240, 0.35);
+}
+
+.light {
+  /**
+  * Fonts Colors
+  */
+  --font-default-color: #202020;
+  --font-second-color: #000;
+
+  /**
+  * Colors
+  */
+  --color-black: #FFF;
+  --color-white: #000;
+  --color-grey-background: #cfcfd0;
+  --color-footer-background: #FFF;
+
+  /**
+  * Backgrounds
+  */
+  --color-background-header: #FFF;
+  --color-background-home: #FFF;
+  --color-background-thesis: #FFF;
+  --color-background-platform: #FFF;
+  --color-background-how-it-works: #FFF;
+  --color-background-our-vision: #FFF;
+  --color-background-cta-team: #FFF;
+  --color-background-core-team: #FFF;
+  --color-background-advisors: #FFF;
+
+  /**
+  * images
+  */
+  --color-image-filter: invert(100%);
+
+  /**
+  * Footer borders
+  */
+  --color-footer-border: 1px solid rgba(0, 0, 0);
+}
 
 /**
 * Fonts Sizes
@@ -49,14 +123,6 @@ $LINE_HEIGHT_XNORMAL: 36px;
 $LINE_HEIGHT_LARGE: 42px;
 $LINE_HEIGHT_XLARGE: 60px;
 $LINE_HEIGHT_XXLARGE: 80px;
-
-/**
-* Colors
- */
-$COLOR_BLACK: #000;
-$COLOR_WHITE: #fff;
-$COLOR_GREY_BACKGROUND: #18191B;
-$COLOR_FOOTER_BACKGROUND: #050505;
 
 /**
 * UI Elements

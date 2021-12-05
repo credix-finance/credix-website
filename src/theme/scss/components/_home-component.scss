@@ -1,5 +1,5 @@
 .home-component {
-  background: linear-gradient(180deg, #1F1F1F 0%, #1F1F1F 43.43%, #000000 100%);
+  background: var(--color-background-home);
   min-height: 709px;
   height: 80vh;
 
@@ -27,8 +27,8 @@
                     45deg);
     border-left: none;
     border-top: none;
-    border-right: 2px #fff solid;
-    border-bottom: 2px #fff solid;
+    border-right: 2px var(--color-white) solid;
+    border-bottom: 2px var(--color-white) solid;
 
     &::before {
       content: "";
@@ -38,8 +38,8 @@
       margin: -10px 0 0 -10px;
       border-left: none;
       border-top: none;
-      border-right: 1px #fff solid;
-      border-bottom: 1px #fff solid;
+      border-right: 1px var(--color-white) solid;
+      border-bottom: 1px var(--color-white) solid;
       animation-duration: 2s;
       animation-iteration-count: infinite;
       animation-name: arrow;
@@ -79,7 +79,7 @@
     font-size: $FONT_SIZE_XLARGE;
     font-weight: bold;
     line-height: $LINE_HEIGHT_XXLARGE;
-    color: $FONT_SECOND_COLOR;
+    color: var(--font-default-color);
 
     @include mobile {
       font-size: $FONT_SIZE_XSLARGE;
@@ -92,6 +92,7 @@
     font-size: $FONT_SIZE_XNORMAL;
     font-weight: $FONT_WEIGHT_NORMAL;
     line-height: $LINE_HEIGHT_NORMAL;
+    color: var(--font-default-color);
 
     @extend .font-second;
     @extend .h-margin-top;

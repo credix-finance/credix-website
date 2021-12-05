@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
 import SvgIcon, { SVG_COLORS, SVG_ICONS } from './shared/svg-icon/SvgIcon';
 import { CredixButton } from './shared/buttons/CredixButton';
-import { Drawer } from '@mui/material';
-import { IWidthProps, openInNewTab } from '../pages';
+import { Drawer, Switch } from '@mui/material';
+import { IComponentProps, openInNewTab } from '../pages';
 
-export const HeaderComponent = ({ isMobile }: IWidthProps) => {
+const label = { inputProps: { 'aria-label': 'Light Theme' } };
+
+export const HeaderComponent = ({ isMobile, isLightTheme, setIsLightTheme }: IComponentProps) => {
   const [isMenuOpen, setMenuOpen] = useState<boolean>();
 
   const headerLinks = () => {
     return (
       <>
+        <Switch {...label} color={'default'} value={isLightTheme} onChange={(e, bool) => setIsLightTheme && setIsLightTheme(bool)}/>
         <span className="header-component--link" onClick={() => openInNewTab('https://angel.co/company/credix')}>Join The Team</span>
         <span className="header-component--link" onClick={() => openInNewTab('https://credix.gitbook.io/credix')}>Documentation</span>
         <CredixButton className="header--links--button" url={'https://app.credix.finance/'}>Launch App</CredixButton>
@@ -20,7 +23,7 @@ export const HeaderComponent = ({ isMobile }: IWidthProps) => {
   return (
     <div className="h-flex-column header-component">
       <div className="h-flex-row h-flex-row--space-between header">
-        <SvgIcon icon={SVG_ICONS.CREDIX_LOGO} className="h-cursor-pointer" color={SVG_COLORS.WHITE} onClick={() => window.location = '..' as unknown as Location}/>
+        <SvgIcon icon={SVG_ICONS.CREDIX_LOGO} className="h-cursor-pointer" color={isLightTheme ? SVG_COLORS.BLACK : SVG_COLORS.WHITE} onClick={() => window.location = '..' as unknown as Location}/>
         <div className="h-flex-row h-flex-row--space-between h-flex-row--align-baseline header--links">
           {
             isMobile ?

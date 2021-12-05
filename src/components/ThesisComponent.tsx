@@ -1,9 +1,9 @@
 import React from 'react';
 import SvgIcon, { SVG_COLORS, SVG_ICONS } from './shared/svg-icon/SvgIcon';
 import { StaticImage } from 'gatsby-plugin-image';
-import { IWidthProps } from '../pages';
+import { IComponentProps } from '../pages';
 
-export const ThesisComponent = ({ isMobile }: IWidthProps) => {
+export const ThesisComponent = ({ isMobile }: IComponentProps) => {
   return (
     <div className="h-flex-column thesis-component">
       <div className="h-flex-row">

@@ -1,10 +1,12 @@
 .header-component {
-  background-color: #1F1F1F;
+  background-color: var(--color-background-header);
   height: 20vh;
 
   @extend .global-padding-left-right;
 
   &--link {
+    color: var(--font-default-color);
+
     @extend .font-second;
     cursor: pointer;
 
@@ -27,7 +29,7 @@
   &--drawer {
 
     .MuiDrawer-paper {
-      background-color: $COLOR_FOOTER_BACKGROUND;
+      background-color: var(--color-footer-background);
     }
 
     &--links-column {

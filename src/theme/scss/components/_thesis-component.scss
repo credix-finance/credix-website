@@ -1,5 +1,5 @@
 .thesis-component {
-  background: linear-gradient(180deg, #000000 0%, #1F1F1F 100%);
+  background: var(--color-background-thesis);
   min-height: 746px;
 
   @extend .global-padding-left-right;
@@ -39,7 +39,7 @@
   &--title {
     font-weight: $FONT_WEIGHT_BOLD;
     font-size: $FONT_SIZE_LARGE;
-    color: $FONT_SECOND_COLOR;
+    color: var(--font-default-color);
   }
 
   &--column {
@@ -66,6 +66,7 @@
     font-weight: $FONT_WEIGHT_XNORMAL;
     font-size: $FONT_SIZE_XXXNORMAL;
     line-height: $LINE_HEIGHT_NORMAL;
+    color: var(--font-default-color);
 
     @include mobile {
       font-weight: $FONT_WEIGHT_BOLD;
@@ -78,6 +79,7 @@
   &--text {
     @extend .small-text;
     @extend .h-margin-top--double;
+    color: var(--font-default-color);
 
     @include mobile {
       margin-top: $UNIT;
@@ -89,6 +91,7 @@
 
   &--shape {
     padding-right: 15px;
+    filter: var(--color-image-filter);
 
     @include mobile {
       transform: scale(.4);

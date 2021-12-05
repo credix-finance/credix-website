@@ -1,6 +1,7 @@
 .advisors-component {
   min-height: 428px;
-  background: linear-gradient(180deg, #1F1F1F 0%, #000000 100%);
+  background: var(--color-background-advisors);
+  color: var(--font-default-color);
 
   @extend .global-padding-left-right;
 
@@ -26,7 +27,7 @@
 
   &--persons {
     margin-top: 30px;
-    margin-bottom: 80px; 
+    margin-bottom: 80px;
 
     @include mobile {
       flex-flow: column;

@@ -1,5 +1,5 @@
 .platform-component {
-  background: linear-gradient(180deg, #1F1F1F 0%, #000000 100%);
+  background: var(--color-background-platform);
   min-height: 880px;
 
   @extend .global-padding-left-right;
@@ -13,11 +13,13 @@
     font-size: $FONT_SIZE_SMALL;
     text-transform: uppercase;
     font-family: $FONT_FAMILY_SECOND;
+    color: var(--font-default-color);
   }
 
   &--text {
     margin-top: $UNIT * 3;
     max-width: 842px;
+    color: var(--font-default-color);
     @extend .small-text;
 
     @include mobile {
@@ -29,7 +31,7 @@
 
   &--items-row {
     margin-top: 100px;
-    background-color: $COLOR_GREY_BACKGROUND;
+    background-color: var(--color-grey-background);
     height: auto;
 
     @include tablet {
@@ -62,7 +64,7 @@
       margin: 0 0 $UNIT * 3;
       padding: $UNIT * 3;
       height: auto;
-      background-color: $COLOR_GREY_BACKGROUND;
+      background-color: var(--color-grey-background);
     }
   }
 
@@ -71,6 +73,7 @@
     font-size: $FONT_SIZE_XXXNORMAL;
     line-height: $LINE_HEIGHT_LARGE;
     font-family: $FONT-FAMILY_SECOND;
+    color: var(--font-default-color);
 
     @include mobile {
       font-size: $FONT_SIZE_SMALL;
@@ -80,6 +83,7 @@
   }
 
   &--item-text {
+    color: var(--font-default-color);
     @extend .h-margin-top;
     @extend .small-text;
 

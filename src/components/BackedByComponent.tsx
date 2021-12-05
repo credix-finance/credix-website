@@ -1,8 +1,8 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
-import { IWidthProps } from '../pages';
+import { IComponentProps } from '../pages';
 
-export const BackedByComponent = ({ isMobile }: IWidthProps) => {
+export const BackedByComponent = ({ isMobile }: IComponentProps) => {
   return (
     <div className="h-flex-column backed-by-component">
       <div className="h-flex-row h-flex-row--space-between backed-by-component--title-row">

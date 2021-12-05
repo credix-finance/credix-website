@@ -1,6 +1,6 @@
 .vision-component {
   min-height: 1038px;
-  background: linear-gradient(180deg, #1F1F1F 0%, #000000 100%);
+  background: var(--color-background-our-vision);
   padding-top: 53px;
 
   @extend .global-padding-left-right;
@@ -19,6 +19,7 @@
     font-weight: $FONT_WEIGHT_XNORMAL;
     font-size: $FONT_SIZE_XXXNORMAL;
     line-height: $LINE_HEIGHT_NORMAL;
+    color: var(--font-default-color);
 
     @include mobile {
       font-size: $FONT_SIZE_NORMAL;
@@ -30,6 +31,7 @@
     max-width: 592px;
     font-family: $FONT_FAMILY_SECOND;
     line-height: $LINE_HEIGHT_SNORMAL;
+    color: var(--font-default-color);
 
     @include tablet {
       margin-top: $UNIT * 3;
@@ -49,6 +51,7 @@
     font-weight: $FONT_WEIGHT_XXNORMAL;
     font-size: $FONT_SIZE_XXXNORMAL;
     letter-spacing: 1px;
+    color: var(--font-default-color);
 
     @include tablet {
       margin-top: 150px;
@@ -84,6 +87,7 @@
   &--roadmap-shape {
     transform: translateY(10px);
     width: 146px;
+    filter: var(--color-image-filter);
 
     @include mobile {
       transform: scale(.7);
@@ -97,6 +101,7 @@
       letter-spacing: 1px;
       font-weight: $FONT_WEIGHT_BOLD;
       text-align: center;
+      color: var(--font-default-color);
 
       @include tablet {
         text-align: left;
