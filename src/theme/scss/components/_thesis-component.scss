@@ -27,6 +27,7 @@
     transform: scale(1.1);
     margin-left: -$UNIT;
     margin-top: $UNIT * 3;
+    filter: var(--color-image-filter);
   }
 
   &--image-column {

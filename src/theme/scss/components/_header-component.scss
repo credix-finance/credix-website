@@ -18,7 +18,7 @@
 
   &--switch {
     span {
-      font-size: 25px; 
+      font-size: 25px;
     }
   }
 
@@ -34,12 +34,8 @@
 
   &--drawer {
 
-    .MuiDrawer-paper {
-      background-color: var(--color-footer-background);
-    }
-
     &--links-column {
-      color: white;
+      color: var(--font-default-color);
       margin: $UNIT * 3;
     }
   }
