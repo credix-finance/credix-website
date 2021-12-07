@@ -35,6 +35,18 @@ $FONT_FAMILY_SECOND: 'IBM Plex Mono', monospace;
   --color-background-cta-team: radial-gradient(43.21% 50% at 47.57% 50%, #1F1F1F 0%, #000000 100%);
   --color-background-core-team: linear-gradient(180deg, #000000 0%, #1F1F1F 100%, #1F1F1F 100%);
   --color-background-advisors: linear-gradient(180deg, #1F1F1F 0%, #000000 100%);
+  --color-background-mobile: initial;
+
+  /**
+  * box shadow
+   */
+  --box-shadow-mobile: initial;
+
+  /**
+  * header font bold
+   */
+
+  --header-text-mobile-bold: initial;
 
   /**
   * images
@@ -75,6 +87,18 @@ $FONT_FAMILY_SECOND: 'IBM Plex Mono', monospace;
   --color-background-cta-team: #FFF;
   --color-background-core-team: #FFF;
   --color-background-advisors: #FFF;
+  --color-background-mobile: rgba(255, 255, 255, 0.8);
+
+  /**
+  * box shadow
+   */
+  --box-shadow-mobile: 0 0 20px 10px rgba(255, 255, 255, 0.8);
+
+  /**
+  * header font bold
+   */
+  --header-text-mobile-bold: 700;
+
 
   /**
   * images

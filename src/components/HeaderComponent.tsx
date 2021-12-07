@@ -14,7 +14,7 @@ export const HeaderComponent = ({ isMobile, isLightTheme, setIsLightTheme }: ICo
       <>
         <div className="h-flex-row h-flex-row--align-center header-component--link header-component--switch">
           <span>🌚</span>
-          <Switch {...label} color={'default'} value={isLightTheme} onChange={(e, bool) => setIsLightTheme && setIsLightTheme(bool)}/>
+          <Switch {...label} color={'default'} checked={isLightTheme} onChange={(e, bool) => setIsLightTheme && setIsLightTheme(bool)}/>
           <span>🌞</span>
         </div>
         <span className={`header-component--link ${!isLightTheme ? 'h-color-white' : 'h-color-black'}`} onClick={() => openInNewTab('https://angel.co/company/credix')}>Join The Team</span>
