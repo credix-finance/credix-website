@@ -61,6 +61,11 @@
 
     &--button.MuiButton-root {
       width: $BUTTON_WIDTH_NORMAL;
+      color: var(--color-black) !important;
+
+      &:hover {
+        color: var(--color-white) !important;
+      }
     }
   }
 }
