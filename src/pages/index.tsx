@@ -56,7 +56,7 @@ const IndexPage = () => {
         meta={[
           {
             name: 'description',
-            content: 'CREDIX is a decentralized credit platform that gives borrowers in emerging countries access to previously untapped capital.'
+            content: 'CREDIX is a decentralized credit marketplace connecting investors with FinTechs in emerging markets. Learn more about the future of debt financing now.'
           },
           {
             name: 'keywords',
@@ -84,7 +84,7 @@ const IndexPage = () => {
           },
           {
             property: 'og:description',
-            content: 'CREDIX is a decentralized credit platform that gives borrowers in emerging countries access to previously untapped capital.'
+            content: 'CREDIX is a decentralized credit marketplace connecting investors with FinTechs in emerging markets. Learn more about the future of debt financing now.'
           },
           {
             property: 'og:url',
@@ -100,7 +100,7 @@ const IndexPage = () => {
           },
           {
             property: 'twitter:description',
-            content: 'CREDIX is a decentralized credit platform that gives borrowers in emerging countries access to previously untapped capital.'
+            content: 'CREDIX is a decentralized credit marketplace connecting investors with FinTechs in emerging markets. Learn more about the future of debt financing now.'
           },
           {
             property: 'twitter:title',
