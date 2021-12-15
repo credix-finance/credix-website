@@ -1,7 +1,8 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
+import { IWidthProps } from '../pages';
 
-export const HowItWorksComponent = () => {
+export const HowItWorksComponent = ({ isMobile }: IWidthProps) => {
   return (
     <div className="h-flex-column h-flex-column--align-center how-it-works-component">
       <StaticImage className="how-it-works-component--shape" src="../assets/shapes/how-it-works.png" alt="how it works"/>
@@ -10,7 +11,12 @@ export const HowItWorksComponent = () => {
       </div>
       <div className="h-flex-row how-it-works-component--row">
         <div className="h-flex-column">
-          <StaticImage className="how-it-works-component--sub-shape" src="../assets/shapes/how-it-works-1.png" alt="borrower creates deal"/>
+          {
+            isMobile ?
+              <StaticImage className="how-it-works-component--sub-shape" src="../assets/shapes/how-it-works-1_mobile.png" alt="borrower creates deal"/>
+              :
+              <StaticImage className="how-it-works-component--sub-shape" src="../assets/shapes/how-it-works-1.png" alt="borrower creates deal"/>
+          }
         </div>
         <div className="h-flex-column">
           <span className="how-it-works-component--sub-title">
@@ -23,7 +29,12 @@ export const HowItWorksComponent = () => {
       </div>
       <div className="h-flex-row how-it-works-component--row">
         <div className="h-flex-column">
-          <StaticImage className="how-it-works-component--sub-shape" src="../assets/shapes/how-it-works-2.png" alt="borrower creates deal"/>
+          {
+            isMobile ?
+              <StaticImage className="how-it-works-component--sub-shape" src="../assets/shapes/how-it-works-2_mobile.png" alt="borrower creates deal"/>
+              :
+              <StaticImage className="how-it-works-component--sub-shape" src="../assets/shapes/how-it-works-2.png" alt="borrower creates deal"/>
+          }
         </div>
         <div className="h-flex-column">
           <span className="how-it-works-component--sub-title">
@@ -36,7 +47,12 @@ export const HowItWorksComponent = () => {
       </div>
       <div className="h-flex-row how-it-works-component--row">
         <div className="h-flex-column">
-          <StaticImage className="how-it-works-component--sub-shape" src="../assets/shapes/how-it-works-3.png" alt="borrower creates deal"/>
+          {
+            isMobile ?
+              <StaticImage className="how-it-works-component--sub-shape" src="../assets/shapes/how-it-works-3_mobile.png" alt="borrower creates deal"/>
+              :
+              <StaticImage className="how-it-works-component--sub-shape" src="../assets/shapes/how-it-works-3.png" alt="borrower creates deal"/>
+          }
         </div>
         <div className="h-flex-column">
           <span className="how-it-works-component--sub-title">
@@ -49,7 +65,12 @@ export const HowItWorksComponent = () => {
       </div>
       <div className="h-flex-row how-it-works-component--row">
         <div className="h-flex-column">
-          <StaticImage className="how-it-works-component--sub-shape" src="../assets/shapes/how-it-works-4.png" alt="borrower creates deal"/>
+          {
+            isMobile ?
+              <StaticImage className="how-it-works-component--sub-shape" src="../assets/shapes/how-it-works-4_mobile.png" alt="borrower creates deal"/>
+              :
+              <StaticImage className="how-it-works-component--sub-shape" src="../assets/shapes/how-it-works-4.png" alt="borrower creates deal"/>
+          }
         </div>
         <div className="h-flex-column">
           <span className="how-it-works-component--sub-title">
