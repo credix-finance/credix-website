@@ -22,7 +22,6 @@
     "@mui/icons-material": "^5.2.0",
     "@mui/material": "^5.2.0",
     "@typeform/embed-react": "^1.2.1",
-    "@wardpeet/gatsby-image-nextgen": "^0.0.2",
     "gatsby": "^4.2.0",
     "gatsby-plugin-google-gtag": "^4.3.0",
     "gatsby-plugin-image": "^2.2.0",
