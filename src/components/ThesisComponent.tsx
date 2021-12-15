@@ -1,5 +1,4 @@
 import React from 'react';
-import SvgIcon, { SVG_COLORS, SVG_ICONS } from './shared/svg-icon/SvgIcon';
 import { StaticImage } from 'gatsby-plugin-image';
 import { IWidthProps } from '../pages';
 
@@ -12,7 +11,12 @@ export const ThesisComponent = ({ isMobile }: IWidthProps) => {
       <div className="h-flex-row h-flex-row--space-between thesis-component--row">
         <div className="h-flex-column thesis-component--column">
           <div className="h-flex-column thesis-component--image-column">
-            <StaticImage src={'../assets/shapes/credit-investing.png'} alt={'credit investing'} className={`${isMobile ? 'thesis-component--image' : 'thesis-component--shape'}`}/>
+            {
+              isMobile ?
+                <StaticImage src={'../assets/shapes/credit-investing_mobile.png'} alt={'credit investing'} className="thesis-component--image"/>
+                :
+                <StaticImage src={'../assets/shapes/credit-investing.png'} alt={'credit investing'} className="thesis-component--shape"/>
+            }
           </div>
           <div className="h-flex-column thesis-component--column--row-mobile">
             <span className="thesis-component--sub-title">Credit investing</span>
@@ -21,7 +25,12 @@ export const ThesisComponent = ({ isMobile }: IWidthProps) => {
         </div>
         <div className="h-flex-column thesis-component--column">
           <div className="h-flex-column thesis-component--image-column">
-            <StaticImage src={'../assets/shapes/the-bridge.png'} alt={'the bridge'} className={`${isMobile ? 'thesis-component--image' : 'thesis-component--shape'}`}/>
+            {
+              isMobile ?
+                <StaticImage src={'../assets/shapes/the-bridge_mobile.png'} alt={'the bridge'} className="thesis-component--image"/>
+                :
+                <StaticImage src={'../assets/shapes/the-bridge.png'} alt={'the bridge'} className="thesis-component--shape"/>
+            }
           </div>
           <div className="h-flex-column thesis-component--column--row-mobile">
             <span className="thesis-component--sub-title">The bridge</span>
@@ -30,7 +39,12 @@ export const ThesisComponent = ({ isMobile }: IWidthProps) => {
         </div>
         <div className="h-flex-column thesis-component--column">
           <div className="h-flex-column thesis-component--image-column">
-            <StaticImage src={'../assets/shapes/defi.png'} alt={'defi'} className={`${isMobile ? 'thesis-component--image' : 'thesis-component--shape'}`}/>
+            {
+              isMobile ?
+                <StaticImage src={'../assets/shapes/defi_mobile.png'} alt={'defi'} className="thesis-component--image"/>
+                :
+                <StaticImage src={'../assets/shapes/defi.png'} alt={'defi'} className="thesis-component--shape"/>
+            }
           </div>
           <div className="h-flex-column thesis-component--column--row-mobile">
             <span className="thesis-component--sub-title">Access to DeFi</span>
