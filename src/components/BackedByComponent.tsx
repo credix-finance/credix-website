@@ -2,65 +2,43 @@ import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import { IWidthProps } from '../pages';
 
-export const BackedByComponent = ({ isMobile }: IWidthProps) => {
+export const BackedByComponent = () => {
   return (
     <div className="h-flex-column backed-by-component">
       <div className="h-flex-row h-flex-row--space-between backed-by-component--title-row">
         <span className="sub-title">Backed by</span>
       </div>
-      {
-        !isMobile ?
-          <>
-            <div className="h-flex-row h-flex-row--space-between backed-by-component--logo-row">
-              <div className="h-flex-column backed-by-component--logo-column">
-                <StaticImage src={'../assets/logos/cumberland.png'} alt={'cumberland'} className="backed-by-component--logo--cumberland"/>
-              </div>
-              <div className="h-flex-column backed-by-component--logo-column">
-                <StaticImage src={'../assets/logos/parafi.png'} alt={'parafi'} className="backed-by-component--logo--parafi"/>
-              </div>
-              <div className="h-flex-column backed-by-component--logo-column">
-                <StaticImage src={'../assets/logos/fuse.png'} alt={'fuse'} className="backed-by-component--logo--fuse"/>
-              </div>
-              <div className="h-flex-column backed-by-component--logo-column">
-                <StaticImage src={'../assets/logos/mgnr.png'} alt={'mgnr'} className="backed-by-component--logo--mgnr"/>
-              </div>
-            </div>
-            <div className="h-flex-row h-flex-row--space-between backed-by-component--logo-row">
-              <div className="h-flex-column backed-by-component--logo-column">
-                <StaticImage src={'../assets/logos/petrock.png'} alt={'petrock'} className="backed-by-component--logo--petrock"/>
-              </div>
-              <div className="h-flex-column backed-by-component--logo-column">
-                <StaticImage src={'../assets/logos/brz.png'} alt={'brz'} className="backed-by-component--logo--brz"/>
-              </div>
-              <div className="h-flex-column backed-by-component--logo-column">
-                <StaticImage src={'../assets/logos/share.png'} alt={'share'} className="backed-by-component--logo--share"/>
-              </div>
-              <div className="h-flex-column backed-by-component--logo-column">
-                <StaticImage src={'../assets/logos/solana.png'} alt={'solana'} className="backed-by-component--logo--solana"/>
-              </div>
-            </div>
-          </>
-          :
-          <>
-            <div className="h-flex-row h-flex-row--space-around backed-by-component--logo-row">
-              <StaticImage src={'../assets/logos/cumberland.png'} alt={'cumberland'} className="backed-by-component--logo"/>
-              <StaticImage src={'../assets/logos/parafi.png'} alt={'parafi'} className="backed-by-component--logo--parafi"/>
-              <StaticImage src={'../assets/logos/mgnr.png'} alt={'mgnr'} className="backed-by-component--logo"/>
-            </div>
-            <div className="h-flex-row h-flex-row--space-around backed-by-component--logo-row">
-              <StaticImage src={'../assets/logos/fuse.png'} alt={'fuse'} className="backed-by-component--logo--fuse"/>
-              <StaticImage src={'../assets/logos/share.png'} alt={'share'} className="backed-by-component--logo"/>
-              <StaticImage src={'../assets/logos/brz.png'} alt={'brz'} className="backed-by-component--logo--brz"/>
-            </div>
-            <div className="h-flex-row h-flex-row--space-around backed-by-component--logo-row">
-              <StaticImage src={'../assets/logos/solana.png'} alt={'solana'} className="backed-by-component--logo--solana"/>
-              <StaticImage src={'../assets/logos/petrock.png'} alt={'petrock'} className="backed-by-component--logo"/>
-            </div>
-          </>
-
+      {        
+        <div className="h-flex-row h-flex-row--space-between backed-by-component--logo-row">
+          <a href="https://www.cumberland.io/" target="_blank">
+            <StaticImage src={'../assets/logos/cumberland-logo.png'} alt={'cumberland'} className="backed-by-component--logo"/>
+          </a>
+          <a href="https://www.parafi.capital/" target="_blank">
+            <StaticImage src={'../assets/logos/parafi.png'} alt={'parafi'} className="backed-by-component--logo"/>
+          </a>
+          <a href="https://solana.ventures/" target="_blank">
+            <StaticImage src={'../assets/logos/solana_ventures.png'} alt={'solana_ventures'} className="backed-by-component--logo"/>
+          </a>
+          <a href="https://www.transferoswiss.ch/" target="_blank">
+            <StaticImage src={'../assets/logos/transfero.png'} alt={'transfero'} className="backed-by-component--logo"/>
+          </a>
+          <a href="https://mgnr.io/" target="_blank">
+            <StaticImage src={'../assets/logos/mgnr.png'} alt={'mgnr'} className="backed-by-component--logo"/>
+          </a>
+          <a href="http://www.fuse.capital/" target="_blank">
+            <StaticImage src={'../assets/logos/fuse.png'} alt={'fuse'} className="backed-by-component--logo"/>
+          </a>
+          <a href="https://www.petrock.capital/" target="_blank">
+            <StaticImage src={'../assets/logos/petrock_capital.png'} alt={'petrock'} className="backed-by-component--logo"/>
+          </a>
+          <a href="https://parrot.fi/" target="_blank">
+            <StaticImage src={'../assets/logos/parrot_finance.png'} alt={'parrot_finance'} className="backed-by-component--logo"/>
+          </a>
+          <a href="https://mercurial.finance/" target="_blank">
+            <StaticImage src={'../assets/logos/mercurial_finance.png'} alt={'mercurial_finance'} className="backed-by-component--logo"/>
+          </a>
+        </div>
       }
-
-
     </div>
   )
 }
