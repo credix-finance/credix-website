@@ -129,7 +129,7 @@ const IndexPage = () => {
       <CTATeamComponent/>
       <CoreTeamComponent/>
       <AdvisorsComponent/>
-      {/* <BackedByComponent/> */}
+      <BackedByComponent/>
       {/*<FAQComponent/>*/}
       <FooterComponent/>
     </main>
