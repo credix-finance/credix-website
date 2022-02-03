@@ -17,7 +17,7 @@ export const HowItWorksComponent = () => {
             Borrower creates deal
           </span>
           <span className="how-it-works-component--text">
-            Borrower creates a deal on the Credix platform. Each deal has its own parameters such as principal amount, financing fee, time to maturity, etc.
+            Borrower creates a deal on the Credix platform. Each deal has its own parameters such as: principal amount, financing fee, time to maturity, etc.
           </span>
         </div>
       </div>
