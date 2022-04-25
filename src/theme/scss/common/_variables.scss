@@ -1,17 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Poppins:wght@500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Poppins:wght@500;700&display=swap");
 
 /**
 * Fonts
  */
-$FONT_FAMILY: Poppins, 'Open Sans', sans-serif;
-$FONT_FAMILY_SECOND: 'IBM Plex Mono', monospace;
-
+$FONT_FAMILY: Poppins, "Open Sans", sans-serif;
+$FONT_FAMILY_SECOND: "IBM Plex Mono", monospace;
 
 /**
 * Fonts Colors
  */
-$FONT_DEFAULT_COLOR: #F0F0F0;
-$FONT_SECOND_COLOR: #FFF;
+$FONT_DEFAULT_COLOR: #f0f0f0;
+$FONT_SECOND_COLOR: #fff;
 
 /**
 * Fonts Sizes
@@ -55,8 +54,8 @@ $LINE_HEIGHT_XXLARGE: 80px;
  */
 $COLOR_BLACK: #000;
 $COLOR_WHITE: #fff;
-$COLOR_GREY_BACKGROUND: #18191B;
-$COLOR_FOOTER_BACKGROUND: #050505;
+$COLOR_GREY_BACKGROUND: #18191b;
+$COLOR_FOOTER_BACKGROUND: #000;
 
 /**
 * UI Elements
