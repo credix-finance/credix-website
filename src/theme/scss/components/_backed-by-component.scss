@@ -40,6 +40,7 @@
     margin-bottom: 100px;
     img {
       height: 50px !important;
+      width: auto;
     }
 
     @include mobile {
