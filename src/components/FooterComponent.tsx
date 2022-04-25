@@ -25,10 +25,8 @@ export const FooterComponent = () => {
         <div className="h-flex-column footer-component--column">
           <div className="h-flex-column footer-component--padding">
             <span className="footer-component--footer--link" onClick={() => openInNewTab('https://twitter.com/Credix_finance')}>Twitter</span>
+            <span className="footer-component--footer--link" onClick={() => openInNewTab('https://www.linkedin.com/company/credix-finance/')}>Linkedin</span>
             <span className="footer-component--footer--link" onClick={() => openInNewTab('https://discord.gg/5Ab8b8ueGs')}>Discord</span>
-            <PopupButton id="k1mIGrFE" className="footer-component--footer--link footer-component--footer--typeform">
-              Join Alpha
-            </PopupButton>
             <span className="footer-component--footer--link" onClick={() => openInNewTab('https://angel.co/company/credix')}>Join The Team</span>
             <span className="footer-component--footer--link" onClick={() => openInNewTab('https://credix.gitbook.io/credix')}>Documentation</span>
             <span className="footer-component--footer--link h-margin-bottom--double" onClick={mail}>Support</span>

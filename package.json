@@ -38,7 +38,10 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "sass": "^1.43.4",
-    "typescript": "^4.5.2"
+    "typescript": "^4.5.2",
+    "gatsby-plugin-facebook-pixel": "^1.0.8",
+    "gatsby-plugin-google-tagmanager": "^4.9.0",
+    "gatsby-plugin-linkedin-insight": "^1.0.1"
   },
   "devDependencies": {
     "@types/react": "^17.0.36",
