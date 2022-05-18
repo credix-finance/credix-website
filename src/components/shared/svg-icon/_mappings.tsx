@@ -1,6 +1,7 @@
 import React from 'react';
 import CredixLogo from '../../../assets/shapes/credix_logo_white.svg'
 import HomeBackgroundShape from '../../../assets/shapes/home-background-shape.svg'
+import HomeBackgroundShapeInvestors from '../../../assets/shapes/home-background-shape-investors.svg'
 import Line1 from '../../../assets/shapes/line_1.svg'
 import Line2 from '../../../assets/shapes/line_2.svg'
 import LinkedIn from '../../../assets/shapes/Linkedin.svg'
@@ -11,6 +12,7 @@ import CloseMenu from '../../../assets/shapes/close-menu.svg'
 export default {
   CREDIX_LOGO: <CredixLogo/>,
   HOME_BACKGROUND_SHAPE: <HomeBackgroundShape/>,
+  HOME_BACKGROUND_SHAPE_INVESTORS: <HomeBackgroundShapeInvestors/>,
   LINE_1: <Line1/>,
   LINE_2: <Line2/>,
   LINKEDIN: <LinkedIn/>,
