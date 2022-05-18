@@ -1,0 +1,166 @@
+.quotes-component {
+  min-height: 710px;
+  background: $COLOR_BLACK;
+  padding-top: 212px;
+
+  @extend .global-padding-left-right;
+
+  &--background-shape-a55{
+    width: 140px;
+    height: 60px;
+    margin-bottom: 48px;
+    margin-left: 20px;
+  }
+
+  &--background-shape-tecredi{
+    width: 170px;
+    height: 50px;
+    margin-bottom: 48px;
+    margin-left: 20px;
+  }
+
+  &--background-shape-t{
+    width: 80px;
+    height: 77px;
+    margin-bottom: 48px;
+    margin-left: 60px;
+  }
+
+  &--a55 {
+    &--background-shape-quotation-start{
+      position: relative;
+      width: 40px;
+      height: 30px;
+      top: -20px;
+      left: 380px;
+    }
+
+    &--background-shape-quotation-end{
+      position: relative;
+      width: 40px;
+      height: 30px;
+      bottom: 30px;
+      left: 500px;
+    }
+  }
+
+  &--title {
+    font-weight: $FONT_WEIGHT_XXNORMAL;
+    font-size: 32px;
+    line-height: $LINE_HEIGHT_XNORMAL;
+    padding-left: 20px;
+  }
+
+  &--text-row {
+    margin-top: 90px;
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &--left-text {
+    max-width: 490px;
+    font-family: $FONT_FAMILY_SECOND;
+    font-weight: $FONT_WEIGHT_XNORMAL;
+    font-size: $FONT_SIZE_XXXNORMAL;
+    line-height: $LINE_HEIGHT_NORMAL;
+
+    @include mobile {
+      font-size: $FONT_SIZE_NORMAL;
+      line-height: $LINE_HEIGHT_SMALL;
+    }
+  }
+
+  &--right-text {
+    max-width: 572px;
+    font-family: $FONT_FAMILY;
+    font-weight: $FONT_WEIGHT_NORMAL;
+    font-style: italic;
+    font-size: $FONT_SIZE_XXNORMAL;
+    line-height: 32px;
+
+    &--cited-person {
+      font-family: $FONT_FAMILY_SECOND;
+      font-weight: $FONT_WEIGHT_XXNORMAL;
+      font-size: $FONT_SIZE_XXXNORMAL;
+      line-height: 38px;
+      color: $COLOR_WHITE;
+      opacity: 0.6;
+      text-transform: uppercase;
+      margin-top: 46px;
+    }
+
+    @include tablet {
+      margin-top: $UNIT * 3;
+    }
+
+    @include mobile {
+      margin-top: $UNIT * 3;
+      font-size: $FONT_SIZE_SMALL;
+      line-height: $LINE_HEIGHT_SMALL;
+      letter-spacing: -.5px;
+    }
+  }
+
+  &--subtitle {
+    //margin-top: 200px;
+    text-transform: uppercase;
+    font-weight: $FONT_WEIGHT_XXNORMAL;
+    font-size: $FONT_SIZE_XXXNORMAL;
+    letter-spacing: 1px;
+
+    @include tablet {
+      margin-top: 150px;
+    }
+
+    @include mobile {
+      margin-top: 100px;
+    }
+  }
+
+  &--roadmap-shapes {
+    margin-top: 70px;
+
+    @include tablet {
+      flex-flow: row;
+    }
+
+    @include mobile {
+      flex-flow: column;
+    }
+  }
+
+  &--roadmap-shape-column {
+
+    @include mobile {
+      flex-flow: row;
+      align-self: flex-start;
+      margin-left: initial;
+      margin-top: - $UNIT * 4;
+    }
+  }
+
+  &--roadmap-shape {
+    transform: translateY(10px);
+    width: 146px;
+
+    @include mobile {
+      transform: scale(.7);
+    }
+
+    &--text {
+      text-transform: uppercase;
+      font-size: $FONT_SIZE_SMALL;
+      font-family: $FONT_FAMILY_SECOND;
+      line-height: $LINE_HEIGHT_SMALL;
+      letter-spacing: 1px;
+      font-weight: $FONT_WEIGHT_BOLD;
+      text-align: center;
+
+      @include tablet {
+        text-align: left;
+      }
+    }
+  }
+}
