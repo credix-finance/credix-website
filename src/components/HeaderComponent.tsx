@@ -8,10 +8,13 @@ export const HeaderComponent = ({ isMobile }: IWidthProps) => {
   const [isMenuOpen, setMenuOpen] = useState<boolean>();
 
   const headerLinks = () => {
+      // todo: fix urls
     return (
       <>
-        <span className="header-component--link" onClick={() => openInNewTab('https://angel.co/company/credix')}>Join The Team</span>
-        <span className="header-component--link" onClick={() => openInNewTab('https://credix.gitbook.io/credix')}>Documentation</span>
+        <span className="header-component--link" onClick={() => openInNewTab('/investors')}>Investors</span>
+        <span className="header-component--link" onClick={() => openInNewTab('/borrowers')}>Borrowers</span>
+        <span className="header-component--link" onClick={() => openInNewTab('https://angel.co/company/credix')}>Team</span>
+        <span className="header-component--link" onClick={() => openInNewTab('https://credix.gitbook.io/credix')}>Contact</span>
         <CredixButton className="header--links--button" url={'https://app.credix.finance/'}>Launch App</CredixButton>
       </>
     )
