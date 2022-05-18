@@ -1,0 +1,37 @@
+.parallax-component {
+  height: 1000px;
+  background: linear-gradient(#000000 100%, #1F1F1F 0%);
+  overflow-y: hidden;
+  @extend .global-padding-left-right;
+
+
+  &--wrapper{
+    height: 400px;
+    overflow: hidden;
+    padding-top: 50px;
+  }
+
+
+  &--child-scroll {
+    height: fit-content;
+    width: 45%;
+    margin: 50px 50px 100px;
+
+    &--title {
+      font-size: $FONT_SIZE_SLARGE;
+      font-weight: $FONT_WEIGHT_XNORMAL;
+      line-height: $LINE_HEIGHT_LARGE;
+    }
+  }
+
+  &--image-scroll {
+    height: 150px;
+    width: 30%;
+    margin: 50px 50px 100px;
+    position: relative;
+  }
+
+  &--image-overlap {
+    position: absolute;
+  }
+}

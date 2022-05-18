@@ -9,14 +9,15 @@ import { VisionComponent } from '../components/VisionComponent';
 import { CTATeamComponent } from '../components/CTATeamComponent';
 import { CoreTeamComponent } from '../components/CoreTeamComponent';
 import { AdvisorsComponent } from '../components/AdvisorsComponent';
-import { BackedByComponent } from '../components/BackedByComponent';
 import { FooterComponent } from '../components/FooterComponent';
 import { useEffect, useState } from 'react';
 import Helmet from 'react-helmet'
 import fav from '../../static/favicon-32x32.png'
 import preview from '../../static/preview_large.png'
 import { HowItWorksComponent } from '../components/HowItWorksComponent';
-import { FAQComponent } from '../components/FAQComponent';
+import { ParallaxProvider } from 'react-scroll-parallax';
+import { ParallaxComponent } from '../components/ParallaxComponent';
+
 
 export interface IWidthProps {
   isMobile?: boolean;
@@ -45,6 +46,7 @@ const IndexPage = () => {
       window.removeEventListener('resize', () => {return;});
     };
   }, []);
+
 
   return (
     <main>
@@ -119,19 +121,25 @@ const IndexPage = () => {
         <title lang="en">Credix</title>
         <html lang="en"/>
       </Helmet>
-      <HeaderComponent isMobile={!!width && width < mobileWidth}/>
-      <HomeComponent isMobile={!!width && width < mobileWidth}/>
-      <CTAComponent/>
-      <ThesisComponent isMobile={!!width && width < mobileWidth}/>
-      <PlatformComponent/>
-      <HowItWorksComponent isMobile={!!width && width < mobileWidth}/>
-      <VisionComponent isMobile={!!width && width < mobileWidth} isTablet={!!width && width < tabletWidth}/>
-      <CTATeamComponent/>
-      <CoreTeamComponent/>
-      <AdvisorsComponent/>
-      {/*<BackedByComponent isMobile={!!width && width < mobileWidth}/>*/}
-      {/*<FAQComponent/>*/}
-      <FooterComponent/>
+      <ParallaxProvider>
+
+        <HeaderComponent isMobile={!!width && width < mobileWidth}/>
+        <HomeComponent isMobile={!!width && width < mobileWidth}/>
+        <ParallaxComponent/>
+        <CTAComponent/>
+        <ThesisComponent isMobile={!!width && width < mobileWidth}/>
+        <PlatformComponent/>
+        <HowItWorksComponent isMobile={!!width && width < mobileWidth}/>
+        <VisionComponent isMobile={!!width && width < mobileWidth} isTablet={!!width && width < tabletWidth}/>
+        <CTATeamComponent/>
+        <CoreTeamComponent/>
+        <AdvisorsComponent/>
+        {/*<BackedByComponent isMobile={!!width && width < mobileWidth}/>*/}
+        {/*<FAQComponent/>*/}
+        <FooterComponent/>
+
+      </ParallaxProvider>
+
     </main>
   )
 }

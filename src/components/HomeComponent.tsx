@@ -22,9 +22,9 @@ export const HomeComponent = ({ isMobile }: IWidthProps) => {
           <CredixButton className="cta-block--button" url={'https://discord.gg/5Ab8b8ueGs'}>Join Discord</CredixButton>
         </div>
       </div>
-      <div className="h-flex-row home-component--arrow-row" id="journey">
-        <a href="#journey" className="home-component--arrow"/>
-      </div>
+      {/*<div className="h-flex-row home-component--arrow-row" id="journey">*/}
+      {/*  <a href="#journey" className="home-component--arrow"/>*/}
+      {/*</div>*/}
     </div>
   )
 }
