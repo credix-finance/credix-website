@@ -1,0 +1,50 @@
+.marquee-container {
+  height: 30px;
+  overflow: hidden;
+
+  @include mobile {
+    height: 25px;
+  }
+}
+
+.marquee {
+  display: flex;
+  justify-content: space-evenly;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  animation: marquee 30s linear infinite;
+  color: $COLOR_BLACK;
+  font-family: $FONT_FAMILY_SECOND;
+  font-size: $FONT_SIZE_XXNORMAL;
+
+  @include mobile {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: $FONT_SIZE_NORMAL;
+  }
+}
+
+.marquee-delayed {
+  display: flex;
+  justify-content: space-evenly;
+  animation-delay: 15s;
+
+  b {
+    padding-left: 10px;
+  }
+}
+
+
+
+@keyframes marquee {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%
+  }
+}
