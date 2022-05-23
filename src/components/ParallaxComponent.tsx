@@ -18,7 +18,6 @@ export const ParallaxComponent = () => {
     };
   }, []);
 
-  //TODO refactor a bit
   const thresholdScrollValue = 1000;
 
   const firstImageStyle = () => {
@@ -30,9 +29,6 @@ export const ParallaxComponent = () => {
       return { marginTop: '-50px', opacity: (opacity > minOpacity ? opacity : minOpacity) + '%' }
     }
   }
-
-  console.log(scrollY)
-
 
   const secondImageStyle = () => {
     const highLightTargetScroll = 450
@@ -58,18 +54,19 @@ export const ParallaxComponent = () => {
   const thirdImageStyle = () => {
     const highLightTargetScroll = 970
     const margin = (50 - ((scrollY - 250) * 100) / (highLightTargetScroll - 250) / 2)
+    const opacity = (((scrollY - 250) * 100) / (highLightTargetScroll - 250))
 
     if (scrollY > thresholdScrollValue) {
       return { marginTop: '50px', opacity: (100 - ((scrollY - thresholdScrollValue) * 100) / (1300 - thresholdScrollValue)) + '%' }
     } else {
       if (margin > 50) {
         //starting margin
-        return { marginTop:  '100px', opacity: (((scrollY - 250) * 100) / (highLightTargetScroll - 250)) + '%' }
+        return { marginTop:  '100px', opacity: opacity + '%' }
       } else if (margin < 0) {
         // end margin
-        return { marginTop:  '50px', opacity: (((scrollY - 250) * 100) / (highLightTargetScroll - 250)) + '%' }
+        return { marginTop:  '50px', opacity: opacity + '%' }
       } else {
-        return { marginTop:  (50 + margin) + 'px', opacity: (((scrollY - 250) * 100) / (highLightTargetScroll - 250)) + '%' }
+        return { marginTop:  (50 + margin) + 'px', opacity: opacity + '%' }
       }
     }
   }
