@@ -56,7 +56,7 @@ export const ParallaxComponent = () => {
   }
 
   const thirdImageStyle = () => {
-    const highLightTargetScroll = 865
+    const highLightTargetScroll = 970
     const margin = (50 - ((scrollY - 250) * 100) / (highLightTargetScroll - 250) / 2)
 
     if (scrollY > thresholdScrollValue) {
@@ -107,13 +107,13 @@ export const ParallaxComponent = () => {
         </Parallax>
         <div className="parallax-component--image-scroll h-flex-column">
           <div className="parallax-component--image-overlap" style={firstImageStyle()}>
-            <StaticImage src={'../assets/shapes/parallax-image.svg'} alt={'credit investing'}/>
+            <StaticImage src={'../assets/shapes/Credix_platform_1.svg'} alt={'Credix platform 1'}/>
           </div>
           <div className="parallax-component--image-overlap" style={secondImageStyle()}>
-            <StaticImage src={'../assets/shapes/parallax-image.svg'} alt={'credit investing'}/>
+            <StaticImage src={'../assets/shapes/Credix_platform_2.svg'} alt={'Credix platform 2'}/>
           </div>
           <div className="parallax-component--image-overlap" style={thirdImageStyle()}>
-            <StaticImage src={'../assets/shapes/parallax-image.svg'} alt={'credit investing'}/>
+            <StaticImage src={'../assets/shapes/Credix_platform_3.svg'} alt={'Credix platform 3'}/>
           </div>
         </div>
       </div>
