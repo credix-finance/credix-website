@@ -47,10 +47,3 @@ export const CTAComponent = () => {
     </div>
   );
 }
-
-
-
-
-
-
-
