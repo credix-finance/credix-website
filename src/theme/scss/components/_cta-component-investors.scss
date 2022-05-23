@@ -1,6 +1,6 @@
 .cta-component-investors {
   background: $COLOR_GREY_BACKGROUND;
-  min-height: 400px;
+  min-height: 349px;
 
   @extend .global-padding-left-right;
 
@@ -9,23 +9,26 @@
   }
 
   &--divider {
-    margin: 36px auto 36px 0;
+    margin: 14px auto 24px 0;
     border-color: $COLOR_BLUE;
     background: $COLOR_BLUE;
     width: 80px;
-    height: 4px;
+    height: 8px;
 
     &--small {
+      border-color: $COLOR_BLUE;
+      background: $COLOR_BLUE;
+      margin: auto auto 16px 0;
       width: 45px;
       height: 8px;
-      border-color:$COLOR_BLUE;
-      background: $COLOR_BLUE;
-      margin: auto auto 36px 0;
+    }
 
       @include mobile {
-        margin: 36px auto 0 0;
-      }
+        margin: 16px auto 0 0;
+        height: 4px;
     }
+
+
   }
 
   &--cta-link {
@@ -39,7 +42,7 @@
   }
 
   &--row {
-    padding-top: 24px;
+    padding-top: 40px;
 
     @include tablet {
       flex-flow: row;
@@ -48,6 +51,7 @@
     @include mobile {
       flex-direction: column;
       align-items: flex-start;
+      padding-top: 0;
     }
   }
 
@@ -79,7 +83,7 @@
     &--row-mobile {
       @include mobile {
         width: 70%;
-        margin-top: $UNIT * 3;
+        margin-top: $UNIT * 4;
       }
     }
 
