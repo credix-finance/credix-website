@@ -7,7 +7,7 @@ import { HomeComponent } from '../components/investors/HomeComponent';
 import { CTAComponent } from '../components/investors/CTAComponent';
 import { FooterComponent } from '../components/FooterComponent';
 import { InvestorsList } from '../components/investors/InvestorsList';
-import { Marquee } from '../components/shared/marquee/Marquee';
+import { MarqueeComponent } from '../components/shared/marquee/MarqueeComponent';
 
 
 const InvestorsPage = () => {
@@ -98,7 +98,7 @@ const InvestorsPage = () => {
         <title lang="en">Credix</title>
         <html lang="en"/>
       </Helmet>
-      <Marquee isMobile={!!width && width < mobileWidth}/>
+      <MarqueeComponent/>
       <HeaderComponent isMobile={!!width && width < mobileWidth}/>
       <HomeComponent isMobile={!!width && width < mobileWidth}/>
       <CTAComponent/>
