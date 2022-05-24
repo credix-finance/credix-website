@@ -2,13 +2,14 @@ import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import { QuoteA55 } from './QuoteA55';
 import { QuoteTecredi } from './QuoteTecredi';
+import { IWidthProps } from '../../../hooks/useMobileWidth';
 
 enum Quote {
     A55 = 'A55',
     TECREDI = 'TECREDI',
 }
 
-export const Quotes = () => {
+export const Quotes = ({ isMobile }: IWidthProps) => {
   const [quote, setQuote] = React.useState(Quote.A55);
 
   return (
@@ -17,15 +18,41 @@ export const Quotes = () => {
         <span className="quotes-component--title">Borrowers</span>
       </div>
       <div className="h-flex-row h-flex-row--space-between quotes-component--text-row">
-        <div className="h-flex-column">
-          <span className="h-cursor-pointer" onClick={() => setQuote(Quote.A55)}><StaticImage className="quotes-component--background-shape-a55" src="../../assets/logos/a55-logo.png" alt="a55 logo"/></span>
-          <span className="h-cursor-pointer" onClick={() => setQuote(Quote.TECREDI)}><StaticImage className="quotes-component--background-shape-tecredi" src="../../assets/logos/tecredi-logo.png" alt="tecredi logo"/></span>
-        </div>
+        {
+          !isMobile &&
+          <div className="h-flex-column">
+            <span className="h-cursor-pointer" onClick={() => setQuote(Quote.A55)} style={{ opacity: quote === Quote.A55 ? 1 : 0.5 }}>
+              <StaticImage className="quotes-component--background-shape-a55" src="../../../assets/logos/a55-logo.png" alt="a55 logo"/>
+            </span>
+            <span className="h-cursor-pointer" onClick={() => setQuote(Quote.TECREDI)} style={{ opacity: quote === Quote.TECREDI ? 1 : 0.5 }}>
+              <StaticImage className="quotes-component--background-shape-tecredi" src="../../../assets/logos/tecredi-logo.png" alt="tecredi logo"/>
+            </span>
+          </div>
+        }
         {
           quote === Quote.A55 && <QuoteA55/>
         }
         {
           quote === Quote.TECREDI && <QuoteTecredi/>
+        }
+        {
+          isMobile &&
+            <>
+              <div className="h-flex-row quotes-component--logo-row-mobile">
+                <span className="h-cursor-pointer" onClick={() => setQuote(Quote.A55)} style={{ opacity: quote === Quote.A55 ? 1 : 0.5 }}>
+                  <StaticImage className="quotes-component--background-shape-a55" src="../../../assets/logos/a55-logo.png" alt="a55 logo"/>
+                </span>
+                <span className="h-cursor-pointer" onClick={() => setQuote(Quote.TECREDI)} style={{ opacity: quote === Quote.TECREDI ? 1 : 0.5 }}>
+                  <StaticImage className="quotes-component--background-shape-tecredi" src="../../../assets/logos/tecredi-logo.png" alt="tecredi logo"/>
+                </span>
+              </div>
+              <div className="h-flex-row h-flex-row--justify-center h-margin-top--double">
+                <hr className="quotes-component--logo-row-mobile--divider" style={{ opacity: quote === Quote.A55 ? 1 : 0.5 }}/>
+                <hr className="quotes-component--logo-row-mobile--divider" style={{ opacity: quote === Quote.TECREDI ? 1 : 0.5 }}/>
+              </div>
+            </>
+
+
         }
       </div>
     </div>

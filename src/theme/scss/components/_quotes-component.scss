@@ -7,16 +7,26 @@
 
   &--background-shape-a55{
     width: 140px;
-    height: 60px;
     margin-bottom: 48px;
     margin-left: 20px;
+
+    @include mobile {
+      width: 75px;
+      margin-left: initial;
+      margin-bottom: initial;
+    }
   }
 
   &--background-shape-tecredi{
     width: 170px;
-    height: 50px;
     margin-bottom: 48px;
     margin-left: 20px;
+
+    @include mobile {
+      width: 100px;
+      margin-left: initial;
+      margin-bottom: initial;
+    }
   }
 
   &--background-shape-quotation-start{
@@ -25,6 +35,13 @@
     height: 30px;
     top: -20px;
     left: 380px;
+
+    @include mobile {
+      left: initial;
+      top: initial;
+      transform: translateX(-10px);
+      width: 20px;
+    }
   }
 
   &--background-shape-quotation-end{
@@ -33,20 +50,27 @@
     height: 30px;
     bottom: 30px;
     left: 500px;
+
+    @include mobile {
+      margin-left: auto;
+      left: initial;
+      width: 20px;
+
+    }
   }
 
   &--title {
     font-weight: $FONT_WEIGHT_XXNORMAL;
-    font-size: 32px;
+    font-size: $FONT_SIZE_XSLARGE;
     line-height: $LINE_HEIGHT_XNORMAL;
-    padding-left: 20px;
   }
 
   &--text-row {
     margin-top: 90px;
 
-    @include tablet {
+    @include mobile {
       flex-direction: column;
+      height: 360px;
     }
   }
 
@@ -58,6 +82,10 @@
     font-size: $FONT_SIZE_XXNORMAL;
     line-height: 32px;
 
+    @include mobile {
+      font-size: $FONT_SIZE_SMALL;
+    }
+
     &--cited-person {
       font-family: $FONT_FAMILY_SECOND;
       font-weight: $FONT_WEIGHT_XXNORMAL;
@@ -67,6 +95,10 @@
       opacity: 0.6;
       text-transform: uppercase;
       margin-top: 46px;
+
+      @include mobile {
+        font-size: $FONT_SIZE_SMALL;
+      }
     }
 
     @include tablet {
@@ -78,6 +110,20 @@
       font-size: $FONT_SIZE_SMALL;
       line-height: $LINE_HEIGHT_SMALL;
       letter-spacing: -.5px;
+    }
+  }
+
+  &--logo-row-mobile {
+    @include mobile {
+      margin-top: auto;
+      justify-content: space-around;
+    }
+
+    &--divider {
+      width: 30px;
+      margin: 0 5px;
+      height: 3px;
+      background-color: $COLOR_WHITE;
     }
   }
 }

@@ -14,13 +14,13 @@ export const InvestorsList = ({ isMobile }: IWidthProps) => (
       {
         <div className="h-flex-row h-flex-row--space-between investors-list-component--logo-row">
           <a target="_blank">
-            <StaticImage src={'../assets/logos/parafi.png'} alt={'parafi'} className="backed-by-component--logo"/>
+            <StaticImage src={'../../assets/logos/parafi.png'} alt={'parafi'} className="backed-by-component--logo"/>
           </a>
           <a target="_blank">
             <StaticImage src={'../../assets/logos/alameda-logo.png'} alt={'alameda'} className="backed-by-component--logo"/>
           </a>
           <a target="_blank">
-            <StaticImage src={'../assets/logos/cumberland-logo.png'} alt={'cumberland'} className="backed-by-component--logo"/>
+            <StaticImage src={'../../assets/logos/cumberland-logo.png'} alt={'cumberland'} className="backed-by-component--logo"/>
           </a>
         </div>
       }
