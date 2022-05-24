@@ -9,7 +9,7 @@ enum Quote {
 }
 
 export const Quotes = () => {
-  const [quote, setQuote] = React.useState('a55');
+  const [quote, setQuote] = React.useState(Quote.A55);
 
   return (
     <div className="h-flex-column quotes-component">
