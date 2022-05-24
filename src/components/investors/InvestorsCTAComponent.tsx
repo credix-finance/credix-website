@@ -2,7 +2,7 @@ import React from 'react';
 import { CTADivider } from './dividers/CTADivider';
 import { openInNewTab } from '../../utils/openInNewTab';
 
-export const CTAComponent = () => (
+export const InvestorsCTAComponent = () => (
   <div className="h-flex-column cta-component-investors">
     <div className="h-flex-row h-flex-row--space-between cta-component-investors--row">
       <div className="h-flex-column cta-component-investors--column">
@@ -41,11 +41,3 @@ export const CTAComponent = () => (
     </div>
   </div>
 );
-
-
-
-
-
-
-
-
