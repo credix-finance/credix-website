@@ -10,7 +10,6 @@ import { InvestorsList } from '../components/investors/InvestorsList';
 import { useMobileWidth } from '../hooks/useMobileWidth';
 import { MarqueeComponent } from '../components/shared/marquee/MarqueeComponent';
 
-// todo: change description
 const InvestorsPage = () => {
   const { width, mobileWidth } = useMobileWidth();
 
@@ -24,6 +23,7 @@ const InvestorsPage = () => {
         meta={[
           {
             name: 'description',
+            //TODO: change description for the pages
             content: 'CREDIX is a decentralized credit marketplace connecting investors with FinTechs in emerging markets. Learn more about the future of debt financing now.'
           },
           {
