@@ -1,5 +1,5 @@
 .header-component {
-  background-color: #1F1F1F;
+  background-color: $COLOR_BLACK;
   height: 20vh;
 
   @extend .global-padding-left-right;
@@ -57,6 +57,7 @@
 
     &--button.MuiButton-root {
       width: $BUTTON_WIDTH_NORMAL;
+      border-radius: $BORDER_RADIUS
     }
   }
 }

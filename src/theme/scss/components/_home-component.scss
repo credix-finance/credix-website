@@ -1,5 +1,5 @@
 .home-component {
-  background: linear-gradient(180deg, #1F1F1F 0%, #1F1F1F 43.43%, #000000 100%);
+  background: $COLOR_BLACK;
   height: 50vh;
 
   @extend .global-padding-left-right;
@@ -113,7 +113,8 @@
   }
 
   &--button.MuiButton-root {
-    width: $BUTTON_WIDTH_NORMAL;
+    width: $BUTTON_WIDTH_LARGE;
+    border-radius: $BORDER_RADIUS;
 
     @extend .h-margin-top--triple;
   }

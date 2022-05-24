@@ -17,6 +17,7 @@ import preview from '../../static/preview_large.png'
 import { HowItWorksComponent } from '../components/HowItWorksComponent';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { ParallaxComponent } from '../components/ParallaxComponent';
+import { BackersBorrowersComponent } from '../components/BackersBorrowersComponent';
 
 
 export interface IWidthProps {
@@ -125,7 +126,8 @@ const IndexPage = () => {
         <HeaderComponent isMobile={!!width && width < mobileWidth}/>
         <HomeComponent isMobile={!!width && width < mobileWidth}/>
         <ParallaxComponent/>
-        <CTAComponent/>
+        {/*<CTAComponent/>*/}
+        <BackersBorrowersComponent/>
         <ThesisComponent isMobile={!!width && width < mobileWidth}/>
         <PlatformComponent/>
         <HowItWorksComponent isMobile={!!width && width < mobileWidth}/>

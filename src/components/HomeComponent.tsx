@@ -9,9 +9,10 @@ export const HomeComponent = ({ isMobile }: IWidthProps) => {
 
   const homeText = () => (
     <div className="h-flex-column">
-      <h1 className="cta-block--title">Credit investing<br/> democratized</h1>
-      <span className="cta-block--text">Be part of the new decentralized credit marketplace connecting investors with FinTechs in emerging markets.</span>
-      <CredixButton className="cta-block--button" url={'https://discord.gg/5Ab8b8ueGs'}>Join Discord</CredixButton>
+      <h1 className="cta-block--title">Credit investing<br/> made global</h1>
+      <span className="cta-block--text">Building the future of global private credit markets</span>
+      {/*//TODO: link*/}
+      <CredixButton className="cta-block--button" url={'https://discord.gg/5Ab8b8ueGs'}>Explore our application</CredixButton>
     </div>
   )
 

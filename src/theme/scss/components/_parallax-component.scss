@@ -15,7 +15,7 @@
   &--child-scroll {
     height: fit-content;
     width: 45%;
-    margin: 50px 50px 100px;
+    margin: 50px 0 100px;
 
     &--title {
       font-size: $FONT_SIZE_SLARGE;
@@ -27,7 +27,7 @@
   &--image-scroll {
     height: 150px;
     width: 30%;
-    margin: 50px 50px 100px;
+    margin: 50px 0 100px auto;
     position: relative;
   }
 
