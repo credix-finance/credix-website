@@ -20,6 +20,14 @@
     }
   }
 
+  &--text {
+    @include mobile {
+      transform: translateY(-50px);
+      padding-top: 30px;
+      background-color: black;
+    }
+  }
+
   &--arrow-row {
     justify-content: center;
     margin-top: auto;
@@ -84,6 +92,10 @@
 .cta-block {
   margin-top: 88px;
   z-index: $Z_INDEX_NORMAL;
+
+  @include mobile {
+    margin-top: 0;
+  }
 
   &--title {
     font-size: $FONT_SIZE_XLARGE;

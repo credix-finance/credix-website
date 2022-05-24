@@ -8,7 +8,7 @@ import DogVideo from '../assets/video/Credix_WebsiteGradientA_02.mp4'
 export const HomeComponent = ({ isMobile }: IWidthProps) => {
 
   const homeText = () => (
-    <div className="h-flex-column">
+    <div className="h-flex-column home-component--text">
       <h1 className="cta-block--title">Credit investing<br/> made global</h1>
       <span className="cta-block--text">Building the future of global private credit markets</span>
       {/*//TODO: link*/}
