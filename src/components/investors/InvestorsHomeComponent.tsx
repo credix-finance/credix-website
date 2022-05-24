@@ -5,7 +5,7 @@ import { IWidthProps } from '../../pages';
 import { StaticImage } from 'gatsby-plugin-image';
 
 // todo: fix url for becoming investor button
-export const HomeComponent = ({ isMobile }: IWidthProps) => {
+export const InvestorsHomeComponent = ({ isMobile }: IWidthProps) => {
 
   return (
     <div className="h-flex-column home-component-investors">

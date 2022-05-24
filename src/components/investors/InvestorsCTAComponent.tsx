@@ -2,7 +2,7 @@ import React from 'react';
 import { CTADivider } from '../shared/dividers/CTADivider';
 import { openInNewTab } from '../../pages';
 
-export const CTAComponent = () => {
+export const InvestorsCTAComponent = () => {
   const handleReadDocumentationClick = () => {
     openInNewTab('https://docs.credix.finance/')
   }

@@ -3,13 +3,13 @@ import Helmet from 'react-helmet';
 import { HeaderComponent } from '../components/HeaderComponent';
 import fav from '../../static/favicon-32x32.png'
 import preview from '../../static/preview_large.png'
-import { HomeComponent } from '../components/investors/HomeComponent';
-import { CTAComponent } from '../components/investors/CTAComponent';
+import { InvestorsHomeComponent } from '../components/investors/InvestorsHomeComponent';
+import { InvestorsCTAComponent } from '../components/investors/InvestorsCTAComponent';
 import { FooterComponent } from '../components/FooterComponent';
 import { InvestorsList } from '../components/investors/InvestorsList';
 import { MarqueeComponent } from '../components/shared/marquee/MarqueeComponent';
 
-
+// todo: change description
 const InvestorsPage = () => {
   const [width, setWidth] = useState<number>();
   const mobileWidth = 900;
@@ -100,8 +100,8 @@ const InvestorsPage = () => {
       </Helmet>
       <MarqueeComponent/>
       <HeaderComponent isMobile={!!width && width < mobileWidth}/>
-      <HomeComponent isMobile={!!width && width < mobileWidth}/>
-      <CTAComponent/>
+      <InvestorsHomeComponent isMobile={!!width && width < mobileWidth}/>
+      <InvestorsCTAComponent/>
       <InvestorsList isMobile={!!width && width < mobileWidth}/>
       <FooterComponent/>
     </main>
