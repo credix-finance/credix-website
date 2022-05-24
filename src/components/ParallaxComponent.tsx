@@ -21,7 +21,7 @@ export const ParallaxComponent = () => {
   const thresholdScrollValue = 1000;
 
   const firstImageStyle = () => {
-    const opacity = (100 - ((scrollY - 100) * 100) / (480 - 100));
+    const opacity = (100 - ((scrollY - 340) * 100) / (570 - 340));
     const minOpacity = 25;
     if (scrollY > thresholdScrollValue) {
       return { marginTop: '-50px', opacity: (100 - ((scrollY - 100) * 100) / (1300 - 100)) + '%' }
@@ -31,7 +31,7 @@ export const ParallaxComponent = () => {
   }
 
   const secondImageStyle = () => {
-    const highLightTargetScroll = 450
+    const highLightTargetScroll = 670
     if (scrollY > highLightTargetScroll) {
       return { marginTop: '0px', opacity: (100 - ((scrollY - highLightTargetScroll) * 100) / (1600 - 830)) + '%' }
     } if (scrollY > thresholdScrollValue) {
@@ -52,7 +52,7 @@ export const ParallaxComponent = () => {
   }
 
   const thirdImageStyle = () => {
-    const highLightTargetScroll = 970
+    const highLightTargetScroll = 1050
     const margin = (50 - ((scrollY - 250) * 100) / (highLightTargetScroll - 250) / 2)
     const opacity = (((scrollY - 250) * 100) / (highLightTargetScroll - 250))
 
@@ -74,7 +74,7 @@ export const ParallaxComponent = () => {
 
   return (
     <div className="parallax-component">
-      <div className="parallax-component--wrapper h-flex-row" style={{ transform: `translateY(${scrollY/3}px)` }}>
+      <div className="parallax-component--wrapper h-flex-row" style={{ transform: `translateY(${scrollY > 400 ? ((scrollY - 400) * 100) / (1500 - 400) : 0}px)` }}>
         <Parallax translateY={[30, -200]} className="parallax-component--child-scroll h-flex-column">
           <span className="parallax-component--child-scroll--title">Vision</span>
           <hr className="solid"/>
