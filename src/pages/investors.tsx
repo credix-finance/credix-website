@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Helmet from 'react-helmet';
 import { HeaderComponent } from '../components/HeaderComponent';
 import fav from '../../static/favicon-32x32.png'
@@ -7,23 +7,12 @@ import { HomeComponent } from '../components/investors/HomeComponent';
 import { CTAComponent } from '../components/investors/CTAComponent';
 import { FooterComponent } from '../components/FooterComponent';
 import { InvestorsList } from '../components/investors/InvestorsList';
+import { useMobileWidth } from '../hooks/useMobileWidth';
 import { MarqueeComponent } from '../components/shared/marquee/MarqueeComponent';
 
 
 const InvestorsPage = () => {
-  const [width, setWidth] = useState<number>();
-  const mobileWidth = 900;
-  const tabletWidth = 1500;
-
-  useEffect(() => {
-    setWidth(window.innerWidth);
-    window.addEventListener('resize', () => {
-      setWidth(window.innerWidth);
-    });
-    return () => {
-      window.removeEventListener('resize', () => {return;});
-    };
-  }, []);
+  const { width, mobileWidth } = useMobileWidth();
 
   return (
     <main>

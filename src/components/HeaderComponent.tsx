@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import SvgIcon, { SVG_COLORS, SVG_ICONS } from './shared/svg-icon/SvgIcon';
 import { CredixButton } from './shared/buttons/CredixButton';
 import { Drawer } from '@mui/material';
-import { IWidthProps, openInNewTab } from '../pages';
+import { IWidthProps } from '../hooks/useMobileWidth';
+import { openInNewTab } from '../utils/openInNewTab';
 
 export const HeaderComponent = ({ isMobile }: IWidthProps) => {
   const [isMenuOpen, setMenuOpen] = useState<boolean>();
 
   const headerLinks = () => {
-      // todo: fix urls
+    // todo: fix urls
     return (
       <>
         <span className="header-component--link" onClick={() => openInNewTab('/investors')}>Investors</span>

@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { CredixButton } from '../shared/buttons/CredixButton';
 import SvgIcon, { SVG_ICONS } from '../shared/svg-icon/SvgIcon';
-import { IWidthProps } from '../../pages';
 import { StaticImage } from 'gatsby-plugin-image';
+import { IWidthProps } from '../../hooks/useMobileWidth';
 
 // todo: fix url for becoming investor button
 export const HomeComponent = ({ isMobile }: IWidthProps) => {

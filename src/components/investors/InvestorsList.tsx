@@ -1,9 +1,9 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import { CredixButton } from '../shared/buttons/CredixButton';
-import { CTADivider } from '../shared/dividers/CTADivider';
-import { CTADividerSmall } from '../shared/dividers/CTADividerSmall';
-import { IWidthProps } from '../../pages';
+import { CTADividerSmall } from './dividers/CTADividerSmall';
+import { CTADivider } from './dividers/CTADivider';
+import { IWidthProps } from '../../hooks/useMobileWidth';
 
 export const InvestorsList = ({ isMobile }: IWidthProps) => (
   <>

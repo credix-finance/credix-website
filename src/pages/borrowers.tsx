@@ -1,30 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Helmet from 'react-helmet';
 import { HeaderComponent } from '../components/HeaderComponent';
 import fav from '../../static/favicon-32x32.png'
 import preview from '../../static/preview_large.png'
-import { HomeComponent } from '../components/borrowers/HomeComponent';
+import { BorrowersHomeComponent } from '../components/borrowers/BorrowersHomeComponent';
 import { FooterComponent } from '../components/FooterComponent';
-import { CTAComponent } from '../components/borrowers/CTAComponent';
-import { CTARegisterComponent } from '../components/borrowers/CTARegisterComponent';
-import { InvestorsList } from '../components/investors/InvestorsList';
-import { Quotes } from '../components/borrowers/Quotes';
+import { BorrowersCTAComponent } from '../components/borrowers/BorrowersCTAComponent';
+import { BorrowersCTARegisterComponent } from '../components/borrowers/BorrowersCTARegisterComponent';
+import { Quotes } from '../components/borrowers/quotes/Quotes';
+import { useMobileWidth } from '../hooks/useMobileWidth';
 
 
 const BorrowersPage = () => {
-  const [width, setWidth] = useState<number>();
-  const mobileWidth = 900;
-  const tabletWidth = 1500;
-
-  useEffect(() => {
-    setWidth(window.innerWidth);
-    window.addEventListener('resize', () => {
-      setWidth(window.innerWidth);
-    });
-    return () => {
-      window.removeEventListener('resize', () => {return;});
-    };
-  }, []);
+  const { width, mobileWidth } = useMobileWidth();
 
   return (
     <main>
@@ -100,10 +88,10 @@ const BorrowersPage = () => {
         <html lang="en"/>
       </Helmet>
       <HeaderComponent isMobile={!!width && width < mobileWidth}/>
-      <HomeComponent/>
-      <CTAComponent/>
+      <BorrowersHomeComponent/>
+      <BorrowersCTAComponent/>
       <Quotes/>
-      <CTARegisterComponent isMobile={!!width && width < mobileWidth}/>
+      <BorrowersCTARegisterComponent isMobile={!!width && width < mobileWidth}/>
       <FooterComponent/>
     </main>
   )

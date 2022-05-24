@@ -11,40 +11,15 @@ import { CoreTeamComponent } from '../components/CoreTeamComponent';
 import { AdvisorsComponent } from '../components/AdvisorsComponent';
 import { BackedByComponent } from '../components/BackedByComponent';
 import { FooterComponent } from '../components/FooterComponent';
-import { useEffect, useState } from 'react';
 import Helmet from 'react-helmet'
 import fav from '../../static/favicon-32x32.png'
 import preview from '../../static/preview_large.png'
 import { HowItWorksComponent } from '../components/HowItWorksComponent';
-import { FAQComponent } from '../components/FAQComponent';
+import { useMobileWidth } from '../hooks/useMobileWidth';
 
-export interface IWidthProps {
-  isMobile?: boolean;
-  isTablet?: boolean;
-}
-
-/**
- * Helper Function
- */
-export const openInNewTab = (url: string): void => {
-  const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
-  if (newWindow) newWindow.opener = null
-}
 
 const IndexPage = () => {
-  const [width, setWidth] = useState<number>();
-  const mobileWidth = 900;
-  const tabletWidth = 1500;
-
-  useEffect(() => {
-    setWidth(window.innerWidth);
-    window.addEventListener('resize', () => {
-      setWidth(window.innerWidth);
-    });
-    return () => {
-      window.removeEventListener('resize', () => {return;});
-    };
-  }, []);
+  const { width, mobileWidth, tabletWidth } = useMobileWidth();
 
   return (
     <main>

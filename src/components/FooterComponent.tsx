@@ -1,8 +1,7 @@
 import React from 'react';
 import SvgIcon, { SVG_COLORS, SVG_ICONS } from './shared/svg-icon/SvgIcon';
 import { StaticImage } from 'gatsby-plugin-image';
-import { openInNewTab } from '../pages';
-import { PopupButton } from '@typeform/embed-react';
+import { openInNewTab } from '../utils/openInNewTab';
 
 export const FooterComponent = () => {
 
