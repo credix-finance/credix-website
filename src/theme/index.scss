@@ -15,6 +15,8 @@
  */
 @import "scss/components/header-component";
 @import "scss/components/home-component";
+@import "scss/components/home-component-investors";
+@import "scss/components/home-component-borrowers";
 @import "scss/components/cta-component";
 @import "scss/components/thesis-component";
 @import "scss/components/platform-component";
@@ -29,3 +31,9 @@
 @import "scss/components/faq-component";
 @import "scss/components/parallax-component";
 @import "scss/components/backers-borrowers-component";
+@import "scss/components/investors-list-component";
+@import "scss/components/cta-component-investors";
+@import "scss/components/cta-component-borrowers";
+@import "scss/components/cta-register-borrower-component";
+@import "scss/components/quotes-component";
+@import "scss/components/marquee-component";

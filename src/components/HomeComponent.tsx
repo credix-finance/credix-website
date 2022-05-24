@@ -1,8 +1,11 @@
 import * as React from 'react'
 import { CredixButton } from './shared/buttons/CredixButton';
-import { IWidthProps } from '../pages';
+import SvgIcon, { SVG_COLORS, SVG_ICONS } from './shared/svg-icon/SvgIcon';
+import { StaticImage } from 'gatsby-plugin-image';
+import { IWidthProps } from '../hooks/useMobileWidth';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
+//TODO: rename
 import DogVideo from '../assets/video/Credix_WebsiteGradientA_02.mp4'
 
 export const HomeComponent = ({ isMobile }: IWidthProps) => {

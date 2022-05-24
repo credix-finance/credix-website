@@ -1,29 +1,18 @@
-import * as React from 'react'
-import '../theme/index.scss';
-import { HomeComponent } from '../components/HomeComponent';
-import { CTAComponent } from '../components/CTAComponent';
-import { ThesisComponent } from '../components/ThesisComponent';
+import React from 'react';
+import Helmet from 'react-helmet';
 import { HeaderComponent } from '../components/HeaderComponent';
-import { PlatformComponent } from '../components/PlatformComponent';
-import { VisionComponent } from '../components/VisionComponent';
-import { CTATeamComponent } from '../components/CTATeamComponent';
-import { CoreTeamComponent } from '../components/CoreTeamComponent';
-import { AdvisorsComponent } from '../components/AdvisorsComponent';
-import { FooterComponent } from '../components/FooterComponent';
-import Helmet from 'react-helmet'
 import fav from '../../static/favicon-32x32.png'
 import preview from '../../static/preview_large.png'
-import { HowItWorksComponent } from '../components/HowItWorksComponent';
+import { BorrowersHomeComponent } from '../components/borrowers/BorrowersHomeComponent';
+import { FooterComponent } from '../components/FooterComponent';
+import { BorrowersCTAComponent } from '../components/borrowers/BorrowersCTAComponent';
+import { BorrowersCTARegisterComponent } from '../components/borrowers/BorrowersCTARegisterComponent';
+import { Quotes } from '../components/borrowers/quotes/Quotes';
 import { useMobileWidth } from '../hooks/useMobileWidth';
-import { ParallaxProvider } from 'react-scroll-parallax';
-import { ParallaxComponent } from '../components/ParallaxComponent';
-import { BackersBorrowersComponent } from '../components/BackersBorrowersComponent';
 
 
-
-const IndexPage = () => {
-  const { width, mobileWidth, tabletWidth } = useMobileWidth();
-
+const BorrowersPage = () => {
+  const { width, mobileWidth } = useMobileWidth();
 
   return (
     <main>
@@ -98,25 +87,14 @@ const IndexPage = () => {
         <title lang="en">Credix</title>
         <html lang="en"/>
       </Helmet>
-      <ParallaxProvider>
-        <HeaderComponent isMobile={!!width && width < mobileWidth}/>
-        <HomeComponent isMobile={!!width && width < mobileWidth}/>
-        <ParallaxComponent/>
-        {/*<CTAComponent/>*/}
-        <BackersBorrowersComponent/>
-        <ThesisComponent isMobile={!!width && width < mobileWidth}/>
-        <PlatformComponent/>
-        <HowItWorksComponent isMobile={!!width && width < mobileWidth}/>
-        <VisionComponent isMobile={!!width && width < mobileWidth} isTablet={!!width && width < tabletWidth}/>
-        <CTATeamComponent/>
-        <CoreTeamComponent/>
-        <AdvisorsComponent/>
-        {/*<BackedByComponent/>*/}
-        {/*<FAQComponent/>*/}
-        <FooterComponent/>
-      </ParallaxProvider>
+      <HeaderComponent isMobile={!!width && width < mobileWidth}/>
+      <BorrowersHomeComponent/>
+      <BorrowersCTAComponent/>
+      <Quotes isMobile={!!width && width < mobileWidth}/>
+      <BorrowersCTARegisterComponent isMobile={!!width && width < mobileWidth}/>
+      <FooterComponent/>
     </main>
   )
 }
 
-export default IndexPage
+export default BorrowersPage;
