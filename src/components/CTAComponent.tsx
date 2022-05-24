@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { PopupButton } from '@typeform/embed-react'
 
 export const CTAComponent = () => {
+
   return (
     <div className="h-flex-column cta-component">
       <div className="h-flex-row h-flex-row--space-between h-flex-row--align-center cta-component--row">

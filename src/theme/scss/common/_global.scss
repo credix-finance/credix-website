@@ -165,3 +165,8 @@ h1 {
   margin-block: 0;
   margin-inline: 0;
 }
+
+hr.solid {
+  width: 100%;
+  border-top: 3px solid $COLOR_WHITE
+}

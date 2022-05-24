@@ -40,9 +40,9 @@ export const HomeComponent = ({ isMobile }: IWidthProps) => {
 
 
       </div>
-      <div className="h-flex-row home-component--arrow-row" id="journey">
-        <a href="#journey" className="home-component--arrow"/>
-      </div>
+      {/*<div className="h-flex-row home-component--arrow-row" id="journey">*/}
+      {/*  <a href="#journey" className="home-component--arrow"/>*/}
+      {/*</div>*/}
     </div>
   )
 }
