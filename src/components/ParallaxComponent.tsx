@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Parallax } from 'react-scroll-parallax';
 import { StaticImage } from 'gatsby-plugin-image';
+import { CredixButton } from './shared/buttons/CredixButton';
+import { PopupButton } from '@typeform/embed-react';
 
 export const ParallaxComponent = () => {
 
@@ -90,6 +92,9 @@ export const ParallaxComponent = () => {
           <hr className="solid"/>
           <span>Institutional investors such as hedge funds, family offices, and alternative asset managers are accessing Credix to enhance returns and diversify risk.</span>
           <br/>
+          <PopupButton id="E98Qjiw9" className="credix-button--typeform parallax-component--child-scroll--button">
+            Become an investor
+          </PopupButton>
           <br/>
           <br/>
           <br/>
@@ -100,6 +105,10 @@ export const ParallaxComponent = () => {
           <span className="parallax-component--child-scroll--title">For Borrowers</span>
           <hr className="solid"/>
           <span>Alternative lenders, such as Credit FinTechs and nonbank loan originators can access credit facilities more efficient and for a lower cost of capital.</span>
+          <br/>
+          <PopupButton id="yFTAJy3h" className="credix-button--typeform parallax-component--child-scroll--button">
+            Register as a borrower
+          </PopupButton>
 
         </Parallax>
         <div className="parallax-component--image-scroll h-flex-column">

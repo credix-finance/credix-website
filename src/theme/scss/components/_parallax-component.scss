@@ -22,6 +22,11 @@
       font-weight: $FONT_WEIGHT_XNORMAL;
       line-height: $LINE_HEIGHT_LARGE;
     }
+
+    &--button {
+      width: $BUTTON_WIDTH_LARGE;
+      border-radius: $BORDER_RADIUS;
+    }
   }
 
   &--image-scroll {
