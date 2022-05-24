@@ -1,25 +1,17 @@
-import * as React from 'react'
-import '../theme/index.scss';
-import { HomeComponent } from '../components/HomeComponent';
-import { CTAComponent } from '../components/CTAComponent';
-import { ThesisComponent } from '../components/ThesisComponent';
+import React from 'react';
+import Helmet from 'react-helmet';
 import { HeaderComponent } from '../components/HeaderComponent';
-import { PlatformComponent } from '../components/PlatformComponent';
-import { VisionComponent } from '../components/VisionComponent';
-import { CTATeamComponent } from '../components/CTATeamComponent';
-import { CoreTeamComponent } from '../components/CoreTeamComponent';
-import { AdvisorsComponent } from '../components/AdvisorsComponent';
-import { BackedByComponent } from '../components/BackedByComponent';
-import { FooterComponent } from '../components/FooterComponent';
-import Helmet from 'react-helmet'
 import fav from '../../static/favicon-32x32.png'
 import preview from '../../static/preview_large.png'
-import { HowItWorksComponent } from '../components/HowItWorksComponent';
+import { InvestorsHomeComponent } from '../components/investors/InvestorsHomeComponent';
+import { InvestorsCTAComponent } from '../components/investors/InvestorsCTAComponent';
+import { FooterComponent } from '../components/FooterComponent';
+import { InvestorsList } from '../components/investors/InvestorsList';
 import { useMobileWidth } from '../hooks/useMobileWidth';
+import { MarqueeComponent } from '../components/shared/marquee/MarqueeComponent';
 
-
-const IndexPage = () => {
-  const { width, mobileWidth, tabletWidth } = useMobileWidth();
+const InvestorsPage = () => {
+  const { width, mobileWidth } = useMobileWidth();
 
   return (
     <main>
@@ -31,6 +23,7 @@ const IndexPage = () => {
         meta={[
           {
             name: 'description',
+            //TODO: change description for the pages
             content: 'CREDIX is a decentralized credit marketplace connecting investors with FinTechs in emerging markets. Learn more about the future of debt financing now.'
           },
           {
@@ -94,21 +87,14 @@ const IndexPage = () => {
         <title lang="en">Credix</title>
         <html lang="en"/>
       </Helmet>
+      <MarqueeComponent/>
       <HeaderComponent isMobile={!!width && width < mobileWidth}/>
-      <HomeComponent isMobile={!!width && width < mobileWidth}/>
-      <CTAComponent/>
-      <ThesisComponent isMobile={!!width && width < mobileWidth}/>
-      <PlatformComponent/>
-      <HowItWorksComponent isMobile={!!width && width < mobileWidth}/>
-      <VisionComponent isMobile={!!width && width < mobileWidth} isTablet={!!width && width < tabletWidth}/>
-      <CTATeamComponent/>
-      <CoreTeamComponent/>
-      <AdvisorsComponent/>
-      <BackedByComponent/>
-      {/*<FAQComponent/>*/}
+      <InvestorsHomeComponent isMobile={!!width && width < mobileWidth}/>
+      <InvestorsCTAComponent/>
+      <InvestorsList isMobile={!!width && width < mobileWidth}/>
       <FooterComponent/>
     </main>
   )
 }
 
-export default IndexPage
+export default InvestorsPage;

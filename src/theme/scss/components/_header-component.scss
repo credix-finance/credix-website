@@ -1,5 +1,5 @@
 .header-component {
-  background-color: #1F1F1F;
+  background-color: $COLOR_BLACK;
   height: 20vh;
 
   @extend .global-padding-left-right;
@@ -10,6 +10,22 @@
 
     @include mobile {
       margin-bottom: $UNIT * 2;
+    }
+
+    &--gatsby {
+      text-decoration: none;
+      color: $COLOR_WHITE;
+    }
+
+    &--active {
+      width: 96px;
+      height: 4px;
+      background: $COLOR_WHITE;
+      margin-top: 34px;
+
+      @include mobile {
+        margin-top: $UNIT;
+      }
     }
 
   }
