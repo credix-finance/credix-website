@@ -1,7 +1,7 @@
 import React from 'react';
 import SvgIcon, { SVG_COLORS, SVG_ICONS } from './shared/svg-icon/SvgIcon';
-import { IWidthProps } from '../pages';
 import { StaticImage } from 'gatsby-plugin-image';
+import { IWidthProps } from '../hooks/useMobileWidth';
 
 export const VisionComponent = ({ isTablet, isMobile }: IWidthProps) => {
   return (

@@ -1,9 +1,9 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import { CredixButton } from '../shared/buttons/CredixButton';
-import { CTADivider } from '../shared/dividers/CTADivider';
-import { CTADividerSmall } from '../shared/dividers/CTADividerSmall';
-import { IWidthProps } from '../../pages';
+import { CTADividerSmall } from './dividers/CTADividerSmall';
+import { CTADivider } from './dividers/CTADivider';
+import { IWidthProps } from '../../hooks/useMobileWidth';
 
 export const InvestorsList = ({ isMobile }: IWidthProps) => (
   <>
@@ -14,13 +14,13 @@ export const InvestorsList = ({ isMobile }: IWidthProps) => (
       {
         <div className="h-flex-row h-flex-row--space-between investors-list-component--logo-row">
           <a target="_blank">
-            <StaticImage src={'../assets/logos/parafi.png'} alt={'parafi'} className="backed-by-component--logo"/>
+            <StaticImage src={'../../assets/logos/parafi.png'} alt={'parafi'} className="backed-by-component--logo"/>
           </a>
           <a target="_blank">
             <StaticImage src={'../../assets/logos/alameda-logo.png'} alt={'alameda'} className="backed-by-component--logo"/>
           </a>
           <a target="_blank">
-            <StaticImage src={'../assets/logos/cumberland-logo.png'} alt={'cumberland'} className="backed-by-component--logo"/>
+            <StaticImage src={'../../assets/logos/cumberland-logo.png'} alt={'cumberland'} className="backed-by-component--logo"/>
           </a>
         </div>
       }
@@ -30,8 +30,7 @@ export const InvestorsList = ({ isMobile }: IWidthProps) => (
         {isMobile ? <CTADividerSmall/> : <CTADivider/>}
         <span>Invest in the future of credit markets</span>
       </div>
-      <CredixButton className="investors-list-component--button" url={''}>Register here</CredixButton>
+      <CredixButton className="investors-list-component--button" url={''}>Register as an investor</CredixButton>
     </div>
   </>
-
 )

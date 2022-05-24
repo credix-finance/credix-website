@@ -2,7 +2,7 @@ import * as React from 'react'
 import { CredixButton } from './shared/buttons/CredixButton';
 import SvgIcon, { SVG_COLORS, SVG_ICONS } from './shared/svg-icon/SvgIcon';
 import { StaticImage } from 'gatsby-plugin-image';
-import { IWidthProps } from '../pages';
+import { IWidthProps } from '../hooks/useMobileWidth';
 
 
 export const HomeComponent = ({ isMobile }: IWidthProps) => {

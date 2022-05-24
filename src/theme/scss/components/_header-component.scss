@@ -12,6 +12,22 @@
       margin-bottom: $UNIT * 2;
     }
 
+    &--gatsby {
+      text-decoration: none;
+      color: $COLOR_WHITE;
+    }
+
+    &--active {
+      width: 96px;
+      height: 4px;
+      background: $COLOR_WHITE;
+      margin-top: 34px;
+
+      @include mobile {
+        margin-top: $UNIT;
+      }
+    }
+
   }
 
   &--menu-button{

@@ -1,6 +1,6 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
-import { IWidthProps } from '../pages';
+import { IWidthProps } from '../hooks/useMobileWidth';
 
 export const ThesisComponent = ({ isMobile }: IWidthProps) => {
   return (

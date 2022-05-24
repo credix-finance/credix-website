@@ -1,6 +1,5 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
-import { IWidthProps } from '../pages';
 
 export const BackedByComponent = () => {
   return (
@@ -8,7 +7,7 @@ export const BackedByComponent = () => {
       <div className="h-flex-row h-flex-row--space-between backed-by-component--title-row">
         <span className="sub-title">Backed by</span>
       </div>
-      {        
+      {
         <div className="h-flex-row h-flex-row--space-between backed-by-component--logo-row">
           <a target="_blank">
             <StaticImage src={'../assets/logos/cumberland-logo.png'} alt={'cumberland'} className="backed-by-component--logo"/>
