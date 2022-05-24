@@ -12,7 +12,6 @@ export const HeaderComponent = ({ isMobile }: IWidthProps) => {
       <>
         <span className="header-component--link" onClick={() => openInNewTab('https://angel.co/company/credix')}>Join The Team</span>
         <span className="header-component--link" onClick={() => openInNewTab('https://credix.gitbook.io/credix')}>Documentation</span>
-        <span className="header-component--link" onClick={() => openInNewTab('https://credix.gitbook.io/credix')}>Documentation</span>
         <CredixButton className="header--links--button" url={'https://app.credix.finance/'}>Launch App</CredixButton>
       </>
     )
