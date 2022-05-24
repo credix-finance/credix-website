@@ -9,6 +9,7 @@ import { BorrowersCTAComponent } from '../components/borrowers/BorrowersCTACompo
 import { BorrowersCTARegisterComponent } from '../components/borrowers/BorrowersCTARegisterComponent';
 import { Quotes } from '../components/borrowers/quotes/Quotes';
 import { useMobileWidth } from '../hooks/useMobileWidth';
+import { MarqueeComponent } from '../components/shared/marquee/MarqueeComponent';
 
 
 const BorrowersPage = () => {
@@ -87,6 +88,7 @@ const BorrowersPage = () => {
         <title lang="en">Credix</title>
         <html lang="en"/>
       </Helmet>
+      <MarqueeComponent/>
       <HeaderComponent isMobile={!!width && width < mobileWidth}/>
       <BorrowersHomeComponent/>
       <BorrowersCTAComponent/>

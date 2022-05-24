@@ -1,12 +1,10 @@
 import * as React from 'react'
 import { CredixButton } from './shared/buttons/CredixButton';
-import SvgIcon, { SVG_COLORS, SVG_ICONS } from './shared/svg-icon/SvgIcon';
-import { StaticImage } from 'gatsby-plugin-image';
 import { IWidthProps } from '../hooks/useMobileWidth';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-//TODO: rename
-import DogVideo from '../assets/video/Credix_WebsiteGradientA_02.mp4'
+import GradientVideo from '../assets/video/Credix_WebsiteGradientA_02.mp4'
+import { VideoComponent } from './shared/video/VideoComponent';
 
 export const HomeComponent = ({ isMobile }: IWidthProps) => {
 
@@ -19,26 +17,18 @@ export const HomeComponent = ({ isMobile }: IWidthProps) => {
     </div>
   )
 
-  const gradientVideo = () => (
-    <div className="h-flex-column home-component--video">
-      <video controls={false} autoPlay muted loop>
-        <source src={DogVideo} type="video/mp4"/>
-      </video>
-    </div>
-  )
-
   return (
     <div className="h-flex-column home-component">
       <div className="h-flex-row cta-block">
         { isMobile ?
           <>
-            {gradientVideo()}
+            <VideoComponent video={GradientVideo}/>
             {homeText()}
           </>
           :
           <>
             {homeText()}
-            {gradientVideo()}
+            <VideoComponent video={GradientVideo}/>
           </>
         }
 

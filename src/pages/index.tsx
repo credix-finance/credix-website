@@ -18,6 +18,7 @@ import { useMobileWidth } from '../hooks/useMobileWidth';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { ParallaxComponent } from '../components/ParallaxComponent';
 import { BackersBorrowersComponent } from '../components/BackersBorrowersComponent';
+import { MarqueeComponent } from '../components/shared/marquee/MarqueeComponent';
 
 
 
@@ -98,6 +99,7 @@ const IndexPage = () => {
         <title lang="en">Credix</title>
         <html lang="en"/>
       </Helmet>
+      <MarqueeComponent/>
       <ParallaxProvider>
         <HeaderComponent isMobile={!!width && width < mobileWidth}/>
         <HomeComponent isMobile={!!width && width < mobileWidth}/>
