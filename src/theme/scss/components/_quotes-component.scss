@@ -8,11 +8,9 @@
   &--background-shape-a55{
     width: 140px;
     margin-bottom: 48px;
-    margin-left: 20px;
 
     @include mobile {
       width: 75px;
-      margin-left: initial;
       margin-bottom: initial;
     }
   }
@@ -20,42 +18,28 @@
   &--background-shape-tecredi{
     width: 170px;
     margin-bottom: 48px;
-    margin-left: 20px;
 
     @include mobile {
       width: 100px;
-      margin-left: initial;
       margin-bottom: initial;
     }
   }
 
-  &--background-shape-quotation-start{
-    position: relative;
-    width: 40px;
-    height: 30px;
-    top: -20px;
-    left: 380px;
+  &--background-shape-quotation-column {
+    width: 30px;
+    height: 100%;
+    transform: translateX(-10px);
 
     @include mobile {
-      left: initial;
-      top: initial;
-      transform: translateX(-10px);
-      width: 20px;
+      width: 5%;
     }
   }
 
-  &--background-shape-quotation-end{
-    position: relative;
-    width: 40px;
-    height: 30px;
-    bottom: 30px;
-    left: 500px;
-
+  &--quote-text{
+    width: 500px;
+    height: 100%;
     @include mobile {
-      margin-left: auto;
-      left: initial;
-      width: 20px;
-
+      width: 90%;
     }
   }
 

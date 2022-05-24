@@ -29,12 +29,39 @@ export const Quotes = ({ isMobile }: IWidthProps) => {
             </span>
           </div>
         }
-        {
-          quote === Quote.A55 && <QuoteA55/>
-        }
-        {
-          quote === Quote.TECREDI && <QuoteTecredi/>
-        }
+        <div className="h-flex-row">
+          <div className="h-flex-column quotes-component--background-shape-quotation-column">
+            <StaticImage src="../../../assets/shapes/quotation-mark-start.png" alt="quotation mark"/>
+          </div>
+          <div className="h-flex-column quotes-component--quote-text">
+            {
+              quote === Quote.A55 &&
+                <>
+                  <div className="quotes-component--right-text">
+                    It is exciting to use the new capital markets, leveraged by decentralized finance and blockchain technologies, to help the new economy entrepreneurs. A55 is impressed by Credit`&rsquo;`s vision and the
+                    already-created technology to rethink global capital markets.
+                  </div>
+                  <div className="quotes-component--right-text--cited-person">
+                    Hugo Mathecowitsch - CEO A55
+                  </div>
+                </>
+            }
+            {
+              quote === Quote.TECREDI &&
+                <>
+                  <div className="quotes-component--right-text">
+                    Credix is a great partner of Tecredi. Their solutions are rewriting the debt venture capital market and creating new possibilities for the whole ecosystem
+                  </div>
+                  <div className="quotes-component--right-text--cited-person">
+                    Gustavo Pulga CO - CEO TECREDI
+                  </div>
+                </>
+            }
+          </div>
+          <div className="h-flex-column quotes-component--background-shape-quotation-column">
+            <StaticImage src="../../../assets/shapes/quotation-mark-end.png" alt="quotation mark" style={{ marginTop: 'auto' }}/>
+          </div>
+        </div>
         {
           isMobile &&
             <>
