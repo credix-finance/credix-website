@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import SvgIcon, { SVG_COLORS, SVG_ICONS } from './shared/svg-icon/SvgIcon';
 import { CredixButton } from './shared/buttons/CredixButton';
 import { Drawer } from '@mui/material';
@@ -11,19 +11,25 @@ enum Page {
     INVESTORS = 'investors',
 }
 
-const getActiveLink = () => {
-  if (window.location.pathname.includes(Page.BORROWERS)) {
+const getActiveLink = (pathname?: string) => {
+  if (pathname && pathname.includes(Page.BORROWERS)) {
     return Page.BORROWERS;
   }
-  if (window.location.pathname.includes(Page.INVESTORS)) {
+  if (pathname && pathname.includes(Page.INVESTORS)) {
     return Page.INVESTORS;
   }
 }
 
-export const HeaderComponent = ({ isMobile }: IWidthProps) => {
-  const currentPage = getActiveLink();
+export const HeaderComponent = ({ isMobile, ...locationProps }: IWidthProps) => {
+  const { location } = locationProps;
+
+  const [currentPage, setCurrentPage] = useState<string | undefined>(getActiveLink(location?.pathname));
 
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>();
+
+  useEffect(() => {
+    setCurrentPage(getActiveLink(location?.pathname));
+  }, [location]);
 
   const headerLinks = () => {
     return (
