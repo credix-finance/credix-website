@@ -82,7 +82,6 @@
 
   &--button.MuiButton-root {
     width: 330px;
-    margin-top: 48px;
 
     @include mobile {
       margin-top: $UNIT * 4;

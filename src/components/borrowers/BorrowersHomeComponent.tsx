@@ -11,7 +11,7 @@ import GradientVideo from '../../assets/video/Credix_WebsiteGradientB_02.mp4';
 export const BorrowersHomeComponent = ({ isMobile }: IWidthProps) => {
 
   const homeText = () => (
-    <div className="h-flex-row cta-block">
+    <div className="h-flex-row cta-block home-component-borrowers--text">
       <div className="h-flex-column">
         <h1 className="cta-block-borrowers--title">Borrow <br/> at attractive rates</h1>
         <span className="cta-block-borrowers--text">Get cheaper credit, less bureaucracy and shorter lead times.</span>

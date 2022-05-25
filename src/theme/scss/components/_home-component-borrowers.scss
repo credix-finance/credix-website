@@ -7,8 +7,16 @@
 
   @include mobile {
     min-height: 400px;
-    height: 500px;
+    height: 630px;
     max-height: 80vh;
+  }
+
+  &--text {
+    @include mobile {
+      transform: translateY(-50px);
+      padding-top: 30px;
+      background-color: black;
+    }
   }
 
   &--background-shape {
@@ -59,8 +67,9 @@
     @extend .font-second;
 
     @include mobile {
-      font-size: $FONT_SIZE_SMALL;
+      font-size: $FONT_SIZE_NORMAL;
       line-height: $LINE_HEIGHT_SMALL;
+      margin-bottom: 50px;
     }
   }
 
@@ -68,5 +77,10 @@
     width: 350px;
 
     @extend .h-margin-top--triple;
+
+    @include mobile {
+      width: 95%;
+      align-self: center;
+    }
   }
 }

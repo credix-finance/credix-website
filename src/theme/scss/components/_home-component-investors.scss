@@ -2,6 +2,7 @@
   background: $COLOR_BLACK;
   min-height: 709px;
   height: 80vh;
+  position: relative;
 
   @extend .global-padding-left-right;
 
@@ -23,11 +24,10 @@
     }
 
     &--mobile {
-      position: absolute !important;
+      position: absolute;
       align-self: center;
-      top: 350px;
-      left: 300px;
-      display: initial;
+      top: 180px;
+      transform: translateX(170px);
     }
   }
 }
@@ -69,5 +69,10 @@
     width: 350px;
 
     @extend .h-margin-top--triple;
+
+    @include mobile {
+      width: 95%;
+      align-self: center;
+    }
   }
 }

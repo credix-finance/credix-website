@@ -93,8 +93,8 @@ html{
   background-color: $COLOR_WHITE;
   color: $COLOR_BLACK;
   height: $BUTTON_HEIGHT;
-  border-radius: 0;
   text-transform: none;
+  border-radius: $BORDER_RADIUS;
 
   &:hover{
     background-color: $COLOR_BLACK;
