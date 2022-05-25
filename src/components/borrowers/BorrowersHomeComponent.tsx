@@ -18,8 +18,8 @@ export const BorrowersHomeComponent = ({ isMobile }: IWidthProps) => {
       }
       <div className="h-flex-row cta-block">
         <div className="h-flex-column">
-          <h1 className="cta-block-borrowers--title">Borrow at attractive rates</h1>
-          <span className="cta-block--text">Get cheaper credit, less bureaucracy and shorter lead times.</span>
+          <h1 className="cta-block-borrowers--title">Borrow <br/> at attractive rates</h1>
+          <span className="cta-block-borrowers--text">Get cheaper credit, less bureaucracy and shorter lead times.</span>
           <CredixButton className="cta-block-borrowers--button" url={''}>Become a borrower</CredixButton>
         </div>
       </div>

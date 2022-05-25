@@ -1,6 +1,12 @@
 import { useEffect, useState } from 'react';
 
-export interface IWidthProps {
+interface LocationProps {
+  location?: {
+    pathname: string;
+  }
+}
+
+export interface IWidthProps extends LocationProps {
   isMobile?: boolean;
   isTablet?: boolean;
 }

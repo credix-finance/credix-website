@@ -9,6 +9,7 @@ import { FooterComponent } from '../components/FooterComponent';
 import { InvestorsList } from '../components/investors/InvestorsList';
 import { useMobileWidth } from '../hooks/useMobileWidth';
 import { MarqueeComponent } from '../components/shared/marquee/MarqueeComponent';
+import { Location } from '@reach/router';
 
 const InvestorsPage = () => {
   const { width, mobileWidth } = useMobileWidth();
@@ -88,7 +89,9 @@ const InvestorsPage = () => {
         <html lang="en"/>
       </Helmet>
       <MarqueeComponent/>
-      <HeaderComponent isMobile={!!width && width < mobileWidth}/>
+      <Location>
+        {locationProps => <HeaderComponent {...locationProps} isMobile={!!width && width < mobileWidth}/>}
+      </Location>
       <InvestorsHomeComponent isMobile={!!width && width < mobileWidth}/>
       <InvestorsCTAComponent/>
       <InvestorsList isMobile={!!width && width < mobileWidth}/>
