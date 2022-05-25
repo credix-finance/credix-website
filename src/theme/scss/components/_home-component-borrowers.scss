@@ -53,9 +53,10 @@
     font-size: $FONT_SIZE_XNORMAL;
     font-weight: $FONT_WEIGHT_NORMAL;
     line-height: $LINE_HEIGHT_NORMAL;
+    margin-top: 48px;
+    margin-bottom: 100px;
 
     @extend .font-second;
-    @extend .h-margin-top;
 
     @include mobile {
       font-size: $FONT_SIZE_SMALL;
