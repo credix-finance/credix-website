@@ -106,12 +106,12 @@ const IndexPage = () => {
         <ParallaxComponent/>
         {/*<CTAComponent/>*/}
         <BackersBorrowersComponent/>
-        <ThesisComponent isMobile={!!width && width < mobileWidth}/>
-        <PlatformComponent/>
-        <HowItWorksComponent isMobile={!!width && width < mobileWidth}/>
-        <VisionComponent isMobile={!!width && width < mobileWidth} isTablet={!!width && width < tabletWidth}/>
-        <CTATeamComponent/>
+        {/*<ThesisComponent isMobile={!!width && width < mobileWidth}/>*/}
+        {/*<PlatformComponent/>*/}
+        {/*<HowItWorksComponent isMobile={!!width && width < mobileWidth}/>*/}
+        {/*<VisionComponent isMobile={!!width && width < mobileWidth} isTablet={!!width && width < tabletWidth}/>*/}
         <CoreTeamComponent/>
+        <CTATeamComponent/>
         <AdvisorsComponent/>
         {/*<BackedByComponent/>*/}
         {/*<FAQComponent/>*/}

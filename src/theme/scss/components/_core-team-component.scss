@@ -1,6 +1,6 @@
 .core-team-component {
   min-height: 400px;
-  background: linear-gradient(180deg, #000000 0%, #1F1F1F 100%, #1F1F1F 100%);
+  background: $COLOR_BLACK;
 
   @extend .global-padding-left-right;
 
