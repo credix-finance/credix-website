@@ -2,6 +2,8 @@ import React from 'react';
 import SvgIcon, { SVG_COLORS, SVG_ICONS } from './shared/svg-icon/SvgIcon';
 import { StaticImage } from 'gatsby-plugin-image';
 import { openInNewTab } from '../utils/openInNewTab';
+import { Link } from 'gatsby';
+import { SocialButton } from './shared/buttons/SocialButton';
 
 export const FooterComponent = () => {
 
@@ -16,25 +18,27 @@ export const FooterComponent = () => {
         <div className="h-flex-column footer-component--column">
           <SvgIcon icon={SVG_ICONS.CREDIX_LOGO} color={SVG_COLORS.WHITE} className="footer-component--logo"/>
           <div className="h-flex-row h-flex-row--space-around footer-component--footer">
-            {/*<span className="footer-component--footer--link" onClick={mail}>Support</span>*/}
-            {/*<span className="footer-component--footer--link">Terms of service</span>*/}
-            {/*<span className="footer-component--footer--link">License</span>*/}
+            <span className="footer-component--footer--link--small" onClick={mail}>Support</span>
+            <span className="footer-component--footer--link--small">Terms of service</span>
+            <span className="footer-component--footer--link--small">License</span>
           </div>
         </div>
         <div className="h-flex-column footer-component--column">
           <div className="h-flex-column footer-component--padding">
-            <span className="footer-component--footer--link" onClick={() => openInNewTab('https://twitter.com/Credix_finance')}>Twitter</span>
-            <span className="footer-component--footer--link" onClick={() => openInNewTab('https://www.linkedin.com/company/credix-finance/')}>Linkedin</span>
-            <span className="footer-component--footer--link" onClick={() => openInNewTab('https://discord.gg/5Ab8b8ueGs')}>Discord</span>
-            <span className="footer-component--footer--link" onClick={() => openInNewTab('https://angel.co/company/credix')}>Join The Team</span>
+            <Link className="footer-component--footer--link" to={'/investors'}>Investors</Link>
+            <Link className="footer-component--footer--link" to={'/borrowers'}>Borrowers</Link>
             <span className="footer-component--footer--link" onClick={() => openInNewTab('https://credix.gitbook.io/credix')}>Documentation</span>
-            <span className="footer-component--footer--link h-margin-bottom--double" onClick={mail}>Support</span>
+            <span className="footer-component--footer--link" onClick={() => openInNewTab('https://credix.gitbook.io/credix')}>Careers</span>
           </div>
         </div>
         <div className="h-flex-column footer-component--column">
           <span className="footer-component--footer--text">
-            Join our mailing list and stay in the loop.
+            Find us on:
           </span>
+          <div className="h-flex-row h-flex-row--align-start footer-component--social-buttons">
+            <SocialButton icon={SVG_ICONS.LINKEDIN_FOOTER} className="h-cursor-pointer footer-component--social-buttons--linkedIn" onClick={() => openInNewTab('https://www.linkedin.com/company/credix-finance')}/>
+            <SocialButton icon={SVG_ICONS.TWITTER_FOOTER} className="h-cursor-pointer" onClick={() => openInNewTab('https://twitter.com/Credix_finance?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor')}/>
+          </div>
           <div id="mc_embed_signup" className="footer-component--mailchimp-row">
             <form action="https://finance.us20.list-manage.com/subscribe/post?u=6501024066e1753c2aa2d692e&amp;id=e5165ece3c"
               method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate"
