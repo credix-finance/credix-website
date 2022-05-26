@@ -1,10 +1,12 @@
 .header-component {
-  background-color: #1F1F1F;
+  background-color: var(--color-background-header);
   height: 20vh;
 
   @extend .global-padding-left-right;
 
   &--link {
+    color: var(--font-default-color);
+
     @extend .font-second;
     cursor: pointer;
 
@@ -12,6 +14,28 @@
       margin-bottom: $UNIT * 2;
     }
 
+    &--gatsby {
+      text-decoration: none;
+      color: var(--font-default-color);
+    }
+
+    &--active {
+      width: 100%;
+      height: 4px;
+      background: var(--color-white);
+      margin-top: 8px;
+
+      @include mobile {
+        margin-top: $UNIT;
+      }
+    }
+
+  }
+
+  &--switch {
+    span {
+      font-size: 25px;
+    }
   }
 
   &--menu-button{
@@ -26,12 +50,8 @@
 
   &--drawer {
 
-    .MuiDrawer-paper {
-      background-color: $COLOR_FOOTER_BACKGROUND;
-    }
-
     &--links-column {
-      color: white;
+      color: var(--font-default-color);
       margin: $UNIT * 3;
     }
   }
@@ -47,7 +67,7 @@
   }
 
   &--links {
-    width: 500px;
+    width: 730px;
     font-weight: $FONT_WEIGHT_XNORMAL;
     font-size: $FONT_SIZE_NORMAL;
 
@@ -56,7 +76,14 @@
     }
 
     &--button.MuiButton-root {
+      margin-left: 64px;
       width: $BUTTON_WIDTH_NORMAL;
+      border-radius: $BORDER_RADIUS;
+      color: var(--color-black) !important;
+
+      &:hover {
+        color: var(--color-white) !important;
+      }
     }
   }
 }

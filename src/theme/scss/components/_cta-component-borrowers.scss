@@ -1,0 +1,172 @@
+.cta-component-borrowers {
+  background-color: var(--color-background-backers-borrowers);
+  color: var(--font-default-color);
+  min-height: 460px;
+
+  @extend .global-padding-left-right;
+
+  @include mobile {
+    min-height: 600px;
+  }
+
+  &--divider {
+    margin: 14px auto 24px 0;
+    border-color: $COLOR_ORANGE;
+    background: $COLOR_ORANGE;
+    width: 100px;
+    height: 4px;
+
+    &--cta-register {
+      margin: 14px auto 24px 0;
+      border-color: $COLOR_ORANGE;
+      background: $COLOR_ORANGE;
+      width: 80px;
+      height: 10px;
+    }
+
+    &--small {
+      border-color: $COLOR_ORANGE;
+      background: $COLOR_ORANGE;
+      margin: auto auto 16px 0;
+      width: 45px;
+      height: 8px;
+    }
+
+      @include mobile {
+        margin: 16px auto 0 0;
+        height: 4px;
+    }
+
+
+  }
+
+  &--cta-link {
+    text-decoration: underline;
+    padding-bottom: 36px;
+
+    @include mobile {
+      margin-top: 0;
+      width: 220px;
+    }
+  }
+
+  &--row {
+    padding-top: 40px;
+
+    @include tablet {
+      flex-flow: row;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 0;
+    }
+  }
+
+  &--title {
+    font-size: $FONT_SIZE_SLARGE;
+    font-weight: $FONT_WEIGHT_XNORMAL;
+    line-height: $LINE_HEIGHT_LARGE;
+    max-width: 340px;
+
+    @include tablet {
+      font-size: $FONT_SIZE_XXXNORMAL;
+      line-height: $LINE_HEIGHT_SNORMAL;
+      font-weight: $FONT_WEIGHT_XXNORMAL;
+      letter-spacing: 1px;
+    }
+
+    @include mobile {
+      font-size: $FONT_SIZE_XNORMAL;
+      line-height: $LINE_HEIGHT_SMALL;
+      font-weight: $FONT_WEIGHT_XXNORMAL;
+      letter-spacing: 1px;
+    }
+  }
+
+  &--column {
+    text-align: center;
+    width: 390px;
+
+    &--row-mobile {
+      @include mobile {
+        width: 70%;
+        margin-top: $UNIT * 4;
+      }
+    }
+
+    @include mobile {
+      flex-direction: row;
+      width: initial;
+      text-align: left;
+    }
+  }
+
+  &--sub-title {
+    font-family: $FONT_FAMILY_SECOND;
+    font-weight: $FONT_WEIGHT_XNORMAL;
+    font-size: $FONT_SIZE_XXXNORMAL;
+    line-height: $LINE_HEIGHT_NORMAL;
+    text-align: left;
+
+
+    @include mobile {
+      font-weight: $FONT_WEIGHT_BOLD;
+      text-transform: uppercase;
+      font-size: $FONT_SIZE_SMALL;
+      line-height: $LINE_HEIGHT_SMALL;
+    }
+  }
+
+  &--text {
+    font-size: $FONT_SIZE_NORMAL;
+    font-weight: $FONT_WEIGHT_NORMAL;
+    font-family: $FONT_FAMILY_SECOND;
+    line-height: $LINE_HEIGHT_SSNORMAL;
+    width: 340px;
+    text-align: left;
+    margin-bottom: 60px;
+
+    &--cta-link {
+      font-size: $FONT_SIZE_NORMAL;
+      font-weight: $FONT_WEIGHT_NORMAL;
+      font-family: $FONT_FAMILY_SECOND;
+      line-height: $LINE_HEIGHT_SSNORMAL;
+      width: 340px;
+      text-align: left;
+      text-decoration: underline;
+      margin-bottom: 40px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      @include mobile {
+        padding-bottom: $UNIT * 3;
+      }
+
+    }
+
+    @include tablet {
+      font-size: $FONT_SIZE_NORMAL;
+      line-height: $LINE_HEIGHT_SMALL;
+    }
+
+    @include mobile {
+      margin-top: $UNIT * 2;
+      font-size: $FONT_SIZE_SMALL;
+      line-height: $LINE_HEIGHT_SMALL;
+    }
+  }
+
+  &--button.MuiButton-root {
+    width: 290px;
+    margin-bottom: $UNIT * 4;
+
+
+    @include mobile {
+      margin-top: $UNIT * 2;
+    }
+  }
+}

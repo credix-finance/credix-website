@@ -1,0 +1,79 @@
+.home-component-investors {
+  background-color: var(--color-background-header);
+  min-height: 709px;
+  height: 80vh;
+  position: relative;
+
+  @extend .global-padding-left-right;
+
+  @include mobile {
+    min-height: 400px;
+    height: 500px;
+    max-height: 80vh;
+  }
+
+  &--background-shape {
+    position: absolute;
+    left: 1000px;
+    top: 350px;
+    transform: translateY(-10px);
+    z-index: $Z_INDEX_BACKGROUND_SHAPE;
+
+    @include mobile {
+      display: none;
+    }
+
+    &--mobile {
+      position: absolute;
+      align-self: center;
+      top: 180px;
+      transform: translateX(170px);
+    }
+  }
+}
+
+
+.cta-block-investors {
+  margin-top: 88px;
+  z-index: $Z_INDEX_NORMAL;
+
+  &--title {
+    font-size: $FONT_SIZE_XLARGE;
+    font-weight: bold;
+    line-height: $LINE_HEIGHT_XXLARGE;
+    color: var(--font-second-color);
+
+    @include mobile {
+      font-size: $FONT_SIZE_XSLARGE;
+      line-height: $LINE_HEIGHT_XNORMAL;
+    }
+  }
+
+  &--text {
+    max-width: 556px;
+    font-size: $FONT_SIZE_XNORMAL;
+    font-weight: $FONT_WEIGHT_NORMAL;
+    line-height: $LINE_HEIGHT_NORMAL;
+    margin-top: 48px;
+    margin-bottom: 100px;
+    color: var(--font-second-color);
+
+    @extend .font-second;
+
+    @include mobile {
+      font-size: $FONT_SIZE_SMALL;
+      line-height: $LINE_HEIGHT_SMALL;
+    }
+  }
+
+  &--button.MuiButton-root {
+    width: 350px;
+
+    @extend .h-margin-top--triple;
+
+    @include mobile {
+      width: 95%;
+      align-self: center;
+    }
+  }
+}
