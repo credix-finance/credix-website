@@ -1,0 +1,67 @@
+.parallax-component {
+  height: 600px;
+  background: linear-gradient(#000000 100%, #1F1F1F 0%);
+  overflow-y: hidden;
+  @extend .global-padding-left-right;
+
+  @include mobile {
+    height: initial;
+    padding-bottom: 175px;
+  }
+
+
+  &--wrapper{
+    height: 400px;
+    overflow: hidden;
+    padding-top: 50px;
+  }
+
+
+  &--child-scroll {
+    height: fit-content;
+    width: 45%;
+    margin: 50px 0 100px;
+
+    &--title {
+      font-size: $FONT_SIZE_SLARGE;
+      font-weight: $FONT_WEIGHT_XNORMAL;
+      line-height: $LINE_HEIGHT_LARGE;
+
+      @include mobile {
+        font-size: $FONT_SIZE_XXXNORMAL;
+        font-weight: $FONT_WEIGHT_XXNORMAL;
+        line-height: $LINE_HEIGHT_LARGE;
+        margin-top: 48px;
+      }
+    }
+
+    &--text {
+      font-family: $FONT_FAMILY_SECOND;
+      margin-top: 10px;
+
+      @include mobile {
+        font-size: $FONT_SIZE_NORMAL;
+        font-weight: $FONT_WEIGHT_NORMAL;
+        line-height: $LINE_HEIGHT_SSNORMAL;
+        margin-top: 48px;
+
+      }
+    }
+
+    &--button {
+      width: $BUTTON_WIDTH_LARGE;
+      border-radius: $BORDER_RADIUS;
+    }
+  }
+
+  &--image-scroll {
+    height: 150px;
+    width: 30%;
+    margin: 50px 0 100px auto;
+    position: relative;
+  }
+
+  &--image-overlap {
+    position: absolute;
+  }
+}

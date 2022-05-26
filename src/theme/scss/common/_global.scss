@@ -93,8 +93,8 @@ html{
   background-color: $COLOR_WHITE;
   color: $COLOR_BLACK;
   height: $BUTTON_HEIGHT;
-  border-radius: 0;
   text-transform: none;
+  border-radius: $BORDER_RADIUS;
 
   &:hover{
     background-color: $COLOR_BLACK;
@@ -129,7 +129,7 @@ html{
 
 .sub-title {
   font-weight: $FONT_WEIGHT_BOLD;
-  font-size: $FONT_SIZE_LARGE;
+  font-size: $FONT_SIZE_XSLARGE;
   line-height: $LINE_HEIGHT_XLARGE;
   color: $FONT_SECOND_COLOR;
   z-index: $Z_INDEX_NORMAL;
@@ -164,4 +164,9 @@ h1 {
   margin: 0;
   margin-block: 0;
   margin-inline: 0;
+}
+
+hr.solid {
+  width: 100%;
+  border-top: 3px solid $COLOR_WHITE
 }

@@ -1,7 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
-import { QuoteA55 } from './QuoteA55';
-import { QuoteTecredi } from './QuoteTecredi';
 import { IWidthProps } from '../../../hooks/useMobileWidth';
 
 enum Quote {
@@ -11,6 +9,23 @@ enum Quote {
 
 export const Quotes = ({ isMobile }: IWidthProps) => {
   const [quote, setQuote] = React.useState(Quote.A55);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      switch (quote) {
+      case Quote.A55:
+        setQuote(Quote.TECREDI);
+        break;
+      case Quote.TECREDI:
+        setQuote(Quote.A55);
+        break;
+      default:
+        setQuote(Quote.A55);
+      }
+    }, 10000)
+
+    return () => clearInterval(interval)
+  }, [quote])
 
   return (
     <div className="h-flex-column quotes-component">

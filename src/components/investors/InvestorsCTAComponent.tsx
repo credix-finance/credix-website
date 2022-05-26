@@ -31,8 +31,7 @@ export const InvestorsCTAComponent = () => (
       <div className="h-flex-row h-flex-row--space-between cta-component-investors--row">
         <div className="h-flex-column cta-component-investors--column">
           <div className="h-flex-column cta-component-investors--column--row-mobile">
-            <span
-              className="cta-component-investors--text--cta-link" onClick={() => openInNewTab('https://docs.credix.finance/')}>Read our documentation -{'>'}</span>
+            <span className="cta-component-investors--text--cta-link" onClick={() => openInNewTab('https://docs.credix.finance/')}>Read our documentation -{'>'}</span>
           </div>
         </div>
         <div className="h-flex-column cta-component-investors--column"/>

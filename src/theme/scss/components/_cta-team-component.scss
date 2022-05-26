@@ -1,6 +1,6 @@
 .cta-team-component {
   min-height: 350px;
-  background: radial-gradient(43.21% 50% at 47.57% 50%, #1F1F1F 0%, #000000 100%);
+  background: $COLOR_BLACK;
 
   padding-left: $GLOBAL_PADDING_LEFT;
   padding-right: $GLOBAL_PADDING_RIGHT;
@@ -12,8 +12,11 @@
 
   &--row {
     margin-top: 80px;
+    border: 1px solid $COLOR_GREY_BACKGROUND;
+    padding: 45px;
     @include mobile {
       flex-flow: column;
+      padding: 25px;
     }
   }
 

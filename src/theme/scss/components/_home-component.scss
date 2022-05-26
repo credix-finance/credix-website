@@ -1,13 +1,32 @@
 .home-component {
-  background: linear-gradient(180deg, #1F1F1F 0%, #1F1F1F 43.43%, #000000 100%);
-  min-height: 709px;
-  height: 80vh;
+  background: $COLOR_BLACK;
+  height: 77vh;
 
   @extend .global-padding-left-right;
 
   @include mobile {
     min-height: 400px;
     max-height: 80vh;
+  }
+
+  &--video {
+    margin-left: auto;
+    margin-right: -$GLOBAL_PADDING_RIGHT;
+
+    @include mobile {
+      margin-left: initial;
+      margin-right: $GLOBAL_PADDING_RIGHT;
+      width: 100%;
+    }
+  }
+
+  &--text {
+    @include mobile {
+      transform: translateY(-50px);
+      padding-top: 30px;
+      background-color: black;
+      width: 100%;
+    }
   }
 
   &--arrow-row {
@@ -75,6 +94,10 @@
   margin-top: 88px;
   z-index: $Z_INDEX_NORMAL;
 
+  @include mobile {
+    margin-top: 0;
+  }
+
   &--title {
     font-size: $FONT_SIZE_XLARGE;
     font-weight: bold;
@@ -103,7 +126,7 @@
   }
 
   &--button.MuiButton-root {
-    width: $BUTTON_WIDTH_NORMAL;
+    width: $BUTTON_WIDTH_LARGE;
 
     @extend .h-margin-top--triple;
   }
