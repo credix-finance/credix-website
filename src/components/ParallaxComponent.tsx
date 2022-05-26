@@ -28,7 +28,7 @@ export const ParallaxComponent = ({ isMobile }: IComponentProps) => {
     const opacity = (100 - ((scrollY - highLightTargetScroll) * 100) / (570 - highLightTargetScroll));
     const minOpacity = 25;
     if (scrollY > thresholdScrollValue) {
-      return { marginTop: '-50px', opacity: (100 - ((scrollY - 100) * 100) / (1300 - 100)) + '%' }
+      return { marginTop: '-50px', opacity: (100 - ((scrollY - 100) * 100) / (1600 - 100)) + '%' }
     } else {
       return { marginTop: '-50px', opacity: (opacity > minOpacity ? opacity : minOpacity) + '%' }
     }

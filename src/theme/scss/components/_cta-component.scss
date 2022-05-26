@@ -1,7 +1,7 @@
 .cta-component {
-  background: var(--color-black);
+  background: var(--color-white);
   min-height: 300px;
-  color: $COLOR_BLACK;
+  color: var(--color-black);
 
   @extend .global-padding-left-right;
 
@@ -21,7 +21,6 @@
     font-weight: $FONT_WEIGHT_XNORMAL;
     line-height: $LINE_HEIGHT_LARGE;
     margin-top: 48px;
-    color: var(--font-default-color);
 
     @include mobile {
       font-size: $FONT_SIZE_XXNORMAL;
@@ -46,6 +45,7 @@
       color: $COLOR_WHITE;
       width: 200px;
       border-radius: $BORDER_RADIUS;
+      border: 1px solid var(--color-black);
 
       @include mobile {
         width: 100%;

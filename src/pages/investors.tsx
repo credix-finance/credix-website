@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Helmet from 'react-helmet';
 import { HeaderComponent } from '../components/HeaderComponent';
 import fav from '../../static/favicon-32x32.png'
@@ -7,14 +7,29 @@ import { InvestorsHomeComponent } from '../components/investors/InvestorsHomeCom
 import { InvestorsCTAComponent } from '../components/investors/InvestorsCTAComponent';
 import { FooterComponent } from '../components/FooterComponent';
 import { InvestorsList } from '../components/investors/InvestorsList';
-import { useComponentProps } from '../hooks/useComponentProps';
+import { ELocalStorage, useComponentProps } from '../hooks/useComponentProps';
 import { MarqueeComponent } from '../components/shared/marquee/MarqueeComponent';
 import { Location } from '@reach/router';
 
 const InvestorsPage = () => {
   const { width, mobileWidth } = useComponentProps();
-  //TODO: fetch from localstorage
   const [isLightTheme, setIsLightTheme] = useState<boolean>(false);
+  const isFirstRender = useRef(true);
+
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+    } else {
+      localStorage.setItem(ELocalStorage.LIGHT_THEME, JSON.stringify(isLightTheme))
+    }
+  }, [isLightTheme])
+
+  useEffect(() => {
+    const lightTheme = localStorage.getItem(ELocalStorage.LIGHT_THEME)
+    if (lightTheme && lightTheme !== 'undefined') {
+      setIsLightTheme(JSON.parse(lightTheme))
+    }
+  }, [])
 
   return (
     <main className={`${isLightTheme ? 'light' : 'dark'}`}>
@@ -96,8 +111,8 @@ const InvestorsPage = () => {
       </Location>
       <InvestorsHomeComponent isMobile={!!width && width < mobileWidth}/>
       <InvestorsCTAComponent/>
-      <InvestorsList isMobile={!!width && width < mobileWidth}/>
-      <FooterComponent/>
+      <InvestorsList isMobile={!!width && width < mobileWidth} isLightTheme={isLightTheme}/>
+      <FooterComponent isLightTheme={isLightTheme}/>
     </main>
   )
 }

@@ -6,6 +6,10 @@ interface LocationProps {
   }
 }
 
+export enum ELocalStorage {
+  LIGHT_THEME = 'light_theme'
+}
+
 export interface IComponentProps extends LocationProps {
   isMobile?: boolean;
   isTablet?: boolean;
