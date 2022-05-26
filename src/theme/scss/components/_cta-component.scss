@@ -1,7 +1,7 @@
 .cta-component {
-  background: var(--color-white);
+  background: $COLOR_WHITE;
   min-height: 300px;
-  color: var(--color-black);
+  color: $COLOR_BLACK;
 
   @extend .global-padding-left-right;
 
