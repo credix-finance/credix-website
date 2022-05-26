@@ -1,6 +1,7 @@
 .cta-team-component {
   min-height: 350px;
-  background: $COLOR_BLACK;
+  background: var(--color-background-cta-team);
+  color: var(--font-default-color);
 
   padding-left: $GLOBAL_PADDING_LEFT;
   padding-right: $GLOBAL_PADDING_RIGHT;

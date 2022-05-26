@@ -6,12 +6,18 @@ interface LocationProps {
   }
 }
 
-export interface IWidthProps extends LocationProps {
-  isMobile?: boolean;
-  isTablet?: boolean;
+export enum ELocalStorage {
+  LIGHT_THEME = 'light_theme'
 }
 
-export const useMobileWidth = () => {
+export interface IComponentProps extends LocationProps {
+  isMobile?: boolean;
+  isTablet?: boolean;
+  isLightTheme?: boolean;
+  setLightTheme?: (b: boolean) => void;
+}
+
+export const useComponentProps = () => {
   const [width, setWidth] = useState<number>();
   const mobileWidth = 900;
   const tabletWidth = 1500;

@@ -1,5 +1,4 @@
 .cta-register-borrower-component {
-  background: $COLOR_BLACK;
   min-height: 300px;
 
   @extend .global-padding-left-right;
@@ -11,16 +10,16 @@
 
   &--cta-banner {
     @extend .global-padding-left-right;
+    background: var(--color-background-backers-borrowers);
+    color: var(--font-default-color);
 
     min-height: 200px;
-    background: $COLOR_GREY_BACKGROUND;
 
     &--title {
       font-family: $FONT_FAMILY_SECOND;
       font-weight: $FONT_WEIGHT_XXNORMAL;
       font-size: $FONT_SIZE_XXXNORMAL;
       line-height: $LINE_HEIGHT_NORMAL;
-      color: $COLOR_WHITE;
 
       @include mobile {
         width: 300px;

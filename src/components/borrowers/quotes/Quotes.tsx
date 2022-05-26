@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
-import { IWidthProps } from '../../../hooks/useMobileWidth';
+import { IComponentProps } from '../../../hooks/useComponentProps';
 
 enum Quote {
     A55 = 'A55',
     TECREDI = 'TECREDI',
 }
 
-export const Quotes = ({ isMobile }: IWidthProps) => {
+export const Quotes = ({ isMobile }: IComponentProps) => {
   const [quote, setQuote] = React.useState(Quote.A55);
 
   useEffect(() => {

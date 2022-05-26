@@ -1,10 +1,12 @@
 .header-component {
-  background-color: $COLOR_BLACK;
+  background-color: var(--color-background-header);
   height: 20vh;
 
   @extend .global-padding-left-right;
 
   &--link {
+    color: var(--font-default-color);
+
     @extend .font-second;
     cursor: pointer;
 
@@ -14,13 +16,13 @@
 
     &--gatsby {
       text-decoration: none;
-      color: $COLOR_WHITE;
+      color: var(--font-default-color);
     }
 
     &--active {
       width: 100%;
       height: 4px;
-      background: $COLOR_WHITE;
+      background: var(--color-white);
       margin-top: 8px;
 
       @include mobile {
@@ -28,6 +30,12 @@
       }
     }
 
+  }
+
+  &--switch {
+    span {
+      font-size: 25px;
+    }
   }
 
   &--menu-button{
@@ -42,12 +50,8 @@
 
   &--drawer {
 
-    .MuiDrawer-paper {
-      background-color: $COLOR_FOOTER_BACKGROUND;
-    }
-
     &--links-column {
-      color: white;
+      color: var(--font-default-color);
       margin: $UNIT * 3;
     }
   }
@@ -63,7 +67,7 @@
   }
 
   &--links {
-    width: 600px;
+    width: 730px;
     font-weight: $FONT_WEIGHT_XNORMAL;
     font-size: $FONT_SIZE_NORMAL;
 
@@ -75,6 +79,11 @@
       margin-left: 64px;
       width: $BUTTON_WIDTH_NORMAL;
       border-radius: $BORDER_RADIUS;
+      color: var(--color-black) !important;
+
+      &:hover {
+        color: var(--color-white) !important;
+      }
     }
   }
 }

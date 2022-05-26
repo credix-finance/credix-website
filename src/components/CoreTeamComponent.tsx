@@ -1,8 +1,9 @@
 import React from 'react';
 import { PersonComponent } from './shared/person/PersonComponent';
 import { StaticImage } from 'gatsby-plugin-image';
+import { IComponentProps } from '../pages';
 
-export const CoreTeamComponent = () => {
+export const CoreTeamComponent = ({ isLightTheme }: IComponentProps) => {
   return (
     <div className="h-flex-row core-team-component">
       <div className="h-flex-column core-team-component--core">
@@ -21,6 +22,7 @@ export const CoreTeamComponent = () => {
                   linkedInUrl={'https://www.linkedin.com/in/thomas-bohner-a0165597/'}
                   twitterUrl={'https://twitter.com/t_bohner'}
                   title={'FOUNDER, CEO'}
+                  isLightTheme={isLightTheme}
                 />
               </div>
               <div className="h-flex-column">
@@ -30,6 +32,7 @@ export const CoreTeamComponent = () => {
                   linkedInUrl={'https://www.linkedin.com/in/maximpiessen/'}
                   twitterUrl={'https://twitter.com/PiessenMaxim'}
                   title={'CO-FOUNDER, CTO'}
+                  isLightTheme={isLightTheme}
                 />
               </div>
               <div className="h-flex-column">
@@ -39,6 +42,7 @@ export const CoreTeamComponent = () => {
                   linkedInUrl={'https://www.linkedin.com/in/chaimfinizola/'}
                   twitterUrl={'https://twitter.com/chaim_fes'}
                   title={'CO-FOUNDER, CGO'}
+                  isLightTheme={isLightTheme}
                 />
               </div>
             </div>

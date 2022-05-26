@@ -1,7 +1,8 @@
 .parallax-component {
   height: 600px;
-  background: linear-gradient(#000000 100%, #1F1F1F 0%);
+  background: var(--color-background-home);
   overflow-y: hidden;
+  color: var(--font-default-color);
   @extend .global-padding-left-right;
 
   @include mobile {

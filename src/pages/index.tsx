@@ -8,21 +8,38 @@ import { FooterComponent } from '../components/FooterComponent';
 import Helmet from 'react-helmet'
 import fav from '../../static/favicon-32x32.png'
 import preview from '../../static/preview_large.png'
-import { useMobileWidth } from '../hooks/useMobileWidth';
+import { ELocalStorage, useComponentProps } from '../hooks/useComponentProps';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { ParallaxComponent } from '../components/ParallaxComponent';
 import { BackersBorrowersComponent } from '../components/BackersBorrowersComponent';
 import { MarqueeComponent } from '../components/shared/marquee/MarqueeComponent';
 import { CTAHomeComponent } from '../components/CTAHomeComponent';
+import { useEffect, useRef, useState } from 'react';
 
 
 
 const IndexPage = () => {
-  const { width, mobileWidth, tabletWidth } = useMobileWidth();
+  const { width, mobileWidth, tabletWidth } = useComponentProps();
+  const [isLightTheme, setIsLightTheme] = useState<boolean>(false);
+  const isFirstRender = useRef(true);
 
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+    } else {
+      localStorage.setItem(ELocalStorage.LIGHT_THEME, JSON.stringify(isLightTheme))
+    }
+  }, [isLightTheme])
+
+  useEffect(() => {
+    const lightTheme = localStorage.getItem(ELocalStorage.LIGHT_THEME)
+    if (lightTheme && lightTheme !== 'undefined') {
+      setIsLightTheme(JSON.parse(lightTheme))
+    }
+  }, [])
 
   return (
-    <main>
+    <main className={`${isLightTheme ? 'light' : 'dark'}`}>
       <Helmet
         titleTemplate="%s - Credit investing democratized"
         link={[
@@ -96,22 +113,14 @@ const IndexPage = () => {
       </Helmet>
       <MarqueeComponent/>
       <ParallaxProvider>
-        <HeaderComponent isMobile={!!width && width < mobileWidth}/>
+        <HeaderComponent isMobile={!!width && width < mobileWidth} isLightTheme={isLightTheme} setLightTheme={setIsLightTheme}/>
         <HomeComponent isMobile={!!width && width < mobileWidth}/>
         <ParallaxComponent isMobile={!!width && width < mobileWidth}/>
-        {/*<CTAComponent/>*/}
         <BackersBorrowersComponent/>
-        {/*<ThesisComponent isMobile={!!width && width < mobileWidth}/>*/}
-        {/*<PlatformComponent/>*/}
-        {/*<HowItWorksComponent isMobile={!!width && width < mobileWidth}/>*/}
-        {/*<VisionComponent isMobile={!!width && width < mobileWidth} isTablet={!!width && width < tabletWidth}/>*/}
-        <CoreTeamComponent/>
+        <CoreTeamComponent isLightTheme={isLightTheme}/>
         <CTATeamComponent/>
         <CTAHomeComponent/>
-        {/*<AdvisorsComponent/>*/}
-        {/*<BackedByComponent/>*/}
-        {/*<FAQComponent/>*/}
-        <FooterComponent/>
+        <FooterComponent isLightTheme={isLightTheme}/>
       </ParallaxProvider>
     </main>
   )

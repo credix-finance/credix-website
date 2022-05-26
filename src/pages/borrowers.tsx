@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Helmet from 'react-helmet';
 import { HeaderComponent } from '../components/HeaderComponent';
 import fav from '../../static/favicon-32x32.png'
@@ -8,16 +8,33 @@ import { FooterComponent } from '../components/FooterComponent';
 import { BorrowersCTAComponent } from '../components/borrowers/BorrowersCTAComponent';
 import { BorrowersCTARegisterComponent } from '../components/borrowers/BorrowersCTARegisterComponent';
 import { Quotes } from '../components/borrowers/quotes/Quotes';
-import { useMobileWidth } from '../hooks/useMobileWidth';
+import { ELocalStorage, useComponentProps } from '../hooks/useComponentProps';
 import { Location } from '@reach/router';
 import { MarqueeComponent } from '../components/shared/marquee/MarqueeComponent';
 
 
 const BorrowersPage = () => {
-  const { width, mobileWidth } = useMobileWidth();
+  const { width, mobileWidth } = useComponentProps();
+  const [isLightTheme, setIsLightTheme] = useState<boolean>(false);
+  const isFirstRender = useRef(true);
+
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+    } else {
+      localStorage.setItem(ELocalStorage.LIGHT_THEME, JSON.stringify(isLightTheme))
+    }
+  }, [isLightTheme])
+
+  useEffect(() => {
+    const lightTheme = localStorage.getItem(ELocalStorage.LIGHT_THEME)
+    if (lightTheme && lightTheme !== 'undefined') {
+      setIsLightTheme(JSON.parse(lightTheme))
+    }
+  }, [])
 
   return (
-    <main>
+    <main className={`${isLightTheme ? 'light' : 'dark'}`}>
       <Helmet
         titleTemplate="%s - Credit investing democratized"
         link={[
@@ -91,13 +108,13 @@ const BorrowersPage = () => {
       </Helmet>
       <MarqueeComponent/>
       <Location>
-        {locationProps => <HeaderComponent {...locationProps} isMobile={!!width && width < mobileWidth}/>}
+        {locationProps => <HeaderComponent {...locationProps} isMobile={!!width && width < mobileWidth} isLightTheme={isLightTheme} setLightTheme={setIsLightTheme}/>}
       </Location>
       <BorrowersHomeComponent isMobile={!!width && width < mobileWidth}/>
       <BorrowersCTAComponent/>
       <Quotes isMobile={!!width && width < mobileWidth}/>
       <BorrowersCTARegisterComponent isMobile={!!width && width < mobileWidth}/>
-      <FooterComponent/>
+      <FooterComponent isLightTheme={isLightTheme}/>
     </main>
   )
 }

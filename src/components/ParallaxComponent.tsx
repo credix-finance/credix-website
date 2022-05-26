@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { Parallax } from 'react-scroll-parallax';
 import { StaticImage } from 'gatsby-plugin-image';
 import { PopupButton } from '@typeform/embed-react';
-import { IWidthProps } from '../hooks/useMobileWidth';
+import { IComponentProps } from '../hooks/useComponentProps';
 import { openInNewTab } from '../utils/openInNewTab';
 
-export const ParallaxComponent = ({ isMobile }: IWidthProps) => {
+export const ParallaxComponent = ({ isMobile }: IComponentProps) => {
 
   const [scrollY, setScrollY] = useState(0);
 
@@ -28,7 +28,7 @@ export const ParallaxComponent = ({ isMobile }: IWidthProps) => {
     const opacity = (100 - ((scrollY - highLightTargetScroll) * 100) / (570 - highLightTargetScroll));
     const minOpacity = 25;
     if (scrollY > thresholdScrollValue) {
-      return { marginTop: '-50px', opacity: (100 - ((scrollY - 100) * 100) / (1300 - 100)) + '%' }
+      return { marginTop: '-50px', opacity: (100 - ((scrollY - 100) * 100) / (1600 - 100)) + '%' }
     } else {
       return { marginTop: '-50px', opacity: (opacity > minOpacity ? opacity : minOpacity) + '%' }
     }

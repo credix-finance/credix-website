@@ -1,13 +1,12 @@
 .home-component-borrowers {
-  background: $COLOR_BLACK;
+  background-color: var(--color-background-header);
+  color: var(--font-default-color);
   min-height: 709px;
   height: 80vh;
 
   @extend .global-padding-left-right;
 
   @include mobile {
-    min-height: 400px;
-    height: 630px;
     max-height: 80vh;
   }
 
@@ -15,7 +14,8 @@
     @include mobile {
       transform: translateY(-50px);
       padding-top: 30px;
-      background-color: black;
+      width: 100%;
+      background-color: var(--color-background-header);
     }
   }
 
@@ -48,7 +48,7 @@
     font-size: $FONT_SIZE_XLARGE;
     font-weight: bold;
     line-height: $LINE_HEIGHT_XXLARGE;
-    color: $FONT_SECOND_COLOR;
+    color: var(--font-second-color);
 
     @include mobile {
       font-size: $FONT_SIZE_XSLARGE;

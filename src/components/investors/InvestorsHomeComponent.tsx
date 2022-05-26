@@ -2,10 +2,10 @@ import * as React from 'react'
 import { CredixButton } from '../shared/buttons/CredixButton';
 import SvgIcon, { SVG_ICONS } from '../shared/svg-icon/SvgIcon';
 import { StaticImage } from 'gatsby-plugin-image';
-import { IWidthProps } from '../../hooks/useMobileWidth';
+import { IComponentProps } from '../../hooks/useComponentProps';
 
 // todo: fix url for becoming investor button
-export const InvestorsHomeComponent = ({ isMobile }: IWidthProps) => {
+export const InvestorsHomeComponent = ({ isMobile }: IComponentProps) => {
 
   return (
     <div className="h-flex-column home-component-investors">

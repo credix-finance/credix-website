@@ -45,6 +45,7 @@
       color: $COLOR_WHITE;
       width: 200px;
       border-radius: $BORDER_RADIUS;
+      border: 1px solid var(--color-black);
 
       @include mobile {
         width: 100%;
