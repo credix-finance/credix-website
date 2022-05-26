@@ -1,10 +1,10 @@
 import React from 'react';
 import SvgIcon, { SVG_COLORS, SVG_ICONS } from './shared/svg-icon/SvgIcon';
 import { StaticImage } from 'gatsby-plugin-image';
-import { openInNewTab } from '../utils/openInNewTab';
-import { IComponentProps } from '../hooks/useComponentProps';
+import { openInNewTab } from '../pages';
+import { PopupButton } from '@typeform/embed-react';
 
-export const FooterComponent = ({ isLightTheme }: IComponentProps) => {
+export const FooterComponent = () => {
 
   const mail = (e: any) => {
     window.location = 'mailto:info@credix.finance' as unknown as Location;
@@ -15,7 +15,7 @@ export const FooterComponent = ({ isLightTheme }: IComponentProps) => {
     <div className="h-flex-column footer-component">
       <div className="h-flex-row footer-component--row">
         <div className="h-flex-column footer-component--column">
-          <SvgIcon icon={SVG_ICONS.CREDIX_LOGO} color={isLightTheme ? SVG_COLORS.BLACK : SVG_COLORS.WHITE} className="footer-component--logo"/>
+          <SvgIcon icon={SVG_ICONS.CREDIX_LOGO} color={SVG_COLORS.WHITE} className="footer-component--logo"/>
           <div className="h-flex-row h-flex-row--space-around footer-component--footer">
             {/*<span className="footer-component--footer--link" onClick={mail}>Support</span>*/}
             {/*<span className="footer-component--footer--link">Terms of service</span>*/}

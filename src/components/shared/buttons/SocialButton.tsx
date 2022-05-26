@@ -5,11 +5,10 @@ interface IProps {
   icon: ReactElement;
   onClick?: () => void
   className?: string;
-  isLightTheme?: boolean;
 }
 
-export const SocialButton = ({ icon, onClick, className, isLightTheme }: IProps) => {
+export const SocialButton = ({ icon, onClick, className }: IProps) => {
   return (
-    <SvgIcon icon={icon} color={isLightTheme ? SVG_COLORS.BLACK : SVG_COLORS.WHITE} className={className} onClick={onClick}/>
+    <SvgIcon icon={icon} color={SVG_COLORS.WHITE} className={className} onClick={onClick}/>
   )
 }

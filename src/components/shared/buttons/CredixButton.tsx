@@ -1,6 +1,6 @@
 import { Button } from '@mui/material';
 import * as React from 'react';
-import { openInNewTab } from '../../../utils/openInNewTab';
+import { openInNewTab } from '../../../pages';
 
 interface IProps {
   children: string

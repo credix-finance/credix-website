@@ -1,7 +1,6 @@
 .footer-component {
   min-height: 384px;
-  background-color: var(--color-footer-background);
-  color: var(--font-default-color);
+  background-color: $COLOR_FOOTER_BACKGROUND;
 
   @extend .global-padding-left-right;
 
@@ -15,8 +14,6 @@
 
   &--row {
     margin-top: 30px;
-    flex-flow: row;
-
 
     @include mobile {
       flex-direction: column;
@@ -24,24 +21,24 @@
   }
 
   &--column {
-    border-right: var(--color-footer-border);
-    border-top: var(--color-footer-border);
-    border-bottom: var(--color-footer-border);
-    width: calc(100% / 3);
+    border-right: 1px solid rgba(240, 240, 240, 0.35);
+    border-top: 1px solid rgba(240, 240, 240, 0.35);
+    border-bottom: 1px solid rgba(240, 240, 240, 0.35);
+    width: 33%;
     height: 320px;
 
     &:first-child {
-      border-left: var(--color-footer-border);
+      border-left: 1px solid rgba(240, 240, 240, 0.35);
     }
 
     @include mobile {
       border-top: 0;
-      border-left: var(--color-footer-border);
+      border-left: 1px solid rgba(240, 240, 240, 0.35);
       width: 100%;
       height: 220px;
 
       &:first-child {
-        border-top: var(--color-footer-border);
+        border-top: 1px solid rgba(240, 240, 240, 0.35);
       }
     }
   }
@@ -62,10 +59,6 @@
       cursor: pointer;
       margin-bottom: $UNIT * 2;
 
-      &:hover {
-        font-weight: $FONT_WEIGHT_BOLD;
-      }
-
       @include mobile {
         margin-bottom: $UNIT;
       }
@@ -74,7 +67,7 @@
     &--typeform {
       background-color: initial;
       border: 0;
-      color: var(--font-default-color);
+      color: $FONT_DEFAULT_COLOR;
       align-self: flex-start;
       padding: 0;
     }

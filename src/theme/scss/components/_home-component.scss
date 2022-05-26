@@ -1,5 +1,5 @@
 .home-component {
-  background: var(--color-background-home);
+  background: linear-gradient(180deg, #1F1F1F 0%, #1F1F1F 43.43%, #000000 100%);
   min-height: 709px;
   height: 80vh;
 
@@ -8,26 +8,6 @@
   @include mobile {
     min-height: 400px;
     max-height: 80vh;
-  }
-
-  &--video {
-    margin-left: auto;
-    margin-right: -$GLOBAL_PADDING_RIGHT;
-
-    @include mobile {
-      margin-left: initial;
-      margin-right: $GLOBAL_PADDING_RIGHT;
-      width: 100%;
-    }
-  }
-
-  &--text {
-    @include mobile {
-      transform: translateY(-50px);
-      padding-top: 30px;
-      background-color: black;
-      width: 100%;
-    }
   }
 
   &--arrow-row {
@@ -47,8 +27,8 @@
                     45deg);
     border-left: none;
     border-top: none;
-    border-right: 2px var(--color-white) solid;
-    border-bottom: 2px var(--color-white) solid;
+    border-right: 2px #fff solid;
+    border-bottom: 2px #fff solid;
 
     &::before {
       content: "";
@@ -58,8 +38,8 @@
       margin: -10px 0 0 -10px;
       border-left: none;
       border-top: none;
-      border-right: 1px var(--color-white) solid;
-      border-bottom: 1px var(--color-white) solid;
+      border-right: 1px #fff solid;
+      border-bottom: 1px #fff solid;
       animation-duration: 2s;
       animation-iteration-count: infinite;
       animation-name: arrow;
@@ -71,7 +51,7 @@
   &--background-shape {
     position: absolute;
     right: 0;
-    top: 10px;
+    top: 0;
     transform: translateY(-10px);
     z-index: $Z_INDEX_BACKGROUND_SHAPE;
 
@@ -95,22 +75,15 @@
   margin-top: 88px;
   z-index: $Z_INDEX_NORMAL;
 
-  @include mobile {
-    margin-top: 0;
-  }
-
   &--title {
     font-size: $FONT_SIZE_XLARGE;
     font-weight: bold;
     line-height: $LINE_HEIGHT_XXLARGE;
-    color: var(--font-default-color);
+    color: $FONT_SECOND_COLOR;
 
     @include mobile {
       font-size: $FONT_SIZE_XSLARGE;
       line-height: $LINE_HEIGHT_XNORMAL;
-      background-color: var(--color-background-mobile);
-      box-shadow: var(--box-shadow-mobile);
-      border-radius: 10px
     }
   }
 
@@ -119,7 +92,6 @@
     font-size: $FONT_SIZE_XNORMAL;
     font-weight: $FONT_WEIGHT_NORMAL;
     line-height: $LINE_HEIGHT_NORMAL;
-    color: var(--font-default-color);
 
     @extend .font-second;
     @extend .h-margin-top;
@@ -127,15 +99,11 @@
     @include mobile {
       font-size: $FONT_SIZE_SMALL;
       line-height: $LINE_HEIGHT_SMALL;
-      font-weight: var(--header-text-mobile-bold);
-      background-color: var(--color-background-mobile);
-      box-shadow: var(--box-shadow-mobile);
-      border-radius: 10px
     }
   }
 
   &--button.MuiButton-root {
-    width: $BUTTON_WIDTH_LARGE;
+    width: $BUTTON_WIDTH_NORMAL;
 
     @extend .h-margin-top--triple;
   }

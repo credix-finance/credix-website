@@ -1,0 +1,50 @@
+.advisors-component {
+  min-height: 428px;
+  background: linear-gradient(180deg, #1F1F1F 0%, #000000 100%);
+
+  @extend .global-padding-left-right;
+
+  &--subtitle {
+    margin-top: 100px;
+    text-transform: uppercase;
+    font-weight: $FONT_WEIGHT_XXNORMAL;
+    font-size: $FONT_SIZE_XXXNORMAL;
+    letter-spacing: 1px;
+
+    @include mobile {
+      margin-top: 30px;
+      font-size: $FONT_SIZE_SMALL;
+      line-height: $LINE_HEIGHT_SMALL;
+    }
+  }
+
+  &--person {
+    @include tablet {
+      flex-basis: 40%;
+    }
+  }
+
+  &--persons {
+    margin-top: 30px;
+    margin-bottom: 80px; 
+
+    @include mobile {
+      flex-flow: column;
+      margin-top: 20px;
+      padding-left: 0;
+      padding-right: 0;
+      align-items: flex-start;
+    }
+
+    &--sub-row {
+      @include tablet {
+        justify-content: space-evenly;
+      }
+
+      @include mobile {
+        flex-flow: column;
+        justify-content: initial;
+      }
+    }
+  }
+}

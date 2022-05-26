@@ -7,121 +7,18 @@ $FONT_FAMILY: Poppins, "Open Sans", sans-serif;
 $FONT_FAMILY_SECOND: "IBM Plex Mono", monospace;
 
 /**
-* Colors
+* Fonts Colors
  */
-$COLOR_BLACK: #000;
-$COLOR_WHITE: #fff;
-$COLOR_GREY_BACKGROUND: #0B0B0B;
-$COLOR_FOOTER_BACKGROUND: #000;
-$COLOR_BLUE: #0046FA;
-$COLOR_ORANGE: #F8BB00;
-
-
-.dark {
-  /**
-  * Fonts Colors
-  */
-  --font-default-color: #f0f0f0;
-  --font-second-color: #FFF;
-
-  /**
-  * Colors
-  */
-  --color-black: #000;
-  --color-white: #FFF;
-  --color-grey-background: #18191B;
-  --color-footer-background: #050505;
-
-  /**
-  * Backgrounds
-  */
-  --color-background-header: #000;
-  --color-background-home: #000;
-  --color-background-cta-team: #000;
-  --color-background-core-team: #000;
-  --color-background-advisors: #000;
-  --color-background-backers-borrowers: #0B0B0B;
-  --color-background-mobile: initial;
-
-  /**
-  * box shadow
-   */
-  --box-shadow-mobile: initial;
-
-  /**
-  * header font bold
-   */
-
-  --header-text-mobile-bold: initial;
-
-  /**
-  * images
-   */
-  --color-image-filter: invert(0%);
-
-  /**
-  * Footer borders
-   */
-
-  --color-footer-border: 1px solid rgba(240, 240, 240, 0.35);
-}
-
-.light {
-  /**
-  * Fonts Colors
-  */
-  --font-default-color: #202020;
-  --font-second-color: #000;
-
-  /**
-  * Colors
-  */
-  --color-black: #fff;
-  --color-white: #000;
-  --color-grey-background: #f1f1f1;
-  --color-footer-background: #FFF;
-
-  /**
-  * Backgrounds
-  */
-  --color-background-header: #E5E5E5;
-  --color-background-home: #E5E5E5;
-  --color-background-cta-team: #E5E5E5;
-  --color-background-core-team: #E5E5E5;
-  --color-background-advisors: #E5E5E5;
-  --color-background-backers-borrowers: #FFF;
-  --color-background-mobile: rgba(255, 255, 255, 0.8);
-
-  /**
-  * box shadow
-   */
-  --box-shadow-mobile: 0 0 20px 10px rgba(255, 255, 255, 0.8);
-
-  /**
-  * header font bold
-   */
-  --header-text-mobile-bold: 700;
-
-
-  /**
-  * images
-  */
-  --color-image-filter: invert(100%);
-
-  /**
-  * Footer borders
-  */
-  --color-footer-border: 1px solid rgba(0, 0, 0);
-}
+$FONT_DEFAULT_COLOR: #f0f0f0;
+$FONT_SECOND_COLOR: #fff;
 
 /**
 * Fonts Sizes
  */
 $FONT_SIZE_XLARGE: 70px;
 $FONT_SIZE_LARGE: 55px;
-$FONT_SIZE_MLARGE: 40px;
 $FONT_SIZE_SLARGE: 36px;
-$FONT_SIZE_XSLARGE: 32px;
+$FONT_SIZE_XSLARGE: 30px;
 $FONT_SIZE_XXXNORMAL: 24px;
 $FONT_SIZE_XXNORMAL: 20px;
 $FONT_SIZE_XNORMAL: 18px;
@@ -153,18 +50,23 @@ $LINE_HEIGHT_XLARGE: 60px;
 $LINE_HEIGHT_XXLARGE: 80px;
 
 /**
+* Colors
+ */
+$COLOR_BLACK: #000;
+$COLOR_WHITE: #fff;
+$COLOR_GREY_BACKGROUND: #18191b;
+$COLOR_FOOTER_BACKGROUND: #000;
+
+/**
 * UI Elements
  */
 $UNIT: 10px;
 $BUTTON_HEIGHT: 50px;
 $BUTTON_WIDTH_NORMAL: 160px;
-$BUTTON_WIDTH_LARGE: 300px;
-$GLOBAL_PADDING_LEFT: 10%;
-$GLOBAL_PADDING_RIGHT: 10%;
-//$GLOBAL_PADDING_RIGHT: 168px;
+$GLOBAL_PADDING_LEFT: 90px;
+$GLOBAL_PADDING_RIGHT: 90px;
 $GLOBAL_PADDING_MOBILE_RIGHT: 30px;
 $GLOBAL_PADDING_MOBILE_LEFT: 30px;
-$BORDER_RADIUS: 4px;
 
 /**
 * Z Index

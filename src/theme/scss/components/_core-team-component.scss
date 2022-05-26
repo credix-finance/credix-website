@@ -1,20 +1,11 @@
 .core-team-component {
   min-height: 400px;
-  background: var(--color-background-core-team);
-  color: var(--font-default-color);
+  background: linear-gradient(180deg, #000000 0%, #1F1F1F 100%, #1F1F1F 100%);
 
   @extend .global-padding-left-right;
 
   @include mobile {
     min-height: 700px;
-  }
-
-  &--core {
-    width: 70%;
-
-    @include mobile {
-      width: 100%;
-    }
   }
 
   &--title-row {
@@ -26,7 +17,7 @@
   }
 
   &--title-column {
-    margin-bottom: 48px;
+    width: 30%;
     @include mobile {
       width: 100%;
     }
@@ -34,10 +25,6 @@
 
   &--persons-column {
     width: 70%;
-
-    @include mobile {
-      width: 100%;
-    }
   }
 
   &--who-we-are {
@@ -59,20 +46,6 @@
       margin-top: 20px;
       padding-left: 0;
       padding-right: 0;
-    }
-  }
-
-  &--advisors {
-    font-family: $FONT_FAMILY_SECOND;
-    font-weight: $FONT_WEIGHT_BOLD;
-    &--name {
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-
-    &--description {
-      margin-bottom: 20px;
-      opacity: 70%;
     }
   }
 }

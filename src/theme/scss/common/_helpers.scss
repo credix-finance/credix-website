@@ -120,33 +120,3 @@
 .h-cursor-pointer {
   cursor: pointer;
 }
-
-/**
-* Material UI overrides
- */
-
-.h-background-color-black{
-  .MuiPaper-root {
-    background-color: black;
-  }
-  .MuiButton-root {
-    background-color: white !important;
-  }
-}
-
-.h-background-color-white{
-  .MuiPaper-root {
-    background-color: white;
-  }
-  .MuiButton-root {
-    background-color: black !important;
-  }
-}
-
-.h-color-black{
-  color: black !important;
-}
-
-.h-color-white{
-  color: white !important;
-}
