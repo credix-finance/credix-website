@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import SvgIcon, { SVG_COLORS, SVG_ICONS } from './shared/svg-icon/SvgIcon';
 import { CredixButton } from './shared/buttons/CredixButton';
-import { IWidthProps } from '../hooks/useMobileWidth';
+import { IComponentProps } from '../hooks/useComponentProps';
 import { openInNewTab } from '../utils/openInNewTab';
 import { Link } from 'gatsby';
 import { Drawer, Switch } from '@mui/material';
@@ -22,7 +22,8 @@ const getActiveLink = (pathname?: string) => {
   }
 }
 
-export const HeaderComponent = ({ isMobile, ...locationProps }: IWidthProps) => {
+export const HeaderComponent = ({ isMobile, isLightTheme, setLightTheme, ...locationProps }: IComponentProps) => {
+
   const { location } = locationProps;
 
   const [currentPage, setCurrentPage] = useState<string | undefined>(getActiveLink(location?.pathname));
@@ -49,7 +50,7 @@ export const HeaderComponent = ({ isMobile, ...locationProps }: IWidthProps) => 
         <CredixButton className="header--links--button" url={'https://app.credix.finance/'}>Launch App</CredixButton>
         <div className="h-flex-row h-flex-row--align-center header-component--link header-component--switch">
           <span>🌚</span>
-          <Switch {...label} color={'default'} checked={isLightTheme} onChange={(e, bool) => setIsLightTheme && setIsLightTheme(bool)}/>
+          <Switch {...label} color={'default'} checked={isLightTheme} onChange={(e, bool) => setLightTheme && setLightTheme(bool)}/>
           <span>🌞</span>
         </div>
       </>

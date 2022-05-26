@@ -16,13 +16,13 @@
 
     &--gatsby {
       text-decoration: none;
-      color: $COLOR_WHITE;
+      color: var(--font-default-color);
     }
 
     &--active {
       width: 100%;
       height: 4px;
-      background: $COLOR_WHITE;
+      background: var(--color-white);
       margin-top: 8px;
 
       @include mobile {

@@ -1,6 +1,7 @@
 .quotes-component {
   min-height: 710px;
-  background: $COLOR_BLACK;
+  background: var(--color-background-home);
+  color: var(--font-default-color);
   padding-top: 212px;
 
   @extend .global-padding-left-right;
@@ -75,7 +76,6 @@
       font-weight: $FONT_WEIGHT_XXNORMAL;
       font-size: $FONT_SIZE_XXXNORMAL;
       line-height: 38px;
-      color: $COLOR_WHITE;
       opacity: 0.6;
       text-transform: uppercase;
       margin-top: 46px;
@@ -107,7 +107,7 @@
       width: 30px;
       margin: 0 5px;
       height: 3px;
-      background-color: $COLOR_WHITE;
+      background-color: var(--font-default-color);
     }
   }
 }

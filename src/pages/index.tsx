@@ -8,17 +8,19 @@ import { FooterComponent } from '../components/FooterComponent';
 import Helmet from 'react-helmet'
 import fav from '../../static/favicon-32x32.png'
 import preview from '../../static/preview_large.png'
-import { useMobileWidth } from '../hooks/useMobileWidth';
+import { useComponentProps } from '../hooks/useComponentProps';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { ParallaxComponent } from '../components/ParallaxComponent';
 import { BackersBorrowersComponent } from '../components/BackersBorrowersComponent';
 import { MarqueeComponent } from '../components/shared/marquee/MarqueeComponent';
 import { CTAHomeComponent } from '../components/CTAHomeComponent';
+import { useState } from 'react';
 
 
 
 const IndexPage = () => {
-  const { width, mobileWidth, tabletWidth } = useMobileWidth();
+  const { width, mobileWidth, tabletWidth } = useComponentProps();
+  const [isLightTheme, setIsLightTheme] = useState<boolean>(false);
 
 
   return (
@@ -96,21 +98,13 @@ const IndexPage = () => {
       </Helmet>
       <MarqueeComponent/>
       <ParallaxProvider>
-        <HeaderComponent isMobile={!!width && width < mobileWidth}/>
+        <HeaderComponent isMobile={!!width && width < mobileWidth} isLightTheme={isLightTheme} setLightTheme={setIsLightTheme}/>
         <HomeComponent isMobile={!!width && width < mobileWidth}/>
         <ParallaxComponent isMobile={!!width && width < mobileWidth}/>
-        {/*<CTAComponent/>*/}
         <BackersBorrowersComponent/>
-        {/*<ThesisComponent isMobile={!!width && width < mobileWidth}/>*/}
-        {/*<PlatformComponent/>*/}
-        {/*<HowItWorksComponent isMobile={!!width && width < mobileWidth}/>*/}
-        {/*<VisionComponent isMobile={!!width && width < mobileWidth} isTablet={!!width && width < tabletWidth}/>*/}
-        <CoreTeamComponent/>
+        <CoreTeamComponent isLightTheme={isLightTheme}/>
         <CTATeamComponent/>
         <CTAHomeComponent/>
-        {/*<AdvisorsComponent/>*/}
-        {/*<BackedByComponent/>*/}
-        {/*<FAQComponent/>*/}
         <FooterComponent/>
       </ParallaxProvider>
     </main>

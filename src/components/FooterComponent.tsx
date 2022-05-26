@@ -1,7 +1,8 @@
 import React from 'react';
 import SvgIcon, { SVG_COLORS, SVG_ICONS } from './shared/svg-icon/SvgIcon';
 import { StaticImage } from 'gatsby-plugin-image';
-import { IComponentProps, openInNewTab } from '../utils/openInNewTab';
+import { openInNewTab } from '../utils/openInNewTab';
+import { IComponentProps } from '../hooks/useComponentProps';
 
 export const FooterComponent = ({ isLightTheme }: IComponentProps) => {
 

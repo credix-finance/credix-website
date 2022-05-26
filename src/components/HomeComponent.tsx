@@ -1,12 +1,12 @@
 import * as React from 'react'
 import { CredixButton } from './shared/buttons/CredixButton';
-import { IWidthProps } from '../hooks/useMobileWidth';
+import { IComponentProps } from '../hooks/useComponentProps';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import GradientVideo from '../assets/video/Credix_WebsiteGradientA_02.mp4'
 import { VideoComponent } from './shared/video/VideoComponent';
 
-export const HomeComponent = ({ isMobile }: IWidthProps) => {
+export const HomeComponent = ({ isMobile }: IComponentProps) => {
 
   const homeText = () => (
     <div className="h-flex-column home-component--text">

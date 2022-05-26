@@ -168,5 +168,5 @@ h1 {
 
 hr.solid {
   width: 100%;
-  border-top: 3px solid $COLOR_WHITE
+  border-top: 3px solid var(--font-default-color);
 }

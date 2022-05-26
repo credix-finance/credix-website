@@ -3,9 +3,9 @@ import { StaticImage } from 'gatsby-plugin-image';
 import { CredixButton } from '../shared/buttons/CredixButton';
 import { CTADividerSmall } from './dividers/CTADividerSmall';
 import { CTADivider } from './dividers/CTADivider';
-import { IWidthProps } from '../../hooks/useMobileWidth';
+import { IComponentProps } from '../../hooks/useComponentProps';
 
-export const InvestorsList = ({ isMobile }: IWidthProps) => (
+export const InvestorsList = ({ isMobile }: IComponentProps) => (
   <>
     <div className="h-flex-column investors-list-component">
       <div className="h-flex-row h-flex-row--space-between investors-list-component--title-row">

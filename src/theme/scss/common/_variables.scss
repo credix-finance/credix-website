@@ -6,6 +6,16 @@
 $FONT_FAMILY: Poppins, "Open Sans", sans-serif;
 $FONT_FAMILY_SECOND: "IBM Plex Mono", monospace;
 
+/**
+* Colors
+ */
+$COLOR_BLACK: #000;
+$COLOR_WHITE: #fff;
+$COLOR_GREY_BACKGROUND: #0B0B0B;
+$COLOR_FOOTER_BACKGROUND: #000;
+$COLOR_BLUE: #0046FA;
+$COLOR_ORANGE: #F8BB00;
+
 
 .dark {
   /**
@@ -25,15 +35,12 @@ $FONT_FAMILY_SECOND: "IBM Plex Mono", monospace;
   /**
   * Backgrounds
   */
-  --color-background-header: #1F1F1F;
-  --color-background-home: linear-gradient(180deg, #1F1F1F 0%, #1F1F1F 43.43%, #000000 100%);
-  --color-background-thesis: linear-gradient(180deg, #000000 0%, #1F1F1F 100%);
-  --color-background-platform: linear-gradient(180deg, #1F1F1F 0%, #000000 100%);
-  --color-background-how-it-works: linear-gradient(180deg, #000000 0%, #1F1F1F 100%);
-  --color-background-our-vision: linear-gradient(180deg, #1F1F1F 0%, #000000 100%);
-  --color-background-cta-team: radial-gradient(43.21% 50% at 47.57% 50%, #1F1F1F 0%, #000000 100%);
-  --color-background-core-team: linear-gradient(180deg, #000000 0%, #1F1F1F 100%, #1F1F1F 100%);
-  --color-background-advisors: linear-gradient(180deg, #1F1F1F 0%, #000000 100%);
+  --color-background-header: #000;
+  --color-background-home: #000;
+  --color-background-cta-team: #000;
+  --color-background-core-team: #000;
+  --color-background-advisors: #000;
+  --color-background-backers-borrowers: #0B0B0B;
   --color-background-mobile: initial;
 
   /**
@@ -77,15 +84,12 @@ $FONT_FAMILY_SECOND: "IBM Plex Mono", monospace;
   /**
   * Backgrounds
   */
-  --color-background-header: #FFF;
-  --color-background-home: #FFF;
-  --color-background-thesis: #FFF;
-  --color-background-platform: #FFF;
-  --color-background-how-it-works: #FFF;
-  --color-background-our-vision: #FFF;
-  --color-background-cta-team: #FFF;
-  --color-background-core-team: #FFF;
-  --color-background-advisors: #FFF;
+  --color-background-header: #E5E5E5;
+  --color-background-home: #E5E5E5;
+  --color-background-cta-team: #E5E5E5;
+  --color-background-core-team: #E5E5E5;
+  --color-background-advisors: #E5E5E5;
+  --color-background-backers-borrowers: #FFF;
   --color-background-mobile: rgba(255, 255, 255, 0.8);
 
   /**
@@ -147,16 +151,6 @@ $LINE_HEIGHT_XNORMAL: 36px;
 $LINE_HEIGHT_LARGE: 42px;
 $LINE_HEIGHT_XLARGE: 60px;
 $LINE_HEIGHT_XXLARGE: 80px;
-
-/**
-* Colors
- */
-$COLOR_BLACK: #000;
-$COLOR_WHITE: #fff;
-$COLOR_GREY_BACKGROUND: #0B0B0B;
-$COLOR_FOOTER_BACKGROUND: #000;
-$COLOR_BLUE: #0046FA;
-$COLOR_ORANGE: #F8BB00;
 
 /**
 * UI Elements

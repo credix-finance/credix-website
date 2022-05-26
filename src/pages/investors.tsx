@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Helmet from 'react-helmet';
 import { HeaderComponent } from '../components/HeaderComponent';
 import fav from '../../static/favicon-32x32.png'
@@ -7,15 +7,17 @@ import { InvestorsHomeComponent } from '../components/investors/InvestorsHomeCom
 import { InvestorsCTAComponent } from '../components/investors/InvestorsCTAComponent';
 import { FooterComponent } from '../components/FooterComponent';
 import { InvestorsList } from '../components/investors/InvestorsList';
-import { useMobileWidth } from '../hooks/useMobileWidth';
+import { useComponentProps } from '../hooks/useComponentProps';
 import { MarqueeComponent } from '../components/shared/marquee/MarqueeComponent';
 import { Location } from '@reach/router';
 
 const InvestorsPage = () => {
-  const { width, mobileWidth } = useMobileWidth();
+  const { width, mobileWidth } = useComponentProps();
+  //TODO: fetch from localstorage
+  const [isLightTheme, setIsLightTheme] = useState<boolean>(false);
 
   return (
-    <main>
+    <main className={`${isLightTheme ? 'light' : 'dark'}`}>
       <Helmet
         titleTemplate="%s - Credit investing democratized"
         link={[
@@ -90,7 +92,7 @@ const InvestorsPage = () => {
       </Helmet>
       <MarqueeComponent/>
       <Location>
-        {locationProps => <HeaderComponent {...locationProps} isMobile={!!width && width < mobileWidth}/>}
+        {locationProps => <HeaderComponent {...locationProps} isMobile={!!width && width < mobileWidth} isLightTheme={isLightTheme} setLightTheme={setIsLightTheme}/>}
       </Location>
       <InvestorsHomeComponent isMobile={!!width && width < mobileWidth}/>
       <InvestorsCTAComponent/>
