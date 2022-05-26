@@ -4,6 +4,11 @@
   overflow-y: hidden;
   @extend .global-padding-left-right;
 
+  @include mobile {
+    height: initial;
+    padding-bottom: 175px;
+  }
+
 
   &--wrapper{
     height: 400px;
@@ -21,6 +26,26 @@
       font-size: $FONT_SIZE_SLARGE;
       font-weight: $FONT_WEIGHT_XNORMAL;
       line-height: $LINE_HEIGHT_LARGE;
+
+      @include mobile {
+        font-size: $FONT_SIZE_XXXNORMAL;
+        font-weight: $FONT_WEIGHT_XXNORMAL;
+        line-height: $LINE_HEIGHT_LARGE;
+        margin-top: 48px;
+      }
+    }
+
+    &--text {
+      font-family: $FONT_FAMILY_SECOND;
+      margin-top: 10px;
+
+      @include mobile {
+        font-size: $FONT_SIZE_NORMAL;
+        font-weight: $FONT_WEIGHT_NORMAL;
+        line-height: $LINE_HEIGHT_SSNORMAL;
+        margin-top: 48px;
+
+      }
     }
 
     &--button {

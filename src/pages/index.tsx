@@ -1,24 +1,19 @@
 import * as React from 'react'
 import '../theme/index.scss';
 import { HomeComponent } from '../components/HomeComponent';
-import { CTAComponent } from '../components/CTAComponent';
-import { ThesisComponent } from '../components/ThesisComponent';
 import { HeaderComponent } from '../components/HeaderComponent';
-import { PlatformComponent } from '../components/PlatformComponent';
-import { VisionComponent } from '../components/VisionComponent';
 import { CTATeamComponent } from '../components/CTATeamComponent';
 import { CoreTeamComponent } from '../components/CoreTeamComponent';
-import { AdvisorsComponent } from '../components/AdvisorsComponent';
 import { FooterComponent } from '../components/FooterComponent';
 import Helmet from 'react-helmet'
 import fav from '../../static/favicon-32x32.png'
 import preview from '../../static/preview_large.png'
-import { HowItWorksComponent } from '../components/HowItWorksComponent';
 import { useMobileWidth } from '../hooks/useMobileWidth';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { ParallaxComponent } from '../components/ParallaxComponent';
 import { BackersBorrowersComponent } from '../components/BackersBorrowersComponent';
 import { MarqueeComponent } from '../components/shared/marquee/MarqueeComponent';
+import { CTAHomeComponent } from '../components/CTAHomeComponent';
 
 
 
@@ -103,7 +98,7 @@ const IndexPage = () => {
       <ParallaxProvider>
         <HeaderComponent isMobile={!!width && width < mobileWidth}/>
         <HomeComponent isMobile={!!width && width < mobileWidth}/>
-        <ParallaxComponent/>
+        <ParallaxComponent isMobile={!!width && width < mobileWidth}/>
         {/*<CTAComponent/>*/}
         <BackersBorrowersComponent/>
         {/*<ThesisComponent isMobile={!!width && width < mobileWidth}/>*/}
@@ -112,7 +107,8 @@ const IndexPage = () => {
         {/*<VisionComponent isMobile={!!width && width < mobileWidth} isTablet={!!width && width < tabletWidth}/>*/}
         <CoreTeamComponent/>
         <CTATeamComponent/>
-        <AdvisorsComponent/>
+        <CTAHomeComponent/>
+        {/*<AdvisorsComponent/>*/}
         {/*<BackedByComponent/>*/}
         {/*<FAQComponent/>*/}
         <FooterComponent/>

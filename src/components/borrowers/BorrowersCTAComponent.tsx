@@ -33,8 +33,7 @@ export const BorrowersCTAComponent = () => (
         <div className="h-flex-column cta-component-borrowers--column">
           <div className="h-flex-column cta-component-borrowers--column--row-mobile">
             <CredixButton className="cta-component-borrowers--button" url={'https://app.credix.finance/'}>Launch App</CredixButton>
-            <span
-              className="cta-component-borrowers--text--cta-link" onClick={() => openInNewTab('https://docs.credix.finance/')}>Read our documentation -{'>'}</span>
+            <span className="cta-component-borrowers--text--cta-link" onClick={() => openInNewTab('https://docs.credix.finance/')}>Read our documentation -{'>'}</span>
           </div>
         </div>
         <div className="h-flex-column cta-component-borrowers--column"/>
@@ -43,11 +42,3 @@ export const BorrowersCTAComponent = () => (
     </div>
   </div>
 );
-
-
-
-
-
-
-
-

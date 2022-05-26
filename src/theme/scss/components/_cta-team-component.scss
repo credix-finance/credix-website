@@ -16,6 +16,7 @@
     padding: 45px;
     @include mobile {
       flex-flow: column;
+      padding: 25px;
     }
   }
 
