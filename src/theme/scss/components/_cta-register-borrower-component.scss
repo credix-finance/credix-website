@@ -1,0 +1,92 @@
+.cta-register-borrower-component {
+  background: $COLOR_BLACK;
+  min-height: 300px;
+
+  @extend .global-padding-left-right;
+
+  @include mobile {
+    min-height: 600px;
+    padding-top: $UNIT * 8;
+  }
+
+  &--cta-banner {
+    @extend .global-padding-left-right;
+
+    min-height: 200px;
+    background: $COLOR_GREY_BACKGROUND;
+
+    &--title {
+      font-family: $FONT_FAMILY_SECOND;
+      font-weight: $FONT_WEIGHT_XXNORMAL;
+      font-size: $FONT_SIZE_XXXNORMAL;
+      line-height: $LINE_HEIGHT_NORMAL;
+      color: $COLOR_WHITE;
+
+      @include mobile {
+        width: 300px;
+        margin-top: $UNIT * 4;
+      }
+    }
+  }
+
+  &--sub-title {
+    font-family: $FONT_FAMILY_SECOND;
+    font-weight: $FONT_WEIGHT_BOLD;
+    font-size: $FONT_SIZE_XXXNORMAL;
+    line-height: $LINE_HEIGHT_NORMAL;
+  }
+
+  &--title-row {
+    margin-top: 50px;
+  }
+
+  &--logo-column {
+    @include tablet {
+      margin-top: 20px;
+      flex-basis: 40%;
+    }
+  }
+
+  &--logo-row {
+    margin-top: 50px;
+    align-items: center;
+    @include mobile {
+      margin-top: 70px;
+      flex-direction: column;
+    }
+
+    a {
+      display: flex;
+      cursor: pointer;
+      pointer-events: auto;
+    }
+  }
+
+  &--logo {
+    height: 50px !important;
+    margin: 40px 40px 100px;
+
+    img {
+      height: 50px !important;
+      width: auto !important;
+    }
+
+    @include mobile {
+      margin-bottom: 70px;
+      height: 30px !important;
+      img {
+        height: 30px !important;
+      }
+    }
+  }
+
+  &--button.MuiButton-root {
+    width: 330px;
+    margin-top: 48px;
+
+    @include mobile {
+      margin-top: $UNIT * 4;
+      margin-bottom: $UNIT * 4;
+    }
+  }
+}

@@ -1,18 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Poppins:wght@500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Poppins:wght@500;700&display=swap");
 
 /**
 * Fonts
  */
-$FONT_FAMILY: Poppins, 'Open Sans', sans-serif;
-$FONT_FAMILY_SECOND: 'IBM Plex Mono', monospace;
-
+$FONT_FAMILY: Poppins, "Open Sans", sans-serif;
+$FONT_FAMILY_SECOND: "IBM Plex Mono", monospace;
 
 
 .dark {
   /**
   * Fonts Colors
   */
-  --font-default-color: #F0F0F0;
+  --font-default-color: #f0f0f0;
   --font-second-color: #FFF;
 
   /**
@@ -70,7 +69,7 @@ $FONT_FAMILY_SECOND: 'IBM Plex Mono', monospace;
   /**
   * Colors
   */
-  --color-black: #FFF;
+  --color-black: #fff;
   --color-white: #000;
   --color-grey-background: #f1f1f1;
   --color-footer-background: #FFF;
@@ -116,8 +115,9 @@ $FONT_FAMILY_SECOND: 'IBM Plex Mono', monospace;
  */
 $FONT_SIZE_XLARGE: 70px;
 $FONT_SIZE_LARGE: 55px;
+$FONT_SIZE_MLARGE: 40px;
 $FONT_SIZE_SLARGE: 36px;
-$FONT_SIZE_XSLARGE: 30px;
+$FONT_SIZE_XSLARGE: 32px;
 $FONT_SIZE_XXXNORMAL: 24px;
 $FONT_SIZE_XXNORMAL: 20px;
 $FONT_SIZE_XNORMAL: 18px;
@@ -149,15 +149,28 @@ $LINE_HEIGHT_XLARGE: 60px;
 $LINE_HEIGHT_XXLARGE: 80px;
 
 /**
+* Colors
+ */
+$COLOR_BLACK: #000;
+$COLOR_WHITE: #fff;
+$COLOR_GREY_BACKGROUND: #0B0B0B;
+$COLOR_FOOTER_BACKGROUND: #000;
+$COLOR_BLUE: #0046FA;
+$COLOR_ORANGE: #F8BB00;
+
+/**
 * UI Elements
  */
 $UNIT: 10px;
 $BUTTON_HEIGHT: 50px;
 $BUTTON_WIDTH_NORMAL: 160px;
-$GLOBAL_PADDING_LEFT: 90px;
-$GLOBAL_PADDING_RIGHT: 90px;
+$BUTTON_WIDTH_LARGE: 300px;
+$GLOBAL_PADDING_LEFT: 10%;
+$GLOBAL_PADDING_RIGHT: 10%;
+//$GLOBAL_PADDING_RIGHT: 168px;
 $GLOBAL_PADDING_MOBILE_RIGHT: 30px;
 $GLOBAL_PADDING_MOBILE_LEFT: 30px;
+$BORDER_RADIUS: 4px;
 
 /**
 * Z Index

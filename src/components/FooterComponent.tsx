@@ -1,8 +1,7 @@
 import React from 'react';
 import SvgIcon, { SVG_COLORS, SVG_ICONS } from './shared/svg-icon/SvgIcon';
 import { StaticImage } from 'gatsby-plugin-image';
-import { IComponentProps, openInNewTab } from '../pages';
-import { PopupButton } from '@typeform/embed-react';
+import { IComponentProps, openInNewTab } from '../utils/openInNewTab';
 
 export const FooterComponent = ({ isLightTheme }: IComponentProps) => {
 
@@ -25,10 +24,8 @@ export const FooterComponent = ({ isLightTheme }: IComponentProps) => {
         <div className="h-flex-column footer-component--column">
           <div className="h-flex-column footer-component--padding">
             <span className="footer-component--footer--link" onClick={() => openInNewTab('https://twitter.com/Credix_finance')}>Twitter</span>
+            <span className="footer-component--footer--link" onClick={() => openInNewTab('https://www.linkedin.com/company/credix-finance/')}>Linkedin</span>
             <span className="footer-component--footer--link" onClick={() => openInNewTab('https://discord.gg/5Ab8b8ueGs')}>Discord</span>
-            <PopupButton id="k1mIGrFE" className="footer-component--footer--link footer-component--footer--typeform">
-              Join Alpha
-            </PopupButton>
             <span className="footer-component--footer--link" onClick={() => openInNewTab('https://angel.co/company/credix')}>Join The Team</span>
             <span className="footer-component--footer--link" onClick={() => openInNewTab('https://credix.gitbook.io/credix')}>Documentation</span>
             <span className="footer-component--footer--link h-margin-bottom--double" onClick={mail}>Support</span>

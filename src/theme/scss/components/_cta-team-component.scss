@@ -13,8 +13,11 @@
 
   &--row {
     margin-top: 80px;
+    border: 1px solid $COLOR_GREY_BACKGROUND;
+    padding: 45px;
     @include mobile {
       flex-flow: column;
+      padding: 25px;
     }
   }
 

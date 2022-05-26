@@ -1,53 +1,25 @@
 import * as React from 'react'
 import '../theme/index.scss';
 import { HomeComponent } from '../components/HomeComponent';
-import { CTAComponent } from '../components/CTAComponent';
-import { ThesisComponent } from '../components/ThesisComponent';
 import { HeaderComponent } from '../components/HeaderComponent';
-import { PlatformComponent } from '../components/PlatformComponent';
-import { VisionComponent } from '../components/VisionComponent';
 import { CTATeamComponent } from '../components/CTATeamComponent';
 import { CoreTeamComponent } from '../components/CoreTeamComponent';
-import { AdvisorsComponent } from '../components/AdvisorsComponent';
-import { BackedByComponent } from '../components/BackedByComponent';
 import { FooterComponent } from '../components/FooterComponent';
-import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 import Helmet from 'react-helmet'
 import fav from '../../static/favicon-32x32.png'
 import preview from '../../static/preview_large.png'
-import { HowItWorksComponent } from '../components/HowItWorksComponent';
-import { FAQComponent } from '../components/FAQComponent';
+import { useMobileWidth } from '../hooks/useMobileWidth';
+import { ParallaxProvider } from 'react-scroll-parallax';
+import { ParallaxComponent } from '../components/ParallaxComponent';
+import { BackersBorrowersComponent } from '../components/BackersBorrowersComponent';
+import { MarqueeComponent } from '../components/shared/marquee/MarqueeComponent';
+import { CTAHomeComponent } from '../components/CTAHomeComponent';
 
-export interface IComponentProps {
-  isMobile?: boolean;
-  isTablet?: boolean;
-  isLightTheme?: boolean;
-  setIsLightTheme?: Dispatch<SetStateAction<boolean>>;
-}
 
-/**
- * Helper Function
- */
-export const openInNewTab = (url: string): void => {
-  const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
-  if (newWindow) newWindow.opener = null
-}
 
 const IndexPage = () => {
-  const [width, setWidth] = useState<number>();
-  const [isLightTheme, setIsLightTheme] = useState<boolean>(false);
-  const mobileWidth = 900;
-  const tabletWidth = 1500;
+  const { width, mobileWidth, tabletWidth } = useMobileWidth();
 
-  useEffect(() => {
-    setWidth(window.innerWidth);
-    window.addEventListener('resize', () => {
-      setWidth(window.innerWidth);
-    });
-    return () => {
-      window.removeEventListener('resize', () => {return;});
-    };
-  }, []);
 
   return (
     <main className={`${isLightTheme ? 'light' : 'dark'}`}>
@@ -59,7 +31,7 @@ const IndexPage = () => {
         meta={[
           {
             name: 'description',
-            content: 'CREDIX is a decentralized credit platform that gives borrowers in emerging countries access to previously untapped capital.'
+            content: 'CREDIX is a decentralized credit marketplace connecting investors with FinTechs in emerging markets. Learn more about the future of debt financing now.'
           },
           {
             name: 'keywords',
@@ -87,7 +59,7 @@ const IndexPage = () => {
           },
           {
             property: 'og:description',
-            content: 'CREDIX is a decentralized credit platform that gives borrowers in emerging countries access to previously untapped capital.'
+            content: 'CREDIX is a decentralized credit marketplace connecting investors with FinTechs in emerging markets. Learn more about the future of debt financing now.'
           },
           {
             property: 'og:url',
@@ -103,7 +75,7 @@ const IndexPage = () => {
           },
           {
             property: 'twitter:description',
-            content: 'CREDIX is a decentralized credit platform that gives borrowers in emerging countries access to previously untapped capital.'
+            content: 'CREDIX is a decentralized credit marketplace connecting investors with FinTechs in emerging markets. Learn more about the future of debt financing now.'
           },
           {
             property: 'twitter:title',
@@ -122,19 +94,25 @@ const IndexPage = () => {
         <title lang="en">Credix</title>
         <html lang="en"/>
       </Helmet>
-      <HeaderComponent isMobile={!!width && width < mobileWidth} isLightTheme={isLightTheme} setIsLightTheme={setIsLightTheme}/>
-      <HomeComponent isMobile={!!width && width < mobileWidth}/>
-      <CTAComponent/>
-      <ThesisComponent isMobile={!!width && width < mobileWidth}/>
-      <PlatformComponent/>
-      <HowItWorksComponent isMobile={!!width && width < mobileWidth}/>
-      <VisionComponent isMobile={!!width && width < mobileWidth} isTablet={!!width && width < tabletWidth} isLightTheme={isLightTheme}/>
-      <CTATeamComponent/>
-      <CoreTeamComponent isLightTheme={isLightTheme}/>
-      <AdvisorsComponent isLightTheme={isLightTheme}/>
-      {/*<BackedByComponent isMobile={!!width && width < mobileWidth}/>*/}
-      {/*<FAQComponent/>*/}
-      <FooterComponent isLightTheme={isLightTheme}/>
+      <MarqueeComponent/>
+      <ParallaxProvider>
+        <HeaderComponent isMobile={!!width && width < mobileWidth}/>
+        <HomeComponent isMobile={!!width && width < mobileWidth}/>
+        <ParallaxComponent isMobile={!!width && width < mobileWidth}/>
+        {/*<CTAComponent/>*/}
+        <BackersBorrowersComponent/>
+        {/*<ThesisComponent isMobile={!!width && width < mobileWidth}/>*/}
+        {/*<PlatformComponent/>*/}
+        {/*<HowItWorksComponent isMobile={!!width && width < mobileWidth}/>*/}
+        {/*<VisionComponent isMobile={!!width && width < mobileWidth} isTablet={!!width && width < tabletWidth}/>*/}
+        <CoreTeamComponent/>
+        <CTATeamComponent/>
+        <CTAHomeComponent/>
+        {/*<AdvisorsComponent/>*/}
+        {/*<BackedByComponent/>*/}
+        {/*<FAQComponent/>*/}
+        <FooterComponent/>
+      </ParallaxProvider>
     </main>
   )
 }

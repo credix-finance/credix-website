@@ -1,0 +1,86 @@
+.home-component-borrowers {
+  background: $COLOR_BLACK;
+  min-height: 709px;
+  height: 80vh;
+
+  @extend .global-padding-left-right;
+
+  @include mobile {
+    min-height: 400px;
+    height: 630px;
+    max-height: 80vh;
+  }
+
+  &--text {
+    @include mobile {
+      transform: translateY(-50px);
+      padding-top: 30px;
+      background-color: black;
+    }
+  }
+
+  &--background-shape {
+    position: absolute;
+    left: 1000px;
+    top: 350px;
+    transform: translateY(-10px);
+    z-index: $Z_INDEX_BACKGROUND_SHAPE;
+
+    @include mobile {
+      display: none;
+    }
+
+    &--mobile {
+      position: absolute !important;
+      align-self: center;
+      top: 350px;
+      left: 300px;
+      display: initial;
+    }
+  }
+}
+
+.cta-block-borrowers {
+  margin-top: 88px;
+  z-index: $Z_INDEX_NORMAL;
+
+  &--title {
+    font-size: $FONT_SIZE_XLARGE;
+    font-weight: bold;
+    line-height: $LINE_HEIGHT_XXLARGE;
+    color: $FONT_SECOND_COLOR;
+
+    @include mobile {
+      font-size: $FONT_SIZE_XSLARGE;
+      line-height: $LINE_HEIGHT_XNORMAL;
+    }
+  }
+
+  &--text {
+    max-width: 556px;
+    font-size: $FONT_SIZE_XNORMAL;
+    font-weight: $FONT_WEIGHT_NORMAL;
+    line-height: $LINE_HEIGHT_NORMAL;
+    margin-top: 48px;
+    margin-bottom: 100px;
+
+    @extend .font-second;
+
+    @include mobile {
+      font-size: $FONT_SIZE_NORMAL;
+      line-height: $LINE_HEIGHT_SMALL;
+      margin-bottom: 50px;
+    }
+  }
+
+  &--button.MuiButton-root {
+    width: 350px;
+
+    @extend .h-margin-top--triple;
+
+    @include mobile {
+      width: 95%;
+      align-self: center;
+    }
+  }
+}

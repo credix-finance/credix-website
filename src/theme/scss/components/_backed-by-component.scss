@@ -20,91 +20,35 @@
   }
 
   &--logo-row {
-    margin-top: 80px;
+    margin-top: 100px;
     align-items: center;
-
-    @include tablet {
-      margin-top: 30px;
+    @include mobile {
+      margin-top: 70px;
+      flex-direction: column;
     }
 
-    @include mobile {
-      margin-top: 30px;
-      justify-content: space-evenly;
-      flex-flow: row;
-      margin-bottom: 30px;
+    a {
+      display: flex;
+      cursor: pointer;
+      pointer-events: auto;
     }
   }
 
   &--logo {
-    max-height: 100px;
-
-    &--solana {
-      max-width: 400px;
-      @include mobile {
-        max-width: 250px;
-      }
-    }
-
-    &--fuse {
-      @include tablet {
-        max-width: 100px;
-      }
-
-      @include mobile {
-        max-width: 100px;
-      }
-    }
-
-    &--cumberland {
-      @include tablet {
-        max-width: 200px;
-      }
-    }
-
-    &--petrock {
-      @include tablet {
-        max-width: 200px;
-      }
-    }
-
-    &--brz {
-      @include tablet {
-        max-width: 250px;
-      }
-    }
-
-    &--share {
-      @include tablet {
-        max-width: 80px;
-      }
-    }
-
-    &--mgnr {
-      @include tablet {
-        max-width: 200px;
-        margin-left: 30px;
-      }
-    }
-
-    &--parafi {
-      @include tablet {
-        max-width: 250px;
-      }
-
-      @include mobile {
-        max-width: 200px;
-      }
-    }
-
-    &--brz {
-      @include mobile {
-        max-width: 200px;
-      }
+    height: 50px !important;
+    margin: 40px;
+    margin-bottom: 100px;
+    img {
+      height: 50px !important;
+      width: auto !important;
     }
 
     @include mobile {
-      max-width: 130px;
-      margin: $UNIT;
+      margin-bottom: 70px;
+      height: 30px !important;
+      img {
+        height: 30px !important;
+      }
     }
   }
 }
