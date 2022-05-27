@@ -47,6 +47,12 @@
       border-radius: $BORDER_RADIUS;
       border: 1px solid var(--color-black);
 
+      &:hover {
+        background-color: $COLOR_WHITE;
+        color: $COLOR_BLACK;
+        border: 1px solid $COLOR_BLACK;
+      }
+
       @include mobile {
         width: 100%;
         margin-top: 50px;
@@ -60,6 +66,11 @@
       color: $COLOR_BLACK;
       width: 230px;
       border-radius: $BORDER_RADIUS;
+
+      &:hover {
+        background-color: $COLOR_BLACK;
+        color: $COLOR_WHITE;
+      }
 
       @include mobile {
         width: 100%;
