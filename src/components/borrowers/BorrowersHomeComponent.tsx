@@ -1,13 +1,11 @@
 import * as React from 'react'
-import { CredixButton } from '../shared/buttons/CredixButton';
 import { IComponentProps } from '../../hooks/useComponentProps';
 import { VideoComponent } from '../shared/video/VideoComponent';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import GradientVideo from '../../assets/video/Credix_WebsiteGradientB_02.mp4';
+import { PopupButton } from '@typeform/embed-react';
 
-// todo: fix url for becoming borrower button
-// todo: replace image with correct one
 export const BorrowersHomeComponent = ({ isMobile }: IComponentProps) => {
 
   const homeText = () => (
@@ -15,7 +13,7 @@ export const BorrowersHomeComponent = ({ isMobile }: IComponentProps) => {
       <div className="h-flex-column">
         <h1 className="cta-block-borrowers--title">Borrow <br/> at attractive rates</h1>
         <span className="cta-block-borrowers--text">Get cheaper credit, less bureaucracy and shorter lead times.</span>
-        <CredixButton className="cta-block-borrowers--button" url={''}>Become a borrower</CredixButton>
+        <PopupButton className="cta-component-investors--button" id="yFTAJy3h">Become a borrower</PopupButton>
       </div>
     </div>
   )

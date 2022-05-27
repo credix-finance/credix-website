@@ -10,7 +10,7 @@
   }
 
   &--divider {
-    margin: 0 auto 24px 0;
+    margin: 16px auto 24px 0;
     border-color: $COLOR_BLUE;
     background: $COLOR_BLUE;
     width: 80px;
@@ -152,7 +152,22 @@
   }
 
   &--button {
-    width: $BUTTON_WIDTH_NORMAL;
+    width: 400px;
+    height: 50px;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    text-transform: none;
+    border-radius: $BORDER_RADIUS;
+    font-family: $FONT_FAMILY_SECOND;
+    font-weight: $FONT_WEIGHT_BOLD;
+    font-size: $FONT_SIZE_NORMAL;
+    line-height: 19px;
+
+    &:hover{
+      background-color: var(--color-black);
+      color: var(--color-white);
+      border: 1px solid var(--color-white);
+    }
 
     @include mobile {
       margin-top: $UNIT * 2;

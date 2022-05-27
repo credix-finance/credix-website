@@ -1,9 +1,9 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
-import { CredixButton } from '../shared/buttons/CredixButton';
 import { CTADividerSmall } from './dividers/CTADividerSmall';
 import { CTADivider } from './dividers/CTADivider';
 import { IComponentProps } from '../../hooks/useComponentProps';
+import { PopupButton } from '@typeform/embed-react';
 
 export const InvestorsList = ({ isMobile, isLightTheme }: IComponentProps) => (
   <>
@@ -45,7 +45,7 @@ export const InvestorsList = ({ isMobile, isLightTheme }: IComponentProps) => (
         {isMobile ? <CTADividerSmall/> : <CTADivider/>}
         <span>Invest in the future of credit markets</span>
       </div>
-      <CredixButton className="investors-list-component--button" url={''}>Register as an investor</CredixButton>
+      <PopupButton className="cta-component-investors--button" id="E98Qjiw9">Register as an investor</PopupButton>
     </div>
   </>
 )

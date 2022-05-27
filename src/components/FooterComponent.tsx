@@ -21,20 +21,20 @@ export const FooterComponent = ({ isMobile, isLightTheme }: IComponentProps) => 
             <div className="h-flex-column footer-component--column">
               <SvgIcon icon={SVG_ICONS.CREDIX_LOGO} color={isLightTheme ? SVG_COLORS.BLACK : SVG_COLORS.WHITE} className="footer-component--logo"/>
               <div className="h-flex-row h-flex-row--space-around footer-component--footer">
-                <span className="footer-component--footer--link--small" onClick={mail}>Support</span>
-                <span className="footer-component--footer--link--small">Terms of service</span>
-                <span className="footer-component--footer--link--small">License</span>
+                <span className="h-cursor-pointer footer-component--footer--link--small" onClick={mail}>Support</span>
+                <span className="h-cursor-pointer footer-component--footer--link--small">Terms of service</span>
+                <span className="h-cursor-pointer footer-component--footer--link--small">License</span>
               </div>
             </div>
         }
         <div className="h-flex-column footer-component--column">
-          { isMobile && <SvgIcon icon={SVG_ICONS.CREDIX_LOGO_MOBILE} color={SVG_COLORS.WHITE} className="footer-component--logo"/>
+          { isMobile && <SvgIcon icon={SVG_ICONS.CREDIX_LOGO_MOBILE} color={isLightTheme ? SVG_COLORS.BLACK : SVG_COLORS.WHITE} className="footer-component--logo"/>
           }
           <div className="h-flex-column footer-component--padding">
-            <Link className="footer-component--footer--link" to={'/investors'}>Investors</Link>
-            <Link className="footer-component--footer--link" to={'/borrowers'}>Borrowers</Link>
-            <span className="footer-component--footer--link" onClick={() => openInNewTab('https://credix.gitbook.io/credix')}>Documentation</span>
-            <span className="footer-component--footer--link" onClick={() => openInNewTab('https://credix.gitbook.io/credix')}>Careers</span>
+            <Link className="h-cursor-pointer footer-component--footer--link" to={'/investors'}>Investors</Link>
+            <Link className="h-cursor-pointer footer-component--footer--link" to={'/borrowers'}>Borrowers</Link>
+            <span className="h-cursor-pointer footer-component--footer--link" onClick={() => openInNewTab('https://credix.gitbook.io/credix')}>Documentation</span>
+            <span className="h-cursor-pointer footer-component--footer--link" onClick={() => openInNewTab('https://angel.co/company/credix')}>Careers</span>
           </div>
         </div>
         <div className="h-flex-column footer-component--column">
@@ -42,15 +42,21 @@ export const FooterComponent = ({ isMobile, isLightTheme }: IComponentProps) => 
             Find us on:
           </span>
           <div className="h-flex-row h-flex-row--align-start footer-component--social-buttons">
-            <SocialButton icon={SVG_ICONS.LINKEDIN_FOOTER} className="h-cursor-pointer footer-component--social-buttons--linkedIn" onClick={() => openInNewTab('https://www.linkedin.com/company/credix-finance')}/>
-            <SocialButton icon={SVG_ICONS.TWITTER_FOOTER} className="h-cursor-pointer" onClick={() => openInNewTab('https://twitter.com/Credix_finance?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor')}/>
+            <SocialButton icon={SVG_ICONS.LINKEDIN_FOOTER} className="h-cursor-pointer footer-component--social-buttons--linkedIn" onClick={() => openInNewTab('https://www.linkedin.com/company/credix-finance')} isLightTheme={isLightTheme}/>
+            <SocialButton icon={SVG_ICONS.TWITTER_FOOTER} className="h-cursor-pointer" onClick={() => openInNewTab('https://twitter.com/Credix_finance?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor')} isLightTheme={isLightTheme}/>
           </div>
           <div id="mc_embed_signup" className="footer-component--mailchimp-row">
             <form action="https://finance.us20.list-manage.com/subscribe/post?u=6501024066e1753c2aa2d692e&amp;id=e5165ece3c"
               method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate"
               target="_blank" noValidate>
               <div className="footer-component--mailchimp-sub--logo-row">
-                <StaticImage className="footer-component--mailchimp-sub--logo" src={'../assets/shapes/Send.png'} alt={'Send'}/>
+                {
+                  isLightTheme ? (
+                    <StaticImage className="footer-component--mailchimp-sub--logo" src={'../assets/shapes/Send_dark.png'} alt={'Send'}/>
+                  ) : (
+                    <StaticImage className="footer-component--mailchimp-sub--logo" src={'../assets/shapes/Send.png'} alt={'Send'}/>
+                  )
+                }
               </div>
               <span className="footer-component--footer--text">
             Contact us:
@@ -60,16 +66,16 @@ export const FooterComponent = ({ isMobile, isLightTheme }: IComponentProps) => 
                 <div style={{ position: 'absolute', left: '-5000px;', visibility: 'hidden' }} aria-hidden="true">
                   <input type="text" name="b_6501024066e1753c2aa2d692e_e5165ece3c" tabIndex={-1} value=""/>
                 </div>
+                {
+                  isMobile && (
+                    <div className="h-flex-row h-flex-row--space-around footer-component--footer">
+                      <span className="h-cursor-pointer footer-component--footer--link--small" onClick={mail}>Support</span>
+                      <span className="h-cursor-pointer footer-component--footer--link--small">Terms of service</span>
+                      <span className="h-cursor-pointer footer-component--footer--link--small">License</span>
+                    </div>
+                  )
+                }
               </div>
-              {
-                isMobile && (
-                  <div className="h-flex-row h-flex-row--space-around footer-component--footer">
-                    <span className="footer-component--footer--link--small" onClick={mail}>Support</span>
-                    <span className="footer-component--footer--link--small">Terms of service</span>
-                    <span className="footer-component--footer--link--small">License</span>
-                  </div>
-                )
-              }
             </form>
           </div>
         </div>

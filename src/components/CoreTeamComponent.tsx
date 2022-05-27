@@ -1,7 +1,7 @@
 import React from 'react';
 import { PersonComponent } from './shared/person/PersonComponent';
 import { StaticImage } from 'gatsby-plugin-image';
-import { IComponentProps } from '../pages';
+import { IComponentProps } from '../hooks/useComponentProps';
 
 export const CoreTeamComponent = ({ isLightTheme }: IComponentProps) => {
   return (

@@ -19,7 +19,7 @@ import { useEffect, useRef, useState } from 'react';
 
 
 const IndexPage = () => {
-  const { width, mobileWidth, tabletWidth } = useComponentProps();
+  const { width, mobileWidth } = useComponentProps();
   const [isLightTheme, setIsLightTheme] = useState<boolean>(false);
   const isFirstRender = useRef(true);
 

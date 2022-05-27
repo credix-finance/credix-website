@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { SocialButton } from '../buttons/SocialButton';
-import { SVG_COLORS, SVG_ICONS } from '../svg-icon/SvgIcon';
+import { SVG_ICONS } from '../svg-icon/SvgIcon';
 import { openInNewTab } from '../../../utils/openInNewTab';
 
 interface IPersonProps {

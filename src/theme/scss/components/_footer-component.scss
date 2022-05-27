@@ -28,8 +28,8 @@
   }
 
   &--email {
-    background: $COLOR_BLACK;
-    border: 1px solid $COLOR_WHITE;
+    background-color: var(--color-footer-background);
+    border: 2px solid var(--font-default-color);
   }
 
   &--column {
@@ -48,7 +48,6 @@
       border-left: var(--color-footer-border);
       width: 100%;
       height: 220px;
-      margin-bottom: 42px;
 
       &:first-child {
         border-top: var(--color-footer-border);
@@ -76,7 +75,7 @@
       cursor: pointer;
       margin-bottom: $UNIT * 2;
       text-decoration: none;
-      color: $COLOR_WHITE;
+      color: var(--font-default-color);
 
       @include mobile {
         margin-bottom: 18px;
