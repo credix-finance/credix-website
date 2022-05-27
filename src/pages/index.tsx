@@ -8,35 +8,25 @@ import { FooterComponent } from '../components/FooterComponent';
 import Helmet from 'react-helmet'
 import fav from '../../static/favicon-32x32.png'
 import preview from '../../static/preview_large.png'
-import { ELocalStorage, useComponentProps } from '../hooks/useComponentProps';
+import { useComponentProps } from '../hooks/useComponentProps';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { ParallaxComponent } from '../components/ParallaxComponent';
 import { BackersBorrowersComponent } from '../components/BackersBorrowersComponent';
 import { MarqueeComponent } from '../components/shared/marquee/MarqueeComponent';
 import { CTAHomeComponent } from '../components/CTAHomeComponent';
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
+import LightThemeProvider from '../services/LightThemeProvider';
 
 
 
 const IndexPage = () => {
-  const { width, mobileWidth, tabletWidth } = useComponentProps();
-  const [isLightTheme, setIsLightTheme] = useState<boolean>(false);
-  const isFirstRender = useRef(true);
+  const { width, mobileWidth } = useComponentProps();
+  const [isLightTheme, setIsLightTheme] = useState<boolean>(LightThemeProvider.isLightTheme);
 
-  useEffect(() => {
-    if (isFirstRender.current) {
-      isFirstRender.current = false;
-    } else {
-      localStorage.setItem(ELocalStorage.LIGHT_THEME, JSON.stringify(isLightTheme))
-    }
-  }, [isLightTheme])
-
-  useEffect(() => {
-    const lightTheme = localStorage.getItem(ELocalStorage.LIGHT_THEME)
-    if (lightTheme && lightTheme !== 'undefined') {
-      setIsLightTheme(JSON.parse(lightTheme))
-    }
-  }, [])
+  const setLightTheme = (bool: boolean) => {
+    setIsLightTheme(bool)
+    LightThemeProvider.setLightTheme(bool)
+  }
 
   return (
     <main className={`${isLightTheme ? 'light' : 'dark'}`}>
@@ -113,7 +103,7 @@ const IndexPage = () => {
       </Helmet>
       <MarqueeComponent/>
       <ParallaxProvider>
-        <HeaderComponent isMobile={!!width && width < mobileWidth} isLightTheme={isLightTheme} setLightTheme={setIsLightTheme}/>
+        <HeaderComponent isMobile={!!width && width < mobileWidth} isLightTheme={isLightTheme} setLightTheme={setLightTheme}/>
         <HomeComponent isMobile={!!width && width < mobileWidth}/>
         <ParallaxComponent isMobile={!!width && width < mobileWidth}/>
         <BackersBorrowersComponent/>
