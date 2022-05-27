@@ -28,9 +28,11 @@ export const scrollFade = () => {
 }
 
 export const initScrollFade = () => {
-  document.addEventListener('scroll', scrollFade);
-  window.addEventListener('resize', scrollFade);
-  document.addEventListener('DOMContentLoaded', function() {
-    scrollFade();
-  });
+  if (typeof document !== 'undefined') {
+    document.addEventListener('scroll', scrollFade);
+    window.addEventListener('resize', scrollFade);
+    document.addEventListener('DOMContentLoaded', function() {
+      scrollFade();
+    });
+  }
 }
