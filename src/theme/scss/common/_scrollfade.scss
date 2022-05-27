@@ -7,8 +7,11 @@
 
 .scrollFade--hidden {
 	opacity: 0;
-	height: 0; 
 	pointer-events: none;
+
+	@include mobile {
+		opacity: 1;
+	}
 }
 
 .scrollFade--visible {
