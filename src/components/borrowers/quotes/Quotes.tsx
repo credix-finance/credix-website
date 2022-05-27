@@ -53,7 +53,8 @@ export const Quotes = ({ isMobile }: IComponentProps) => {
               quote === Quote.A55 &&
                 <>
                   <div className="quotes-component--right-text">
-                    It is exciting to use the new capital markets, leveraged by decentralized finance and blockchain technologies, to help the new economy entrepreneurs. A55 is impressed by Credit`&rsquo;`s vision and the
+                    {/* eslint-disable-next-line react/no-unescaped-entities */}
+                    It is exciting to use the new capital markets, leveraged by decentralized finance and blockchain technologies, to help the new economy entrepreneurs. A55 is impressed by Credit's vision and the
                     already-created technology to rethink global capital markets.
                   </div>
                   <div className="quotes-component--right-text--cited-person">

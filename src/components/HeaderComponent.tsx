@@ -81,6 +81,11 @@ export const HeaderComponent = ({ isMobile, isLightTheme, setLightTheme, ...loca
     setCurrentPage(getActiveLink(location?.pathname));
   }, [location]);
 
+  const mail = (e: any) => {
+    window.location = 'mailto:info@credix.finance' as unknown as Location;
+    e.preventDefault()
+  }
+
   const headerLinks = () => {
     return (
       <>
@@ -93,7 +98,7 @@ export const HeaderComponent = ({ isMobile, isLightTheme, setLightTheme, ...loca
           { currentPage === Page.BORROWERS && <div className="header-component--link--active"/>}
         </div>
         <span className="header-component--link" onClick={() => openInNewTab('https://angel.co/company/credix')}>Team</span>
-        <span className="header-component--link" onClick={() => openInNewTab('https://credix.gitbook.io/credix')}>Contact</span>
+        <span className="header-component--link" onClick={mail}>Contact</span>
         <CredixButton className="header--links--button" url={'https://app.credix.finance/'}>Launch App</CredixButton>
         <MaterialUISwitch sx={{ m: 1 }} theme={{ palette: { mode: isLightTheme? 'light': 'dark' } } as any} checked={isLightTheme} onChange={(e, bool) => setLightTheme && setLightTheme(bool)}/>
         {/*<div className="h-flex-row h-flex-row--align-center header-component--link header-component--switch">*/}
