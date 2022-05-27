@@ -1,7 +1,7 @@
 .parallax-component {
-  height: 600px;
+  height: 800px;
   background: var(--color-background-home);
-  overflow-y: hidden;
+  // overflow-y: hidden;
   color: var(--font-default-color);
   @extend .global-padding-left-right;
 
@@ -12,9 +12,9 @@
 
 
   &--wrapper{
-    height: 400px;
-    overflow: hidden;
-    padding-top: 50px;
+    height: 700px;
+    // overflow: hidden;
+    padding-top: 0px;
   }
 
 
@@ -58,7 +58,7 @@
   &--image-scroll {
     height: 150px;
     width: 30%;
-    margin: 50px 0 100px auto;
+    margin: 100px 0 100px auto;
     position: relative;
   }
 

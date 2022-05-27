@@ -24,7 +24,7 @@ export const ParallaxComponent = ({ isMobile }: IComponentProps) => {
   const thresholdScrollValue = 1000;
 
   const firstImageStyle = () => {
-    const highLightTargetScroll = 430
+    const highLightTargetScroll = 500
     const opacity = (100 - ((scrollY - highLightTargetScroll) * 100) / (570 - highLightTargetScroll));
     const minOpacity = 25;
     if (scrollY > thresholdScrollValue) {

@@ -5,6 +5,7 @@ import { IComponentProps } from '../hooks/useComponentProps';
 // @ts-ignore
 import GradientVideo from '../assets/video/Credix_WebsiteGradientA_02.mp4'
 import { VideoComponent } from './shared/video/VideoComponent';
+import { initScrollFade, scrollFade } from '../utils/scrollfade'; 
 
 export const HomeComponent = ({ isMobile }: IComponentProps) => {
 
@@ -17,9 +18,12 @@ export const HomeComponent = ({ isMobile }: IComponentProps) => {
     </div>
   )
 
+  initScrollFade();
+  scrollFade();
+
   return (
     <div className="h-flex-column home-component">
-      <div className="h-flex-row cta-block">
+      <div className="h-flex-row cta-block scrollFade">
         { isMobile ?
           <>
             <VideoComponent video={GradientVideo}/>
