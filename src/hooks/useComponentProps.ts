@@ -22,6 +22,16 @@ export const useComponentProps = () => {
   const mobileWidth = 900;
   const tabletWidth = 1500;
 
+  const getLightTheme = () => {
+    if (typeof window !== 'undefined') {
+      const lightTheme = localStorage.getItem(ELocalStorage.LIGHT_THEME)
+      if (lightTheme && lightTheme !== 'undefined') {
+        return JSON.parse(lightTheme)
+      } else return false;
+    }
+    return false
+  }
+
   useEffect(() => {
     setWidth(window.innerWidth);
     window.addEventListener('resize', () => {
@@ -35,6 +45,7 @@ export const useComponentProps = () => {
   return {
     width,
     mobileWidth,
-    tabletWidth
+    tabletWidth,
+    getLightTheme
   }
 }

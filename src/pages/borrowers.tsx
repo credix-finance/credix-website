@@ -8,19 +8,18 @@ import { FooterComponent } from '../components/FooterComponent';
 import { BorrowersCTAComponent } from '../components/borrowers/BorrowersCTAComponent';
 import { BorrowersCTARegisterComponent } from '../components/borrowers/BorrowersCTARegisterComponent';
 import { Quotes } from '../components/borrowers/quotes/Quotes';
-import { useComponentProps } from '../hooks/useComponentProps';
+import { ELocalStorage, useComponentProps } from '../hooks/useComponentProps';
 import { Location } from '@reach/router';
 import { MarqueeComponent } from '../components/shared/marquee/MarqueeComponent';
-import LightThemeProvider from '../services/LightThemeProvider';
-
 
 const BorrowersPage = () => {
-  const { width, mobileWidth } = useComponentProps();
-  const [isLightTheme, setIsLightTheme] = useState<boolean>(LightThemeProvider.isLightTheme);
+  const { width, mobileWidth, getLightTheme } = useComponentProps();
+
+  const [isLightTheme, setIsLightTheme] = useState<boolean>(getLightTheme());
 
   const setLightTheme = (bool: boolean) => {
     setIsLightTheme(bool)
-    LightThemeProvider.setLightTheme(bool)
+    localStorage.setItem(ELocalStorage.LIGHT_THEME, JSON.stringify(bool))
   }
 
   return (

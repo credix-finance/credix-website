@@ -7,18 +7,18 @@ import { InvestorsHomeComponent } from '../components/investors/InvestorsHomeCom
 import { InvestorsCTAComponent } from '../components/investors/InvestorsCTAComponent';
 import { FooterComponent } from '../components/FooterComponent';
 import { InvestorsList } from '../components/investors/InvestorsList';
-import { useComponentProps } from '../hooks/useComponentProps';
+import { ELocalStorage, useComponentProps } from '../hooks/useComponentProps';
 import { MarqueeComponent } from '../components/shared/marquee/MarqueeComponent';
 import { Location } from '@reach/router';
-import LightThemeProvider from '../services/LightThemeProvider';
 
 const InvestorsPage = () => {
-  const { width, mobileWidth } = useComponentProps();
-  const [isLightTheme, setIsLightTheme] = useState<boolean>(LightThemeProvider.isLightTheme);
+  const { width, mobileWidth, getLightTheme } = useComponentProps();
+
+  const [isLightTheme, setIsLightTheme] = useState<boolean>(getLightTheme());
 
   const setLightTheme = (bool: boolean) => {
     setIsLightTheme(bool)
-    LightThemeProvider.setLightTheme(bool)
+    localStorage.setItem(ELocalStorage.LIGHT_THEME, JSON.stringify(bool))
   }
 
   return (
