@@ -1,11 +1,23 @@
 import { useEffect, useState } from 'react';
 
-export interface IWidthProps {
-  isMobile?: boolean;
-  isTablet?: boolean;
+interface LocationProps {
+  location?: {
+    pathname: string;
+  }
 }
 
-export const useMobileWidth = () => {
+export enum ELocalStorage {
+  LIGHT_THEME = 'light_theme'
+}
+
+export interface IComponentProps extends LocationProps {
+  isMobile?: boolean;
+  isTablet?: boolean;
+  isLightTheme?: boolean;
+  setLightTheme?: (b: boolean) => void;
+}
+
+export const useComponentProps = () => {
   const [width, setWidth] = useState<number>();
   const mobileWidth = 900;
   const tabletWidth = 1500;

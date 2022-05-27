@@ -1,5 +1,4 @@
 .cta-register-borrower-component {
-  background: $COLOR_BLACK;
   min-height: 300px;
 
   @extend .global-padding-left-right;
@@ -10,25 +9,21 @@
   }
 
   &--cta-banner {
-    min-height: 200px;
-    background: $COLOR_GREY_BACKGROUND;
+    @extend .global-padding-left-right;
+    background: var(--color-background-backers-borrowers);
+    color: var(--font-default-color);
 
-    &--divider {
-      margin-left: 90px;
-    }
+    min-height: 200px;
 
     &--title {
       font-family: $FONT_FAMILY_SECOND;
       font-weight: $FONT_WEIGHT_XXNORMAL;
       font-size: $FONT_SIZE_XXXNORMAL;
       line-height: $LINE_HEIGHT_NORMAL;
-      color: $COLOR_WHITE;
-      margin-left: 90px;
 
       @include mobile {
         width: 300px;
         margin-top: $UNIT * 4;
-        margin-left: 26px;
       }
     }
   }
@@ -68,8 +63,8 @@
 
   &--logo {
     height: 50px !important;
-    margin: 40px;
-    margin-bottom: 100px;
+    margin: 40px 40px 100px;
+
     img {
       height: 50px !important;
       width: auto !important;
@@ -87,8 +82,6 @@
   &--button.MuiButton-root {
     width: 330px;
     margin-top: 48px;
-    margin-left: 90px;
-    margin-right: 90px;
 
     @include mobile {
       margin-top: $UNIT * 4;

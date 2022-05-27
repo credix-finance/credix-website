@@ -4,9 +4,9 @@ import { StaticImage } from 'gatsby-plugin-image';
 import { openInNewTab } from '../utils/openInNewTab';
 import { Link } from 'gatsby';
 import { SocialButton } from './shared/buttons/SocialButton';
-import { IWidthProps } from '../hooks/useMobileWidth';
+import { IComponentProps } from '../hooks/useComponentProps';
 
-export const FooterComponent = ({ isMobile }: IWidthProps) => {
+export const FooterComponent = ({ isMobile, isLightTheme }: IComponentProps) => {
 
   const mail = (e: any) => {
     window.location = 'mailto:info@credix.finance' as unknown as Location;
@@ -19,7 +19,7 @@ export const FooterComponent = ({ isMobile }: IWidthProps) => {
         {
           !isMobile &&
             <div className="h-flex-column footer-component--column">
-              <SvgIcon icon={SVG_ICONS.CREDIX_LOGO} color={SVG_COLORS.WHITE} className="footer-component--logo"/>
+              <SvgIcon icon={SVG_ICONS.CREDIX_LOGO} color={isLightTheme ? SVG_COLORS.BLACK : SVG_COLORS.WHITE} className="footer-component--logo"/>
               <div className="h-flex-row h-flex-row--space-around footer-component--footer">
                 <span className="footer-component--footer--link--small" onClick={mail}>Support</span>
                 <span className="footer-component--footer--link--small">Terms of service</span>

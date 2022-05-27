@@ -1,5 +1,6 @@
 .cta-component-investors {
-  background: $COLOR_GREY_BACKGROUND;
+  background-color: var(--color-background-backers-borrowers);
+  color: var(--font-default-color);
   min-height: 349px;
 
   @extend .global-padding-left-right;
@@ -9,7 +10,7 @@
   }
 
   &--divider {
-    margin: 14px auto 24px 0;
+    margin: 0 auto 24px 0;
     border-color: $COLOR_BLUE;
     background: $COLOR_BLUE;
     width: 80px;

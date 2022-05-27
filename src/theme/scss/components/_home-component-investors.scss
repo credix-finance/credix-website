@@ -1,7 +1,8 @@
 .home-component-investors {
-  background: $COLOR_BLACK;
+  background-color: var(--color-background-header);
   min-height: 709px;
   height: 80vh;
+  position: relative;
 
   @extend .global-padding-left-right;
 
@@ -23,11 +24,10 @@
     }
 
     &--mobile {
-      position: absolute !important;
+      position: absolute;
       align-self: center;
-      top: 350px;
-      left: 300px;
-      display: initial;
+      top: 180px;
+      transform: translateX(170px);
     }
   }
 }
@@ -41,7 +41,7 @@
     font-size: $FONT_SIZE_XLARGE;
     font-weight: bold;
     line-height: $LINE_HEIGHT_XXLARGE;
-    color: $FONT_SECOND_COLOR;
+    color: var(--font-second-color);
 
     @include mobile {
       font-size: $FONT_SIZE_XSLARGE;
@@ -54,9 +54,11 @@
     font-size: $FONT_SIZE_XNORMAL;
     font-weight: $FONT_WEIGHT_NORMAL;
     line-height: $LINE_HEIGHT_NORMAL;
+    margin-top: 48px;
+    margin-bottom: 100px;
+    color: var(--font-second-color);
 
     @extend .font-second;
-    @extend .h-margin-top;
 
     @include mobile {
       font-size: $FONT_SIZE_SMALL;
@@ -68,5 +70,10 @@
     width: 350px;
 
     @extend .h-margin-top--triple;
+
+    @include mobile {
+      width: 95%;
+      align-self: center;
+    }
   }
 }

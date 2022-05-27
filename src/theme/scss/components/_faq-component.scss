@@ -32,7 +32,7 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.35);
 
     &--title{
-      color: $COLOR_WHITE;
+      color: var(--color-white);
       font-size: $FONT_SIZE_NORMAL;
       font-family: $FONT_FAMILY_SECOND;
       line-height: $LINE_HEIGHT_SMALL;
@@ -44,11 +44,11 @@
       font-family: $FONT_FAMILY_SECOND;
       font-size: $FONT_SIZE_SMALL;
       line-height: $LINE_HEIGHT_XSMALL;
-      color: $COLOR_WHITE;
+      color: var(--color-white);
     }
 
     &--icon {
-      color: $COLOR_WHITE;
+      color: var(--color-white);
     }
   }
 }

@@ -3,9 +3,9 @@ import { StaticImage } from 'gatsby-plugin-image';
 import { CredixButton } from '../shared/buttons/CredixButton';
 import { CTADividerSmall } from './dividers/CTADividerSmall';
 import { CTADivider } from './dividers/CTADivider';
-import { IWidthProps } from '../../hooks/useMobileWidth';
+import { IComponentProps } from '../../hooks/useComponentProps';
 
-export const InvestorsList = ({ isMobile }: IWidthProps) => (
+export const InvestorsList = ({ isMobile, isLightTheme }: IComponentProps) => (
   <>
     <div className="h-flex-column investors-list-component">
       <div className="h-flex-row h-flex-row--space-between investors-list-component--title-row">
@@ -14,13 +14,28 @@ export const InvestorsList = ({ isMobile }: IWidthProps) => (
       {
         <div className="h-flex-row h-flex-row--space-between investors-list-component--logo-row">
           <a target="_blank">
-            <StaticImage src={'../../assets/logos/parafi.png'} alt={'parafi'} className="backed-by-component--logo"/>
+            {
+              isLightTheme ?
+                <StaticImage src={'../../assets/logos/parafi_light.png'} alt={'parafi'} className="backed-by-component--logo"/>
+                :
+                <StaticImage src={'../../assets/logos/parafi.png'} alt={'parafi'} className="backed-by-component--logo"/>
+            }
           </a>
           <a target="_blank">
-            <StaticImage src={'../../assets/logos/alameda-logo.png'} alt={'alameda'} className="backed-by-component--logo"/>
+            {
+              isLightTheme ?
+                <StaticImage src={'../../assets/logos/alameda_light.png'} alt={'alameda'} className="backed-by-component--logo"/>
+                :
+                <StaticImage src={'../../assets/logos/alameda-logo.png'} alt={'alameda'} className="backed-by-component--logo"/>
+            }
           </a>
           <a target="_blank">
-            <StaticImage src={'../../assets/logos/cumberland-logo.png'} alt={'cumberland'} className="backed-by-component--logo"/>
+            {
+              isLightTheme ?
+                <StaticImage src={'../../assets/logos/cumberland_light.png'} alt={'cumberland'} className="backed-by-component--logo"/>
+                :
+                <StaticImage src={'../../assets/logos/cumberland-logo.png'} alt={'cumberland'} className="backed-by-component--logo"/>
+            }
           </a>
         </div>
       }
