@@ -92,7 +92,7 @@ const BorrowersPage = () => {
       <BorrowersCTAComponent/>
       <Quotes isMobile={!!width && width < mobileWidth}/>
       <BorrowersCTARegisterComponent isMobile={!!width && width < mobileWidth}/>
-      <FooterComponent/>
+      <FooterComponent isMobile={!!width && width < mobileWidth}/>
     </main>
   )
 }

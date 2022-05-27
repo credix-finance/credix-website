@@ -92,7 +92,7 @@ const InvestorsPage = () => {
       <InvestorsHomeComponent isMobile={!!width && width < mobileWidth}/>
       <InvestorsCTAComponent/>
       <InvestorsList isMobile={!!width && width < mobileWidth}/>
-      <FooterComponent/>
+      <FooterComponent isMobile={!!width && width < mobileWidth}/>
     </main>
   )
 }

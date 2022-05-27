@@ -106,7 +106,7 @@ const IndexPage = () => {
       <AdvisorsComponent/>
       <BackedByComponent/>
       {/*<FAQComponent/>*/}
-      <FooterComponent/>
+      <FooterComponent isMobile={!!width && width < mobileWidth}/>
     </main>
   )
 }

@@ -4,8 +4,9 @@ import { StaticImage } from 'gatsby-plugin-image';
 import { openInNewTab } from '../utils/openInNewTab';
 import { Link } from 'gatsby';
 import { SocialButton } from './shared/buttons/SocialButton';
+import { IWidthProps } from '../hooks/useMobileWidth';
 
-export const FooterComponent = () => {
+export const FooterComponent = ({ isMobile }: IWidthProps) => {
 
   const mail = (e: any) => {
     window.location = 'mailto:info@credix.finance' as unknown as Location;
@@ -15,15 +16,20 @@ export const FooterComponent = () => {
   return (
     <div className="h-flex-column footer-component">
       <div className="h-flex-row footer-component--row">
+        {
+          !isMobile &&
+            <div className="h-flex-column footer-component--column">
+              <SvgIcon icon={SVG_ICONS.CREDIX_LOGO} color={SVG_COLORS.WHITE} className="footer-component--logo"/>
+              <div className="h-flex-row h-flex-row--space-around footer-component--footer">
+                <span className="footer-component--footer--link--small" onClick={mail}>Support</span>
+                <span className="footer-component--footer--link--small">Terms of service</span>
+                <span className="footer-component--footer--link--small">License</span>
+              </div>
+            </div>
+        }
         <div className="h-flex-column footer-component--column">
-          <SvgIcon icon={SVG_ICONS.CREDIX_LOGO} color={SVG_COLORS.WHITE} className="footer-component--logo"/>
-          <div className="h-flex-row h-flex-row--space-around footer-component--footer">
-            <span className="footer-component--footer--link--small" onClick={mail}>Support</span>
-            <span className="footer-component--footer--link--small">Terms of service</span>
-            <span className="footer-component--footer--link--small">License</span>
-          </div>
-        </div>
-        <div className="h-flex-column footer-component--column">
+          { isMobile && <SvgIcon icon={SVG_ICONS.CREDIX_LOGO_MOBILE} color={SVG_COLORS.WHITE} className="footer-component--logo"/>
+          }
           <div className="h-flex-column footer-component--padding">
             <Link className="footer-component--footer--link" to={'/investors'}>Investors</Link>
             <Link className="footer-component--footer--link" to={'/borrowers'}>Borrowers</Link>
@@ -46,12 +52,24 @@ export const FooterComponent = () => {
               <div className="footer-component--mailchimp-sub--logo-row">
                 <StaticImage className="footer-component--mailchimp-sub--logo" src={'../assets/shapes/Send.png'} alt={'Send'}/>
               </div>
+              <span className="footer-component--footer--text">
+            Contact us:
+              </span>
               <div id="mc_embed_signup_scroll" className="footer-component--mailchimp-sub">
-                <input type="email" name="EMAIL" className="email" id="mce-EMAIL" placeholder="  email address & enter" required/>
+                <input type="email" name="EMAIL" className="footer-component--email" id="mce-EMAIL" placeholder="  Email address" required/>
                 <div style={{ position: 'absolute', left: '-5000px;', visibility: 'hidden' }} aria-hidden="true">
                   <input type="text" name="b_6501024066e1753c2aa2d692e_e5165ece3c" tabIndex={-1} value=""/>
                 </div>
               </div>
+              {
+                isMobile && (
+                  <div className="h-flex-row h-flex-row--space-around footer-component--footer">
+                    <span className="footer-component--footer--link--small" onClick={mail}>Support</span>
+                    <span className="footer-component--footer--link--small">Terms of service</span>
+                    <span className="footer-component--footer--link--small">License</span>
+                  </div>
+                )
+              }
             </form>
           </div>
         </div>
