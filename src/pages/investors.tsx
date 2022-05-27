@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import Helmet from 'react-helmet';
 import { HeaderComponent } from '../components/HeaderComponent';
 import fav from '../../static/favicon-32x32.png'
@@ -12,24 +12,14 @@ import { MarqueeComponent } from '../components/shared/marquee/MarqueeComponent'
 import { Location } from '@reach/router';
 
 const InvestorsPage = () => {
-  const { width, mobileWidth } = useComponentProps();
-  const [isLightTheme, setIsLightTheme] = useState<boolean>(false);
-  const isFirstRender = useRef(true);
+  const { width, mobileWidth, getLightTheme } = useComponentProps();
 
-  useEffect(() => {
-    if (isFirstRender.current) {
-      isFirstRender.current = false;
-    } else {
-      localStorage.setItem(ELocalStorage.LIGHT_THEME, JSON.stringify(isLightTheme))
-    }
-  }, [isLightTheme])
+  const [isLightTheme, setIsLightTheme] = useState<boolean>(getLightTheme());
 
-  useEffect(() => {
-    const lightTheme = localStorage.getItem(ELocalStorage.LIGHT_THEME)
-    if (lightTheme && lightTheme !== 'undefined') {
-      setIsLightTheme(JSON.parse(lightTheme))
-    }
-  }, [])
+  const setLightTheme = (bool: boolean) => {
+    setIsLightTheme(bool)
+    localStorage.setItem(ELocalStorage.LIGHT_THEME, JSON.stringify(bool))
+  }
 
   return (
     <main className={`${isLightTheme ? 'light' : 'dark'}`}>
@@ -107,7 +97,7 @@ const InvestorsPage = () => {
       </Helmet>
       <MarqueeComponent/>
       <Location>
-        {locationProps => <HeaderComponent {...locationProps} isMobile={!!width && width < mobileWidth} isLightTheme={isLightTheme} setLightTheme={setIsLightTheme}/>}
+        {locationProps => <HeaderComponent {...locationProps} isMobile={!!width && width < mobileWidth} isLightTheme={isLightTheme} setLightTheme={setLightTheme}/>}
       </Location>
       <InvestorsHomeComponent isMobile={!!width && width < mobileWidth}/>
       <InvestorsCTAComponent/>
