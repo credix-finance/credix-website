@@ -5,7 +5,7 @@ import { PopupButton } from '@typeform/embed-react';
 import { IComponentProps } from '../hooks/useComponentProps';
 import { openInNewTab } from '../utils/openInNewTab';
 
-export const ParallaxComponent = ({ isMobile }: IComponentProps) => {
+export const ParallaxComponent = ({ isMobile, isLightTheme }: IComponentProps) => {
 
   const [scrollY, setScrollY] = useState(0);
 
@@ -22,13 +22,13 @@ export const ParallaxComponent = ({ isMobile }: IComponentProps) => {
   }, []);
 
   const minOpacity = 15;
-  const baseMargin = 50; 
+  const baseMargin = 50;
   const marginMoveSpeed = 15 * Math.log(scrollY);
 
   const firstImageStyle = () => {
     const highLightTargetScroll = 480
     const opacity = (100 - Math.abs((scrollY - highLightTargetScroll) / (0.3*highLightTargetScroll)) * 100);
-    const margin = baseMargin - marginMoveSpeed; 
+    const margin = baseMargin - marginMoveSpeed;
 
     return { marginTop: margin + 'px', opacity: (opacity > minOpacity ? opacity : minOpacity) + '%' }
 
@@ -120,13 +120,28 @@ export const ParallaxComponent = ({ isMobile }: IComponentProps) => {
             </Parallax>
             <div className="parallax-component--image-scroll h-flex-column">
               <div className="parallax-component--image-overlap" style={firstImageStyle()}>
-                <StaticImage src={'../assets/shapes/Credix_platform_1.svg'} alt={'Credix platform 1'}/>
+                {
+                  isLightTheme ?
+                    <StaticImage src={'../assets/shapes/Credix_platform_1_black.svg'} alt={'Credix platform 1'}/>
+                    :
+                    <StaticImage src={'../assets/shapes/Credix_platform_1.svg'} alt={'Credix platform 1'}/>
+                }
               </div>
               <div className="parallax-component--image-overlap" style={secondImageStyle()}>
-                <StaticImage src={'../assets/shapes/Credix_platform_2.svg'} alt={'Credix platform 2'}/>
+                {
+                  isLightTheme ?
+                    <StaticImage src={'../assets/shapes/Credix_platform_2_black.svg'} alt={'Credix platform 2'}/>
+                    :
+                    <StaticImage src={'../assets/shapes/Credix_platform_2.svg'} alt={'Credix platform 2'}/>
+                }
               </div>
               <div className="parallax-component--image-overlap" style={thirdImageStyle()}>
-                <StaticImage src={'../assets/shapes/Credix_platform_3.svg'} alt={'Credix platform 3'}/>
+                {
+                  isLightTheme ?
+                    <StaticImage src={'../assets/shapes/Credix_platform_3_black.svg'} alt={'Credix platform 3'}/>
+                    :
+                    <StaticImage src={'../assets/shapes/Credix_platform_3.svg'} alt={'Credix platform 3'}/>
+                }
               </div>
             </div>
           </div>

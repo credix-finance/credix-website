@@ -1,0 +1,86 @@
+
+.toggle-container {
+  /* for codepen */
+  transform: scale(1.5);
+  /**************/
+  width: 68px;
+  height: 26px;
+  cursor: pointer;
+  background-color: $COLOR_GREY_BACKGROUND;
+  border-radius: 15px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 5px;
+  position: relative;
+  transition: background .5s;
+  overflow: hidden;
+
+  @include mobile {
+    margin-right: 50px;
+  }
+
+  .icon {
+    svg {
+      stroke: #fff;
+      stroke-width: 1.5px;
+      width: 19px;
+    }
+  }
+  .toggle-dark-icon {
+    margin-left: 12px;
+    margin-top: 2px;
+    svg {
+      margin-top: 3px;
+      transition: transform .9s;
+      transform: scale(1) translateX(0px);
+    }
+  }
+  .toggle-light-icon {
+    margin-top: 2px;
+    svg {
+      margin-top: 3px;
+      transform-origin: center;
+      transform: scale(.7) rotate(0deg);
+      position: relative;
+      right: 30px;
+      transition: transform .9s, right .5s;
+    }
+  }
+  .toggle-circle {
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    // opacity: .2;
+    left: 5%;
+    transition: left .5s;
+  }
+}
+
+#toggle-check {
+  display: none;
+  &:checked~.toggle-label .toggle-container {
+    background: $COLOR_WHITE;
+    .toggle-circle {
+      left: 62%;
+      background: $COLOR_BLACK;
+    }
+    .toggle-light-icon {
+      svg {
+        transform: scale(1) rotate(180deg);
+        right: 0px;
+        fill: black;
+        stroke: black;
+      }
+    }
+    .toggle-dark-icon {
+      svg {
+        transform: scale(1) translateX(30px);
+      }
+    }
+  }
+}

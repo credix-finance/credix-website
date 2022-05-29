@@ -165,6 +165,7 @@
     font-size: $FONT_SIZE_NORMAL;
     line-height: 19px;
     border: 0;
+    cursor: pointer;
 
     &:hover{
       background-color: var(--color-black);
