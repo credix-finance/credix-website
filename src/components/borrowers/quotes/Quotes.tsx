@@ -1,103 +1,109 @@
 import React, { useEffect } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import { IComponentProps } from '../../../hooks/useComponentProps';
+import { BorrowersCTADivider } from '../dividers/BorrowersCTADivider';
+import { BorrowersCTADividerSmall } from '../dividers/BorrowersCTADividerSmall';
 
 enum Quote {
     A55 = 'A55',
     TECREDI = 'TECREDI',
+    UNKNOWN = 'UNKNOWN',
 }
 
-export const Quotes = ({ isMobile }: IComponentProps) => {
+export const Quotes = ({ isMobile, isLightTheme }: IComponentProps) => {
   const [quote, setQuote] = React.useState(Quote.A55);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      switch (quote) {
-      case Quote.A55:
-        setQuote(Quote.TECREDI);
-        break;
-      case Quote.TECREDI:
-        setQuote(Quote.A55);
-        break;
-      default:
-        setQuote(Quote.A55);
-      }
-    }, 10000)
-
-    return () => clearInterval(interval)
-  }, [quote])
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     switch (quote) {
+  //     case Quote.A55:
+  //       setQuote(Quote.TECREDI);
+  //       break;
+  //     case Quote.TECREDI:
+  //       setQuote(Quote.UNKNOWN);
+  //       break;
+  //     case Quote.UNKNOWN:
+  //       setQuote(Quote.A55);
+  //     default:
+  //       setQuote(Quote.A55);
+  //     }
+  //   }, 5000)
+  //
+  //   return () => clearInterval(interval)
+  // }, [quote])
 
   return (
     <div className="h-flex-column quotes-component">
       <div className="h-flex-row">
         <span className="quotes-component--title">Borrowers</span>
       </div>
-      <div className="h-flex-row h-flex-row--space-between quotes-component--text-row">
-        {
-          !isMobile &&
-          <div className="h-flex-column">
-            <span className="h-cursor-pointer" onClick={() => setQuote(Quote.A55)} style={{ opacity: quote === Quote.A55 ? 1 : 0.5 }}>
-              <StaticImage className="quotes-component--background-shape-a55" src="../../../assets/logos/a55-logo.png" alt="a55 logo"/>
-            </span>
-            <span className="h-cursor-pointer" onClick={() => setQuote(Quote.TECREDI)} style={{ opacity: quote === Quote.TECREDI ? 1 : 0.5 }}>
-              <StaticImage className="quotes-component--background-shape-tecredi" src="../../../assets/logos/tecredi-logo.png" alt="tecredi logo"/>
-            </span>
-          </div>
-        }
-        <div className="h-flex-row">
-          <div className="h-flex-column quotes-component--background-shape-quotation-column">
-            <StaticImage src="../../../assets/shapes/quotation-mark-start.png" alt="quotation mark"/>
-          </div>
-          <div className="h-flex-column quotes-component--quote-text">
+      <div className={`quotes-component--quote-row ${quote === Quote.A55 && 'quotes-component--quote-row--first-visible' || quote === Quote.TECREDI && 'quotes-component--quote-row--second-visible' || quote === Quote.UNKNOWN && 'quotes-component--quote-row--third-visible'}`}>
+        <div className="quotes-component--card">
+          <div className="quotes-component--text">
             {
-              quote === Quote.A55 &&
-                <>
-                  <div className="quotes-component--right-text">
-                    {/* eslint-disable-next-line react/no-unescaped-entities */}
-                    It is exciting to use the new capital markets, leveraged by decentralized finance and blockchain technologies, to help the new economy entrepreneurs. A55 is impressed by Credit's vision and the
-                    already-created technology to rethink global capital markets.
-                  </div>
-                  <div className="quotes-component--right-text--cited-person">
-                    Hugo Mathecowitsch - CEO A55
-                  </div>
-                </>
+              !isMobile && <BorrowersCTADividerSmall/>
             }
+            {/* eslint-disable-next-line react/no-unescaped-entities */}
+                      "It is exciting to use the new capital markets, leveraged by decentralized finance and blockchain technologies, to help the new economy entrepreneurs. A55 is impressed by Credit's vision and the
+            {/* eslint-disable-next-line react/no-unescaped-entities */}
+                      already-created technology to rethink global capital markets."
+          </div>
+          <div className="quotes-component--text--cited-person">
+                Hugo Mathecowitsch - CEO A55
+          </div>
+          <span className="h-cursor-pointer" style={{ opacity: quote === Quote.A55 ? 1 : 0.5 }}>
             {
-              quote === Quote.TECREDI &&
-                <>
-                  <div className="quotes-component--right-text">
-                    Credix is a great partner of Tecredi. Their solutions are rewriting the debt venture capital market and creating new possibilities for the whole ecosystem.
-                  </div>
-                  <div className="quotes-component--right-text--cited-person">
-                    Gustavo Pulga CO - CEO TECREDI
-                  </div>
-                </>
+              isLightTheme ? (<StaticImage className="quotes-component--background-shape quotes-component--background-shape--a55" src="../../../assets/logos/a55-dark.png" alt="a55 logo"/>
+              ) : (<StaticImage className="quotes-component--background-shape quotes-component--background-shape--a55" src="../../../assets/logos/a55-logo.png" alt="a55 logo"/>
+              )
             }
-          </div>
-          <div className="h-flex-column quotes-component--background-shape-quotation-column">
-            <StaticImage src="../../../assets/shapes/quotation-mark-end.png" alt="quotation mark" style={{ marginTop: 'auto' }}/>
-          </div>
+          </span>
         </div>
-        {
-          isMobile &&
-            <>
-              <div className="h-flex-row quotes-component--logo-row-mobile">
-                <span className="h-cursor-pointer" onClick={() => setQuote(Quote.A55)} style={{ opacity: quote === Quote.A55 ? 1 : 0.5 }}>
-                  <StaticImage className="quotes-component--background-shape-a55" src="../../../assets/logos/a55-logo.png" alt="a55 logo"/>
-                </span>
-                <span className="h-cursor-pointer" onClick={() => setQuote(Quote.TECREDI)} style={{ opacity: quote === Quote.TECREDI ? 1 : 0.5 }}>
-                  <StaticImage className="quotes-component--background-shape-tecredi" src="../../../assets/logos/tecredi-logo.png" alt="tecredi logo"/>
-                </span>
-              </div>
-              <div className="h-flex-row h-flex-row--justify-center h-margin-top--double">
-                <hr className="quotes-component--logo-row-mobile--divider" style={{ opacity: quote === Quote.A55 ? 1 : 0.5 }}/>
-                <hr className="quotes-component--logo-row-mobile--divider" style={{ opacity: quote === Quote.TECREDI ? 1 : 0.5 }}/>
-              </div>
-            </>
-
-
-        }
+        <div className="quotes-component--card">
+          <div className="quotes-component--text">
+            {
+              !isMobile && <BorrowersCTADividerSmall/>
+            }
+            {/* eslint-disable-next-line react/no-unescaped-entities */}
+                "Credix is a great partner of Tecredi. Their solutions are rewriting the debt venture capital market and creating new possibilities for the whole ecosystem."
+          </div>
+          <div className="quotes-component--text--cited-person">
+                Gustavo Pulga - CO CEO TECREDI
+          </div>
+          <span className="h-cursor-pointer" style={{ opacity: quote === Quote.A55 ? 1 : 0.5 }}>
+            {
+              isLightTheme ? (<StaticImage className="quotes-component--background-shape quotes-component--background-shape--tecredi" src="../../../assets/logos/tecredi-dark.png" alt="tecredi logo"/>
+              ) : (<StaticImage className="quotes-component--background-shape quotes-component--background-shape--tecredi" src="../../../assets/logos/tecredi-logo.png" alt="tecredi logo"/>
+              )
+            }
+          </span>
+        </div>
+        <div className="quotes-component--card">
+          <div className="quotes-component--text">
+            {
+              !isMobile && <BorrowersCTADividerSmall/>
+            }
+            {/* eslint-disable-next-line react/no-unescaped-entities */}
+                      "Placeholder for third quote."
+          </div>
+          <div className="quotes-component--text--cited-person">
+                      Placeholder for third quote
+          </div>
+          <span className="h-cursor-pointer" style={{ opacity: quote === Quote.A55 ? 1 : 0.5 }}>
+            {
+              isLightTheme ? (<StaticImage className="quotes-component--background-shape quotes-component--background-shape--tecredi" src="../../../assets/logos/tecredi-dark.png" alt="tecredi logo"/>
+              ) : (<StaticImage className="quotes-component--background-shape quotes-component--background-shape--tecredi" src="../../../assets/logos/tecredi-logo.png" alt="tecredi logo"/>
+              )
+            }          </span>
+        </div>
       </div>
+      <>
+        <div className="h-flex-row h-flex-row--justify-center h-margin-top--triple">
+          <hr className="quotes-component--logo-row-mobile--divider h-cursor-pointer" style={{ opacity: quote === Quote.A55 ? 1 : 0.5 }} onClick={() => setQuote(Quote.A55)}/>
+          <hr className="quotes-component--logo-row-mobile--divider h-cursor-pointer" style={{ opacity: quote === Quote.TECREDI ? 1 : 0.5 }} onClick={() => setQuote(Quote.TECREDI)}/>
+          <hr className="quotes-component--logo-row-mobile--divider h-cursor-pointer" style={{ opacity: quote === Quote.UNKNOWN ? 1 : 0.5 }} onClick={() => setQuote(Quote.UNKNOWN)}/>
+        </div>
+      </>
     </div>
   )
 }
