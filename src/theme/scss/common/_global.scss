@@ -95,6 +95,7 @@ html{
   height: $BUTTON_HEIGHT;
   text-transform: none;
   border-radius: $BORDER_RADIUS;
+  box-shadow: none;
 
   &:hover{
     background-color: var(--color-black);
