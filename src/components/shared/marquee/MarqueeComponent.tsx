@@ -8,7 +8,7 @@ export const MarqueeComponent = () => {
 
   useEffect(() => {
     const fetchData = async() => {
-      const result = await axios.get('https://api.dev.credix.finance/stats/markets/credix-marketplace');
+      const result = await axios.get('https://api.credix.finance/stats/markets/credix-marketplace');
       const { data } = result;
 
       const formattedTvl = Intl.NumberFormat('en', {
