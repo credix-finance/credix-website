@@ -24,7 +24,7 @@
     }
 
     &--mobile {
-      position: absolute;
+      position: absolute !important;
       align-self: center;
       top: 180px;
       transform: translateX(170px);
