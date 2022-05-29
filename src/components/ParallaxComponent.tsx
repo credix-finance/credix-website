@@ -21,58 +21,35 @@ export const ParallaxComponent = ({ isMobile }: IComponentProps) => {
     };
   }, []);
 
-  const thresholdScrollValue = 1000;
+  const minOpacity = 15;
+  const baseMargin = 50; 
+  const marginMoveSpeed = 15 * Math.log(scrollY);
 
   const firstImageStyle = () => {
-    const highLightTargetScroll = 430
-    const opacity = (100 - ((scrollY - highLightTargetScroll) * 100) / (570 - highLightTargetScroll));
-    const minOpacity = 25;
-    if (scrollY > thresholdScrollValue) {
-      return { marginTop: '-50px', opacity: (100 - ((scrollY - 100) * 100) / (1600 - 100)) + '%' }
-    } else {
-      return { marginTop: '-50px', opacity: (opacity > minOpacity ? opacity : minOpacity) + '%' }
-    }
+    const highLightTargetScroll = 480
+    const opacity = (100 - Math.abs((scrollY - highLightTargetScroll) / (0.3*highLightTargetScroll)) * 100);
+    const margin = baseMargin - marginMoveSpeed; 
+
+    return { marginTop: margin + 'px', opacity: (opacity > minOpacity ? opacity : minOpacity) + '%' }
+
   }
 
   const secondImageStyle = () => {
-    const highLightTargetScroll = 770
-    if (scrollY > highLightTargetScroll) {
-      return { marginTop: '0px', opacity: (100 - ((scrollY - highLightTargetScroll) * 100) / (1600 - 830)) + '%' }
-    } if (scrollY > thresholdScrollValue) {
-      return { marginTop: '0px', opacity: (100 - ((scrollY - thresholdScrollValue) * 100) / (1300 - 830)) + '%' }
-    } else {
-      const margin = (50 - ((scrollY - 100) * 100) / (highLightTargetScroll - 100) / 2)
-      const opacity = (((scrollY - 100) * 100) / (highLightTargetScroll - 100)) + '%'
-      if (margin > 50) {
-        //starting margin
-        return { marginTop:  '50px', opacity: opacity }
-      } else if (margin < 0) {
-        //end margin
-        return { marginTop:  '0px', opacity: opacity }
-      } else {
-        return { marginTop:  margin + 'px', opacity: opacity }
-      }
-    }
+    const highLightTargetScroll = 720
+    const opacity = (100 - Math.abs((scrollY - highLightTargetScroll) / (0.3*highLightTargetScroll)) * 100);
+    const margin = baseMargin + 80 - 1.2 * marginMoveSpeed;
+
+    return { marginTop: margin + 'px', opacity: (opacity > minOpacity ? opacity : minOpacity) + '%' }
+
   }
 
   const thirdImageStyle = () => {
-    const highLightTargetScroll = 1140
-    const margin = (50 - ((scrollY - 250) * 100) / (highLightTargetScroll - 250) / 2)
-    const opacity = (((scrollY - 250) * 100) / (highLightTargetScroll - 250))
+    const highLightTargetScroll = 1000
+    const opacity = (100 - Math.abs((scrollY - highLightTargetScroll) / (0.3*highLightTargetScroll)) * 100);
+    const margin = baseMargin + 150 - 1.3 * marginMoveSpeed;
 
-    if (scrollY > highLightTargetScroll) {
-      return { marginTop: '50px', opacity: (100 - ((scrollY - thresholdScrollValue) * 100) / (1600 - thresholdScrollValue)) + '%' }
-    } else {
-      if (margin > 50) {
-        //starting margin
-        return { marginTop:  '100px', opacity: opacity + '%' }
-      } else if (margin < 0) {
-        // end margin
-        return { marginTop:  '50px', opacity: opacity + '%' }
-      } else {
-        return { marginTop:  (50 + margin) + 'px', opacity: opacity + '%' }
-      }
-    }
+    return { marginTop: margin + 'px', opacity: (opacity > minOpacity ? opacity : minOpacity) + '%' }
+
   }
 
   const visionComponent = () => (
