@@ -54,10 +54,15 @@
 
     @include mobile {
       align-self: flex-start;
+      width: 100%;
     }
   }
 
   &--button.MuiButton-root {
     width: 180px;
+
+    @include mobile {
+      width: 100%;
+    }
   }
 }

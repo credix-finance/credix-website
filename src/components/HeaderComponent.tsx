@@ -131,7 +131,7 @@ export const HeaderComponent = ({ isMobile, isLightTheme, setLightTheme, ...loca
           className={`header-component--drawer ${isLightTheme ? 'h-background-color-white' : 'h-background-color-black'}`}
         >
           <div className="h-flex-row h-flex-column--align-end h-flex-row--space-between header-component--icons">
-            <SvgIcon icon={SVG_ICONS.CREDIX_LOGO_MOBILE} color={isLightTheme ? SVG_COLORS.BLACK : SVG_COLORS.WHITE} className="header-component--logo"/>
+            <SvgIcon icon={SVG_ICONS.CREDIX_LOGO_MOBILE} color={isLightTheme ? SVG_COLORS.BLACK : SVG_COLORS.WHITE} className="header-component--logo" onClick={() => window.location = '..' as unknown as Location}/>
             <div className="h-flex-row h-flex-row--align-baseline">
               {
                 isMobile && <MaterialUISwitch sx={{ m: 1 }} theme={{ palette: { mode: isLightTheme? 'light': 'dark' } } as any} checked={isLightTheme} onChange={(e, bool) => setLightTheme && setLightTheme(bool)}/>
