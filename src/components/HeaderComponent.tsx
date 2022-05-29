@@ -99,7 +99,7 @@ export const HeaderComponent = ({ isMobile, isLightTheme, setLightTheme, ...loca
         </div>
         <span className="header-component--link" onClick={() => openInNewTab('https://angel.co/company/credix')}>Team</span>
         <span className="header-component--link" onClick={mail}>Contact</span>
-        <CredixButton className="header--links--button" url={'https://app.credix.finance/'}>Launch App</CredixButton>
+        <CredixButton className={`header--links--button ${isLightTheme ? 'h-color-white' : 'h-color-black'}`} url={'https://app.credix.finance/'}>Launch App</CredixButton>
         {
           !isMobile && <MaterialUISwitch sx={{ m: 1 }} theme={{ palette: { mode: isLightTheme? 'light': 'dark' } } as any} checked={isLightTheme} onChange={(e, bool) => setLightTheme && setLightTheme(bool)}/>
         }
@@ -140,7 +140,7 @@ export const HeaderComponent = ({ isMobile, isLightTheme, setLightTheme, ...loca
               <SvgIcon icon={SVG_ICONS.CLOSE_MENU} color={isLightTheme ? SVG_COLORS.BLACK : SVG_COLORS.WHITE} className="header-component--menu-close-button" onClick={() => setIsMenuOpen(!isMenuOpen)}/>
             </div>
           </div>
-          <div className="h-flex-column header-component--drawer--links-column">
+          <div className="h-flex-column header-component--drawer--links-column" style={{ color: isLightTheme ? 'black' : 'white' }}>
             {headerLinks()}
           </div>
         </Drawer>

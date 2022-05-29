@@ -17,7 +17,7 @@
     transition: opacity 0.6s ease-out, transform 1.2s ease-out;
     will-change: opacity, visibility;
   }
-  
+
   .fade-in-section.is-visible {
     opacity: 1;
     transform: none;
@@ -39,7 +39,7 @@
     @include mobile {
       transform: translateY(-50px);
       padding-top: 30px;
-      background-color: black;
+      background-color: var(--color-background-home);
       width: 100%;
     }
   }
@@ -122,9 +122,6 @@
     @include mobile {
       font-size: $FONT_SIZE_XSLARGE;
       line-height: $LINE_HEIGHT_XNORMAL;
-      background-color: var(--color-background-mobile);
-      box-shadow: var(--box-shadow-mobile);
-      border-radius: 10px
     }
   }
 
@@ -142,8 +139,6 @@
       font-size: $FONT_SIZE_SMALL;
       line-height: $LINE_HEIGHT_SMALL;
       font-weight: var(--header-text-mobile-bold);
-      background-color: var(--color-background-mobile);
-      box-shadow: var(--box-shadow-mobile);
       border-radius: 10px
     }
   }

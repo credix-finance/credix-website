@@ -61,6 +61,10 @@
 
   &--drawer {
 
+    .MuiPaper-elevation{
+      width: 100%;
+    }
+
     &--links-column {
       color: var(--font-default-color);
       margin: $UNIT * 3;
@@ -90,16 +94,17 @@
       margin-left: 64px;
       width: $BUTTON_WIDTH_NORMAL;
       border-radius: $BORDER_RADIUS;
-      color: var(--font-default-color) !important;
 
       @include mobile {
-        margin-left: 20px;
+        margin-left: initial;
         margin-top: 64px;
-        width: 250px;
+        width: 100%
       }
 
       &:hover {
         color: var(--font-default-color) !important;
+        background-color: var(--color-black) !important;
+        border: 1px solid var(--font-default-color) !important;
       }
     }
   }
