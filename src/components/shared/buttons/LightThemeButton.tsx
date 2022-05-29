@@ -11,7 +11,7 @@ export const LightThemeButton = ({ isLightTheme, onChange }: ILightThemeButtonPr
     <>
       <input type="checkbox" id="toggle-check" checked={isLightTheme} onChange={(e) => onChange(e.target.checked)}/>
       <label htmlFor="toggle-check" className="toggle-label">
-        <div className="toggle-container">
+        <div className="toggle-container" style={{ border: isLightTheme ? '1px solid black' : '1px solid white' }}>
           <div className="toggle-light-icon icon">
             <svg viewBox="0 0 24 24" fill="none" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="12" cy="12" r="5"></circle>
