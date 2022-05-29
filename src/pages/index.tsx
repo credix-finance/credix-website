@@ -103,7 +103,7 @@ const IndexPage = () => {
       <ParallaxProvider>
         <HeaderComponent isMobile={!!width && width < mobileWidth} isLightTheme={isLightTheme} setLightTheme={setLightTheme}/>
         <HomeComponent isMobile={!!width && width < mobileWidth}/>
-        <ParallaxComponent isMobile={!!width && width < mobileWidth}/>
+        <ParallaxComponent isMobile={!!width && width < mobileWidth} isLightTheme={isLightTheme}/>
         <BackersBorrowersComponent/>
         <CoreTeamComponent isLightTheme={isLightTheme}/>
         <CTATeamComponent/>

@@ -4,6 +4,17 @@
 
   @extend .global-padding-left-right;
 
+  &--icons {
+    margin-top: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  &--logo {
+    margin-left: 15px;
+    margin-bottom: 6px;
+  }
+
   &--link {
     color: var(--font-default-color);
 
@@ -50,6 +61,10 @@
 
   &--drawer {
 
+    .MuiPaper-elevation{
+      width: 100%;
+    }
+
     &--links-column {
       color: var(--font-default-color);
       margin: $UNIT * 3;
@@ -79,10 +94,17 @@
       margin-left: 64px;
       width: $BUTTON_WIDTH_NORMAL;
       border-radius: $BORDER_RADIUS;
-      color: var(--color-black) !important;
+
+      @include mobile {
+        margin-left: initial;
+        margin-top: 64px;
+        width: 100%
+      }
 
       &:hover {
-        color: var(--color-white) !important;
+        color: var(--font-default-color) !important;
+        background-color: var(--color-black) !important;
+        border: 1px solid var(--font-default-color) !important;
       }
     }
   }

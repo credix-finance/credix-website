@@ -13,7 +13,7 @@
 
   &--row {
     margin-top: 80px;
-    border: 1px solid $COLOR_GREY_BACKGROUND;
+    border: 1px solid var(--color-background-cta-team-border);
     padding: 45px;
     @include mobile {
       flex-flow: column;
@@ -54,10 +54,15 @@
 
     @include mobile {
       align-self: flex-start;
+      width: 100%;
     }
   }
 
   &--button.MuiButton-root {
     width: 180px;
+
+    @include mobile {
+      width: 100%;
+    }
   }
 }

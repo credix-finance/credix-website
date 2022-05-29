@@ -1,6 +1,7 @@
 import React from 'react';
 import { CTADivider } from './dividers/CTADivider';
 import { openInNewTab } from '../../utils/openInNewTab';
+import { CredixButton } from '../shared/buttons/CredixButton';
 
 export const InvestorsCTAComponent = () => (
   <div className="h-flex-column cta-component-investors">
@@ -31,6 +32,7 @@ export const InvestorsCTAComponent = () => (
       <div className="h-flex-row h-flex-row--space-between cta-component-investors--row">
         <div className="h-flex-column cta-component-investors--column">
           <div className="h-flex-column cta-component-investors--column--row-mobile">
+            <CredixButton className="cta-component-borrowers--button" url={'https://app.credix.finance/'}>Launch App</CredixButton>
             <span className="cta-component-investors--text--cta-link" onClick={() => openInNewTab('https://docs.credix.finance/')}>Read our documentation -{'>'}</span>
           </div>
         </div>

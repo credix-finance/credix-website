@@ -11,10 +11,21 @@
 
   &--cta-banner {
     min-height: 200px;
-    background: var(--color-background-backers-borrowers);
-    color: var(--font-default-color);
+    background: $COLOR_WHITE;
+    color: $COLOR_BLACK;
 
     @extend .global-padding-left-right;
+
+    .cta-component-investors--button {
+      background-color: $COLOR_BLACK;
+      color: $COLOR_WHITE;
+
+      &:hover {
+        color: $COLOR_BLACK;
+        background-color: $COLOR_WHITE;
+        border: 1px solid $COLOR_BLACK;
+      }
+    }
 
     &--title {
       font-family: $FONT_FAMILY_SECOND;

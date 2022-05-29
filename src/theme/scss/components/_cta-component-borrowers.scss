@@ -11,25 +11,28 @@
 
   &--divider {
     margin: 14px auto 24px 0;
-    border-color: $COLOR_ORANGE;
+    border: 0;
     background: $COLOR_ORANGE;
     width: 100px;
     height: 4px;
+    box-shadow: none;
 
     &--cta-register {
       margin: 14px auto 24px 0;
-      border-color: $COLOR_ORANGE;
+      border: 0;
       background: $COLOR_ORANGE;
       width: 80px;
       height: 10px;
+      box-shadow: none;
     }
 
     &--small {
-      border-color: $COLOR_ORANGE;
+      border: 0;
       background: $COLOR_ORANGE;
       margin: auto auto 16px 0;
       width: 45px;
       height: 8px;
+      box-shadow: none;
     }
 
       @include mobile {
@@ -91,7 +94,7 @@
 
     &--row-mobile {
       @include mobile {
-        width: 70%;
+        width: 100%;
         margin-top: $UNIT * 4;
       }
     }
@@ -124,7 +127,6 @@
     font-weight: $FONT_WEIGHT_NORMAL;
     font-family: $FONT_FAMILY_SECOND;
     line-height: $LINE_HEIGHT_SSNORMAL;
-    width: 340px;
     text-align: left;
     margin-bottom: 60px;
 
