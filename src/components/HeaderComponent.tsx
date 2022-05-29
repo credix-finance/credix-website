@@ -77,6 +77,9 @@ export const HeaderComponent = ({ isMobile, isLightTheme, setLightTheme, ...loca
 
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>();
 
+  const docRef = typeof document !== 'undefined' ? document : undefined;
+  const teamComponent = docRef?.getElementById('team')
+
   useEffect(() => {
     setCurrentPage(getActiveLink(location?.pathname));
   }, [location]);
@@ -97,7 +100,7 @@ export const HeaderComponent = ({ isMobile, isLightTheme, setLightTheme, ...loca
           <Link className="header-component--link--gatsby" to={'/borrowers'}>Borrowers</Link>
           { !isMobile && currentPage === Page.BORROWERS && <div className="header-component--link--active"/>}
         </div>
-        <span className="header-component--link" onClick={() => openInNewTab('https://angel.co/company/credix')}>Team</span>
+        <span className="header-component--link" onClick={() => teamComponent?.scrollIntoView()}>Team</span>
         <span className="header-component--link" onClick={mail}>Contact</span>
         <CredixButton className={`header--links--button ${isLightTheme ? 'h-color-white' : 'h-color-black'}`} url={'https://app.credix.finance/'}>Launch App</CredixButton>
         {

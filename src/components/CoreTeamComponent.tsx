@@ -5,7 +5,7 @@ import { IComponentProps } from '../hooks/useComponentProps';
 
 export const CoreTeamComponent = ({ isLightTheme }: IComponentProps) => {
   return (
-    <div className="h-flex-row core-team-component">
+    <div className="h-flex-row core-team-component" id={'team'}>
       <div className="h-flex-column core-team-component--core">
         <div className="h-flex-row core-team-component--title-row">
           <div className="h-flex-column core-team-component--title-column">
