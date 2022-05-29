@@ -17,6 +17,7 @@
   position: relative;
   transition: background .5s;
   overflow: hidden;
+  border: 1px solid var(--font-default-color);
 
   @include mobile {
     margin-right: 50px;
