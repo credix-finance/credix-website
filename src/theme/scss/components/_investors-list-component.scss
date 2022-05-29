@@ -34,6 +34,7 @@
     font-weight: $FONT_WEIGHT_BOLD;
     font-size: $FONT_SIZE_XXXNORMAL;
     line-height: $LINE_HEIGHT_NORMAL;
+    color: var(--font-default-color);
   }
 
   &--title-row {

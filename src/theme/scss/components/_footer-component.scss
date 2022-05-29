@@ -10,7 +10,11 @@
   }
 
   &--padding {
-    padding: $UNIT * 3;
+    padding: 24px;
+
+    @include mobile {
+      padding-left: 15px;
+    }
   }
 
   &--row {
@@ -21,6 +25,11 @@
     @include mobile {
       flex-direction: column;
     }
+  }
+
+  &--email {
+    background-color: var(--color-footer-background);
+    border: 2px solid var(--font-default-color);
   }
 
   &--column {
@@ -48,19 +57,38 @@
 
   &--logo {
     @extend .footer-component--padding;
+
+    @include mobile {
+      padding-bottom: 0;
+    }
   }
 
   &--footer {
     @extend .footer-component--padding;
     margin-top: auto;
-    justify-content: flex-start;
 
     &--link {
       font-family: $FONT_FAMILY_SECOND;
-      font-size: $FONT_SIZE_SMALL;
-      line-height: $LINE_HEIGHT_SMALL;
+      font-size: $FONT_SIZE_NORMAL;
+      line-height: $LINE_HEIGHT_SSNORMAL;
+      font-weight: $FONT_WEIGHT_NORMAL;
       cursor: pointer;
       margin-bottom: $UNIT * 2;
+      text-decoration: none;
+      color: var(--font-default-color);
+
+      @include mobile {
+        margin-bottom: 18px;
+        font-size: 12px;
+        line-height: $LINE_HEIGHT_XSMALL;
+      }
+
+      &--small {
+        font-family: $FONT_FAMILY_SECOND;
+        font-size: $FONT_SIZE_SMALL;
+        line-height: $LINE_HEIGHT_XSMALL;
+        font-weight: $FONT_WEIGHT_NORMAL;
+      }
 
       &:hover {
         font-weight: $FONT_WEIGHT_BOLD;
@@ -82,8 +110,28 @@
     &--text {
       @extend .footer-component--padding;
       font-family: $FONT_FAMILY_SECOND;
-      font-size: $FONT_SIZE_SMALL;
-      line-height: $LINE_HEIGHT_SMALL;
+      font-size: $FONT_SIZE_NORMAL;
+      line-height: $LINE_HEIGHT_SSNORMAL;
+      font-weight: $FONT_WEIGHT_NORMAL;
+      padding-left: 55px;
+
+      @include mobile {
+        padding-left: 15px;
+        font-size: 12px;
+        line-height: $LINE_HEIGHT_XSMALL;
+      }
+    }
+  }
+
+  &--social-buttons {
+    padding-left: 55px;
+
+    @include mobile {
+      padding-left: 15px;
+    }
+
+    &--linkedIn {
+      margin-right: $UNIT * 2;
     }
   }
 
@@ -93,11 +141,23 @@
   }
 
   &--mailchimp-sub {
-    display: flex;
-    justify-content: center;
+    margin-top: 12px;
+    padding-left: 55px;
+
+    @include mobile {
+      padding-left: 15px;
+    }
+
+
     input {
       width: 90%;
-      height: 35px;
+      height: 48px;
+
+      &::placeholder {
+        font-family: $FONT_FAMILY_SECOND;
+        font-size: $FONT_SIZE_NORMAL;
+        opacity: 0.7;
+      }
     }
 
     &--logo-row {
@@ -105,8 +165,14 @@
       justify-content: flex-end;
 
       .footer-component--mailchimp-sub--logo{
-        position: absolute;
-        transform: translateY(12px) translateX(-35px);
+        position: relative;
+        right: 3vw;
+        bottom: -76px;
+
+        @include mobile {
+          right: 10vw;
+          bottom: -72px;
+        }
       }
     }
   }

@@ -108,7 +108,7 @@ const IndexPage = () => {
         <CoreTeamComponent isLightTheme={isLightTheme}/>
         <CTATeamComponent/>
         <CTAHomeComponent/>
-        <FooterComponent isLightTheme={isLightTheme}/>
+        <FooterComponent isMobile={!!width && width < mobileWidth} isLightTheme={isLightTheme}/>
       </ParallaxProvider>
     </main>
   )

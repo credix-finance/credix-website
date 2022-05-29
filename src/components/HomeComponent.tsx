@@ -13,8 +13,7 @@ export const HomeComponent = ({ isMobile }: IComponentProps) => {
     <div className="h-flex-column home-component--text">
       <h1 className="cta-block--title">Credit investing<br/> made global</h1>
       <span className="cta-block--text">Building the future of global private credit markets</span>
-      {/*//TODO: link*/}
-      <CredixButton className="cta-block--button" url={'https://discord.gg/5Ab8b8ueGs'}>Explore our application</CredixButton>
+      <CredixButton className="cta-block--button" url={'https://app.credix.finance'}>Explore our application</CredixButton>
     </div>
   )
 
