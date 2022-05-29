@@ -15,6 +15,7 @@
     background: $COLOR_ORANGE;
     width: 100px;
     height: 4px;
+    box-shadow: none;
 
     &--cta-register {
       margin: 14px auto 24px 0;
@@ -22,6 +23,7 @@
       background: $COLOR_ORANGE;
       width: 80px;
       height: 10px;
+      box-shadow: none;
     }
 
     &--small {
@@ -30,6 +32,7 @@
       margin: auto auto 16px 0;
       width: 45px;
       height: 8px;
+      box-shadow: none;
     }
 
       @include mobile {

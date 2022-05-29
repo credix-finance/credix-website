@@ -15,6 +15,7 @@
     background: $COLOR_BLUE;
     width: 80px;
     height: 8px;
+    box-shadow: none;
 
     &--small {
       border-color: $COLOR_BLUE;
@@ -22,6 +23,7 @@
       margin: auto auto 16px 0;
       width: 45px;
       height: 8px;
+      box-shadow: none;
     }
 
       @include mobile {

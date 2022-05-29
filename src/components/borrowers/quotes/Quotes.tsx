@@ -66,7 +66,7 @@ export const Quotes = ({ isMobile }: IComponentProps) => {
               quote === Quote.TECREDI &&
                 <>
                   <div className="quotes-component--right-text">
-                    Credix is a great partner of Tecredi. Their solutions are rewriting the debt venture capital market and creating new possibilities for the whole ecosystem
+                    Credix is a great partner of Tecredi. Their solutions are rewriting the debt venture capital market and creating new possibilities for the whole ecosystem.
                   </div>
                   <div className="quotes-component--right-text--cited-person">
                     Gustavo Pulga CO - CEO TECREDI
