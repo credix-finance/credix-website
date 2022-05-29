@@ -14,18 +14,23 @@ import { ParallaxComponent } from '../components/ParallaxComponent';
 import { BackersBorrowersComponent } from '../components/BackersBorrowersComponent';
 import { MarqueeComponent } from '../components/shared/marquee/MarqueeComponent';
 import { CTAHomeComponent } from '../components/CTAHomeComponent';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const IndexPage = () => {
   const { width, mobileWidth, getLightTheme } = useComponentProps();
 
-  const [isLightTheme, setIsLightTheme] = useState<boolean>(getLightTheme());
+  const [isLightTheme, setIsLightTheme] = useState<boolean | undefined>(undefined);
 
   const setLightTheme = (bool: boolean) => {
     setIsLightTheme(bool)
     localStorage.setItem(ELocalStorage.LIGHT_THEME, JSON.stringify(bool))
   }
 
+  useEffect(() => {
+    setIsLightTheme(getLightTheme())
+  }, [])
+
+  if (typeof isLightTheme === 'undefined') return null;
   return (
     <main className={`${isLightTheme ? 'light' : 'dark'}`}>
       <Helmet
