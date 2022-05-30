@@ -44,8 +44,17 @@
         font-size: $FONT_SIZE_NORMAL;
         font-weight: $FONT_WEIGHT_NORMAL;
         line-height: $LINE_HEIGHT_SSNORMAL;
-        margin-top: 48px;
+        margin-top: 24px;
 
+      }
+    }
+
+    &--cta-link {
+      @extend .cta-component-investors--text--cta-link;
+
+      @include mobile {
+        padding-bottom: 0 !important;
+        margin-bottom: 20px !important;
       }
     }
 

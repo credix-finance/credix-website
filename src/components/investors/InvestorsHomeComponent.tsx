@@ -18,7 +18,7 @@ export const InvestorsHomeComponent = ({ isMobile }: IComponentProps) => {
         <div className="h-flex-column">
           <h1 className="cta-block-investors--title">Invest <br/> With Credix</h1>
           <span className="cta-block-investors--text">Stable return, flexibility to withdraw at any moment and invest in senior tranche.</span>
-          <PopupButton className="cta-component-investors--button" id="E98Qjiw9">Become an investor</PopupButton>
+          <PopupButton className="cta-component-investors--button h-margin-top--triple" id="E98Qjiw9">Become an investor</PopupButton>
         </div>
       </div>
     </div>
