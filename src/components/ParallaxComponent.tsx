@@ -56,7 +56,7 @@ export const ParallaxComponent = ({ isMobile, isLightTheme }: IComponentProps) =
     <>
       <span className="parallax-component--child-scroll--title">Vision</span>
       <hr className="solid"/>
-      <span className="parallax-component--child-scroll--text">Credix is the first truly global ecosystem for private credit, connecting alternative lenders in emerging markets with institutional investors. {isMobile && <><br/><br/></>} We’re building an open and decentralized platform that will allow any loan originator and any investor to connect at scale in a more open, transparent, and efficient way.</span>
+      <span className="parallax-component--child-scroll--text">Credix is the first truly global ecosystem for private credit investing, connecting alternative lenders in emerging markets with institutional investors. We’re building an open marketplace and decentralized finance platform that will allow any loan originator and any investor to connect at scale in a more open, transparent, and efficient way.</span>
     </>
   )
 
@@ -77,7 +77,7 @@ export const ParallaxComponent = ({ isMobile, isLightTheme }: IComponentProps) =
     <>
       <span className="parallax-component--child-scroll--title">For Borrowers</span>
       <hr className="solid"/>
-      <span className="parallax-component--child-scroll--text">Alternative lenders, such as Credit FinTechs and nonbank loan originators can access credit facilities more efficient and for a lower cost of capital.</span>
+      <span className="parallax-component--child-scroll--text">Alternative lenders, such as Credit FinTechs and Defi loan originators can access credit facilities more efficient and for a lower cost of capital.</span>
       <span className="parallax-component--child-scroll--cta-link" onClick={() => openInNewTab('https://docs.credix.finance/')}>Read our documentation -{'>'}</span>
       <br/>
       <PopupButton id="yFTAJy3h" className="credix-button--typeform parallax-component--child-scroll--button">
