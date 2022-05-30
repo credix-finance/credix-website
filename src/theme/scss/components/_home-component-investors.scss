@@ -13,7 +13,7 @@
   }
 
   &--background-shape {
-    position: absolute;
+    position: absolute !important;
     left: 1000px;
     top: 220px;
     transform: translateY(-10px);
@@ -24,7 +24,7 @@
     }
 
     &--mobile {
-      position: absolute;
+      position: absolute !important;
       align-self: center;
       top: 180px;
       transform: translateX(170px);
@@ -54,9 +54,8 @@
     font-size: $FONT_SIZE_XNORMAL;
     font-weight: $FONT_WEIGHT_NORMAL;
     line-height: $LINE_HEIGHT_NORMAL;
-    margin-top: 48px;
-    margin-bottom: 100px;
     color: var(--font-second-color);
+    margin-top: 10px;
 
     @extend .font-second;
 

@@ -3,9 +3,7 @@ import { CredixButton } from './shared/buttons/CredixButton';
 import { IComponentProps } from '../hooks/useComponentProps';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import GradientVideo from '../assets/video/Credix_WebsiteGradientA_02.mp4'
-import { VideoComponent } from './shared/video/VideoComponent';
-import { initScrollFade, scrollFade } from '../utils/scrollfade'; 
+import { initScrollFade, scrollFade } from '../utils/scrollfade';
 
 export const HomeComponent = ({ isMobile }: IComponentProps) => {
 
@@ -22,16 +20,16 @@ export const HomeComponent = ({ isMobile }: IComponentProps) => {
 
   return (
     <div className="h-flex-column home-component">
-      <div className="h-flex-row cta-block scrollFade">
+      <div className="h-flex-row cta-block scrollFade h-flex-row--space-between">
         { isMobile ?
           <>
-            <VideoComponent video={GradientVideo}/>
+            <div className="home-gradient"/>
             {homeText()}
           </>
           :
           <>
             {homeText()}
-            <VideoComponent video={GradientVideo}/>
+            <div className="home-gradient"/>
           </>
         }
 
