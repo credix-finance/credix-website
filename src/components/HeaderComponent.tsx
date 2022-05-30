@@ -31,9 +31,6 @@ export const HeaderComponent = ({ isMobile, isLightTheme, setLightTheme, ...loca
 
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>();
 
-  const docRef = typeof document !== 'undefined' ? document : undefined;
-  const teamComponent = docRef?.getElementById('team')
-
   useEffect(() => {
     setCurrentPage(getActiveLink(location?.pathname));
   }, [location]);
@@ -46,18 +43,14 @@ export const HeaderComponent = ({ isMobile, isLightTheme, setLightTheme, ...loca
   const headerLinks = () => {
     return (
       <>
-        <div className="header-component--link">
+        <div className="header-component--link" style={{ marginTop: !isMobile && currentPage === EPage.INVESTORS ? '12px' : 0 }}>
           <Link className="header-component--link--gatsby" to={'/investors'}>Investors</Link>
           { !isMobile && currentPage === EPage.INVESTORS && <div className="header-component--link--active"/>}
         </div>
-        <div className="header-component--link">
+        <div className="header-component--link" style={{ marginTop: !isMobile && currentPage === EPage.BORROWERS ? '12px' : 0 }}>
           <Link className="header-component--link--gatsby" to={'/borrowers'}>Borrowers</Link>
           { !isMobile && currentPage === EPage.BORROWERS && <div className="header-component--link--active"/>}
         </div>
-        {
-          currentPage === EPage.HOME &&
-          <span className="header-component--link" onClick={() => teamComponent?.scrollIntoView()}>Team</span>
-        }
         <span className="header-component--link" onClick={mail}>Contact</span>
         <CredixButton className={`header--links--button ${isLightTheme ? 'h-color-white' : 'h-color-black'}`} url={'https://app.credix.finance/'}>Launch App</CredixButton>
         {
@@ -72,7 +65,7 @@ export const HeaderComponent = ({ isMobile, isLightTheme, setLightTheme, ...loca
     <div className="h-flex-column header-component">
       <div className="h-flex-row h-flex-row--space-between header">
         <SvgIcon icon={SVG_ICONS.CREDIX_LOGO} className="h-cursor-pointer" color={isLightTheme ? SVG_COLORS.BLACK : SVG_COLORS.WHITE} onClick={() => window.location = '..' as unknown as Location}/>
-        <div className="h-flex-row h-flex-row--space-between h-flex-row--align-baseline header--links">
+        <div className="h-flex-row h-flex-row--space-between h-flex-row--align-center header--links">
           {
             isMobile ?
               <SvgIcon icon={SVG_ICONS.HAMBURGER_MENU} color={isLightTheme ? SVG_COLORS.BLACK : SVG_COLORS.WHITE} className="header-component--menu-button" onClick={() => setIsMenuOpen(!isMenuOpen)}/>

@@ -54,9 +54,8 @@
     font-size: $FONT_SIZE_XNORMAL;
     font-weight: $FONT_WEIGHT_NORMAL;
     line-height: $LINE_HEIGHT_NORMAL;
-    margin-top: 48px;
-    margin-bottom: 100px;
     color: var(--font-second-color);
+    margin-top: 10px;
 
     @extend .font-second;
 

@@ -13,7 +13,7 @@ import { Location } from '@reach/router';
 import { MarqueeComponent } from '../components/shared/marquee/MarqueeComponent';
 
 const BorrowersPage = () => {
-  const { width, mobileWidth, getLightTheme } = useComponentProps();
+  const { width, mobileWidth, tabletWidth, getLightTheme } = useComponentProps();
 
   const [isLightTheme, setIsLightTheme] = useState<boolean | undefined>(undefined);
 
@@ -104,7 +104,7 @@ const BorrowersPage = () => {
       <Location>
         {locationProps => <HeaderComponent {...locationProps} isMobile={!!width && width < mobileWidth} isLightTheme={isLightTheme} setLightTheme={setLightTheme}/>}
       </Location>
-      <BorrowersHomeComponent isMobile={!!width && width < mobileWidth}/>
+      <BorrowersHomeComponent isMobile={!!width && width < mobileWidth} isTablet={!!width && width < tabletWidth}/>
       <BorrowersCTAComponent/>
       <Quotes isMobile={!!width && width < mobileWidth}/>
       <BorrowersCTARegisterComponent isMobile={!!width && width < mobileWidth}/>
