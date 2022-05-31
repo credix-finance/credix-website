@@ -8,13 +8,16 @@
 
   &--card {
     background-color: var(--color-background-borrowers-quote);
-    width: 720px;
-    height: 420px;
+    min-width: 850px;
+    min-height: 420px;
     margin-top: 64px;
     margin-right: 96px;
+    padding: 32px;
 
     @include mobile {
-      width: 90vw;
+      min-width: 75%;
+      min-height: 360px;
+      padding: 20px;
     }
   }
 
@@ -26,27 +29,10 @@
 
     &--first-visible {
       transform: translateX(0);
-
-      @include mobile {
-        transform: translateX(10%);
-      }
     }
 
     &--second-visible {
       transform: translateX(-25%);
-
-      @include mobile {
-        transform: translateX(-70%);
-      }
-
-    }
-
-    &--third-visible {
-      transform: translateX(-70%);
-
-      @include mobile {
-        transform: translateX(-145%);
-      }
     }
   }
 
@@ -101,7 +87,6 @@
   }
 
   &--text {
-    width: 560px;
     height: 145px;
     font-family: $FONT_FAMILY;
     font-weight: $FONT_WEIGHT_NORMAL;
@@ -112,8 +97,7 @@
     margin-bottom: 22px;
 
     @include mobile {
-      width: 280px;
-      padding: 64px 24px 0 24px;
+      padding: 0 24px 0 24px;
       font-size: $FONT_SIZE_SMALL;
       height: 176px;
     }
