@@ -20,7 +20,7 @@ export interface IComponentProps extends LocationProps {
 export const useComponentProps = () => {
   const [width, setWidth] = useState<number>();
   const mobileWidth = 900;
-  const tabletWidth = 1500;
+  const tabletWidth = 1445;
 
   const getLightTheme = () => {
     if (typeof window !== 'undefined') {

@@ -1,7 +1,8 @@
 .cta-component-borrowers {
   background-color: var(--color-background-backers-borrowers);
   color: var(--font-default-color);
-  min-height: 460px;
+  min-height: 600px;
+  justify-content: center;
 
   @extend .global-padding-left-right;
 

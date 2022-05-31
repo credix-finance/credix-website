@@ -13,10 +13,13 @@
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  padding: 5px;
+  padding: 0 5px 5px;
+  margin-right: 15px;
+  margin-bottom: 4px;
   position: relative;
   transition: background .5s;
   overflow: hidden;
+  border: 1px solid var(--font-default-color);
 
   @include mobile {
     margin-right: 50px;
@@ -31,7 +34,7 @@
   }
   .toggle-dark-icon {
     margin-left: 12px;
-    margin-top: 2px;
+    margin-top: 8px;
     svg {
       margin-top: 3px;
       transition: transform .9s;
@@ -39,7 +42,7 @@
     }
   }
   .toggle-light-icon {
-    margin-top: 2px;
+    margin-top: 8px;
     svg {
       margin-top: 3px;
       transform-origin: center;
@@ -58,6 +61,7 @@
     // opacity: .2;
     left: 5%;
     transition: left .5s;
+    margin-top: 5px;
   }
 }
 

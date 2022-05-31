@@ -29,6 +29,7 @@
     margin-bottom: 48px;
     @include mobile {
       width: 100%;
+      margin-bottom: 24px;
     }
   }
 
@@ -56,23 +57,24 @@
 
     @include mobile {
       flex-flow: column;
-      margin-top: 20px;
+      margin-bottom: 20px;
       padding-left: 0;
       padding-right: 0;
     }
   }
 
   &--advisors {
-    font-family: $FONT_FAMILY_SECOND;
     font-weight: $FONT_WEIGHT_BOLD;
     &--name {
       text-transform: uppercase;
       margin-bottom: 10px;
+      font-family: $FONT_FAMILY_SECOND;
     }
 
     &--description {
       margin-bottom: 20px;
       opacity: 70%;
+      font-family: $FONT_FAMILY_SECOND;
     }
   }
 }
