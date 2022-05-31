@@ -7,34 +7,34 @@ enum Quote {
     TECREDI = 'TECREDI',
 }
 
-export const Quotes = ({ isMobile, isLightTheme }: IComponentProps) => {
+export const Quotes = ({ isTablet, isLightTheme }: IComponentProps) => {
   const [quote, setQuote] = React.useState(Quote.A55);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      switch (quote) {
-      case Quote.A55:
-        setQuote(Quote.TECREDI);
-        break;
-      case Quote.TECREDI:
-        setQuote(Quote.A55);
-        break;
-      default:
-        setQuote(Quote.A55);
-      }
-    }, 5000)
-
-    return () => clearInterval(interval)
-  }, [quote])
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     switch (quote) {
+  //     case Quote.A55:
+  //       setQuote(Quote.TECREDI);
+  //       break;
+  //     case Quote.TECREDI:
+  //       setQuote(Quote.A55);
+  //       break;
+  //     default:
+  //       setQuote(Quote.A55);
+  //     }
+  //   }, 5000)
+  //
+  //   return () => clearInterval(interval)
+  // }, [quote])
 
   return (
     <div className="h-flex-column quotes-component">
       <div className="h-flex-row">
         <span className="quotes-component--title">Borrowers</span>
       </div>
-      <div className={`quotes-component--quote-row ${!isMobile && quote === Quote.A55 && 'quotes-component--quote-row--first-visible' || !isMobile && quote === Quote.TECREDI && 'quotes-component--quote-row--second-visible'}`}>
+      <div className={`quotes-component--quote-row ${!isTablet && quote === Quote.A55 && 'quotes-component--quote-row--first-visible' || !isTablet && quote === Quote.TECREDI && 'quotes-component--quote-row--second-visible'}`}>
         {
-          (!isMobile || isMobile && quote === Quote.A55) && (
+          (!isTablet || isTablet && quote === Quote.A55) && (
             <div className="quotes-component--card">
               <div className="quotes-component--text">
                 {/* eslint-disable-next-line react/no-unescaped-entities */}
@@ -56,7 +56,7 @@ export const Quotes = ({ isMobile, isLightTheme }: IComponentProps) => {
           )
         }
         {
-          (!isMobile || isMobile && quote === Quote.TECREDI) && (
+          (!isTablet || isTablet && quote === Quote.TECREDI) && (
             <div className="quotes-component--card">
               <div className="quotes-component--text">
                 {/* eslint-disable-next-line react/no-unescaped-entities */}

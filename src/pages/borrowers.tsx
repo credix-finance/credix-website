@@ -106,7 +106,7 @@ const BorrowersPage = () => {
       </Location>
       <BorrowersHomeComponent isMobile={!!width && width < mobileWidth} isTablet={!!width && width < tabletWidth}/>
       <BorrowersCTAComponent/>
-      <Quotes isMobile={!!width && width < mobileWidth} isLightTheme={isLightTheme}/>
+      <Quotes isTablet={!!width && width < tabletWidth} isLightTheme={isLightTheme}/>
       <BorrowersCTARegisterComponent isMobile={!!width && width < mobileWidth}/>
       <FooterComponent isMobile={!!width && width < mobileWidth} isLightTheme={isLightTheme}/>
     </main>

@@ -13,6 +13,12 @@
     margin-right: 96px;
     padding: 100px;
 
+    @include tablet {
+      width: 70%;
+      min-height: 360px;
+      padding: 20px;
+    }
+
     @include mobile {
       min-width: 75%;
       min-height: 360px;
@@ -90,6 +96,12 @@
     font-style: italic;
     font-size: $FONT_SIZE_XNORMAL;
     line-height: 29px;
+
+    @include tablet {
+      font-weight: $FONT_WEIGHT_NORMAL;
+      font-size: $FONT_SIZE_XNORMAL;
+      line-height: 29px;
+    }
 
     @include mobile {
       font-size: $FONT_SIZE_SMALL;
