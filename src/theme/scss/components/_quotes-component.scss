@@ -9,10 +9,9 @@
   &--card {
     background-color: var(--color-background-borrowers-quote);
     min-width: 850px;
-    min-height: 420px;
     margin-top: 64px;
     margin-right: 96px;
-    padding: 32px;
+    padding: 100px;
 
     @include mobile {
       min-width: 75%;
@@ -32,17 +31,15 @@
     }
 
     &--second-visible {
-      transform: translateX(-25%);
+      transform: translateX(-45%);
     }
   }
 
   &--background-shape {
     margin-top: 80px;
-    margin-left: 64px;
 
     @include mobile {
       margin-top: 50px;
-      margin-left: 24px;
     }
 
 
@@ -93,25 +90,18 @@
     font-style: italic;
     font-size: $FONT_SIZE_XNORMAL;
     line-height: 29px;
-    padding: 64px 64px 14px 64px;
-    margin-bottom: 22px;
 
     @include mobile {
-      padding: 0 24px 0 24px;
       font-size: $FONT_SIZE_SMALL;
-      height: 176px;
     }
 
     &--cited-person {
       font-family: $FONT_FAMILY_SECOND;
       font-weight: $FONT_WEIGHT_XNORMAL;
       font-size: $FONT_SIZE_NORMAL;
-      line-height: 19px;
-      margin-left: 64px;
 
       @include mobile {
         font-size: $FONT_SIZE_SMALL;
-        margin-left: 24px;
         padding-top: 0;
       }
     }
@@ -136,7 +126,7 @@
 
     &--divider {
       width: 49px;
-      margin: 64px 5px 0 5px;
+      margin: 64px 5px 48px 5px;
       height: 8px;
       background-color: var(--font-default-color);
     }

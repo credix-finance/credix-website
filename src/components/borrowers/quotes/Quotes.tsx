@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import { IComponentProps } from '../../../hooks/useComponentProps';
-import { BorrowersCTADividerSmall } from '../dividers/BorrowersCTADividerSmall';
 
 enum Quote {
     A55 = 'A55',
@@ -11,24 +10,22 @@ enum Quote {
 export const Quotes = ({ isMobile, isLightTheme }: IComponentProps) => {
   const [quote, setQuote] = React.useState(Quote.A55);
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     switch (quote) {
-  //     case Quote.A55:
-  //       setQuote(Quote.TECREDI);
-  //       break;
-  //     case Quote.TECREDI:
-  //       setQuote(Quote.UNKNOWN);
-  //       break;
-  //     case Quote.UNKNOWN:
-  //       setQuote(Quote.A55);
-  //     default:
-  //       setQuote(Quote.A55);
-  //     }
-  //   }, 5000)
-  //
-  //   return () => clearInterval(interval)
-  // }, [quote])
+  useEffect(() => {
+    const interval = setInterval(() => {
+      switch (quote) {
+      case Quote.A55:
+        setQuote(Quote.TECREDI);
+        break;
+      case Quote.TECREDI:
+        setQuote(Quote.A55);
+        break;
+      default:
+        setQuote(Quote.A55);
+      }
+    }, 5000)
+
+    return () => clearInterval(interval)
+  }, [quote])
 
   return (
     <div className="h-flex-column quotes-component">
