@@ -22,8 +22,7 @@ export const FooterComponent = ({ isMobile, isLightTheme }: IComponentProps) => 
               <SvgIcon icon={SVG_ICONS.CREDIX_LOGO} color={isLightTheme ? SVG_COLORS.BLACK : SVG_COLORS.WHITE} className="footer-component--logo"/>
               <div className="h-flex-row h-flex-row--space-around footer-component--footer">
                 <span className="h-cursor-pointer footer-component--footer--link--small" onClick={mail}>Support</span>
-                <span className="h-cursor-pointer footer-component--footer--link--small">Terms of service</span>
-                <span className="h-cursor-pointer footer-component--footer--link--small">License</span>
+                <span className="h-cursor-pointer footer-component--footer--link--small" onClick={() => openInNewTab('https://docs.credix.finance/other-links-and-resources/privacy-policy')}>Privacy Policy</span>
               </div>
             </div>
         }
@@ -70,8 +69,7 @@ export const FooterComponent = ({ isMobile, isLightTheme }: IComponentProps) => 
                   isMobile && (
                     <div className="h-flex-row h-flex-row--space-around footer-component--footer">
                       <span className="h-cursor-pointer footer-component--footer--link--small" onClick={mail}>Support</span>
-                      <span className="h-cursor-pointer footer-component--footer--link--small">Terms of service</span>
-                      <span className="h-cursor-pointer footer-component--footer--link--small">License</span>
+                      <span className="h-cursor-pointer footer-component--footer--link--small" onClick={() => openInNewTab('https://docs.credix.finance/other-links-and-resources/privacy-policy')}>Privacy Policy</span>
                     </div>
                   )
                 }
