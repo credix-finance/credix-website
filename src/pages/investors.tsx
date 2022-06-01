@@ -10,6 +10,7 @@ import { InvestorsList } from '../components/investors/InvestorsList';
 import { ELocalStorage, useComponentProps } from '../hooks/useComponentProps';
 import { MarqueeComponent } from '../components/shared/marquee/MarqueeComponent';
 import { Location } from '@reach/router';
+import { CookieBanner } from '../components/shared/cookies/CookieBanner';
 
 const InvestorsPage = () => {
   const { width, mobileWidth, getLightTheme } = useComponentProps();
@@ -31,7 +32,6 @@ const InvestorsPage = () => {
         meta={[
           {
             name: 'description',
-            //TODO: change description for the pages
             content: 'CREDIX is a decentralized credit marketplace connecting investors with FinTechs in emerging markets. Learn more about the future of debt financing now.'
           },
           {
@@ -96,6 +96,7 @@ const InvestorsPage = () => {
         <html lang="en"/>
       </Helmet>
       <MarqueeComponent/>
+      <CookieBanner/>
       <Location>
         {locationProps => <HeaderComponent {...locationProps} isMobile={!!width && width < mobileWidth} isLightTheme={isLightTheme} setLightTheme={setLightTheme}/>}
       </Location>

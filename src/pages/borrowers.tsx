@@ -11,6 +11,7 @@ import { Quotes } from '../components/borrowers/quotes/Quotes';
 import { ELocalStorage, useComponentProps } from '../hooks/useComponentProps';
 import { Location } from '@reach/router';
 import { MarqueeComponent } from '../components/shared/marquee/MarqueeComponent';
+import { CookieBanner } from '../components/shared/cookies/CookieBanner';
 
 const BorrowersPage = () => {
   const { width, mobileWidth, getLightTheme } = useComponentProps();
@@ -95,6 +96,7 @@ const BorrowersPage = () => {
         <title lang="en">Credix</title>
         <html lang="en"/>
       </Helmet>
+      <CookieBanner/>
       <MarqueeComponent/>
       <Location>
         {locationProps => <HeaderComponent {...locationProps} isMobile={!!width && width < mobileWidth} isLightTheme={isLightTheme} setLightTheme={setLightTheme}/>}

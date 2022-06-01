@@ -3,11 +3,15 @@
   width: fit-content;
   height: fit-content;
   padding: 16px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
 
   @include mobile {
     height: 120px;
     border-radius: 4px;
-    margin: auto 24px;
+    margin: auto 24px 16px 24px;
   }
 
   &--text {
