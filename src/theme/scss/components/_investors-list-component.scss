@@ -11,15 +11,26 @@
 
   &--cta-banner {
     min-height: 200px;
-    background: var(--color-background-backers-borrowers);
-    color: var(--font-default-color);
+    background: var(--color-white);
+    color: var(--color-black);
 
     @extend .global-padding-left-right;
 
+    .cta-component-investors--button {
+      background-color: var(--color-black);
+      color: var(--color-white);
+
+      &:hover {
+        color: var(--color-black);
+        background-color: var(--color-white);
+        border: 1px solid var(--color-black);
+      }
+    }
+
     &--title {
-      font-family: $FONT_FAMILY_SECOND;
+      font-family: $FONT_FAMILY;
       font-weight: $FONT_WEIGHT_XXNORMAL;
-      font-size: $FONT_SIZE_XXXNORMAL;
+      font-size: $FONT_SIZE_SLARGE;
       line-height: $LINE_HEIGHT_NORMAL;
 
       @include mobile {
@@ -27,14 +38,6 @@
         margin-top: $UNIT * 4;
       }
     }
-  }
-
-  &--sub-title {
-    font-family: $FONT_FAMILY_SECOND;
-    font-weight: $FONT_WEIGHT_BOLD;
-    font-size: $FONT_SIZE_XXXNORMAL;
-    line-height: $LINE_HEIGHT_NORMAL;
-    color: var(--font-default-color);
   }
 
   &--title-row {

@@ -1,7 +1,7 @@
 .cta-component {
-  background: $COLOR_WHITE;
+  background: var(--color-white);
+  color: var(--color-black);
   min-height: 300px;
-  color: $COLOR_BLACK;
 
   @extend .global-padding-left-right;
 
@@ -70,6 +70,7 @@
       &:hover {
         background-color: $COLOR_BLACK;
         color: $COLOR_WHITE;
+        border: 1px solid $COLOR_WHITE;
       }
 
       @include mobile {

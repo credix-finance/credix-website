@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Helmet from 'react-helmet';
 import { HeaderComponent } from '../components/HeaderComponent';
 import fav from '../../static/favicon-32x32.png'
@@ -14,15 +14,20 @@ import { MarqueeComponent } from '../components/shared/marquee/MarqueeComponent'
 import { CookieBanner } from '../components/shared/cookies/CookieBanner';
 
 const BorrowersPage = () => {
-  const { width, mobileWidth, getLightTheme } = useComponentProps();
+  const { width, mobileWidth, tabletWidth, getLightTheme } = useComponentProps();
 
-  const [isLightTheme, setIsLightTheme] = useState<boolean>(getLightTheme());
+  const [isLightTheme, setIsLightTheme] = useState<boolean | undefined>(undefined);
 
   const setLightTheme = (bool: boolean) => {
     setIsLightTheme(bool)
     localStorage.setItem(ELocalStorage.LIGHT_THEME, JSON.stringify(bool))
   }
 
+  useEffect(() => {
+    setIsLightTheme(getLightTheme())
+  }, [])
+
+  if (typeof isLightTheme === 'undefined') return null;
   return (
     <main className={`${isLightTheme ? 'light' : 'dark'}`}>
       <Helmet
@@ -101,7 +106,7 @@ const BorrowersPage = () => {
       <Location>
         {locationProps => <HeaderComponent {...locationProps} isMobile={!!width && width < mobileWidth} isLightTheme={isLightTheme} setLightTheme={setLightTheme}/>}
       </Location>
-      <BorrowersHomeComponent isMobile={!!width && width < mobileWidth}/>
+      <BorrowersHomeComponent isMobile={!!width && width < mobileWidth} isTablet={!!width && width < tabletWidth}/>
       <BorrowersCTAComponent/>
       <Quotes isMobile={!!width && width < mobileWidth}/>
       <BorrowersCTARegisterComponent isMobile={!!width && width < mobileWidth}/>

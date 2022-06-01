@@ -1,6 +1,7 @@
 import React from 'react';
 import { CTADivider } from './dividers/CTADivider';
 import { openInNewTab } from '../../utils/openInNewTab';
+import { CredixButton } from '../shared/buttons/CredixButton';
 
 export const InvestorsCTAComponent = () => (
   <div className="h-flex-column cta-component-investors">
@@ -16,14 +17,14 @@ export const InvestorsCTAComponent = () => (
         <div className="h-flex-column cta-component-investors--column--row-mobile">
           <span className="cta-component-investors--sub-title">Diversify Risk</span>
           <CTADivider/>
-          <span className="cta-component-investors--text">We provide low sensitivity to equity and crypto markets.</span>
+          <span className="cta-component-investors--text">We provide low sensitivity to equity and crypto markets by utilizing alternative investing.</span>
         </div>
       </div>
       <div className="h-flex-column cta-component-investors--column">
         <div className="h-flex-column cta-component-investors--column--row-mobile">
           <span className="cta-component-investors--sub-title">Scalable Ecosystem</span>
           <CTADivider/>
-          <span className="cta-component-investors--text">Via the Credix platform, you can access investments via a digital-first platform.</span>
+          <span className="cta-component-investors--text">Via the Credix platform, you can  access investments via our lending marketplace, a digital-first platform.</span>
         </div>
       </div>
     </div>
@@ -31,6 +32,7 @@ export const InvestorsCTAComponent = () => (
       <div className="h-flex-row h-flex-row--space-between cta-component-investors--row">
         <div className="h-flex-column cta-component-investors--column">
           <div className="h-flex-column cta-component-investors--column--row-mobile">
+            <CredixButton className="cta-component-borrowers--button" url={'https://app.credix.finance/'}>Launch App</CredixButton>
             <span className="cta-component-investors--text--cta-link" onClick={() => openInNewTab('https://docs.credix.finance/')}>Read our documentation -{'>'}</span>
           </div>
         </div>

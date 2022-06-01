@@ -1,7 +1,8 @@
 .cta-component-investors {
   background-color: var(--color-background-backers-borrowers);
   color: var(--font-default-color);
-  min-height: 349px;
+  min-height: 600px;
+  justify-content: center;
 
   @extend .global-padding-left-right;
 
@@ -120,6 +121,7 @@
     line-height: $LINE_HEIGHT_SSNORMAL;
     width: 340px;
     text-align: left;
+    margin-bottom: 60px;
 
     &--cta-link {
       font-size: $FONT_SIZE_NORMAL;
@@ -129,7 +131,7 @@
       width: 340px;
       text-align: left;
       text-decoration: underline;
-      padding-top: 36px;
+      margin-bottom: 40px;
 
       &:hover {
         cursor: pointer;
@@ -165,6 +167,7 @@
     font-size: $FONT_SIZE_NORMAL;
     line-height: 19px;
     border: 0;
+    cursor: pointer;
 
     &:hover{
       background-color: var(--color-black);
@@ -175,6 +178,7 @@
     @include mobile {
       margin-top: $UNIT * 2;
       width: 100%;
+      margin-bottom: 24px;
     }
   }
 }

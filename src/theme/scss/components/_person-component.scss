@@ -1,6 +1,6 @@
 .person-component {
   @include mobile {
-    margin-top: $UNIT * 3;
+    margin-bottom: $UNIT * 3;
     flex-flow: row;
   }
 

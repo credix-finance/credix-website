@@ -9,7 +9,7 @@ export const InvestorsList = ({ isMobile, isLightTheme }: IComponentProps) => (
   <>
     <div className="h-flex-column investors-list-component">
       <div className="h-flex-row h-flex-row--space-between investors-list-component--title-row">
-        <span className="investors-list-component--sub-title">Investors</span>
+        <span className="sub-title">Investors</span>
       </div>
       {
         <div className="h-flex-row h-flex-row--space-between investors-list-component--logo-row">
