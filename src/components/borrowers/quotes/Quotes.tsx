@@ -10,22 +10,22 @@ enum Quote {
 export const Quotes = ({ isTablet, isLightTheme }: IComponentProps) => {
   const [quote, setQuote] = React.useState(Quote.A55);
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     switch (quote) {
-  //     case Quote.A55:
-  //       setQuote(Quote.TECREDI);
-  //       break;
-  //     case Quote.TECREDI:
-  //       setQuote(Quote.A55);
-  //       break;
-  //     default:
-  //       setQuote(Quote.A55);
-  //     }
-  //   }, 5000)
-  //
-  //   return () => clearInterval(interval)
-  // }, [quote])
+  useEffect(() => {
+    const interval = setInterval(() => {
+      switch (quote) {
+      case Quote.A55:
+        setQuote(Quote.TECREDI);
+        break;
+      case Quote.TECREDI:
+        setQuote(Quote.A55);
+        break;
+      default:
+        setQuote(Quote.A55);
+      }
+    }, 5000)
+
+    return () => clearInterval(interval)
+  }, [quote])
 
   return (
     <div className="h-flex-column quotes-component">
@@ -35,7 +35,7 @@ export const Quotes = ({ isTablet, isLightTheme }: IComponentProps) => {
       <div className={`quotes-component--quote-row ${!isTablet && quote === Quote.A55 && 'quotes-component--quote-row--first-visible' || !isTablet && quote === Quote.TECREDI && 'quotes-component--quote-row--second-visible'}`}>
         {
           (!isTablet || isTablet && quote === Quote.A55) && (
-            <div className="quotes-component--card">
+            <div className="quotes-component--card h-cursor-pointer" onClick={() => setQuote(Quote.A55)}>
               <div className="quotes-component--text">
                 {/* eslint-disable-next-line react/no-unescaped-entities */}
                             "It is exciting to use the new capital markets, leveraged by decentralized finance and blockchain technologies, to help the new economy entrepreneurs. A55 is impressed by Credit's vision and the
@@ -57,7 +57,7 @@ export const Quotes = ({ isTablet, isLightTheme }: IComponentProps) => {
         }
         {
           (!isTablet || isTablet && quote === Quote.TECREDI) && (
-            <div className="quotes-component--card">
+            <div className="quotes-component--card h-cursor-pointer" onClick={() => setQuote(Quote.TECREDI)}>
               <div className="quotes-component--text">
                 {/* eslint-disable-next-line react/no-unescaped-entities */}
                           "Credix is a great partner of Tecredi. Their solutions are rewriting the debt venture capital market and creating new possibilities for the whole ecosystem."
