@@ -37,7 +37,7 @@ const BorrowersPage = () => {
         meta={[
           {
             name: 'description',
-            content: 'CREDIX is a decentralized credit marketplace connecting investors with FinTechs in emerging markets. Learn more about the future of debt financing now.'
+            content: 'Secure debt capital from international investors is now easier than before.'
           },
           {
             name: 'keywords',
@@ -65,7 +65,7 @@ const BorrowersPage = () => {
           },
           {
             property: 'og:description',
-            content: 'CREDIX is a decentralized credit marketplace connecting investors with FinTechs in emerging markets. Learn more about the future of debt financing now.'
+            content: 'Secure debt capital from international investors is now easier than before.'
           },
           {
             property: 'og:url',
@@ -81,7 +81,7 @@ const BorrowersPage = () => {
           },
           {
             property: 'twitter:description',
-            content: 'CREDIX is a decentralized credit marketplace connecting investors with FinTechs in emerging markets. Learn more about the future of debt financing now.'
+            content: 'Secure debt capital from international investors is now easier than before.'
           },
           {
             property: 'twitter:title',

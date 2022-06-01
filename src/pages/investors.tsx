@@ -36,8 +36,7 @@ const InvestorsPage = () => {
         meta={[
           {
             name: 'description',
-            //TODO: change description for the pages
-            content: 'CREDIX is a decentralized credit marketplace connecting investors with FinTechs in emerging markets. Learn more about the future of debt financing now.'
+            content: 'Get access to exclusive, high-quality private credit investments.'
           },
           {
             name: 'keywords',
@@ -65,7 +64,7 @@ const InvestorsPage = () => {
           },
           {
             property: 'og:description',
-            content: 'CREDIX is a decentralized credit marketplace connecting investors with FinTechs in emerging markets. Learn more about the future of debt financing now.'
+            content: 'Get access to exclusive, high-quality private credit investments.'
           },
           {
             property: 'og:url',
@@ -81,7 +80,7 @@ const InvestorsPage = () => {
           },
           {
             property: 'twitter:description',
-            content: 'CREDIX is a decentralized credit marketplace connecting investors with FinTechs in emerging markets. Learn more about the future of debt financing now.'
+            content: 'Get access to exclusive, high-quality private credit investments.'
           },
           {
             property: 'twitter:title',
