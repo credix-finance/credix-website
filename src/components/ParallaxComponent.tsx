@@ -100,21 +100,9 @@ export const ParallaxComponent = ({ isMobile, isLightTheme }: IComponentProps) =
           <div className="parallax-component--wrapper h-flex-row" style={{ transform: `translateY(${scrollY > 400 ? ((scrollY - 400) * 100) / (1500 - 400) : 0}px)` }}>
             <Parallax translateY={[30, -200]} className="parallax-component--child-scroll h-flex-column">
               {visionComponent()}
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
+              <span className="parallax-component--spacing"/>
               {investorsComponent()}
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
+              <span className="parallax-component--spacing"/>
               {borrowerComponent()}
 
             </Parallax>
