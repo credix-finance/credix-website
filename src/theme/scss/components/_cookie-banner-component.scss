@@ -4,6 +4,12 @@
   height: fit-content;
   padding: 16px;
 
+  @include mobile {
+    height: 120px;
+    border-radius: 4px;
+    margin: auto 24px;
+  }
+
   &--text {
     font-family: $FONT_FAMILY_SECOND;
     color: $COLOR_WHITE;
@@ -17,6 +23,12 @@
     }
   }
 
+  &--button-container {
+    @include mobile {
+      margin: auto;
+    }
+  }
+
   &--button.MuiButton-root {
     width: 144px;
     height: 48px;
@@ -24,8 +36,10 @@
 
     @include mobile {
       margin-top: $UNIT * 2;
-      margin-right: 0;
-      width: 100%;
+      width: fit-content;
+      border-radius: 4px;
+      height: 32px;
+      padding: 5px 24px ;
     }
   }
 
@@ -45,8 +59,10 @@
 
     @include mobile {
       margin-top: $UNIT * 2;
-      margin-right: 0;
-      width: 100%;
+      width: 110px;
+      border-radius: 4px;
+      height: 32px;
+      padding: 5px 24px ;
     }
   }
 }
