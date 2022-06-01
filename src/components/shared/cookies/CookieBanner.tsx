@@ -1,12 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLocation } from '@reach/router'
 import { initializeAndTrack } from 'gatsby-plugin-gdpr-cookies';
 import { CookieButton } from '../buttons/CookieButton';
 import { openInNewTab } from '../../../utils/openInNewTab';
+import { ELocalStorage, useComponentProps } from '../../../hooks/useComponentProps';
 
 export const CookieBanner = () => {
-
+  const { getCookieState } = useComponentProps();
   const location = useLocation()
+  const [showCookie, setShowCookie] = useState<boolean>(!getCookieState());
+
+  const setCookie = () => {
+    setShowCookie(false)
+    localStorage.setItem(ELocalStorage.COOKIE_RESPONDED, 'true')
+    document.cookie = 'gatsby-gdpr-facebook-pixel=true; expires=Sun, 1 Jan 2090 00:00:00 UTC; path=/';
+    document.cookie = 'gatsby-gdpr-google-analytics=true; expires=Sun, 1 Jan 2090 00:00:00 UTC; path=/';
+    document.cookie = 'gatsby-gdpr-google-analytics-2=true; expires=Sun, 1 Jan 2090 00:00:00 UTC; path=/';
+    document.cookie = 'gatsby-gdpr-google-tagmanager=true; expires=Sun, 1 Jan 2090 00:00:00 UTC; path=/';
+    document.cookie = 'gatsby-gdpr-linked-in=true; expires=Sun, 1 Jan 2090 00:00:00 UTC; path=/';
+    initializeAndTrack(location);
+  }
+
+  const declineCookie = () => {
+    setShowCookie(false)
+    localStorage.setItem(ELocalStorage.COOKIE_RESPONDED, 'true')
+  }
+
+  if (!showCookie) return null;
 
   return (
     <div className="h-flex-row h-flex-row--align-center cookie-banner-component">
@@ -16,8 +36,8 @@ export const CookieBanner = () => {
       </div>
       <div className="cookie-banner-component--button-container">
         <CookieButton className="cookie-banner-component--button"
-          onClick={() => initializeAndTrack(location)}> Accept all</CookieButton>
-        <CookieButton className="cookie-banner-component--button--decline">Decline</CookieButton>
+          onClick={setCookie}> Accept all</CookieButton>
+        <CookieButton className="cookie-banner-component--button--decline" onClick={declineCookie}>Decline</CookieButton>
       </div>
     </div>
   )

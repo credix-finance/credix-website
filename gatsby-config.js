@@ -24,18 +24,21 @@ module.exports = {
       resolve: `gatsby-plugin-gdpr-cookies`,
       options: {
         googleAnalytics: {
-          trackingId: [
-            "G-2WM77E6YNH",
-            "AW-10862509247"
-          ],
+          trackingId: "G-2WM77E6YNH",
           cookieName: 'gatsby-gdpr-google-analytics',
+          anonymize: true,
+          allowAdFeatures: false
+        },
+        googleAnalytics: {
+          trackingId:  "AW-10862509247",
+          cookieName: 'gatsby-gdpr-google-analytics-2',
           anonymize: true,
           allowAdFeatures: false
         },
         googleTagManager: {
           trackingId: 'GTM-PJ3PP5W',
           cookieName: 'gatsby-gdpr-google-tagmanager',
-          dataLayerName: 'dataLayer',
+          dataLayerName: 'gatsby',
         },
         facebookPixel: {
           pixelId: "1182663155872985",
