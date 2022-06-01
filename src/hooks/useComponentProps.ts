@@ -7,7 +7,8 @@ interface LocationProps {
 }
 
 export enum ELocalStorage {
-  LIGHT_THEME = 'light_theme'
+  LIGHT_THEME = 'light_theme',
+  COOKIE_RESPONDED = 'cookie_responded'
 }
 
 export interface IComponentProps extends LocationProps {
@@ -32,6 +33,18 @@ export const useComponentProps = () => {
     return false
   }
 
+  const getCookieState = () => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem(ELocalStorage.COOKIE_RESPONDED)
+    }
+  }
+
+  const setCookieState = () => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem(ELocalStorage.COOKIE_RESPONDED, 'true')
+    }
+  }
+
   useEffect(() => {
     setWidth(window.innerWidth);
     window.addEventListener('resize', () => {
@@ -46,6 +59,8 @@ export const useComponentProps = () => {
     width,
     mobileWidth,
     tabletWidth,
-    getLightTheme
+    getLightTheme,
+    getCookieState,
+    setCookieState
   }
 }

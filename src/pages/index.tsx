@@ -15,6 +15,7 @@ import { BackersBorrowersComponent } from '../components/BackersBorrowersCompone
 import { MarqueeComponent } from '../components/shared/marquee/MarqueeComponent';
 import { CTAHomeComponent } from '../components/CTAHomeComponent';
 import { useEffect, useState } from 'react';
+import { CookieBanner } from '../components/shared/cookies/CookieBanner';
 
 const IndexPage = () => {
   const { width, mobileWidth, getLightTheme } = useComponentProps();
@@ -105,6 +106,7 @@ const IndexPage = () => {
         <html lang="en"/>
       </Helmet>
       <MarqueeComponent/>
+      <CookieBanner/>
       <ParallaxProvider>
         <HeaderComponent isMobile={!!width && width < mobileWidth} isLightTheme={isLightTheme} setLightTheme={setLightTheme}/>
         <HomeComponent isMobile={!!width && width < mobileWidth}/>

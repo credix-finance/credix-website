@@ -10,6 +10,7 @@ import { InvestorsList } from '../components/investors/InvestorsList';
 import { ELocalStorage, useComponentProps } from '../hooks/useComponentProps';
 import { MarqueeComponent } from '../components/shared/marquee/MarqueeComponent';
 import { Location } from '@reach/router';
+import { CookieBanner } from '../components/shared/cookies/CookieBanner';
 
 const InvestorsPage = () => {
   const { width, mobileWidth, getLightTheme } = useComponentProps();
@@ -100,6 +101,7 @@ const InvestorsPage = () => {
         <html lang="en"/>
       </Helmet>
       <MarqueeComponent/>
+      <CookieBanner/>
       <Location>
         {locationProps => <HeaderComponent {...locationProps} isMobile={!!width && width < mobileWidth} isLightTheme={isLightTheme} setLightTheme={setLightTheme}/>}
       </Location>

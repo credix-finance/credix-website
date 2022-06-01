@@ -25,6 +25,7 @@
     "axios": "^0.27.2",
     "gatsby": "^4.2.0",
     "gatsby-plugin-facebook-pixel": "^1.0.8",
+    "gatsby-plugin-gdpr-cookies": "^2.0.9",
     "gatsby-plugin-google-gtag": "^4.3.0",
     "gatsby-plugin-google-tagmanager": "^4.9.0",
     "gatsby-plugin-image": "^2.2.0",
