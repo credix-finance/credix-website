@@ -34,7 +34,15 @@ export const useComponentProps = () => {
   }
 
   const getCookieState = () => {
-    return localStorage.getItem(ELocalStorage.COOKIE_RESPONDED)
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem(ELocalStorage.COOKIE_RESPONDED)
+    }
+  }
+
+  const setCookieState = () => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem(ELocalStorage.COOKIE_RESPONDED, 'true')
+    }
   }
 
   useEffect(() => {
@@ -52,6 +60,7 @@ export const useComponentProps = () => {
     mobileWidth,
     tabletWidth,
     getLightTheme,
-    getCookieState
+    getCookieState,
+    setCookieState
   }
 }

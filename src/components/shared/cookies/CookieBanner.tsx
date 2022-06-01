@@ -3,16 +3,16 @@ import { useLocation } from '@reach/router'
 import { initializeAndTrack } from 'gatsby-plugin-gdpr-cookies';
 import { CookieButton } from '../buttons/CookieButton';
 import { openInNewTab } from '../../../utils/openInNewTab';
-import { ELocalStorage, useComponentProps } from '../../../hooks/useComponentProps';
+import { useComponentProps } from '../../../hooks/useComponentProps';
 
 export const CookieBanner = () => {
-  const { getCookieState } = useComponentProps();
+  const { getCookieState, setCookieState } = useComponentProps();
   const location = useLocation()
   const [showCookie, setShowCookie] = useState<boolean>(!getCookieState());
 
   const setCookie = () => {
     setShowCookie(false)
-    localStorage.setItem(ELocalStorage.COOKIE_RESPONDED, 'true')
+    setCookieState()
     document.cookie = 'gatsby-gdpr-facebook-pixel=true; expires=Sun, 1 Jan 2090 00:00:00 UTC; path=/';
     document.cookie = 'gatsby-gdpr-google-analytics=true; expires=Sun, 1 Jan 2090 00:00:00 UTC; path=/';
     document.cookie = 'gatsby-gdpr-google-analytics-2=true; expires=Sun, 1 Jan 2090 00:00:00 UTC; path=/';
@@ -23,7 +23,7 @@ export const CookieBanner = () => {
 
   const declineCookie = () => {
     setShowCookie(false)
-    localStorage.setItem(ELocalStorage.COOKIE_RESPONDED, 'true')
+    setCookieState()
   }
 
   if (!showCookie) return null;
