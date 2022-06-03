@@ -40,6 +40,10 @@
     flex-flow: row;
   }
 
+  &--wrap-reverse {
+    flex-wrap: wrap-reverse;
+  }
+
   &--align-center {
     align-items: center;
   }

@@ -24,13 +24,18 @@ export const useComponentProps = () => {
   const tabletWidth = 1445;
 
   const getLightTheme = () => {
+    const userPrefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
     if (typeof window !== 'undefined') {
       const lightTheme = localStorage.getItem(ELocalStorage.LIGHT_THEME)
       if (lightTheme && lightTheme !== 'undefined') {
         return JSON.parse(lightTheme)
+      } else if (userPrefersLight) {
+        return true
       } else return false;
     }
-    return false
+    if (userPrefersLight) {
+      return true
+    } else return false;
   }
 
   const getCookieState = () => {

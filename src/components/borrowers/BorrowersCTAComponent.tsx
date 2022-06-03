@@ -10,21 +10,21 @@ export const BorrowersCTAComponent = () => (
         <div className="h-flex-column cta-component-borrowers--column--row-mobile">
           <span className="cta-component-borrowers--sub-title">DEFI 2.0</span>
           <BorrowersCTADivider/>
-          <span className="cta-component-borrowers--text">Our digital native platform and investment experience makes the transaction lifecycle, - execution and - management much quicker and simpler. You can access capital within weeks.</span>
+          <span className="cta-component-borrowers--text">Our digital native platform lets you access capital within weeks.</span>
         </div>
       </div>
       <div className="h-flex-column cta-component-borrowers--column">
         <div className="h-flex-column cta-component-borrowers--column--row-mobile">
           <span className="cta-component-borrowers--sub-title">Save on costs</span>
           <BorrowersCTADivider/>
-          <span className="cta-component-borrowers--text">Cost savings on deal structuring, transaction execution, and legal contracting could be up to 300bps depending on the deal size.</span>
+          <span className="cta-component-borrowers--text">Save up to 300bps depending on the deal size.</span>
         </div>
       </div>
       <div className="h-flex-column cta-component-borrowers--column">
         <div className="h-flex-column cta-component-borrowers--column--row-mobile">
           <span className="cta-component-borrowers--sub-title">Access untapped liquidity</span>
           <BorrowersCTADivider/>
-          <span className="cta-component-borrowers--text">Via the Credix platform, you get access to a massive amount of global retail and institutional capital locked in the crypto & defi world for your crypto loans.</span>
+          <span className="cta-component-borrowers--text">Get access to institutional capital via our ecosystem of global investors.</span>
         </div>
       </div>
     </div>
