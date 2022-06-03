@@ -77,7 +77,7 @@ export const ParallaxComponent = ({ isMobile, isLightTheme }: IComponentProps) =
     <>
       <span className="parallax-component--child-scroll--title">For Borrowers</span>
       <hr className="solid"/>
-      <span className="parallax-component--child-scroll--text">Alternative lenders, like Credit FinTechs and Defi loan originators can access credit facilities more efficient and for a lower cost of capital.</span>
+      <span className="parallax-component--child-scroll--text">Credit fintechs and non-bank loan originators in emerging markets can raise debt funding internationally with less friction and at attractive rates.</span>
       <span className="parallax-component--child-scroll--cta-link" onClick={() => openInNewTab('https://docs.credix.finance/')}>Read our documentation -{'>'}</span>
       <br/>
       <PopupButton id="yFTAJy3h" className="credix-button--typeform parallax-component--child-scroll--button">

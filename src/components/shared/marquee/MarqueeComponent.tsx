@@ -32,10 +32,10 @@ export const MarqueeComponent = () => {
     <Marquee loop={0} speed={50} gradient={false}>
       <span style={{ marginLeft: '64px' }}>TVL:<b> {tvl ? `${tvl} USDC` : '...'}</b></span>
       <span style={{ marginLeft: '64px' }}>Credit Outstanding:<b> {creditOutstanding ? `${creditOutstanding} USDC` : '...'}</b></span>
-      <span style={{ marginLeft: '64px' }}>Liquidity Pool Expected APY:<b> 13,5%</b></span>
+      <span style={{ marginLeft: '64px' }}>Liquidity Pool APY:<b> 13,5%</b></span>
       <span style={{ marginLeft: '64px' }}>TVL:<b> {tvl ? `${tvl} USDC` : '...'}</b></span>
       <span style={{ marginLeft: '64px' }}>Credit Outstanding:<b> {creditOutstanding ? `${creditOutstanding} USDC` : '...'}</b></span>
-      <span style={{ marginLeft: '64px' }}>Liquidity Pool Expected APY:<b> 13,5%</b></span>
+      <span style={{ marginLeft: '64px' }}>Liquidity Pool APY:<b> 13,5%</b></span>
     </Marquee>
 
   );
