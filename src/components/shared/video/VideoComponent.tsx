@@ -6,7 +6,7 @@ interface IProps {
 
 export const VideoComponent = ({ video }: IProps) => {
   return (
-    <div className="h-flex-column home-component--video">
+    <div className="gradient">
       <video controls={false} autoPlay muted loop>
         <source src={video} type="video/mp4"/>
       </video>

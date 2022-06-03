@@ -64,7 +64,7 @@ export const ParallaxComponent = ({ isMobile, isLightTheme }: IComponentProps) =
     <>
       <span className="parallax-component--child-scroll--title">For Investors</span>
       <hr className="solid"/>
-      <span className="parallax-component--child-scroll--text">Institutional investors such as hedge funds, family offices, and alternative asset managers are accessing Credix to enhance returns and diversify risk.</span>
+      <span className="parallax-component--child-scroll--text">Institutional investors like hedge funds, family offices, and alternative asset managers are accessing Credix to enhance returns and diversify risk.</span>
       <span className="parallax-component--child-scroll--cta-link" onClick={() => openInNewTab('https://docs.credix.finance/')}>Read our documentation -{'>'}</span>
       <br/>
       <PopupButton id="E98Qjiw9" className="credix-button--typeform parallax-component--child-scroll--button">
@@ -77,7 +77,7 @@ export const ParallaxComponent = ({ isMobile, isLightTheme }: IComponentProps) =
     <>
       <span className="parallax-component--child-scroll--title">For Borrowers</span>
       <hr className="solid"/>
-      <span className="parallax-component--child-scroll--text">Alternative lenders, such as Credit FinTechs and Defi loan originators can access credit facilities more efficient and for a lower cost of capital.</span>
+      <span className="parallax-component--child-scroll--text">Alternative lenders, like Credit FinTechs and Defi loan originators can access credit facilities more efficient and for a lower cost of capital.</span>
       <span className="parallax-component--child-scroll--cta-link" onClick={() => openInNewTab('https://docs.credix.finance/')}>Read our documentation -{'>'}</span>
       <br/>
       <PopupButton id="yFTAJy3h" className="credix-button--typeform parallax-component--child-scroll--button">

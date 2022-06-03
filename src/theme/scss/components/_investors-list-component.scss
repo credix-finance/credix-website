@@ -1,6 +1,6 @@
 .investors-list-component {
   background: var(--color-background-home);
-  min-height: 300px;
+  min-height: 400px;
 
   @extend .global-padding-left-right;
 
@@ -10,7 +10,7 @@
   }
 
   &--cta-banner {
-    min-height: 200px;
+    min-height: 300px;
     background: var(--color-white);
     color: var(--color-black);
 
@@ -31,7 +31,7 @@
       font-family: $FONT_FAMILY;
       font-weight: $FONT_WEIGHT_XXNORMAL;
       font-size: $FONT_SIZE_SLARGE;
-      line-height: $LINE_HEIGHT_NORMAL;
+      line-height: $LINE_HEIGHT_XNORMAL;
 
       @include mobile {
         width: 300px;

@@ -5,6 +5,7 @@ import { IComponentProps } from '../../../hooks/useComponentProps';
 enum Quote {
     A55 = 'A55',
     TECREDI = 'TECREDI',
+    OTHER = 'OTHER',
 }
 
 export const Quotes = ({ isTablet, isLightTheme }: IComponentProps) => {
@@ -79,7 +80,7 @@ export const Quotes = ({ isTablet, isLightTheme }: IComponentProps) => {
       <>
         <div className="h-flex-row h-flex-row--justify-center h-margin-top--triple">
           <hr className="quotes-component--logo-row-mobile--divider h-cursor-pointer" style={{ opacity: quote === Quote.A55 ? 1 : 0.5 }} onClick={() => setQuote(Quote.A55)}/>
-          <hr className="quotes-component--logo-row-mobile--divider h-cursor-pointer" style={{ opacity: quote === Quote.TECREDI ? 1 : 0.5 }} onClick={() => setQuote(Quote.TECREDI)}/>
+          <hr className="quotes-component--logo-row-mobile--divider h-cursor-pointer" style={{ opacity: quote === Quote.TECREDI ? 1 : 0.5 }} onClick={() => setQuote(Quote.TECREDI)} />
         </div>
       </>
     </div>

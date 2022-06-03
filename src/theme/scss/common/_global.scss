@@ -108,21 +108,21 @@ html{
 
 
 .credix-button--typeform {
-  background-color: var(--color-white);
-  color: var(--color-black);
-  height: $BUTTON_HEIGHT;
-  border-radius: 0;
-  text-transform: none;
-  border: 0;
-  font-size: 0.875rem;
-  font-weight: 500;
-  font-family: $FONT-FAMILY_SECOND;
-  cursor: pointer;
+  background-color: var(--color-white) !important;
+  color: var(--color-black)  !important;
+  height: $BUTTON_HEIGHT  !important;
+  border-radius: 0  !important;
+  text-transform: none  !important;
+  border: 0  !important;
+  font-size: 0.875rem  !important;
+  font-weight: 500  !important;
+  font-family: $FONT-FAMILY_SECOND  !important;
+  cursor: pointer  !important;
 
   &:hover{
-    background-color: var(--color-black);
-    color: var(--color-white);
-    border: 1px solid var(--color-white);
+    background-color: var(--color-black)  !important;
+    color: var(--color-white)  !important;
+    border: 1px solid var(--color-white)  !important;
   }
 
   @extend .font-second;
@@ -170,4 +170,8 @@ h1 {
 hr.solid {
   width: 100%;
   border-top: 3px solid var(--font-default-color);
+}
+
+button {
+  box-shadow: none !important; 
 }

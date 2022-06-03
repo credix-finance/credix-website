@@ -10,19 +10,19 @@
 
   &--cta-banner {
     @extend .global-padding-left-right;
-    background: $COLOR_WHITE;
-    color: $COLOR_BLACK;
+    background: var(--color-white);
+    color: var(--color-black);
 
-    min-height: 200px;
+    min-height: 300px;
 
     .cta-component-investors--button {
-      background-color: $COLOR_BLACK;
-      color: $COLOR_WHITE;
+      background-color: var(--color-black);
+      color: var(--color-white);
 
       &:hover {
-        color: $COLOR_BLACK;
-        background-color: $COLOR_WHITE;
-        border: 1px solid $COLOR_BLACK;
+        color: var(--color-black);
+        background-color: var(--color-white);
+        border: 1px solid var(--color-black);
       }
     }
 
@@ -30,7 +30,7 @@
       font-family: $FONT_FAMILY;
       font-weight: $FONT_WEIGHT_XXNORMAL;
       font-size: $FONT_SIZE_SLARGE;
-      line-height: $LINE_HEIGHT_NORMAL;
+      line-height: $LINE_HEIGHT_XNORMAL;
 
       @include mobile {
         width: 300px;

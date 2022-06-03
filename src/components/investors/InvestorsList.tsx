@@ -37,6 +37,46 @@ export const InvestorsList = ({ isMobile, isLightTheme }: IComponentProps) => (
                 <StaticImage src={'../../assets/logos/cumberland-logo.png'} alt={'cumberland'} className="backed-by-component--logo"/>
             }
           </a>
+          <a target="_blank">
+            {
+              isLightTheme ?
+                <StaticImage src={'../../assets/logos/mgnr_light.png'} alt={'mgnr'} className="backed-by-component--logo"/>
+                :
+                <StaticImage src={'../../assets/logos/mgnr.png'} alt={'mgnr'} className="backed-by-component--logo"/>
+            }
+          </a>
+          <a target="_blank">
+            {
+              isLightTheme ?
+                <StaticImage src={'../../assets/logos/rockaway_light.png'} alt={'rockaway'} className="backed-by-component--logo"/>
+                :
+                <StaticImage src={'../../assets/logos/rockaway.png'} alt={'rockaway'} className="backed-by-component--logo"/>
+            }
+          </a>
+          <a target="_blank">
+            {
+              isLightTheme ?
+                <StaticImage src={'../../assets/logos/arca_light.png'} alt={'arca'} className="backed-by-component--logo"/>
+                :
+                <StaticImage src={'../../assets/logos/arca.png'} alt={'arca'} className="backed-by-component--logo"/>
+            }
+          </a>
+          <a target="_blank">
+            {
+              isLightTheme ?
+                <StaticImage src={'../../assets/logos/fuse_light.png'} alt={'fuse'} className="backed-by-component--logo"/>
+                :
+                <StaticImage src={'../../assets/logos/fuse.png'} alt={'fuse'} className="backed-by-component--logo"/>
+            }
+          </a>
+          <a target="_blank">
+            {
+              isLightTheme ?
+                <StaticImage src={'../../assets/logos/mudrex_light.png'} alt={'mudrex'} className="backed-by-component--logo"/>
+                :
+                <StaticImage src={'../../assets/logos/mudrex.png'} alt={'mudrex'} className="backed-by-component--logo"/>
+            }
+          </a>
         </div>
       }
     </div>
