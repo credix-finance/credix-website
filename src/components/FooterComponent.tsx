@@ -41,9 +41,9 @@ export const FooterComponent = ({ isMobile, isLightTheme }: IComponentProps) => 
             Find us on:
           </span>
           <div className="h-flex-row h-flex-row--align-start footer-component--social-buttons">
-            <SocialButton icon={SVG_ICONS.LINKEDIN_FOOTER} className="h-cursor-pointer footer-component--social-buttons--linkedIn" onClick={() => openInNewTab('https://www.linkedin.com/company/credix-finance')} isLightTheme={isLightTheme}/>
-            <SocialButton icon={SVG_ICONS.DISCORD_FOOTER} className="h-cursor-pointer footer-component--social-buttons--discord" onClick={() => openInNewTab('https://discord.gg/VmF8VyVg')} isLightTheme={isLightTheme}/>
-            <SocialButton icon={SVG_ICONS.MEDIUM_FOOTER} className="h-cursor-pointer footer-component--social-buttons--discord" onClick={() => openInNewTab('https://link.medium.com/n7tpQNpZyqb')} isLightTheme={isLightTheme}/>
+            <SocialButton icon={SVG_ICONS.LINKEDIN_FOOTER} className="h-cursor-pointer footer-component--social-buttons--logo" onClick={() => openInNewTab('https://www.linkedin.com/company/credix-finance')} isLightTheme={isLightTheme}/>
+            <SocialButton icon={SVG_ICONS.DISCORD_FOOTER} className="h-cursor-pointer footer-component--social-buttons--logo" onClick={() => openInNewTab('https://discord.gg/VmF8VyVg')} isLightTheme={isLightTheme}/>
+            <SocialButton icon={SVG_ICONS.MEDIUM_FOOTER} className="h-cursor-pointer footer-component--social-buttons--logo" onClick={() => openInNewTab('https://link.medium.com/n7tpQNpZyqb')} isLightTheme={isLightTheme}/>
             <SocialButton icon={SVG_ICONS.TWITTER_FOOTER} className="h-cursor-pointer" onClick={() => openInNewTab('https://twitter.com/Credix_finance?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor')} isLightTheme={isLightTheme}/>
           </div>
           <div id="mc_embed_signup" className="footer-component--mailchimp-row">
