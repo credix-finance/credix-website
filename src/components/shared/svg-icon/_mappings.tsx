@@ -11,6 +11,8 @@ import Twitter from '../../../assets/shapes/Twitter.svg'
 import TwitterFooter from '../../../assets/shapes/Twitter-footer.svg'
 import HamburgerMenu from '../../../assets/shapes/hamburger-menu.svg'
 import CloseMenu from '../../../assets/shapes/close-menu.svg'
+import DiscordFooter from '../../../assets/shapes/Discord-footer.svg'
+import MediumFooter from '../../../assets/shapes/medium-footer.svg'
 
 export default {
   CREDIX_LOGO: <CredixLogo/>,
@@ -24,5 +26,7 @@ export default {
   TWITTER: <Twitter/>,
   TWITTER_FOOTER: <TwitterFooter/>,
   HAMBURGER_MENU: <HamburgerMenu/>,
-  CLOSE_MENU: <CloseMenu/>
+  CLOSE_MENU: <CloseMenu/>,
+  DISCORD_FOOTER: <DiscordFooter/>,
+  MEDIUM_FOOTER: <MediumFooter/>
 };
