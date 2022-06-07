@@ -5,7 +5,7 @@ import { IComponentProps } from '../../../hooks/useComponentProps';
 export const Quotes = ({ isTablet, isLightTheme }: IComponentProps) => {
   const [index, setIndex] = useState<number>(0);
   const amountOfScroll = 1146
-  const amountOfItems = 3
+  const amountOfItems = 2
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -66,32 +66,12 @@ export const Quotes = ({ isTablet, isLightTheme }: IComponentProps) => {
             </div>
           )
         }
-        {
-          (!isTablet || isTablet && index === 2) && (
-            <div className="quotes-component--card h-cursor-pointer" onClick={() => setIndex(2)}>
-              <div className="quotes-component--text">
-                {/* eslint-disable-next-line react/no-unescaped-entities */}
-                          "Credix is a great partner of Tecredi. Their solutions are rewriting the debt venture capital market and creating new possibilities for the whole ecosystem."
-              </div>
-              <div className="quotes-component--text--cited-person">
-                          Gustavo Pulga - CO CEO TECREDI
-              </div>
-              <span className="h-cursor-pointer">
-                {
-                  isLightTheme ? (<StaticImage className="quotes-component--background-shape quotes-component--background-shape--tecredi" src="../../../assets/logos/tecredi-dark.png" alt="tecredi logo"/>
-                  ) : (<StaticImage className="quotes-component--background-shape quotes-component--background-shape--tecredi" src="../../../assets/logos/tecredi-logo.png" alt="tecredi logo"/>
-                  )
-                }
-              </span>
-            </div>
-          )
-        }
       </div>
       <>
         <div className="h-flex-row h-flex-row--justify-center h-margin-top--triple">
           <hr className="quotes-component--logo-row-mobile--divider h-cursor-pointer" style={{ opacity: index === 0 ? 1 : 0.5 }} onClick={() => setIndex(0)}/>
           <hr className="quotes-component--logo-row-mobile--divider h-cursor-pointer" style={{ opacity: index === 1 ? 1 : 0.5 }} onClick={() => setIndex(1)}/>
-          <hr className="quotes-component--logo-row-mobile--divider h-cursor-pointer" style={{ opacity: index === 2 ? 1 : 0.5 }} onClick={() => setIndex(2)}/>
+          {/* <hr className="quotes-component--logo-row-mobile--divider h-cursor-pointer" style={{ opacity: index === 2 ? 1 : 0.5 }} onClick={() => setIndex(2)}/> */}
         </div>
       </>
     </div>
