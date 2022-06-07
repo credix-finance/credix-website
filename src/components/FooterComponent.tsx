@@ -34,6 +34,7 @@ export const FooterComponent = ({ isMobile, isLightTheme }: IComponentProps) => 
             <Link className="h-cursor-pointer footer-component--footer--link" to={'/borrowers'}>Borrowers</Link>
             <span className="h-cursor-pointer footer-component--footer--link" onClick={() => openInNewTab('https://credix.gitbook.io/credix')}>Documentation</span>
             <span className="h-cursor-pointer footer-component--footer--link" onClick={() => openInNewTab('https://angel.co/company/credix')}>Careers</span>
+            <span className="h-cursor-pointer footer-component--footer--link" onClick={() => openInNewTab('https://status.credix.finance')}>Status</span>
           </div>
         </div>
         <div className="h-flex-column footer-component--column">
