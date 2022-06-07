@@ -80,7 +80,7 @@ export const ParallaxComponent = ({ isMobile, isLightTheme }: IComponentProps) =
       <span className="parallax-component--child-scroll--text">Credit fintechs and non-bank loan originators in emerging markets can raise debt funding internationally with less friction and at attractive rates.</span>
       <span className="parallax-component--child-scroll--cta-link" onClick={() => openInNewTab('https://docs.credix.finance/')}>Read our documentation -{'>'}</span>
       <br/>
-      <PopupButton id="yFTAJy3h" className="credix-button--typeform parallax-component--child-scroll--button">
+      <PopupButton id="Mtgs2OJ9" className="credix-button--typeform parallax-component--child-scroll--button">
         Register as a borrower
       </PopupButton>
     </>

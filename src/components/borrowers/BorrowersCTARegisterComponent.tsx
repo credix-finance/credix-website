@@ -10,6 +10,6 @@ export const BorrowersCTARegisterComponent = ({ isMobile }: IComponentProps) => 
       {isMobile ? <BorrowersCTADividerSmall/> : <BorrowersCTADivider/>}
       <span>Be part of the journey</span>
     </div>
-    <PopupButton className="cta-component-investors--button" id="yFTAJy3h ">Register as a borrower</PopupButton>
+    <PopupButton className="cta-component-investors--button" id="Mtgs2OJ9">Register as a borrower</PopupButton>
   </div>
 )
