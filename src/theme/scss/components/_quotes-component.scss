@@ -32,13 +32,6 @@
     width: 120%;
     transition: transform .9s;
 
-    &--first-visible {
-      transform: translateX(0);
-    }
-
-    &--second-visible {
-      transform: translateX(-45%);
-    }
   }
 
   &--background-shape {
