@@ -5,7 +5,7 @@ export const BackersBorrowersComponent = () => {
     <div className="backers-borrowers-component h-flex-column">
       <div className="backers-borrowers-component--row h-flex-row h-flex-row--space-between">
         <div className="h-flex-column backers-borrowers-component--column">
-          <span className="backers-borrowers-component--title">Backers</span>
+          <span className="backers-borrowers-component--title">Investors</span>
         </div>
         <div className="h-flex-column backers-borrowers-component--column">
           <span className="backers-borrowers-component--item">DRW Cumberland</span>
