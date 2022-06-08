@@ -35,7 +35,7 @@ export const CookieBanner = () => {
       <span className="cookie-banner-component--text cookie-banner-component--text--link h-cursor-pointer" onClick={() => openInNewTab('https://docs.credix.finance/other-links-and-resources/cookie-policy')}>View Cookie Policy</span>
       </div>
       <div className="cookie-banner-component--button-container">
-        <CookieButton className="cookie-banner-component--button"
+        <CookieButton className="cookie-banner-component--button cookie-banner-component--button--accept"
           onClick={setCookie}> Accept all</CookieButton>
         <CookieButton className="cookie-banner-component--button--decline" onClick={declineCookie}>Decline</CookieButton>
       </div>

@@ -47,13 +47,35 @@
     }
   }
 
+  &--button--accept.MuiButton-root {
+    width: 144px;
+    height: 48px;
+    margin-right: 24px;
+    color: $COLOR_BLACK;
+    background-color: $COLOR_WHITE;
+  
+    &:hover {
+      background-color: $COLOR_BLACK;
+      color: $COLOR_WHITE;
+      border: 1px solid $COLOR_WHITE;
+    }
+  
+    @include mobile {
+      margin-top: $UNIT * 2;
+      width: 110px;
+      border-radius: 4px;
+      height: 32px;
+      padding: 5px 24px;
+    }
+  }
+
   &--button--decline.MuiButton-root {
     width: 144px;
     height: 48px;
     margin-right: 24px;
-    color: $COLOR_WHITE;
+    color: $COLOR_GREY;
     background-color: $COLOR_BLACK;
-    border: 1px solid $COLOR_WHITE;
+    // border: 1px solid $COLOR_WHITE;
 
     &:hover {
       background-color: $COLOR_WHITE;
