@@ -1,5 +1,5 @@
 .cookie-banner-component {
-  background: #1A2024;
+  background: #1a2024;
   width: fit-content;
   height: fit-content;
   padding: 16px;
@@ -40,10 +40,10 @@
 
     @include mobile {
       margin-top: $UNIT * 2;
-      width: fit-content;
+      width: 140px !important;
       border-radius: 4px;
       height: 32px;
-      padding: 5px 24px ;
+      padding: 5px 24px;
     }
   }
 
@@ -53,13 +53,13 @@
     margin-right: 24px;
     color: $COLOR_BLACK;
     background-color: $COLOR_WHITE;
-  
+
     &:hover {
       background-color: $COLOR_BLACK;
       color: $COLOR_WHITE;
       border: 1px solid $COLOR_WHITE;
     }
-  
+
     @include mobile {
       margin-top: $UNIT * 2;
       width: 110px;
@@ -88,7 +88,7 @@
       width: 110px;
       border-radius: 4px;
       height: 32px;
-      padding: 5px 24px ;
+      padding: 5px 24px;
     }
   }
 }
