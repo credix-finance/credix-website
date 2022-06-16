@@ -1,7 +1,6 @@
 .person-component {
-  text-align: center;
   @include mobile {
-    margin-top: $UNIT * 3;
+    margin-bottom: $UNIT * 3;
     flex-flow: row;
   }
 
@@ -86,7 +85,7 @@
   }
 
   &--social-button {
-    margin: 10px 10px 0px;
+    margin: 10px 10px 0 0;
 
 
     @include mobile {

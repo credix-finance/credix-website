@@ -1,5 +1,5 @@
 .backed-by-component {
-  background-color: $COLOR_BLACK;
+  background-color: var(--color-black);
   min-height: 665px;
 
   @extend .global-padding-left-right;
@@ -29,8 +29,6 @@
 
     a {
       display: flex;
-      cursor: pointer;
-      pointer-events: auto;
     }
   }
 

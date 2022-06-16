@@ -13,7 +13,7 @@ main {
 }
 
 body {
-  color: $FONT_DEFAULT_COLOR;
+  color: var(--font-default-color);
   font-family: $FONT_FAMILY;
   font-weight: $FONT_WEIGHT_NORMAL;
   font-size: $FONT_SIZE_NORMAL;
@@ -90,16 +90,17 @@ html{
 }
 
 .credix-button.MuiButton-root {
-  background-color: $COLOR_WHITE;
-  color: $COLOR_BLACK;
+  background-color: var(--color-white);
+  color: var(--color-black);
   height: $BUTTON_HEIGHT;
-  border-radius: 0;
   text-transform: none;
+  border-radius: $BORDER_RADIUS;
+  box-shadow: none;
 
   &:hover{
-    background-color: $COLOR_BLACK;
-    color: $COLOR_WHITE;
-    border: 1px solid $COLOR_WHITE;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border: 1px solid var(--color-white);
   }
 
   @extend .font-second;
@@ -107,8 +108,8 @@ html{
 
 
 .credix-button--typeform {
-  background-color: $COLOR_WHITE;
-  color: $COLOR_BLACK;
+  background-color: var(--color-white);
+  color: var(--color-black);
   height: $BUTTON_HEIGHT;
   border-radius: 0;
   text-transform: none;
@@ -119,9 +120,9 @@ html{
   cursor: pointer;
 
   &:hover{
-    background-color: $COLOR_BLACK;
-    color: $COLOR_WHITE;
-    border: 1px solid $COLOR_WHITE;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border: 1px solid var(--color-white);
   }
 
   @extend .font-second;
@@ -129,9 +130,9 @@ html{
 
 .sub-title {
   font-weight: $FONT_WEIGHT_BOLD;
-  font-size: $FONT_SIZE_LARGE;
+  font-size: $FONT_SIZE_XSLARGE;
   line-height: $LINE_HEIGHT_XLARGE;
-  color: $FONT_SECOND_COLOR;
+  color: var(--font-default-color);
   z-index: $Z_INDEX_NORMAL;
 
   @include mobile {
@@ -164,4 +165,13 @@ h1 {
   margin: 0;
   margin-block: 0;
   margin-inline: 0;
+}
+
+hr.solid {
+  width: 100%;
+  border-top: 3px solid var(--font-default-color);
+}
+
+button {
+  box-shadow: none !important; 
 }

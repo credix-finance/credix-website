@@ -1,11 +1,20 @@
 .core-team-component {
   min-height: 400px;
-  background: linear-gradient(180deg, #000000 0%, #1F1F1F 100%, #1F1F1F 100%);
+  background: var(--color-background-core-team);
+  color: var(--font-default-color);
 
   @extend .global-padding-left-right;
 
   @include mobile {
     min-height: 700px;
+  }
+
+  &--core {
+    width: 70%;
+
+    @include mobile {
+      width: 100%;
+    }
   }
 
   &--title-row {
@@ -17,14 +26,19 @@
   }
 
   &--title-column {
-    width: 30%;
+    margin-bottom: 48px;
     @include mobile {
       width: 100%;
+      margin-bottom: 24px;
     }
   }
 
   &--persons-column {
     width: 70%;
+
+    @include mobile {
+      width: 100%;
+    }
   }
 
   &--who-we-are {
@@ -43,9 +57,24 @@
 
     @include mobile {
       flex-flow: column;
-      margin-top: 20px;
+      margin-bottom: 20px;
       padding-left: 0;
       padding-right: 0;
+    }
+  }
+
+  &--advisors {
+    font-weight: $FONT_WEIGHT_BOLD;
+    &--name {
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      font-family: $FONT_FAMILY_SECOND;
+    }
+
+    &--description {
+      margin-bottom: 20px;
+      opacity: 70%;
+      font-family: $FONT_FAMILY_SECOND;
     }
   }
 }

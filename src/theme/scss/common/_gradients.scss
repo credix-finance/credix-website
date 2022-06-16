@@ -1,0 +1,14 @@
+
+.gradient {
+  width: 27vw;
+  height: 22vw;
+  margin-bottom: 50px; 
+  background-blend-mode: hard-light;
+  animation: hue-rotate 14s linear infinite;
+  overflow: hidden;
+
+  @include mobile {
+    width: 100%;
+    height: 250px;
+  }
+}

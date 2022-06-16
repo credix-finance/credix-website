@@ -1,0 +1,139 @@
+.quotes-component {
+  min-height: 710px;
+  background: var(--color-background-home);
+  color: var(--font-default-color);
+  padding-top: 212px;
+
+  @extend .global-padding-left-right;
+
+  &--card {
+    background-color: var(--color-background-borrowers-quote);
+    min-width: 850px;
+    margin-top: 64px;
+    margin-right: 96px;
+    padding: 100px;
+
+    @include tablet {
+      width: 70%;
+      min-height: 360px;
+      padding: 20px;
+    }
+
+    @include mobile {
+      min-width: 75%;
+      min-height: 360px;
+      padding: 20px;
+    }
+  }
+
+  &--quote-row {
+    display: flex;
+    justify-content: space-between;
+    width: 120%;
+    transition: transform .9s;
+
+  }
+
+  &--background-shape {
+    margin-top: 80px;
+
+    @include mobile {
+      margin-top: 50px;
+    }
+
+
+    &--a55 {
+      width: 80px;
+      height: 33px;
+
+      @include mobile {
+        width: 76px;
+        height: 30px;
+      }
+    }
+
+  &--tecredi {
+    width: 150px;
+    height: 40px;
+
+    @include mobile {
+      width: 100px;
+      height: 20px;
+    }
+  }
+
+    @include mobile {
+      width: 75px;
+      margin-bottom: initial;
+    }
+  }
+
+  &--title {
+    font-weight: $FONT_WEIGHT_XXNORMAL;
+    font-size: $FONT_SIZE_XSLARGE;
+    line-height: $LINE_HEIGHT_XNORMAL;
+  }
+
+  &--text-row {
+
+    @include mobile {
+      flex-direction: column;
+      height: 360px;
+    }
+  }
+
+  &--text {
+    height: 145px;
+    font-family: $FONT_FAMILY;
+    font-weight: $FONT_WEIGHT_NORMAL;
+    font-style: italic;
+    font-size: $FONT_SIZE_XNORMAL;
+    line-height: 29px;
+
+    @include tablet {
+      font-weight: $FONT_WEIGHT_NORMAL;
+      font-size: $FONT_SIZE_XNORMAL;
+      line-height: 29px;
+    }
+
+    @include mobile {
+      font-size: $FONT_SIZE_SMALL;
+    }
+
+    &--cited-person {
+      font-family: $FONT_FAMILY_SECOND;
+      font-weight: $FONT_WEIGHT_XNORMAL;
+      font-size: $FONT_SIZE_NORMAL;
+
+      @include mobile {
+        font-size: $FONT_SIZE_SMALL;
+        padding-top: 0;
+      }
+    }
+
+    @include tablet {
+      margin-top: $UNIT * 3;
+    }
+
+    @include mobile {
+      margin-top: $UNIT * 3;
+      font-size: $FONT_SIZE_SMALL;
+      line-height: $LINE_HEIGHT_SMALL;
+      letter-spacing: -.5px;
+    }
+  }
+
+  &--logo-row-mobile {
+    @include mobile {
+      margin-top: auto;
+      justify-content: space-around;
+    }
+
+    &--divider {
+      width: 49px;
+      margin: 64px 5px 48px 5px;
+      height: 8px;
+      background-color: var(--font-default-color);
+    }
+  }
+}

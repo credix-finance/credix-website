@@ -1,0 +1,96 @@
+.home-component-borrowers {
+  background-color: var(--color-background-header);
+  color: var(--font-default-color);
+  min-height: 709px;
+  height: 80vh;
+
+  @extend .global-padding-left-right;
+
+  @include mobile {
+    min-height: 400px;
+    max-height: 80vh;
+  }
+
+  &--wrapper {
+    flex-wrap: wrap-reverse;
+  
+    @include mobile {
+      flex-wrap: wrap;
+    }
+  }
+
+  &--text {
+    @include mobile {
+      transform: translateY(-50px);
+      padding-top: 30px;
+      width: 100%;
+      background-color: var(--color-background-header);
+    }
+  }
+
+  &--background-shape {
+    position: absolute;
+    left: 1000px;
+    top: 350px;
+    transform: translateY(-10px);
+    z-index: $Z_INDEX_BACKGROUND_SHAPE;
+
+    @include mobile {
+      display: none;
+    }
+
+    &--mobile {
+      position: absolute !important;
+      align-self: center;
+      padding: 10px; 
+      top: 350px;
+      left: 300px;
+      display: initial;
+    }
+  }
+}
+
+.cta-block-borrowers {
+  margin-top: 88px;
+  z-index: $Z_INDEX_NORMAL;
+  
+  @include mobile {
+    margin-top: 0;
+  }
+  
+  &--title {
+    font-size: $FONT_SIZE_XLARGE;
+    font-weight: bold;
+    line-height: $LINE_HEIGHT_XXLARGE;
+    color: var(--font-default-color);
+  
+    @include mobile {
+      font-size: $FONT_SIZE_XSLARGE;
+      line-height: $LINE_HEIGHT_XNORMAL;
+    }
+  }
+  
+  &--text {
+    max-width: 556px;
+    font-size: $FONT_SIZE_XNORMAL;
+    font-weight: $FONT_WEIGHT_NORMAL;
+    line-height: $LINE_HEIGHT_NORMAL;
+    color: var(--font-default-color);
+  
+    @extend .font-second;
+    @extend .h-margin-top;
+  
+    @include mobile {
+      font-size: $FONT_SIZE_SMALL;
+      line-height: $LINE_HEIGHT_SMALL;
+      font-weight: var(--header-text-mobile-bold);
+      border-radius: 10px
+    }
+  }
+  
+  &--button.MuiButton-root {
+    width: $BUTTON_WIDTH_LARGE;
+  
+    @extend .h-margin-top--triple;
+  }
+}

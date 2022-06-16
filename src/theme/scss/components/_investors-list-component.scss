@@ -1,0 +1,94 @@
+.investors-list-component {
+  background: var(--color-background-home);
+  min-height: 400px;
+
+  @extend .global-padding-left-right;
+
+  @include mobile {
+    min-height: 600px;
+    padding-top: $UNIT * 8;
+  }
+
+  &--cta-banner {
+    min-height: 300px;
+    background: var(--color-white);
+    color: var(--color-black);
+
+    @extend .global-padding-left-right;
+
+    .cta-component-investors--button {
+      background-color: var(--color-black);
+      color: var(--color-white);
+
+      &:hover {
+        color: var(--color-black);
+        background-color: var(--color-white);
+        border: 1px solid var(--color-black);
+      }
+    }
+
+    &--title {
+      font-family: $FONT_FAMILY;
+      font-weight: $FONT_WEIGHT_XXNORMAL;
+      font-size: $FONT_SIZE_SLARGE;
+      line-height: $LINE_HEIGHT_XNORMAL;
+
+      @include mobile {
+        width: 300px;
+        margin-top: $UNIT * 4;
+      }
+    }
+  }
+
+  &--title-row {
+    margin-top: 50px;
+  }
+
+  &--logo-column {
+    @include tablet {
+      margin-top: 20px;
+      flex-basis: 40%;
+    }
+  }
+
+  &--logo-row {
+    margin-top: 50px;
+    align-items: center;
+    @include mobile {
+      margin-top: 70px;
+      flex-direction: column;
+    }
+
+    a {
+      display: flex;
+      pointer-events: none;
+    }
+  }
+
+  &--logo {
+    height: 50px !important;
+    margin: 40px 40px 100px;
+
+    img {
+      height: 50px !important;
+      width: auto !important;
+    }
+
+    @include mobile {
+      margin-bottom: 70px;
+      height: 30px !important;
+      img {
+        height: 30px !important;
+      }
+    }
+  }
+
+  &--button.MuiButton-root {
+    width: 330px;
+
+    @include mobile {
+      margin-top: $UNIT * 4;
+      margin-bottom: $UNIT * 4;
+    }
+  }
+}

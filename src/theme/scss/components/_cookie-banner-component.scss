@@ -1,0 +1,94 @@
+.cookie-banner-component {
+  background: #1A2024;
+  width: fit-content;
+  height: fit-content;
+  padding: 16px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+
+  @include mobile {
+    width: 80%;
+    border-radius: 4px;
+    margin: auto 24px 16px 24px;
+  }
+
+  &--text {
+    font-family: $FONT_FAMILY_SECOND;
+    color: $COLOR_WHITE;
+    font-weight: $FONT_WEIGHT_XNORMAL;
+    font-size: $FONT_SIZE_SMALL;
+    line-height: $LINE_HEIGHT_SMALL;
+    width: 400px;
+
+    &--link {
+      text-decoration: underline;
+    }
+  }
+
+  &--button-container {
+    @include mobile {
+      margin: auto;
+    }
+  }
+
+  &--button.MuiButton-root {
+    width: 144px;
+    height: 48px;
+    margin-right: 24px;
+
+    @include mobile {
+      margin-top: $UNIT * 2;
+      width: fit-content;
+      border-radius: 4px;
+      height: 32px;
+      padding: 5px 24px ;
+    }
+  }
+
+  &--button--accept.MuiButton-root {
+    width: 144px;
+    height: 48px;
+    margin-right: 24px;
+    color: $COLOR_BLACK;
+    background-color: $COLOR_WHITE;
+  
+    &:hover {
+      background-color: $COLOR_BLACK;
+      color: $COLOR_WHITE;
+      border: 1px solid $COLOR_WHITE;
+    }
+  
+    @include mobile {
+      margin-top: $UNIT * 2;
+      width: 110px;
+      border-radius: 4px;
+      height: 32px;
+      padding: 5px 24px;
+    }
+  }
+
+  &--button--decline.MuiButton-root {
+    width: 144px;
+    height: 48px;
+    margin-right: 24px;
+    color: $COLOR_GREY;
+    background-color: $COLOR_BLACK;
+    // border: 1px solid $COLOR_WHITE;
+
+    &:hover {
+      background-color: $COLOR_WHITE;
+      color: $COLOR_BLACK;
+      border: 1px solid $COLOR_BLACK;
+    }
+
+    @include mobile {
+      margin-top: $UNIT * 2;
+      width: 110px;
+      border-radius: 4px;
+      height: 32px;
+      padding: 5px 24px ;
+    }
+  }
+}

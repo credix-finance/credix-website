@@ -1,0 +1,32 @@
+.backers-borrowers-component {
+  background-color: var(--color-background-backers-borrowers);
+  color: var(--font-default-color);
+  font-family: $FONT_FAMILY_SECOND;
+
+  @extend .global-padding-left-right;
+
+  &--row {
+    padding-top: 78px;
+    padding-bottom: 50px;
+
+    @include mobile {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+  }
+
+  &--column {
+   width: 280px;
+  }
+
+  &--title {
+    font-size: $FONT_SIZE_XXXNORMAL;
+    font-weight: $FONT_WEIGHT_BOLD;
+    margin-bottom: 24px;
+  }
+
+  &--item {
+    margin-bottom: 24px;
+    font-size: $FONT_SIZE_NORMAL;
+  }
+}
