@@ -1,19 +1,36 @@
-import React from 'react';
-import { IComponentProps } from '../../../hooks/useComponentProps';
+import React from "react";
+import { IComponentProps } from "../../../hooks/useComponentProps";
 
 interface ILightThemeButtonProps extends IComponentProps {
   onChange: (b: boolean) => void;
 }
 
-export const LightThemeButton = ({ isLightTheme, onChange }: ILightThemeButtonProps) => {
-
+export const LightThemeButton = ({
+  isLightTheme,
+  onChange,
+}: ILightThemeButtonProps) => {
   return (
     <>
-      <input type="checkbox" id="toggle-check" checked={isLightTheme} onChange={(e) => onChange(e.target.checked)}/>
+      <input
+        type="checkbox"
+        id="toggle-check"
+        checked={isLightTheme}
+        onChange={(e) => onChange(e.target.checked)}
+      />
       <label htmlFor="toggle-check" className="toggle-label">
-        <div className="toggle-container" style={{ border: isLightTheme ? '1px solid black' : '1px solid white' }}>
+        <div
+          className="toggle-container"
+          style={{
+            border: isLightTheme ? "1px solid black" : "1px solid white",
+          }}
+        >
           <div className="toggle-light-icon icon">
-            <svg viewBox="0 0 24 24" fill="none" strokeLinecap="round" strokeLinejoin="round">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
               <circle cx="12" cy="12" r="5"></circle>
               <line x1="12" y1="1" x2="12" y2="3"></line>
               <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -26,7 +43,12 @@ export const LightThemeButton = ({ isLightTheme, onChange }: ILightThemeButtonPr
             </svg>
           </div>
           <div className="toggle-dark-icon icon">
-            <svg viewBox="0 0 24 24" fill="none" strokeLinecap="round" strokeLinejoin="round">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
             </svg>
           </div>
@@ -34,6 +56,5 @@ export const LightThemeButton = ({ isLightTheme, onChange }: ILightThemeButtonPr
         </div>
       </label>
     </>
-
-  )
-}
+  );
+};
