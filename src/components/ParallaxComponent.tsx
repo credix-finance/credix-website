@@ -82,17 +82,12 @@ export const ParallaxComponent = ({
       </span>
       <hr className="solid" />
       <span className="parallax-component--child-scroll--text">
-        <b>To build the future of global credit markets</b>
+        <b>Building the future of global credit markets</b>
         <br />
         <br />
-        <br /> Connecting institutional investors globally with credit
-        opportunities
-        <br />
-        <br /> Unlocking risk-adjusted returns through robust underwriting
-        <br />
-        <br />
-        Building on the most advanced decentralized technologies to achieve
-        scale
+        Connecting institutional investors globally with credit opportunities -
+        Unlocking risk-adjusted returns through robust underwriting - Building
+        on the most advanced decentralized technologies to achieve scale
       </span>
     </>
   );
