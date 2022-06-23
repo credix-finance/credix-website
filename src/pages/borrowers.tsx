@@ -30,7 +30,6 @@ const BorrowersPage = () => {
     setIsLightTheme(getLightTheme());
   }, []);
 
-  if (typeof isLightTheme === "undefined") return null;
   return (
     <main className={`${isLightTheme ? "light" : "dark"}`}>
       <Helmet
