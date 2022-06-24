@@ -21,25 +21,35 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          "G-2WM77E6YNH",
+          "AW-10862509247"
+        ],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-PJ3PP5W",
+
+        // Include GTM in development.
+        //
+        // Defaults to false meaning GTM will only be loaded in production.
+        includeInDevelopment: false,
+
+        // datalayer to be set before GTM is loaded
+        // should be an object or a function that is executed in the browser
+        //
+        // Defaults to null
+        defaultDataLayer: { platform: "gatsby" }
+      },
+    },
+    {
       resolve: `gatsby-plugin-gdpr-cookies`,
       options: {
-        googleAnalytics: {
-          trackingId: "G-2WM77E6YNH",
-          cookieName: 'gatsby-gdpr-google-analytics',
-          anonymize: true,
-          allowAdFeatures: false
-        },
-        googleAnalytics: {
-          trackingId:  "AW-10862509247",
-          cookieName: 'gatsby-gdpr-google-analytics-2',
-          anonymize: true,
-          allowAdFeatures: false
-        },
-        googleTagManager: {
-          trackingId: 'GTM-PJ3PP5W',
-          cookieName: 'gatsby-gdpr-google-tagmanager',
-          dataLayerName: 'gatsby',
-        },
         facebookPixel: {
           pixelId: "1182663155872985",
           cookieName: 'gatsby-gdpr-facebook-pixel',
