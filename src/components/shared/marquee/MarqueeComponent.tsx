@@ -13,7 +13,6 @@ export const MarqueeComponent = () => {
         "https://credix-market-stats.credix.workers.dev/?cached=True"
       );
       const { data } = result;
-      console.log("dataaaaa", data);
       const formattedTvl = Intl.NumberFormat("en", {
         notation: "compact",
         minimumFractionDigits: 0,
@@ -24,11 +23,9 @@ export const MarqueeComponent = () => {
         minimumFractionDigits: 0,
         maximumFractionDigits: 1,
       }).format(data.total_outstanding_credit.uiAmount);
-      const formattedFinancingFee = Intl.NumberFormat("en", {
-        notation: "compact",
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 2,
-      }).format(data.weighted_average_financing_fee);
+      const formattedFinancingFee = (
+        Math.round(data.weighted_average_financing_fee * 1000) / 1000
+      ).toString();
 
       setTvl(formattedTvl);
       setCreditOutstanding(formattedCreditOutstanding);
