@@ -5,31 +5,38 @@ import axios from "axios";
 export const MarqueeComponent = () => {
   const [tvl, setTvl] = useState("");
   const [creditOutstanding, setCreditOutstanding] = useState("");
-  const [financingFee, setFinancingFee] = useState("");
+  const [trailingApy, setTrailingApy] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios.get(
+      const marketStatsResult = await axios.get(
         "https://credix-market-stats.credix.workers.dev/?cached=True"
       );
-      const { data } = result;
+      const marketStatsData = marketStatsResult.data;
+      const trailingApyResult = await axios.get(
+        "https://credix-30d-apy.credix.workers.dev"
+      );
+      const trailingApyData = trailingApyResult.data;
+
       const formattedTvl = Intl.NumberFormat("en", {
         notation: "compact",
         minimumFractionDigits: 0,
         maximumFractionDigits: 1,
-      }).format(data.TVL.uiAmount);
+      }).format(marketStatsData.TVL.uiAmount);
       const formattedCreditOutstanding = Intl.NumberFormat("en", {
         notation: "compact",
         minimumFractionDigits: 0,
         maximumFractionDigits: 1,
-      }).format(data.total_outstanding_credit.uiAmount);
-      const formattedFinancingFee = (
-        Math.round(data.weighted_average_financing_fee * 1000) / 1000
+      }).format(marketStatsData.total_outstanding_credit.uiAmount);
+      const formattedTrailingApy = (
+        Math.round(
+          trailingApyData["credix-marketplace"]["apy_30_d_trailing"] * 1000
+        ) / 1000
       ).toString();
 
       setTvl(formattedTvl);
       setCreditOutstanding(formattedCreditOutstanding);
-      setFinancingFee(formattedFinancingFee);
+      setTrailingApy(formattedTrailingApy);
     };
     fetchData();
   }, []);
@@ -44,8 +51,8 @@ export const MarqueeComponent = () => {
         <b> {creditOutstanding ? `${creditOutstanding} USDC` : "..."}</b>
       </span>
       <span style={{ marginLeft: "64px" }}>
-        Average financing fee:
-        <b> {financingFee ? `${financingFee * 100} %` : "..."}</b>
+        30d Trailing APY:
+        <b> {trailingApy ? `${trailingApy * 100} %` : "..."}</b>
       </span>
       <span style={{ marginLeft: "64px" }}>
         TVL:<b> {tvl ? `${tvl} USDC` : "..."}</b>
@@ -55,8 +62,8 @@ export const MarqueeComponent = () => {
         <b> {creditOutstanding ? `${creditOutstanding} USDC` : "..."}</b>
       </span>
       <span style={{ marginLeft: "64px" }}>
-        Average financing fee:
-        <b> {financingFee ? `${financingFee * 100} %` : "..."}</b>
+        30d Trailing APY:
+        <b> {trailingApy ? `${trailingApy * 100} %` : "..."}</b>
       </span>
     </Marquee>
   );
