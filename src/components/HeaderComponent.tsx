@@ -78,13 +78,13 @@ export const HeaderComponent = ({
           )}
         </div>
         <span className="header-component--link" onClick={mail}>
-          Docs
+          Contact
         </span>
         <CredixButton
           className={`header--links--button ${
             isLightTheme ? "h-color-white" : "h-color-black"
           }`}
-          url={"https://docs.credix.finance/"}
+          url={"https://app.credix.finance/"}
         >
           Launch App
         </CredixButton>
