@@ -102,6 +102,7 @@ export const HeaderComponent = ({
 		);
 	};
 
+
 	return (
 		<div className="h-flex-column header-component">
 			<div className="h-flex-row h-flex-row--space-between header">
