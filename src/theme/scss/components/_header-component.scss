@@ -1,111 +1,109 @@
 .header-component {
-  background-color: var(--color-background-header);
-  height: 20vh;
+	background-color: var(--color-background-header);
+	height: 20vh;
 
-  @extend .global-padding-left-right;
+	@extend .global-padding-left-right;
 
-  &--icons {
-    margin-top: 30px;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
+	&--icons {
+		margin-top: 30px;
+		margin-left: 15px;
+		margin-right: 15px;
+	}
 
-  &--logo {
-    margin-left: 15px;
-    margin-bottom: 6px;
-  }
+	&--logo {
+		margin-left: 15px;
+		margin-bottom: 6px;
+	}
 
-  &--link {
-    color: var(--font-default-color);
+	&--link {
+		color: var(--font-default-color);
+		text-decoration: none;
+		@extend .font-second;
+		cursor: pointer;
 
-    @extend .font-second;
-    cursor: pointer;
+		@include mobile {
+			margin-bottom: $UNIT * 2;
+		}
 
-    @include mobile {
-      margin-bottom: $UNIT * 2;
-    }
+		&--gatsby {
+			text-decoration: none;
+			color: var(--font-default-color);
+		}
 
-    &--gatsby {
-      text-decoration: none;
-      color: var(--font-default-color);
-    }
+		&--active {
+			width: 100%;
+			height: 4px;
+			background: var(--color-white);
+			margin-top: 8px;
 
-    &--active {
-      width: 100%;
-      height: 4px;
-      background: var(--color-white);
-      margin-top: 8px;
+			@include mobile {
+				margin-top: $UNIT;
+			}
+		}
+	}
 
-      @include mobile {
-        margin-top: $UNIT;
-      }
-    }
+	&--switch {
+		span {
+			font-size: 25px;
+		}
+	}
 
-  }
+	&--menu-button {
+		align-self: center;
+		margin-left: auto;
+		cursor: pointer;
+	}
 
-  &--switch {
-    span {
-      font-size: 25px;
-    }
-  }
+	&--menu-close-button {
+		margin-bottom: $UNIT * 2;
+	}
 
-  &--menu-button{
-    align-self: center;
-    margin-left: auto;
-    cursor: pointer;
-  }
+	&--drawer {
+		.MuiPaper-elevation {
+			width: 100%;
+		}
 
-  &--menu-close-button {
-    margin-bottom: $UNIT * 2;
-  }
-
-  &--drawer {
-
-    .MuiPaper-elevation{
-      width: 100%;
-    }
-
-    &--links-column {
-      color: var(--font-default-color);
-      margin: $UNIT * 3;
-    }
-  }
+		&--links-column {
+			color: var(--font-default-color);
+			margin: $UNIT * 3;
+		}
+	}
 }
 
 .header {
-  margin-top: 43px;
-  width: 100%;
-  z-index: $Z_INDEX_NORMAL;
+	margin-top: 43px;
+	width: 100%;
+	z-index: $Z_INDEX_NORMAL;
 
-  @include mobile {
-    margin-top: 30px;
-  }
+	@include mobile {
+		margin-top: 30px;
+	}
 
-  &--links {
-    width: 730px;
-    font-weight: $FONT_WEIGHT_XNORMAL;
-    font-size: $FONT_SIZE_NORMAL;
+	&--links {
+		width: 730px;
+		font-weight: $FONT_WEIGHT_XNORMAL;
+		font-size: $FONT_SIZE_NORMAL;
 
-    @include mobile {
-      width: 100px;
-    }
+		@include mobile {
+			width: 100px;
+		}
 
-    &--button.MuiButton-root {
-      margin-left: 64px;
-      width: $BUTTON_WIDTH_NORMAL;
-      border-radius: $BORDER_RADIUS;
+		&--button.MuiButton-root {
+			margin-left: 64px;
+			width: $BUTTON_WIDTH_NORMAL;
+			border-radius: $BORDER_RADIUS;
 
-      @include mobile {
-        margin-left: initial;
-        margin-top: 64px;
-        width: 100%
-      }
+			@include mobile {
+				margin-left: initial;
+				margin-top: 64px;
+				width: 100%;
+			}
 
-      &:hover {
-        color: var(--font-default-color) !important;
-        background-color: var(--color-black) !important;
-        border: 1px solid var(--font-default-color) !important;
-      }
-    }
-  }
+			&:hover {
+				color: var(--font-default-color) !important;
+				background-color: var(--color-black) !important;
+				border: 1px solid var(--font-default-color) !important;
+			}
+		}
+	}
 }
