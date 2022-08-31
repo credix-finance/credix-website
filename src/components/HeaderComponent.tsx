@@ -88,7 +88,7 @@ export const HeaderComponent = ({
 					className={`header--links--button ${
 						isLightTheme ? "h-color-white" : "h-color-black"
 					}`}
-					url={"https://docs.credix.finance/"}
+					url={"https://app.credix.finance/"}
 				>
 					Launch App
 				</CredixButton>
@@ -101,7 +101,6 @@ export const HeaderComponent = ({
 			</>
 		);
 	};
-
 
 	return (
 		<div className="h-flex-column header-component">
