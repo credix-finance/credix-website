@@ -12,19 +12,19 @@ export const BackersBorrowersComponent = () => {
 						Motive Partners
 					</span>
 					<span className="backers-borrowers-component--item">
-						Parafi Capital
-					</span>
-					<span className="backers-borrowers-component--item">
-						Valor Capital
+						DRW Cumberland
 					</span>
 					<span className="backers-borrowers-component--item">
 						MGG Investment <br />
 						Group - Byhawk
 					</span>
+					<span className="backers-borrowers-component--item">
+						Victory Park Capital
+					</span>
 				</div>
 				<div className="h-flex-column backers-borrowers-component--column">
 					<span className="backers-borrowers-component--item">
-						DRW Cumberland
+						Parafi Capital
 					</span>
 					<span className="backers-borrowers-component--item">
 						Circle Ventures
@@ -38,7 +38,7 @@ export const BackersBorrowersComponent = () => {
 				</div>
 				<div className="h-flex-column backers-borrowers-component--column">
 					<span className="backers-borrowers-component--item">
-						Victory Park Capital
+						Valor Capital
 					</span>
 					<span className="backers-borrowers-component--item">
 						Claure Group
@@ -46,9 +46,7 @@ export const BackersBorrowersComponent = () => {
 					<span className="backers-borrowers-component--item">
 						Transfero Swiss
 					</span>
-					<span className="backers-borrowers-component--item">
-						Petrock Capital
-					</span>
+					<span className="backers-borrowers-component--item">Abra</span>
 				</div>
 			</div>
 		</div>
