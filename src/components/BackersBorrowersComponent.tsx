@@ -15,11 +15,10 @@ export const BackersBorrowersComponent = () => {
 						DRW Cumberland
 					</span>
 					<span className="backers-borrowers-component--item">
-						MGG Investment <br />
-						Group - Byhawk
+						MGG - Byhawk
 					</span>
 					<span className="backers-borrowers-component--item">
-						Victory Park Capital
+						Transfero Swiss
 					</span>
 				</div>
 				<div className="h-flex-column backers-borrowers-component--column">
@@ -44,7 +43,7 @@ export const BackersBorrowersComponent = () => {
 						Claure Group
 					</span>
 					<span className="backers-borrowers-component--item">
-						Transfero Swiss
+						Victory Park Capital
 					</span>
 					<span className="backers-borrowers-component--item">Abra</span>
 				</div>
