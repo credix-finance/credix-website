@@ -51,7 +51,7 @@ export const MarqueeComponent = () => {
 			<span style={{ marginLeft: "64px" }}>
 				TVL:<b> {tvl ? `${tvl} USDC` : "..."}</b>
 			</span>
-			{/* <span style={{ marginLeft: "64px" }}>
+			<span style={{ marginLeft: "64px" }}>
 				30d Trailing APY:
 				<b>
 					{" "}
@@ -59,7 +59,7 @@ export const MarqueeComponent = () => {
 						? `${Math.round(trailingApy30d * 1000) / 10} %`
 						: "..."}
 				</b>
-			</span> */}
+			</span>
 			<span style={{ marginLeft: "64px" }}>
 				Credit Outstanding:
 				<b> {creditOutstanding ? `${creditOutstanding} USDC` : "..."}</b>
@@ -76,7 +76,7 @@ export const MarqueeComponent = () => {
 			<span style={{ marginLeft: "64px" }}>
 				TVL:<b> {tvl ? `${tvl} USDC` : "..."}</b>
 			</span>
-			{/* <span style={{ marginLeft: "64px" }}>
+			<span style={{ marginLeft: "64px" }}>
 				30d Trailing APY:
 				<b>
 					{" "}
@@ -84,7 +84,7 @@ export const MarqueeComponent = () => {
 						? `${Math.round(trailingApy30d * 1000) / 10} %`
 						: "..."}
 				</b>
-			</span> */}
+			</span>
 			<span style={{ marginLeft: "64px" }}>
 				Credit Outstanding:
 				<b> {creditOutstanding ? `${creditOutstanding} USDC` : "..."}</b>
