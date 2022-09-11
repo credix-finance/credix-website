@@ -5,7 +5,6 @@ import axios from "axios";
 export const MarqueeComponent = () => {
 	const [tvl, setTvl] = useState("");
 	const [creditOutstanding, setCreditOutstanding] = useState();
-	const [trailingApy30d, setTrailingApy30d] = useState();
 	const [trailingApy90d, setTrailingApy90d] = useState();
 
 	useEffect(() => {
@@ -29,10 +28,6 @@ export const MarqueeComponent = () => {
 				minimumFractionDigits: 0,
 				maximumFractionDigits: 1,
 			}).format(marketStatsData.total_outstanding_credit.uiAmount);
-			const formattedTrailingApy30d =
-				Math.round(
-					trailingApyData["credix-marketplace"]["apy_30_d_trailing"] * 1000
-				) / 1000;
 			const formattedTrailingApy90d =
 				Math.round(
 					trailingApyData["credix-marketplace"]["apy_90_d_trailing"] * 1000
@@ -40,7 +35,6 @@ export const MarqueeComponent = () => {
 
 			setTvl(formattedTvl);
 			setCreditOutstanding(formattedCreditOutstanding);
-			setTrailingApy30d(formattedTrailingApy30d);
 			setTrailingApy90d(formattedTrailingApy90d);
 		};
 		fetchData();
@@ -50,15 +44,6 @@ export const MarqueeComponent = () => {
 		<Marquee loop={0} speed={50} gradient={false}>
 			<span style={{ marginLeft: "64px" }}>
 				TVL:<b> {tvl ? `${tvl} USDC` : "..."}</b>
-			</span>
-			<span style={{ marginLeft: "64px" }}>
-				30d Trailing APY:
-				<b>
-					{" "}
-					{trailingApy30d
-						? `${Math.round(trailingApy30d * 1000) / 10} %`
-						: "..."}
-				</b>
 			</span>
 			<span style={{ marginLeft: "64px" }}>
 				Credit Outstanding:
@@ -75,15 +60,6 @@ export const MarqueeComponent = () => {
 			</span>
 			<span style={{ marginLeft: "64px" }}>
 				TVL:<b> {tvl ? `${tvl} USDC` : "..."}</b>
-			</span>
-			<span style={{ marginLeft: "64px" }}>
-				30d Trailing APY:
-				<b>
-					{" "}
-					{trailingApy30d
-						? `${Math.round(trailingApy30d * 1000) / 10} %`
-						: "..."}
-				</b>
 			</span>
 			<span style={{ marginLeft: "64px" }}>
 				Credit Outstanding:
