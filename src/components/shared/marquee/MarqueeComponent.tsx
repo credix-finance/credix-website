@@ -6,6 +6,7 @@ export const MarqueeComponent = () => {
 	const [tvl, setTvl] = useState("");
 	const [creditOutstanding, setCreditOutstanding] = useState();
 	const [trailingApy90d, setTrailingApy90d] = useState();
+	const [totalInterestRepaid, setTotalInterestRepaid] = useState();
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -17,6 +18,12 @@ export const MarqueeComponent = () => {
 				"https://credix-trailing-apy.credix.workers.dev"
 			);
 			const trailingApyData = trailingApyResult.data;
+			const allDealsResult = await axios.get("https://credix-deals.credix.workers.dev/")
+			const allDeals = allDealsResult.data;
+			let interestRepaidSum = 0; 
+			allDeals.forEach((d) => {
+				interestRepaidSum += d["interestRepaidSchedule"].reduce((partialSum, a) => partialSum + a, 0); 
+			})
 
 			const formattedTvl = Intl.NumberFormat("en", {
 				notation: "compact",
@@ -32,10 +39,16 @@ export const MarqueeComponent = () => {
 				Math.round(
 					trailingApyData["credix-marketplace"]["apy_90_d_trailing"] * 1000
 				) / 1000;
+			const formattedTotalInterestRepaid = Intl.NumberFormat("en", {
+				notation: "compact",
+				minimumFractionDigits: 0,
+				maximumFractionDigits: 1,
+			}).format(interestRepaidSum);
 
 			setTvl(formattedTvl);
 			setCreditOutstanding(formattedCreditOutstanding);
 			setTrailingApy90d(formattedTrailingApy90d);
+			setTotalInterestRepaid(formattedTotalInterestRepaid);
 		};
 		fetchData();
 	}, []);
@@ -48,6 +61,10 @@ export const MarqueeComponent = () => {
 			<span style={{ marginLeft: "64px" }}>
 				Credit Outstanding:
 				<b> {creditOutstanding ? `${creditOutstanding} USDC` : "..."}</b>
+			</span>
+			<span style={{ marginLeft: "64px" }}>
+				Interest Repaid:
+				<b> {totalInterestRepaid ? `${totalInterestRepaid} USDC` : "..."}</b>
 			</span>
 			<span style={{ marginLeft: "64px" }}>
 				90d Trailing APY:
@@ -64,6 +81,10 @@ export const MarqueeComponent = () => {
 			<span style={{ marginLeft: "64px" }}>
 				Credit Outstanding:
 				<b> {creditOutstanding ? `${creditOutstanding} USDC` : "..."}</b>
+			</span>
+			<span style={{ marginLeft: "64px" }}>
+				Interest Repaid:
+				<b> {totalInterestRepaid ? `${totalInterestRepaid} USDC` : "..."}</b>
 			</span>
 			<span style={{ marginLeft: "64px" }}>
 				90d Trailing APY:
