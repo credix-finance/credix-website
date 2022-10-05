@@ -1,82 +1,86 @@
 .cta-component {
-  background: var(--color-white);
-  color: var(--color-black);
-  min-height: 300px;
+	background: var(--color-white);
+	color: var(--color-black);
+	min-height: 300px;
 
-  @extend .global-padding-left-right;
+	@extend .global-padding-left-right;
 
-  @include mobile {
-    min-height: 270px;
-  }
+	@include mobile {
+		min-height: 270px;
+	}
 
-  &--row {
-    @include mobile {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
+	&--row {
+		@include mobile {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
 
-  &--title {
-    font-size: $FONT_SIZE_MLARGE;
-    font-weight: $FONT_WEIGHT_XNORMAL;
-    line-height: $LINE_HEIGHT_LARGE;
-    margin-top: 48px;
+	&--title {
+		font-size: $FONT_SIZE_MLARGE;
+		font-weight: $FONT_WEIGHT_XNORMAL;
+		line-height: $LINE_HEIGHT_LARGE;
+		margin-top: 48px;
 
-    @include mobile {
-      font-size: $FONT_SIZE_XXNORMAL;
-      line-height: $LINE_HEIGHT_SSNORMAL;
-      font-weight: $FONT_WEIGHT_XXNORMAL;
-      letter-spacing: 1px;
-    }
-  }
+		@include mobile {
+			font-size: $FONT_SIZE_XXNORMAL;
+			line-height: $LINE_HEIGHT_SSNORMAL;
+			font-weight: $FONT_WEIGHT_XXNORMAL;
+			letter-spacing: 1px;
+		}
+	}
 
-  &--button {
-    width: $BUTTON_WIDTH_NORMAL;
-    margin-right: 20px;
-    margin-bottom: 54px;
+	&--button {
+		width: $BUTTON_WIDTH_NORMAL;
+		margin-right: 20px;
+		margin-bottom: 54px;
 
-    @include mobile {
-      margin-top: $UNIT * 2;
-      margin-right: 0;
-    }
+		@include mobile {
+			margin-top: $UNIT * 2;
+			margin-right: 0;
+		}
 
-    &--investor {
-      background-color: $COLOR_BLACK;
-      color: $COLOR_WHITE;
-      width: 200px;
-      border-radius: $BORDER_RADIUS;
-      border: 1px solid var(--color-black);
+		&--investor-main-page {
+			width: 400px !important;
+		}
 
-      &:hover {
-        background-color: $COLOR_WHITE;
-        color: $COLOR_BLACK;
-        border: 1px solid $COLOR_BLACK;
-      }
+		&--investor {
+			background-color: $COLOR_BLACK;
+			color: $COLOR_WHITE;
+			width: 250px;
+			border-radius: $BORDER_RADIUS;
+			border: 1px solid var(--color-black);
 
-      @include mobile {
-        width: 100%;
-        margin-top: 50px;
-        margin-bottom: 10px;
-      }
-    }
+			&:hover {
+				background-color: $COLOR_WHITE;
+				color: $COLOR_BLACK;
+				border: 1px solid $COLOR_BLACK;
+			}
 
-    &--borrower {
-      border: 1px solid black;
-      background-color: $COLOR_WHITE;
-      color: $COLOR_BLACK;
-      width: 230px;
-      border-radius: $BORDER_RADIUS;
+			@include mobile {
+				width: 100%;
+				margin-top: 50px;
+				margin-bottom: 10px;
+			}
+		}
 
-      &:hover {
-        background-color: $COLOR_BLACK;
-        color: $COLOR_WHITE;
-        border: 1px solid $COLOR_WHITE;
-      }
+		&--borrower {
+			border: 1px solid black;
+			background-color: $COLOR_WHITE;
+			color: $COLOR_BLACK;
+			width: 250px;
+			border-radius: $BORDER_RADIUS;
 
-      @include mobile {
-        width: 100%;
-        margin-bottom: 24px;
-      }
-    }
-  }
+			&:hover {
+				background-color: $COLOR_BLACK;
+				color: $COLOR_WHITE;
+				border: 1px solid $COLOR_WHITE;
+			}
+
+			@include mobile {
+				width: 100%;
+				margin-bottom: 24px;
+			}
+		}
+	}
 }

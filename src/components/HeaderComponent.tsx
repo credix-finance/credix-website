@@ -79,6 +79,13 @@ export const HeaderComponent = ({
 				</div>
 				<Link
 					className="header-component--link"
+					to={"https://medium.com/credix"}
+					target="_blank"
+				>
+					Blog
+				</Link>
+				<Link
+					className="header-component--link"
 					to={"https://docs.credix.finance"}
 					target="_blank"
 				>
