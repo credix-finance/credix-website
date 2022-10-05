@@ -97,7 +97,7 @@ export const HeaderComponent = ({
 					}`}
 					url={"https://app.credix.finance/"}
 				>
-					Launch App
+					Invest
 				</CredixButton>
 				{!isMobile && (
 					<LightThemeButton
