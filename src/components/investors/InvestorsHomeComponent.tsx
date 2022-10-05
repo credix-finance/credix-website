@@ -26,8 +26,8 @@ export const InvestorsHomeComponent = ({ isMobile }: IComponentProps) => {
 						Invest <br /> With Credix
 					</h1>
 					<span className="cta-block-investors--text">
-						Private debt investments with sustainable returns, backed by
-						real-world assets, and flexibility to withdraw at any moment
+						Private debt investments with sustainable, non-crypto correlated
+						returns, backed by real-world assets
 					</span>
 					<br></br>
 					<CredixButton
