@@ -105,7 +105,7 @@ const InvestorsPage = () => {
 			</Helmet>
 			{typeof isLightTheme !== "undefined" && (
 				<>
-					{/* <MarqueeComponent /> */}
+					<MarqueeComponent />
 					<CookieBanner />
 					<Location>
 						{(locationProps) => (

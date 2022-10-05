@@ -111,7 +111,7 @@ const IndexPage = () => {
 			</Helmet>
 			{typeof isLightTheme !== "undefined" && (
 				<>
-					{/* <MarqueeComponent /> */}
+					<MarqueeComponent />
 					<CookieBanner />
 					<ParallaxProvider>
 						<HeaderComponent

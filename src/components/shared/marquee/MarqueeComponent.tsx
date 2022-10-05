@@ -14,10 +14,6 @@ export const MarqueeComponent = () => {
 				"https://credix-market-stats.credix.workers.dev/?cached=True"
 			);
 			const marketStatsData = marketStatsResult.data;
-			const trailingApyResult = await axios.get(
-				"https://credix-trailing-apy.credix.workers.dev"
-			);
-			const trailingApyData = trailingApyResult.data;
 
 			const formattedTvl = Intl.NumberFormat("en", {
 				notation: "compact",
@@ -30,9 +26,7 @@ export const MarqueeComponent = () => {
 				maximumFractionDigits: 1,
 			}).format(marketStatsData.total_outstanding_credit);
 			const formattedTrailingApy90d =
-				Math.round(
-					trailingApyData["credix-marketplace"]["apy_90_d_trailing"] * 1000
-				) / 1000;
+				Math.round(marketStatsData["apy_90_d_trailing"] * 1000) / 1000;
 			const formattedTotalInterestRepaid = Intl.NumberFormat("en", {
 				notation: "compact",
 				minimumFractionDigits: 0,

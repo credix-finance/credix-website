@@ -108,7 +108,7 @@ const BorrowersPage = () => {
 			{typeof isLightTheme !== "undefined" && (
 				<>
 					<CookieBanner />
-					{/* <MarqueeComponent /> */}
+					<MarqueeComponent />
 					<Location>
 						{(locationProps) => (
 							<HeaderComponent
