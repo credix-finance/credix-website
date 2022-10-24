@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Marquee from "react-fast-marquee";
 import axios from "axios";
-import "./Marquee.scss";
 
 export const MarqueeComponent = () => {
 	const [tvl, setTvl] = useState("");
