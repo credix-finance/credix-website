@@ -14,9 +14,7 @@ export const BackersBorrowersComponent = () => {
 					<span className="backers-borrowers-component--item">
 						DRW Cumberland
 					</span>
-					<span className="backers-borrowers-component--item">
-						MGG - Byhawk
-					</span>
+					<span className="backers-borrowers-component--item">Bayhawk</span>
 					<span className="backers-borrowers-component--item">
 						Transfero Swiss
 					</span>

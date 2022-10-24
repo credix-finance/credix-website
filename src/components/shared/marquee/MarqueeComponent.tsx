@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Marquee from "react-fast-marquee";
 import axios from "axios";
+import "./Marquee.scss";
 
 export const MarqueeComponent = () => {
 	const [tvl, setTvl] = useState("");
@@ -42,6 +43,7 @@ export const MarqueeComponent = () => {
 	}, []);
 
 	return (
+		<div></div>
 		<Marquee loop={0} speed={50} gradient={false}>
 			<span style={{ marginLeft: "64px" }}>
 				TVL:<b> {tvl ? `${tvl} USDC` : "..."}</b>
