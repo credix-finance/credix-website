@@ -21,7 +21,7 @@ export const BackersBorrowersComponent = () => {
 				</div>
 				<div className="h-flex-column backers-borrowers-component--column">
 					<span className="backers-borrowers-component--item">
-						<b>Parafi Capital</b>
+						<b>ParaFi Capital</b>
 					</span>
 					<span className="backers-borrowers-component--item">
 						Circle Ventures
