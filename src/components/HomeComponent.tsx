@@ -18,7 +18,7 @@ export const HomeComponent = ({ isMobile }: IComponentProps) => {
 			</span>
 			<CredixButton
 				className="cta-block--button"
-				url={"https://app.credix.finance/credix-marketplace/invest-withdraw/"}
+				url={"https://app.credix.finance/credix-marketplace/"}
 			>
 				Investment opportunities
 			</CredixButton>
