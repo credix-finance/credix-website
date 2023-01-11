@@ -13,6 +13,14 @@ module.exports = {
 		"gatsby-plugin-preact",
 		"gatsby-plugin-gdpr-cookies",
 		{
+			resolve: "gatsby-plugin-hubspot",
+			options: {
+				trackingCode: "26631266",
+				respectDNT: false,
+				productionOnly: true,
+			},
+		},
+		{
 			resolve: "gatsby-plugin-react-svg",
 			options: {
 				rule: {

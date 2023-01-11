@@ -107,7 +107,6 @@ const IndexPage = () => {
 			>
 				<title lang="en">Credix</title>
 				<html lang="en" />
-				<script id="mcjs">{`!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/6501024066e1753c2aa2d692e/58d796753651966cecde5b186.js");`}</script>
 			</Helmet>
 			{typeof isLightTheme !== "undefined" && (
 				<>

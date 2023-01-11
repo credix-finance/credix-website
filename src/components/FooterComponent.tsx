@@ -119,7 +119,10 @@ export const FooterComponent = ({
 					<div className="footer-component--mailchimp-row">
 						<div className="footer-component--mailchimp-sub--logo-row">
 							<span className="footer-component--footer--text">
-								<a href="http://eepurl.com/hOHPIX" target="_blank">
+								<a
+									href="https://share-eu1.hsforms.com/1jAAAMPCdTpOl9Sx_K_7HrAfuste"
+									target="_blank"
+								>
 									✉️ Subscribe to investor updates ✉️
 								</a>
 							</span>
