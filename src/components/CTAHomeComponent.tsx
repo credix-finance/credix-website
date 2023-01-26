@@ -10,19 +10,19 @@ export const CTAHomeComponent = () => {
 					Become part of the future <br /> of private credit markets
 				</span>
 			</div>
-			<div className="h-flex-row h-margin-top--auto">
+			<div className="h-flex-row h-margin-top-50">
 				<CredixButton
-					className="cta-component--button cta-component--button--investor"
+					className="cta-component--button--investor"
 					url={"https://app.credix.finance"}
 				>
 					Onboard as an investor
 				</CredixButton>
-				<PopupButton
-					id="Mtgs2OJ9"
-					className="credix-button--typeform cta-component--button cta-component--button--borrower"
+				<CredixButton
+					className="cta-component--button--borrower"
+					url={"https://share-eu1.hsforms.com/13OiNrrgQT0Gv2AF1cV52Uwfuste"}
 				>
 					Register as a borrower
-				</PopupButton>
+				</CredixButton>
 			</div>
 		</div>
 	);

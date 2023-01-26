@@ -5,34 +5,34 @@
  */
 
 main {
-  overflow-x: hidden;
+	overflow-x: hidden;
 }
 
 * {
-  outline: none;
+	outline: none;
 }
 
 body {
-  color: var(--font-default-color);
-  font-family: $FONT_FAMILY;
-  font-weight: $FONT_WEIGHT_NORMAL;
-  font-size: $FONT_SIZE_NORMAL;
-  height: 100vh;
-  margin: 0;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  padding: 0;
-  width: 100vw;
+	color: var(--font-default-color);
+	font-family: $FONT_FAMILY;
+	font-weight: $FONT_WEIGHT_NORMAL;
+	font-size: $FONT_SIZE_NORMAL;
+	height: 100vh;
+	margin: 0;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	padding: 0;
+	width: 100vw;
 }
 
 #root {
-  height: 100%;
-  width: 100%;
+	height: 100%;
+	width: 100%;
 }
 
-html{
-  scroll-behavior:smooth
+html {
+	scroll-behavior: smooth;
 }
 
 /**
@@ -40,15 +40,15 @@ html{
  */
 
 @mixin mobile {
-  @media (max-width:$MOBILE_WIDTH) {
-    @content;
-  }
+	@media (max-width: $MOBILE_WIDTH) {
+		@content;
+	}
 }
 
 @mixin tablet {
-  @media (max-width:$TABLET_WIDTH) {
-    @content;
-  }
+	@media (max-width: $TABLET_WIDTH) {
+		@content;
+	}
 }
 
 /**
@@ -56,13 +56,13 @@ html{
  */
 
 @keyframes arrow {
-  0% {
-    opacity: 1
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-10px, -10px)
-  }
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: translate(-10px, -10px);
+	}
 }
 
 /**
@@ -70,108 +70,107 @@ html{
  */
 
 .font-second {
-  font-family: $FONT_FAMILY_SECOND;
-  font-style: normal;
+	font-family: $FONT_FAMILY_SECOND;
+	font-style: normal;
 }
 
 .global-padding-left-right {
-  padding-left: $GLOBAL_PADDING_LEFT;
-  padding-right: $GLOBAL_PADDING_RIGHT;
+	padding-left: $GLOBAL_PADDING_LEFT;
+	padding-right: $GLOBAL_PADDING_RIGHT;
 
-  @media (max-width:$MOBILE_WIDTH) {
-    padding-left: $GLOBAL_PADDING_MOBILE_LEFT;
-    padding-right: $GLOBAL_PADDING_MOBILE_RIGHT;
-  }
+	@media (max-width: $MOBILE_WIDTH) {
+		padding-left: $GLOBAL_PADDING_MOBILE_LEFT;
+		padding-right: $GLOBAL_PADDING_MOBILE_RIGHT;
+	}
 }
 
 .team-padding-left-right {
-  padding-left: $GLOBAL_PADDING_LEFT * 2;
-  padding-right: $GLOBAL_PADDING_RIGHT * 2;
+	padding-left: $GLOBAL_PADDING_LEFT * 2;
+	padding-right: $GLOBAL_PADDING_RIGHT * 2;
 }
 
 .credix-button.MuiButton-root {
-  background-color: var(--color-white);
-  color: var(--color-black);
-  height: $BUTTON_HEIGHT;
-  text-transform: none;
-  border-radius: $BORDER_RADIUS;
-  box-shadow: none;
+	background-color: var(--color-white);
+	color: var(--color-black);
+	height: $BUTTON_HEIGHT;
+	text-transform: none;
+	border-radius: $BORDER_RADIUS;
+	box-shadow: none;
 
-  &:hover{
-    background-color: var(--color-black);
-    color: var(--color-white);
-    border: 1px solid var(--color-white);
-  }
+	&:hover {
+		background-color: var(--color-black);
+		color: var(--color-white);
+		border: 1px solid var(--color-white);
+	}
 
-  @extend .font-second;
+	@extend .font-second;
 }
 
-
 .credix-button--typeform {
-  background-color: var(--color-white);
-  color: var(--color-black);
-  height: $BUTTON_HEIGHT;
-  border-radius: 0;
-  text-transform: none;
-  border: 0;
-  font-size: 0.875rem;
-  font-weight: 500;
-  font-family: $FONT-FAMILY_SECOND;
-  cursor: pointer;
+	background-color: var(--color-white);
+	color: var(--color-black);
+	height: $BUTTON_HEIGHT;
+	border-radius: 0;
+	text-transform: none;
+	border: 0;
+	font-size: 0.875rem;
+	font-weight: 500;
+	font-family: $FONT-FAMILY_SECOND;
+	cursor: pointer;
 
-  &:hover{
-    background-color: var(--color-black);
-    color: var(--color-white);
-    border: 1px solid var(--color-white);
-  }
+	&:hover {
+		background-color: var(--color-black);
+		color: var(--color-white);
+		border: 1px solid var(--color-white);
+	}
 
-  @extend .font-second;
+	@extend .font-second;
 }
 
 .sub-title {
-  font-weight: $FONT_WEIGHT_BOLD;
-  font-size: $FONT_SIZE_XSLARGE;
-  line-height: $LINE_HEIGHT_XLARGE;
-  color: var(--font-default-color);
-  z-index: $Z_INDEX_NORMAL;
+	font-weight: $FONT_WEIGHT_BOLD;
+	font-size: $FONT_SIZE_XSLARGE;
+	line-height: $LINE_HEIGHT_XLARGE;
+	color: var(--font-default-color);
+	z-index: $Z_INDEX_NORMAL;
 
-  @include mobile {
-    font-size: $FONT_SIZE_XXXNORMAL;
-    line-height: $LINE_HEIGHT_NORMAL;
-  }
+	@include mobile {
+		font-size: $FONT_SIZE_XXXNORMAL;
+		line-height: $LINE_HEIGHT_NORMAL;
+	}
 }
 
 .small-text {
-  font-size: $FONT_SIZE_NORMAL;
-  font-family: $FONT_FAMILY_SECOND;
-  line-height: $LINE_HEIGHT_SNORMAL;
+	font-size: $FONT_SIZE_NORMAL;
+	font-family: $FONT_FAMILY_SECOND;
+	line-height: $LINE_HEIGHT_SNORMAL;
 }
 
 .not-found-component {
-  height: calc(80vh - 384px);
-  background-color: #1F1F1F;
-  display: flex;
-  justify-content: center;
+	height: calc(80vh - 384px);
+	background-color: #1f1f1f;
+	display: flex;
+	justify-content: center;
 
-  &--title{
-    font-size: $FONT_SIZE_XLARGE;
-    font-family: $FONT_FAMILY_SECOND;
-    font-weight: $FONT_WEIGHT_BOLD;
-    letter-spacing: 1px;
-  }
+	&--title {
+		font-size: $FONT_SIZE_XLARGE;
+		font-family: $FONT_FAMILY_SECOND;
+		font-weight: $FONT_WEIGHT_BOLD;
+		letter-spacing: 1px;
+	}
 }
 
 h1 {
-  margin: 0;
-  margin-block: 0;
-  margin-inline: 0;
+	margin: 0;
+	margin-block: 0;
+	margin-inline: 0;
 }
 
 hr.solid {
-  width: 100%;
-  border-top: 3px solid var(--font-default-color);
+	width: 100%;
+	border-top: 3px solid var(--font-default-color);
 }
 
 button {
-  box-shadow: none !important; 
+	box-shadow: none !important;
 }

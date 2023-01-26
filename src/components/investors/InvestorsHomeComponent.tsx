@@ -31,7 +31,7 @@ export const InvestorsHomeComponent = ({ isMobile }: IComponentProps) => {
 					</span>
 					<br></br>
 					<CredixButton
-						className="cta-component--button cta-component--button--investor cta-component--button--investor-main-page"
+						className="cta-component--button--investor"
 						url={"https://app.credix.finance"}
 					>
 						Onboard as an investor

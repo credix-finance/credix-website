@@ -1,80 +1,80 @@
 .core-team-component {
-  min-height: 400px;
-  background: var(--color-background-core-team);
-  color: var(--font-default-color);
+	min-height: 400px;
+	background: var(--color-background-core-team);
+	color: var(--font-default-color);
 
-  @extend .global-padding-left-right;
+	@extend .global-padding-left-right;
 
-  @include mobile {
-    min-height: 700px;
-  }
+	@include mobile {
+		min-height: 700px;
+	}
 
-  &--core {
-    width: 70%;
+	&--core {
+		width: 80%;
 
-    @include mobile {
-      width: 100%;
-    }
-  }
+		@include mobile {
+			width: 100%;
+		}
+	}
 
-  &--title-row {
-    margin-top: 100px;
+	&--title-row {
+		margin-top: 100px;
 
-    @include mobile {
-      flex-flow: column;
-    }
-  }
+		@include mobile {
+			flex-flow: column;
+		}
+	}
 
-  &--title-column {
-    margin-bottom: 48px;
-    @include mobile {
-      width: 100%;
-      margin-bottom: 24px;
-    }
-  }
+	&--title-column {
+		margin-bottom: 48px;
+		@include mobile {
+			width: 100%;
+			margin-bottom: 24px;
+		}
+	}
 
-  &--persons-column {
-    width: 70%;
+	&--persons-column {
+		width: 80%;
 
-    @include mobile {
-      width: 100%;
-    }
-  }
+		@include mobile {
+			width: 100%;
+		}
+	}
 
-  &--who-we-are {
-    display: flex;
-    margin-top: 20px;
+	&--who-we-are {
+		display: flex;
+		margin-top: 20px;
 
-    &--line {
-      transform: translateY(-5px);
-      margin-right: $UNIT * 2;
-    }
-  }
+		&--line {
+			transform: translateY(-5px);
+			margin-right: $UNIT * 2;
+		}
+	}
 
-  &--persons {
-    flex-flow: row;
-    justify-content: space-between;
+	&--persons {
+		flex-flow: row;
+		justify-content: space-between;
 
-    @include mobile {
-      flex-flow: column;
-      margin-bottom: 20px;
-      padding-left: 0;
-      padding-right: 0;
-    }
-  }
+		@include mobile {
+			flex-flow: column;
+			margin-bottom: 20px;
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
 
-  &--advisors {
-    font-weight: $FONT_WEIGHT_BOLD;
-    &--name {
-      text-transform: uppercase;
-      margin-bottom: 10px;
-      font-family: $FONT_FAMILY_SECOND;
-    }
+	&--advisors {
+		font-weight: $FONT_WEIGHT_BOLD;
+		&--name {
+			text-transform: uppercase;
+			margin-bottom: 10px;
+			font-family: $FONT_FAMILY_SECOND;
+		}
 
-    &--description {
-      margin-bottom: 20px;
-      opacity: 70%;
-      font-family: $FONT_FAMILY_SECOND;
-    }
-  }
+		&--description {
+			margin-bottom: 20px;
+			opacity: 70%;
+			font-family: $FONT_FAMILY_SECOND;
+		}
+	}
 }
