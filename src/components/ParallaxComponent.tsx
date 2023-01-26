@@ -138,12 +138,12 @@ export const ParallaxComponent = ({
 				Read our documentation -{">"}
 			</span>
 			<br />
-			<PopupButton
-				id="Mtgs2OJ9"
-				className="credix-button--typeform parallax-component--child-scroll--button"
+			<CredixButton
+				className="cta-component--button cta-component--button--investor"
+				url={"https://share-eu1.hsforms.com/13OiNrrgQT0Gv2AF1cV52Uwfuste"}
 			>
 				Register as a borrower
-			</PopupButton>
+			</CredixButton>
 		</>
 	);
 
