@@ -74,7 +74,11 @@ export const FooterComponent = ({
 						</span>
 						<span
 							className="h-cursor-pointer footer-component--footer--link"
-							onClick={() => openInNewTab("https://angel.co/company/credix")}
+							onClick={() =>
+								openInNewTab(
+									"https://credix.notion.site/credix/EXT-Work-with-us-at-Credix-606913498d5a4f02949a641e738f9257"
+								)
+							}
 						>
 							Careers
 						</span>
