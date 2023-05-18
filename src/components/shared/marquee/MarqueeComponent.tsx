@@ -10,28 +10,40 @@ export const MarqueeComponent = () => {
 
 	useEffect(() => {
 		const fetchData = async () => {
-			const marketStatsResult = await axios.get(
+			const marketStatsFintechResult = await axios.get(
 				"https://credix-market-stats.credix.workers.dev/?cached=True"
 			);
-			const marketStatsData = marketStatsResult.data;
+			const marketStatsFintechData = marketStatsFintechResult.data;
+			const marketStatsReceivablesResult = await axios.get(
+				"https://credix-market-stats.credix.workers.dev/?market=receivables-factoring&cached=True"
+			);
+			const marketStatsReceivablesData = marketStatsReceivablesResult.data;
+
+			const TVL = marketStatsFintechData.TVL + marketStatsReceivablesData.TVL;
+			const totalOutstandingCredit =
+				marketStatsFintechData.total_outstanding_credit +
+				marketStatsReceivablesData.total_outstanding_credit;
+			const interestRepaid =
+				marketStatsFintechData.interest_repaid +
+				marketStatsReceivablesData.interest_repaid;
 
 			const formattedTvl = Intl.NumberFormat("en", {
 				notation: "compact",
 				minimumFractionDigits: 0,
 				maximumFractionDigits: 1,
-			}).format(marketStatsData.TVL);
+			}).format(TVL);
 			const formattedCreditOutstanding = Intl.NumberFormat("en", {
 				notation: "compact",
 				minimumFractionDigits: 0,
 				maximumFractionDigits: 1,
-			}).format(marketStatsData.total_outstanding_credit);
+			}).format(totalOutstandingCredit);
 			const formattedTrailingApy90d =
-				Math.round(marketStatsData["apy_90_d_trailing"] * 1000) / 1000;
+				Math.round(marketStatsFintechData["apy_90_d_trailing"] * 1000) / 1000;
 			const formattedTotalInterestRepaid = Intl.NumberFormat("en", {
 				notation: "compact",
 				minimumFractionDigits: 0,
 				maximumFractionDigits: 1,
-			}).format(marketStatsData.interest_repaid);
+			}).format(interestRepaid);
 
 			setTvl(formattedTvl);
 			setCreditOutstanding(formattedCreditOutstanding);
