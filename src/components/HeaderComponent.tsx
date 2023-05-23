@@ -86,6 +86,22 @@ export const HeaderComponent = ({
 				</Link>
 				<Link
 					className="header-component--link"
+					to={"https://share-eu1.hsforms.com/1jAAAMPCdTpOl9Sx_K_7HrAfuste"}
+					target="_blank"
+				>
+					Newsletter
+				</Link>
+				<Link
+					className="header-component--link"
+					to={
+						"https://credix.notion.site/Work-with-us-at-Credix-606913498d5a4f02949a641e738f9257"
+					}
+					target="_blank"
+				>
+					Careers
+				</Link>
+				<Link
+					className="header-component--link"
 					to={"https://docs.credix.finance"}
 					target="_blank"
 				>
