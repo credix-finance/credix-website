@@ -4,17 +4,18 @@ import { IComponentProps } from "../hooks/useComponentProps";
 // @ts-ignore
 import GradientVideo from "../assets/video/Credix_WebsiteGradientA_02.mp4";
 import { VideoComponent } from "./shared/video/VideoComponent";
+import { StaticImage } from "gatsby-plugin-image";
 import { initScrollFade, scrollFade } from "../utils/scrollfade";
 
 export const HomeComponent = ({ isMobile }: IComponentProps) => {
 	const homeText = () => (
 		<div className="h-flex-column home-component--text">
 			<h1 className="cta-block--title">
-				Credit investing
-				<br /> made global
+				New portals to <br />
+				credit investing
 			</h1>
 			<span className="cta-block--text">
-				Building the future of global credit markets
+				Opening up access to unexplored territory
 			</span>
 			<CredixButton
 				className="cta-block--button"
@@ -33,13 +34,23 @@ export const HomeComponent = ({ isMobile }: IComponentProps) => {
 			<div className="h-flex-row cta-block scrollFade h-flex-row--space-between home-component--wrapper">
 				{isMobile ? (
 					<>
-						<VideoComponent video={GradientVideo} />
+						<StaticImage
+							src={"../assets/shapes/Credix_Portal.png"}
+							alt={"Credix Portal"}
+							className="gradient"
+						/>
+						{/* <VideoComponent video={GradientVideo} /> */}
 						{homeText()}
 					</>
 				) : (
 					<>
 						{homeText()}
-						<VideoComponent video={GradientVideo} />
+						{/* <VideoComponent video={GradientVideo} /> */}
+						<StaticImage
+							src={"../assets/shapes/Credix_Portal.png"}
+							alt={"Credix Portal"}
+							className="gradient"
+						/>
 					</>
 				)}
 			</div>
