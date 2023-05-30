@@ -1,9 +1,33 @@
+.gradient-red {
+	width: 27vw;
+	height: 27vw;
+	margin-bottom: 50px;
+	overflow: hidden;
+	background-color: #f52330;
+
+	@include mobile {
+		width: 80vw;
+		height: 80vw;
+	}
+}
+
+.gradient-blue {
+	width: 27vw;
+	height: 27vw;
+	margin-bottom: 50px;
+	overflow: hidden;
+	background-color: #2777f5;
+
+	@include mobile {
+		width: 80vw;
+		height: 80vw;
+	}
+}
+
 .gradient {
 	width: 27vw;
 	height: 27vw;
 	margin-bottom: 50px;
-	background-blend-mode: hard-light;
-	animation: hue-rotate 14s linear infinite;
 	overflow: hidden;
 
 	@include mobile {
