@@ -12,120 +12,117 @@ $FONT_FAMILY_SECOND: "IBM Plex Mono", monospace;
 $COLOR_BLACK: #000;
 $COLOR_WHITE: #fff;
 $COLOR_GREY: rgb(200, 200, 200);
-$COLOR_GREY_BACKGROUND: #0B0B0B;
+$COLOR_GREY_BACKGROUND: #0b0b0b;
 $COLOR_FOOTER_BACKGROUND: #000;
-$COLOR_BLUE: #0046FA;
-$COLOR_ORANGE: #F8BB00;
-
+$COLOR_BLUE: #2777f5;
+$COLOR_ORANGE: #f52330;
 
 .dark {
-  /**
+	/**
   * Fonts Colors
   */
-  --font-default-color: #f0f0f0;
-  --font-second-color: #FFF;
+	--font-default-color: #f0f0f0;
+	--font-second-color: #fff;
 
-  /**
+	/**
   * Colors
   */
-  --color-black: #000;
-  --color-white: #FFF;
-  --color-grey-background: #18191B;
-  --color-footer-background: #050505;
+	--color-black: #000;
+	--color-white: #fff;
+	--color-grey-background: #18191b;
+	--color-footer-background: #050505;
 
-  /**
+	/**
   * Backgrounds
   */
-  --color-background-header: #000;
-  --color-background-home: #000;
-  --color-background-cta-team: #000;
-  --color-background-core-team: #000;
-  --color-background-advisors: #000;
-  --color-background-backers-borrowers: #0B0B0B;
-  --color-background-mobile: initial;
-  --color-background-borrowers-quote: #141414;
+	--color-background-header: #000;
+	--color-background-home: #000;
+	--color-background-cta-team: #000;
+	--color-background-core-team: #000;
+	--color-background-advisors: #000;
+	--color-background-backers-borrowers: #0b0b0b;
+	--color-background-mobile: initial;
+	--color-background-borrowers-quote: #141414;
 
-  /**
+	/**
   * Borders
    */
-  --color-background-cta-team-border: white;
+	--color-background-cta-team-border: white;
 
-  /**
+	/**
   * box shadow
    */
-  --box-shadow-mobile: initial;
+	--box-shadow-mobile: initial;
 
-  /**
+	/**
   * header font bold
    */
 
-  --header-text-mobile-bold: initial;
+	--header-text-mobile-bold: initial;
 
-  /**
+	/**
   * images
    */
-  --color-image-filter: invert(0%);
+	--color-image-filter: invert(0%);
 
-  /**
+	/**
   * Footer borders
    */
 
-  --color-footer-border: 1px solid white;
+	--color-footer-border: 1px solid white;
 }
 
 .light {
-  /**
+	/**
   * Fonts Colors
   */
-  --font-default-color: #202020;
-  --font-second-color: #000;
+	--font-default-color: #202020;
+	--font-second-color: #000;
 
-  /**
+	/**
   * Colors
   */
-  --color-black: #fff;
-  --color-white: #000;
-  --color-grey-background: #f1f1f1;
-  --color-footer-background: #FFF;
+	--color-black: #fff;
+	--color-white: #000;
+	--color-grey-background: #f1f1f1;
+	--color-footer-background: #fff;
 
-  /**
+	/**
   * Backgrounds
   */
-  --color-background-header: #f6f6f6;
-  --color-background-home: #f6f6f6;
-  --color-background-cta-team: #f6f6f6;
-  --color-background-core-team: #f6f6f6;
-  --color-background-advisors: #f6f6f6;
-  --color-background-backers-borrowers: #FFF;
-  --color-background-mobile: rgba(255, 255, 255, 0.8);
-  --color-background-borrowers-quote: #FFF;
+	--color-background-header: #f6f6f6;
+	--color-background-home: #f6f6f6;
+	--color-background-cta-team: #f6f6f6;
+	--color-background-core-team: #f6f6f6;
+	--color-background-advisors: #f6f6f6;
+	--color-background-backers-borrowers: #fff;
+	--color-background-mobile: rgba(255, 255, 255, 0.8);
+	--color-background-borrowers-quote: #fff;
 
-
-  /**
+	/**
 * Borders
  */
-  --color-background-cta-team-border: #0B0B0B;
+	--color-background-cta-team-border: #0b0b0b;
 
-  /**
+	/**
   * box shadow
    */
-  --box-shadow-mobile: 0 0 20px 10px rgba(255, 255, 255, 0.8);
+	--box-shadow-mobile: 0 0 20px 10px rgba(255, 255, 255, 0.8);
 
-  /**
+	/**
   * header font bold
    */
-  --header-text-mobile-bold: 700;
+	--header-text-mobile-bold: 700;
 
-
-  /**
+	/**
   * images
   */
-  --color-image-filter: invert(100%);
+	--color-image-filter: invert(100%);
 
-  /**
+	/**
   * Footer borders
   */
-  --color-footer-border: 1px solid rgba(0, 0, 0);
+	--color-footer-border: 1px solid rgba(0, 0, 0);
 }
 
 /**

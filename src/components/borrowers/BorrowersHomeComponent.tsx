@@ -6,6 +6,7 @@ import GradientVideo from "../../assets/video/Credix_GradientD_500x400_01.mp4";
 import { VideoComponent } from "../shared/video/VideoComponent";
 import { PopupButton } from "@typeform/embed-react";
 import { CredixButton } from "../shared/buttons/CredixButton";
+import { StaticImage } from "gatsby-plugin-image";
 
 export const BorrowersHomeComponent = ({
 	isMobile,
@@ -35,13 +36,13 @@ export const BorrowersHomeComponent = ({
 			<div className="h-flex-row cta-block h-flex-row--space-between home-component-borrowers--wrapper">
 				{isMobile ? (
 					<>
-						<VideoComponent video={GradientVideo} />
+						<div className="gradient-red" />
 						{homeText()}
 					</>
 				) : (
 					<>
 						{homeText()}
-						<VideoComponent video={GradientVideo} />
+						<div className="gradient-red" />
 					</>
 				)}
 			</div>

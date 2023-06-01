@@ -1,160 +1,158 @@
 .home-component {
-  background: var(--color-background-home);
-  min-height: 709px;
-  height: 80vh;
+	background: var(--color-background-home);
+	min-height: 709px;
+	height: 80vh;
 
-  @extend .global-padding-left-right;
+	@extend .global-padding-left-right;
 
-  @include mobile {
-    min-height: 400px;
-    max-height: 80vh;
-  }
+	@include mobile {
+		min-height: 400px;
+		max-height: 80vh;
+	}
 
-  &--wrapper {
-    flex-wrap: wrap-reverse;
+	&--wrapper {
+		flex-wrap: wrap-reverse;
 
-    @include mobile {
-      flex-wrap: wrap;
-    }
-  }
+		@include mobile {
+			flex-wrap: wrap;
+		}
+	}
 
-  .fade-in-section {
-    opacity: 0;
-    transform: translateY(20vh);
-    visibility: hidden;
-    transition: opacity 0.6s ease-out, transform 1.2s ease-out;
-    will-change: opacity, visibility;
-  }
+	.fade-in-section {
+		opacity: 0;
+		transform: translateY(20vh);
+		visibility: hidden;
+		transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+		will-change: opacity, visibility;
+	}
 
-  .fade-in-section.is-visible {
-    opacity: 1;
-    transform: none;
-    visibility: visible;
-  }
+	.fade-in-section.is-visible {
+		opacity: 1;
+		transform: none;
+		visibility: visible;
+	}
 
-  // &--video {
-  //   margin-left: auto;
-  //   margin-bottom: 50px;
-  //   // margin-right: -$GLOBAL_PADDING_RIGHT;
+	// &--video {
+	//   margin-left: auto;
+	//   margin-bottom: 50px;
+	//   // margin-right: -$GLOBAL_PADDING_RIGHT;
 
-  //   @include mobile {
-  //     margin-left: initial;
-  //     margin-right: $GLOBAL_PADDING_RIGHT;
-  //     width: 100%;
-  //   }
-  // }
+	//   @include mobile {
+	//     margin-left: initial;
+	//     margin-right: $GLOBAL_PADDING_RIGHT;
+	//     width: 100%;
+	//   }
+	// }
 
-  &--text {
-    @include mobile {
-      transform: translateY(-50px);
-      padding-top: 30px;
-      background-color: var(--color-background-home);
-      width: 100%;
-    }
-  }
+	&--text {
+		@include mobile {
+			transform: translateY(-50px);
+			padding-top: 30px;
+			background-color: var(--color-background-home);
+			width: 100%;
+		}
+	}
 
-  &--arrow-row {
-    justify-content: center;
-    margin-top: auto;
-    margin-bottom: 80px;
-    z-index: $Z_INDEX_ARROW;
-  }
+	&--arrow-row {
+		justify-content: center;
+		margin-top: auto;
+		margin-bottom: 80px;
+		z-index: $Z_INDEX_ARROW;
+	}
 
-  &--arrow {
-    bottom: 50px;
-    width: 20px;
-    height: 20px;
-    margin: -10px 0 0 -10px;
-    opacity: .5;
-    -webkit-transform: rotate(
-                    45deg);
-    border-left: none;
-    border-top: none;
-    border-right: 2px var(--color-white) solid;
-    border-bottom: 2px var(--color-white) solid;
+	&--arrow {
+		bottom: 50px;
+		width: 20px;
+		height: 20px;
+		margin: -10px 0 0 -10px;
+		opacity: 0.5;
+		-webkit-transform: rotate(45deg);
+		border-left: none;
+		border-top: none;
+		border-right: 2px var(--color-white) solid;
+		border-bottom: 2px var(--color-white) solid;
 
-    &::before {
-      content: "";
-      width: 20px;
-      height: 20px;
-      top: 50%;
-      margin: -10px 0 0 -10px;
-      border-left: none;
-      border-top: none;
-      border-right: 1px var(--color-white) solid;
-      border-bottom: 1px var(--color-white) solid;
-      animation-duration: 2s;
-      animation-iteration-count: infinite;
-      animation-name: arrow;
-      position: absolute;
-      left: 50%;
-    }
-  }
+		&::before {
+			content: "";
+			width: 20px;
+			height: 20px;
+			top: 50%;
+			margin: -10px 0 0 -10px;
+			border-left: none;
+			border-top: none;
+			border-right: 1px var(--color-white) solid;
+			border-bottom: 1px var(--color-white) solid;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			animation-name: arrow;
+			position: absolute;
+			left: 50%;
+		}
+	}
 
-  &--background-shape {
-    position: absolute;
-    right: 0;
-    top: 10px;
-    transform: translateY(-10px);
-    z-index: $Z_INDEX_BACKGROUND_SHAPE;
+	&--background-shape {
+		position: absolute;
+		right: 0;
+		top: 10px;
+		transform: translateY(-10px);
+		z-index: $Z_INDEX_BACKGROUND_SHAPE;
 
-    @include mobile {
-      display: none;
-    }
+		@include mobile {
+			display: none;
+		}
 
-    &--mobile {
-      position: absolute !important;
-      width: 100%;
-      align-self: center;
-      top: 30px;
-      display: initial;
-      height: 80%;
-    }
-  }
+		&--mobile {
+			position: absolute !important;
+			width: 100%;
+			align-self: center;
+			top: 30px;
+			display: initial;
+			height: 80%;
+		}
+	}
 }
 
-
 .cta-block {
-  margin-top: 88px;
-  z-index: $Z_INDEX_NORMAL;
+	margin-top: 88px;
+	z-index: $Z_INDEX_NORMAL;
 
-  @include mobile {
-    margin-top: 0;
-  }
+	@include mobile {
+		margin-top: 0;
+	}
 
-  &--title {
-    font-size: $FONT_SIZE_XLARGE;
-    font-weight: bold;
-    line-height: $LINE_HEIGHT_XXLARGE;
-    color: var(--font-default-color);
+	&--title {
+		font-size: $FONT_SIZE_XLARGE;
+		font-weight: bold;
+		line-height: $LINE_HEIGHT_XXLARGE;
+		color: var(--font-default-color);
 
-    @include mobile {
-      font-size: $FONT_SIZE_XSLARGE;
-      line-height: $LINE_HEIGHT_XNORMAL;
-    }
-  }
+		@include mobile {
+			font-size: $FONT_SIZE_XSLARGE;
+			line-height: $LINE_HEIGHT_XNORMAL;
+		}
+	}
 
-  &--text {
-    max-width: 556px;
-    font-size: $FONT_SIZE_XNORMAL;
-    font-weight: $FONT_WEIGHT_NORMAL;
-    line-height: $LINE_HEIGHT_NORMAL;
-    color: var(--font-default-color);
+	&--text {
+		max-width: 556px;
+		font-size: $FONT_SIZE_XNORMAL;
+		font-weight: $FONT_WEIGHT_NORMAL;
+		line-height: $LINE_HEIGHT_NORMAL;
+		color: var(--font-default-color);
 
-    @extend .font-second;
-    @extend .h-margin-top;
+		@extend .font-second;
+		@extend .h-margin-top;
 
-    @include mobile {
-      font-size: $FONT_SIZE_SMALL;
-      line-height: $LINE_HEIGHT_SMALL;
-      font-weight: var(--header-text-mobile-bold);
-      border-radius: 10px
-    }
-  }
+		@include mobile {
+			font-size: $FONT_SIZE_SMALL;
+			line-height: $LINE_HEIGHT_SMALL;
+			font-weight: var(--header-text-mobile-bold);
+			border-radius: 10px;
+		}
+	}
 
-  &--button.MuiButton-root {
-    width: $BUTTON_WIDTH_LARGE;
+	&--button.MuiButton-root {
+		width: $BUTTON_WIDTH_LARGE;
 
-    @extend .h-margin-top--triple;
-  }
+		@extend .h-margin-top--triple;
+	}
 }
