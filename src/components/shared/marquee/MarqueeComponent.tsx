@@ -24,7 +24,10 @@ export const MarqueeComponent = () => {
 			);
 			const marketStatsVariantData = marketStatsVariantResult.data;
 
-			const TVL = marketStatsFintechData.TVL + marketStatsReceivablesData.TVL;
+			const TVL =
+				marketStatsFintechData.TVL +
+				marketStatsReceivablesData.TVL +
+				marketStatsVariantData.TVL;
 			const totalOutstandingCredit =
 				marketStatsFintechData.total_outstanding_credit +
 				marketStatsReceivablesData.total_outstanding_credit +
