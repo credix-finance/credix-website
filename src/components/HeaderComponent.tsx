@@ -84,13 +84,13 @@ export const HeaderComponent = ({
 				>
 					Blog
 				</Link>
-				<Link
+				{/* <Link
 					className="header-component--link"
 					to={"https://share-eu1.hsforms.com/1jAAAMPCdTpOl9Sx_K_7HrAfuste"}
 					target="_blank"
 				>
 					Newsletter
-				</Link>
+				</Link> */}
 				<Link
 					className="header-component--link"
 					to={
@@ -99,6 +99,15 @@ export const HeaderComponent = ({
 					target="_blank"
 				>
 					Careers
+				</Link>
+				<Link
+					className="header-component--link"
+					to={
+						"https://www.notion.so/credix/Get-to-Know-Credix-An-Exclusive-Look-Behind-the-Scenes-283c454a02c747869e137886e229d4b3?pvs=4"
+					}
+					target="_blank"
+				>
+					Career day
 				</Link>
 				<Link
 					className="header-component--link"
