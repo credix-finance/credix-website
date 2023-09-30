@@ -19,13 +19,20 @@ export const MarqueeComponent = () => {
 			);
 			const marketStatsReceivablesData = marketStatsReceivablesResult.data;
 
+			const marketStatsVariantResult = await axios.get(
+				"https://credix-market-stats.credix.workers.dev/?market=variant&cached=True"
+			);
+			const marketStatsVariantData = marketStatsVariantResult.data;
+
 			const TVL = marketStatsFintechData.TVL + marketStatsReceivablesData.TVL;
 			const totalOutstandingCredit =
 				marketStatsFintechData.total_outstanding_credit +
-				marketStatsReceivablesData.total_outstanding_credit;
+				marketStatsReceivablesData.total_outstanding_credit +
+				marketStatsVariantData.total_outstanding_credit;
 			const interestRepaid =
 				marketStatsFintechData.interest_repaid +
-				marketStatsReceivablesData.interest_repaid;
+				marketStatsReceivablesData.interest_repaid +
+				marketStatsVariantData.interest_repaid;
 
 			const formattedTvl = Intl.NumberFormat("en", {
 				notation: "compact",
