@@ -5,7 +5,7 @@ import axios from "axios";
 export const MarqueeComponent = () => {
 	const [tvl, setTvl] = useState("");
 	const [creditOutstanding, setCreditOutstanding] = useState();
-	const [trailingApy90d, setTrailingApy90d] = useState();
+	// const [trailingApy90d, setTrailingApy90d] = useState();
 	const [totalInterestRepaid, setTotalInterestRepaid] = useState();
 
 	useEffect(() => {
@@ -47,8 +47,8 @@ export const MarqueeComponent = () => {
 				minimumFractionDigits: 0,
 				maximumFractionDigits: 1,
 			}).format(totalOutstandingCredit);
-			const formattedTrailingApy90d =
-				Math.round(marketStatsFintechData["apy_90_d_trailing"] * 1000) / 1000;
+			// const formattedTrailingApy90d =
+			// 	Math.round(marketStatsFintechData["apy_90_d_trailing"] * 1000) / 1000;
 			const formattedTotalInterestRepaid = Intl.NumberFormat("en", {
 				notation: "compact",
 				minimumFractionDigits: 0,
@@ -57,7 +57,7 @@ export const MarqueeComponent = () => {
 
 			setTvl(formattedTvl);
 			setCreditOutstanding(formattedCreditOutstanding);
-			setTrailingApy90d(formattedTrailingApy90d);
+			// setTrailingApy90d(formattedTrailingApy90d);
 			setTotalInterestRepaid(formattedTotalInterestRepaid);
 		};
 		fetchData();
@@ -76,7 +76,7 @@ export const MarqueeComponent = () => {
 				Interest Repaid:
 				<b> {totalInterestRepaid ? `${totalInterestRepaid} USDC` : "..."}</b>
 			</span>
-			<span style={{ marginLeft: "64px" }}>
+			{/* <span style={{ marginLeft: "64px" }}>
 				90d Trailing APY:
 				<b>
 					{" "}
@@ -84,7 +84,7 @@ export const MarqueeComponent = () => {
 						? `${Math.round(trailingApy90d * 1000) / 10} %`
 						: "..."}
 				</b>
-			</span>
+			</span> */}
 			<span style={{ marginLeft: "64px" }}>
 				TVL:<b> {tvl ? `${tvl} USDC` : "..."}</b>
 			</span>
@@ -96,7 +96,7 @@ export const MarqueeComponent = () => {
 				Interest Repaid:
 				<b> {totalInterestRepaid ? `${totalInterestRepaid} USDC` : "..."}</b>
 			</span>
-			<span style={{ marginLeft: "64px" }}>
+			{/* <span style={{ marginLeft: "64px" }}>
 				90d Trailing APY:
 				<b>
 					{" "}
@@ -104,7 +104,7 @@ export const MarqueeComponent = () => {
 						? `${Math.round(trailingApy90d * 1000) / 10} %`
 						: "..."}
 				</b>
-			</span>
+			</span> */}
 		</Marquee>
 	);
 };
