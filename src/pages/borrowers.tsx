@@ -124,10 +124,10 @@ const BorrowersPage = () => {
 						isTablet={!!width && width < tabletWidth}
 					/>
 					<BorrowersCTAComponent />
-					<Quotes
+					{/* <Quotes
 						isTablet={!!width && width < tabletWidth}
 						isLightTheme={isLightTheme}
-					/>
+					/> */}
 					<BorrowersCTARegisterComponent
 						isMobile={!!width && width < mobileWidth}
 					/>
