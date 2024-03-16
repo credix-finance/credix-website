@@ -31,7 +31,8 @@ export const HomeComponent = ({ isMobile }: IComponentProps) => {
 
 	return (
 		<div className="h-flex-column home-component">
-			<div className="h-flex-row cta-block scrollFade h-flex-row--space-between home-component--wrapper">
+			<div className="h-flex-row cta-block h-flex-row--space-between home-component--wrapper">
+				{/* <div className="h-flex-row cta-block scrollFade h-flex-row--space-between home-component--wrapper"></div> */}
 				{isMobile ? (
 					<>
 						<StaticImage

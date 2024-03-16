@@ -49,6 +49,13 @@ export const HeaderComponent = ({
 	const headerLinks = () => {
 		return (
 			<>
+				<Link
+					className="header-component--link"
+					to={"https://credipay.credix.finance/"}
+					target="_blank"
+				>
+					CrediPay
+				</Link>
 				<div
 					className="header-component--link"
 					style={{
@@ -99,15 +106,6 @@ export const HeaderComponent = ({
 					target="_blank"
 				>
 					Careers
-				</Link>
-				<Link
-					className="header-component--link"
-					to={
-						"https://www.notion.so/credix/Get-to-Know-Credix-An-Exclusive-Look-Behind-the-Scenes-283c454a02c747869e137886e229d4b3?pvs=4"
-					}
-					target="_blank"
-				>
-					Career day
 				</Link>
 				<Link
 					className="header-component--link"

@@ -1,68 +1,68 @@
 .cta-team-component {
-  min-height: 350px;
-  background: var(--color-background-cta-team);
-  color: var(--font-default-color);
+	min-height: 350px;
+	background: var(--color-background-cta-team);
+	color: var(--font-default-color);
 
-  padding-left: $GLOBAL_PADDING_LEFT;
-  padding-right: $GLOBAL_PADDING_RIGHT;
+	padding-left: $GLOBAL_PADDING_LEFT;
+	padding-right: $GLOBAL_PADDING_RIGHT;
 
-  @include mobile {
-    padding-left: $GLOBAL_PADDING_MOBILE_LEFT;
-    padding-right: $GLOBAL_PADDING_MOBILE_RIGHT;
-  }
+	@include mobile {
+		padding-left: $GLOBAL_PADDING_MOBILE_LEFT;
+		padding-right: $GLOBAL_PADDING_MOBILE_RIGHT;
+	}
 
-  &--row {
-    margin-top: 80px;
-    border: 1px solid var(--color-background-cta-team-border);
-    padding: 45px;
-    @include mobile {
-      flex-flow: column;
-      padding: 25px;
-    }
-  }
+	&--row {
+		margin-top: 80px;
+		border: 1px solid var(--color-background-cta-team-border);
+		padding: 45px;
+		@include mobile {
+			flex-flow: column;
+			padding: 25px;
+		}
+	}
 
-  &--title {
-    font-weight: $FONT_WEIGHT_BOLD;
-    font-size: $FONT_SIZE_SLARGE;
-    line-height: $LINE_HEIGHT_LARGE;
+	&--title {
+		font-weight: $FONT_WEIGHT_BOLD;
+		font-size: $FONT_SIZE_SLARGE;
+		// line-height: $LINE_HEIGHT_LARGE;
 
-    @include mobile {
-      font-size: $FONT_SIZE_XNORMAL;
-      letter-spacing: 1px;
-    }
-  }
+		@include mobile {
+			font-size: $FONT_SIZE_XNORMAL;
+			letter-spacing: 1px;
+		}
+	}
 
-  &--text {
-    margin-top: 15px;
-    font-size: $FONT_SIZE_NORMAL;
-    font-family: $FONT_FAMILY_SECOND;
-    line-height: $LINE_HEIGHT_SNORMAL;
+	&--text {
+		margin-top: 15px;
+		font-size: $FONT_SIZE_NORMAL;
+		font-family: $FONT_FAMILY_SECOND;
+		line-height: $LINE_HEIGHT_SNORMAL;
 
-    @include mobile {
-      font-size: $FONT_SIZE_SMALL;
-      line-height: $LINE_HEIGHT_SMALL;
-      letter-spacing: -.5px;
-    }
-  }
+		@include mobile {
+			font-size: $FONT_SIZE_SMALL;
+			line-height: $LINE_HEIGHT_SMALL;
+			letter-spacing: -0.5px;
+		}
+	}
 
-  &--button-column {
-    align-self: center;
+	&--button-column {
+		align-self: center;
 
-    @include tablet {
-      margin-top: $UNIT * 3;
-    }
+		@include tablet {
+			margin-top: $UNIT * 3;
+		}
 
-    @include mobile {
-      align-self: flex-start;
-      width: 100%;
-    }
-  }
+		@include mobile {
+			align-self: flex-start;
+			width: 100%;
+		}
+	}
 
-  &--button.MuiButton-root {
-    width: 180px;
+	&--button.MuiButton-root {
+		width: 180px;
 
-    @include mobile {
-      width: 100%;
-    }
-  }
+		@include mobile {
+			width: 100%;
+		}
+	}
 }
