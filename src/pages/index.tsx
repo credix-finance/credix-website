@@ -3,6 +3,7 @@ import "../theme/index.scss";
 import { HomeComponent } from "../components/HomeComponent";
 import { HeaderComponent } from "../components/HeaderComponent";
 import { CTATeamComponent } from "../components/CTATeamComponent";
+import { CTACredipayComponent } from "../components/CTACredipayComponent";
 import { CoreTeamComponent } from "../components/CoreTeamComponent";
 import { FooterComponent } from "../components/FooterComponent";
 import Helmet from "react-helmet";
@@ -119,6 +120,7 @@ const IndexPage = () => {
 							setLightTheme={setLightTheme}
 						/>
 						<HomeComponent isMobile={!!width && width < mobileWidth} />
+						<CTACredipayComponent isMobile={!!width && width < mobileWidth} />
 						<ParallaxComponent
 							isMobile={!!width && width < mobileWidth}
 							isLightTheme={isLightTheme}

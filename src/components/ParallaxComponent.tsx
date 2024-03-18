@@ -78,17 +78,15 @@ export const ParallaxComponent = ({
 
 	const visionComponent = () => (
 		<>
-			<span className="parallax-component--child-scroll--title">
-				Vision & Mission
-			</span>
+			<span className="parallax-component--child-scroll--title">Mission</span>
 			<hr className="solid" />
 			<span className="parallax-component--child-scroll--text">
-				<b>Building the future of global credit markets</b>
+				<b>Growing Businesses in Latin America</b>
 				<br />
 				<br />
-				Connecting institutional investors globally with credit opportunities -
-				Unlocking risk-adjusted returns through robust underwriting - Building
-				on the most advanced decentralized technologies to achieve scale
+				Advance the state of the art in building credit infrastructure - Enable
+				and grow B2B internet-enabled commerce - Accelerate globalization and
+				GDP growth in Brazil
 			</span>
 		</>
 	);
