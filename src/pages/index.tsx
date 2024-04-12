@@ -129,7 +129,7 @@ const IndexPage = () => {
 							isLightTheme={isLightTheme}
 						/>
 						{/* <BackersBorrowersComponent /> */}
-						<InvestorsList />
+						<InvestorsList isLightTheme={isLightTheme} />
 						{/* <CoreTeamComponent isLightTheme={isLightTheme} /> */}
 						<CTATeamComponent />
 						{/* <CTAHomeComponent /> */}
