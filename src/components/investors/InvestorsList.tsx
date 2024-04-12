@@ -10,12 +10,12 @@ export const InvestorsList = ({ isMobile, isLightTheme }: IComponentProps) => (
 	<>
 		<div className="h-flex-column investors-list-component">
 			<div className="h-flex-row h-flex-row--space-between investors-list-component--title-row">
-				<span className="sub-title">Investors</span>
+				<span className="sub-title">Backed by</span>
 			</div>
 			{
 				<div className="h-flex-row  investors-list-component--logo-row">
 					<a target="_blank">
-						{isLightTheme ? (
+						{!isLightTheme ? (
 							<StaticImage
 								src={"../../assets/logos/parafi_light.png"}
 								alt={"parafi"}
@@ -30,7 +30,7 @@ export const InvestorsList = ({ isMobile, isLightTheme }: IComponentProps) => (
 						)}
 					</a>
 					<a target="_blank">
-						{isLightTheme ? (
+						{!isLightTheme ? (
 							<StaticImage
 								src={"../../assets/logos/cumberland_light.png"}
 								alt={"cumberland"}
@@ -44,8 +44,8 @@ export const InvestorsList = ({ isMobile, isLightTheme }: IComponentProps) => (
 							/>
 						)}
 					</a>
-					<a target="_blank">
-						{isLightTheme ? (
+					{/* <a target="_blank">
+						{!isLightTheme ? (
 							<StaticImage
 								src={"../../assets/logos/mgnr_light.png"}
 								alt={"mgnr"}
@@ -58,9 +58,9 @@ export const InvestorsList = ({ isMobile, isLightTheme }: IComponentProps) => (
 								className="backed-by-component--logo"
 							/>
 						)}
-					</a>
-					<a target="_blank">
-						{isLightTheme ? (
+					</a> */}
+					{/* <a target="_blank">
+						{!isLightTheme ? (
 							<StaticImage
 								src={"../../assets/logos/rockaway_light.png"}
 								alt={"rockaway"}
@@ -73,9 +73,9 @@ export const InvestorsList = ({ isMobile, isLightTheme }: IComponentProps) => (
 								className="backed-by-component--logo"
 							/>
 						)}
-					</a>
-					<a target="_blank">
-						{isLightTheme ? (
+					</a> */}
+					{/* <a target="_blank">
+						{!isLightTheme ? (
 							<StaticImage
 								src={"../../assets/logos/arca_light.png"}
 								alt={"arca"}
@@ -88,9 +88,9 @@ export const InvestorsList = ({ isMobile, isLightTheme }: IComponentProps) => (
 								className="backed-by-component--logo"
 							/>
 						)}
-					</a>
+					</a> */}
 					<a target="_blank">
-						{isLightTheme ? (
+						{!isLightTheme ? (
 							<StaticImage
 								src={"../../assets/logos/fuse_light.png"}
 								alt={"fuse"}
@@ -104,8 +104,8 @@ export const InvestorsList = ({ isMobile, isLightTheme }: IComponentProps) => (
 							/>
 						)}
 					</a>
-					<a target="_blank">
-						{isLightTheme ? (
+					{/* <a target="_blank">
+						{!isLightTheme ? (
 							<StaticImage
 								src={"../../assets/logos/mudrex_light.png"}
 								alt={"mudrex"}
@@ -118,11 +118,11 @@ export const InvestorsList = ({ isMobile, isLightTheme }: IComponentProps) => (
 								className="backed-by-component--logo"
 							/>
 						)}
-					</a>
+					</a> */}
 				</div>
 			}
 		</div>
-		<div className="h-flex-row h-flex-row--space-between h-flex-row--align-center investors-list-component--cta-banner">
+		{/* <div className="h-flex-row h-flex-row--space-between h-flex-row--align-center investors-list-component--cta-banner">
 			<div className="investors-list-component--cta-banner--title">
 				{isMobile ? <CTADividerSmall /> : <CTADivider />}
 				<span>Invest in the future of credit markets</span>
@@ -133,6 +133,6 @@ export const InvestorsList = ({ isMobile, isLightTheme }: IComponentProps) => (
 			>
 				Onboard as an investor
 			</CredixButton>
-		</div>
+		</div> */}
 	</>
 );

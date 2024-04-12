@@ -78,31 +78,34 @@ export const ParallaxComponent = ({
 
 	const visionComponent = () => (
 		<>
-			<span className="parallax-component--child-scroll--title">Mission</span>
-			<hr className="solid" />
-			<span className="parallax-component--child-scroll--text">
-				<b>Growing Businesses in Latin America</b>
-				<br />
-				<br />
-				Advance the state of the art in building credit infrastructure - Enable
-				and grow B2B internet-enabled commerce - Accelerate globalization and
-				GDP growth in Brazil
-			</span>
+			<div className="parallax-component-item">
+				<span className="parallax-component--child-scroll--title">
+					Credit & Capital Markets Infrastructure
+				</span>
+				<hr className="solid" />
+				<span className="parallax-component--child-scroll--text">
+					Our next-generation platform, featuring AI and Blockchain, offers
+					flexible embedded financing options. We allow SMEs to pay on their own
+					terms while merchants are paid out right away
+				</span>
+			</div>
 		</>
 	);
 
 	const investorsComponent = () => (
 		<>
-			<span className="parallax-component--child-scroll--title">
-				For Investors
-			</span>
-			<hr className="solid" />
-			<span className="parallax-component--child-scroll--text">
-				Institutional investors like hedge funds, family offices, and
-				alternative asset managers are accessing Credix to enhance returns and
-				diversify risk.
-			</span>
-			<span
+			<div className="parallax-component-item">
+				<span className="parallax-component--child-scroll--title">
+					Consumer Grade Experience
+				</span>
+				<hr className="solid" />
+				<span className="parallax-component--child-scroll--text">
+					We offer a top-notch user experience and next-level customer
+					engagement. Our underwriting is instant, integration is seamless, and
+					capital settles in real-time.
+				</span>
+			</div>
+			{/* <span
 				className="parallax-component--child-scroll--cta-link"
 				onClick={() => openInNewTab("https://docs.credix.finance/")}
 			>
@@ -114,7 +117,7 @@ export const ParallaxComponent = ({
 				url={"https://app.credix.finance"}
 			>
 				Onboard as an investor
-			</CredixButton>
+			</CredixButton> */}
 		</>
 	);
 
@@ -151,11 +154,11 @@ export const ParallaxComponent = ({
 				<div className="h-flex-column parallax-component--mobile">
 					{visionComponent()}
 					{investorsComponent()}
-					{borrowerComponent()}
+					{/* {borrowerComponent()} */}
 				</div>
 			) : (
 				<div
-					className="parallax-component--wrapper h-flex-row"
+					className="parallax-component--wrapper"
 					style={{
 						transform: `translateY(${
 							scrollY > 400 ? ((scrollY - 400) * 100) / (1500 - 400) : 0
@@ -170,9 +173,9 @@ export const ParallaxComponent = ({
 						<span className="parallax-component--spacing" />
 						{investorsComponent()}
 						<span className="parallax-component--spacing" />
-						{borrowerComponent()}
+						{/* {borrowerComponent()} */}
 					</Parallax>
-					<div className="parallax-component--image-scroll h-flex-column">
+					{/* <div className="parallax-component--image-scroll h-flex-column">
 						<div
 							className="parallax-component--image-overlap"
 							style={firstImageStyle()}
@@ -221,7 +224,7 @@ export const ParallaxComponent = ({
 								/>
 							)}
 						</div>
-					</div>
+					</div> */}
 				</div>
 			)}
 		</div>

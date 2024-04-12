@@ -7,7 +7,7 @@ export const CTAHomeComponent = () => {
 		<div className="h-flex-column cta-component">
 			<div className="h-flex-row">
 				<span className="cta-component--title">
-					Become part of the future <br /> of private credit markets
+					Become part of the future <br /> of credit
 				</span>
 			</div>
 			<div className="h-flex-row h-margin-top-50">

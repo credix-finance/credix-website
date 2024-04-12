@@ -11,18 +11,19 @@ export const HomeComponent = ({ isMobile }: IComponentProps) => {
 	const homeText = () => (
 		<div className="h-flex-column home-component--text">
 			<h1 className="cta-block--title">
-				New portals to <br />
-				credit investing
+				We are the <br />
+				next generation <br />
+				credit network
 			</h1>
 			<span className="cta-block--text">
-				Opening up access to unexplored territory
+				Growing businesses in Latin America
 			</span>
-			<CredixButton
+			{/* <CredixButton
 				className="cta-block--button"
 				url={"https://app.credix.finance/"}
 			>
 				Investment opportunities
-			</CredixButton>
+			</CredixButton> */}
 		</div>
 	);
 
@@ -31,7 +32,7 @@ export const HomeComponent = ({ isMobile }: IComponentProps) => {
 
 	return (
 		<div className="h-flex-column home-component">
-			<div className="h-flex-row cta-block h-flex-row--space-between home-component--wrapper">
+			<div className="h-flex-row cta-block h-flex-row--align-center h-flex-row--space-between home-component--wrapper">
 				{/* <div className="h-flex-row cta-block scrollFade h-flex-row--space-between home-component--wrapper"></div> */}
 				{isMobile ? (
 					<>

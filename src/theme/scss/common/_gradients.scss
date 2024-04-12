@@ -25,13 +25,13 @@
 }
 
 .gradient {
-	width: 27vw;
-	height: 27vw;
-	margin-bottom: 50px;
+	width: 24vw;
+	height: 24vw;
 	overflow: hidden;
 
 	@include mobile {
-		width: 80vw;
-		height: 80vw;
+		width: 30vh;
+		height: 30vh;
+		margin-bottom: 50px;
 	}
 }

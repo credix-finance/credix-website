@@ -1,156 +1,156 @@
 .h-flex-column {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 
-  &--align-end {
-    align-items: flex-end;
-  }
+	&--align-end {
+		align-items: flex-end;
+	}
 
-  &--align-start {
-    align-items: flex-start;
-  }
+	&--align-start {
+		align-items: flex-start;
+	}
 
-  &--align-center {
-    align-items: center;
-  }
+	&--align-center {
+		align-items: center;
+	}
 
-  &--align-self-center {
-    align-self: center;
-  }
+	&--align-self-center {
+		align-self: center;
+	}
 
-  &--justify-center {
-    justify-content: center;
-  }
+	&--justify-center {
+		justify-content: center !important;
+	}
 
-  &--justify-space-between {
-    justify-content: space-between;
-  }
+	&--justify-space-between {
+		justify-content: space-between;
+	}
 
-  &--justify-end {
-    justify-content: flex-end;
-  }
+	&--justify-end {
+		justify-content: flex-end;
+	}
 }
 
 .h-flex-row {
-  display: flex;
-  flex-direction: row;
-  flex-flow: row wrap;
+	display: flex;
+	flex-direction: row;
+	flex-flow: row wrap;
 
-  &--no-wrap {
-    flex-flow: row;
-  }
+	&--no-wrap {
+		flex-flow: row;
+	}
 
-  &--wrap-reverse {
-    flex-wrap: wrap-reverse;
-  }
+	&--wrap-reverse {
+		flex-wrap: wrap-reverse;
+	}
 
-  &--align-center {
-    align-items: center;
-  }
+	&--align-center {
+		align-items: center;
+	}
 
-  &--align-start {
-    align-items: flex-start;
-  }
+	&--align-start {
+		align-items: flex-start;
+	}
 
-  &--align-end {
-    align-items: flex-end;
-  }
+	&--align-end {
+		align-items: flex-end;
+	}
 
-  &--align-end-flex {
-    align-items: end;
-  }
+	&--align-end-flex {
+		align-items: end;
+	}
 
-  &--align-baseline {
-    align-items: baseline;
-  }
+	&--align-baseline {
+		align-items: baseline;
+	}
 
-  &--justify-end {
-    justify-content: flex-end;
-  }
+	&--justify-end {
+		justify-content: flex-end;
+	}
 
-  &--justify-center {
-    justify-content: center;
-  }
+	&--justify-center {
+		justify-content: center;
+	}
 
-  &--space-between {
-    justify-content: space-between;
-  }
+	&--space-between {
+		justify-content: space-between;
+	}
 
-  &--space-around {
-    justify-content: space-around;
-  }
+	&--space-around {
+		justify-content: space-around;
+	}
 
-  &--space-evenly {
-    justify-content: space-evenly;
-  }
+	&--space-evenly {
+		justify-content: space-evenly;
+	}
 }
 
 .h-margin {
-  margin: $UNIT;
+	margin: $UNIT;
 }
 
 .h-margin-bottom {
-  margin-bottom: $UNIT;
+	margin-bottom: $UNIT;
 
-  &--double {
-    margin-bottom: $UNIT * 2;
-  }
+	&--double {
+		margin-bottom: $UNIT * 2;
+	}
 }
 
 .h-margin-top {
-  margin-top: $UNIT;
+	margin-top: $UNIT;
 
-  &--auto {
-    margin-top: auto;
-  }
+	&--auto {
+		margin-top: auto;
+	}
 
-  &--double {
-    margin-top: $UNIT * 2;
-  }
+	&--double {
+		margin-top: $UNIT * 2;
+	}
 
-  &--triple {
-    margin-top: $UNIT * 3;
-  }
+	&--triple {
+		margin-top: $UNIT * 3;
+	}
 }
 
 .h-full-width {
-  width: 100%;
+	width: 100%;
 }
 
 .h-width-30 {
-  width: 30%;
+	width: 30%;
 }
 
 .h-cursor-pointer {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 /**
 * Material UI overrides
  */
 
-.h-background-color-black{
-  .MuiPaper-root {
-    background-color: black;
-  }
-  .MuiButton-root {
-    background-color: white !important;
-  }
+.h-background-color-black {
+	.MuiPaper-root {
+		background-color: black;
+	}
+	.MuiButton-root {
+		background-color: white !important;
+	}
 }
 
-.h-background-color-white{
-  .MuiPaper-root {
-    background-color: white;
-  }
-  .MuiButton-root {
-    background-color: black !important;
-  }
+.h-background-color-white {
+	.MuiPaper-root {
+		background-color: white;
+	}
+	.MuiButton-root {
+		background-color: black !important;
+	}
 }
 
-.h-color-black{
-  color: black !important;
+.h-color-black {
+	color: black !important;
 }
 
-.h-color-white{
-  color: white !important;
+.h-color-white {
+	color: white !important;
 }
