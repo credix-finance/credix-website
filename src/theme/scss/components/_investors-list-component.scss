@@ -57,9 +57,11 @@
 
 	&--logo-row {
 		margin-top: 50px;
+
 		align-items: center;
+		justify-content: space-between;
 		@include mobile {
-			margin-top: 70px;
+			margin-top: 0px;
 			flex-direction: column;
 		}
 
