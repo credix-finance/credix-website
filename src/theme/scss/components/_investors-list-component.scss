@@ -1,94 +1,100 @@
 .investors-list-component {
-  background: var(--color-background-home);
-  min-height: 400px;
+	background: var(--color-background-home-inverse);
+	min-height: 400px;
 
-  @extend .global-padding-left-right;
+	.sub-title {
+		color: var(--font-default-color-inverse) !important;
+	}
 
-  @include mobile {
-    min-height: 600px;
-    padding-top: $UNIT * 8;
-  }
+	@extend .global-padding-left-right;
 
-  &--cta-banner {
-    min-height: 300px;
-    background: var(--color-white);
-    color: var(--color-black);
+	@include mobile {
+		min-height: 600px;
+		padding-top: $UNIT * 8;
+	}
 
-    @extend .global-padding-left-right;
+	&--cta-banner {
+		min-height: 300px;
+		background: var(--color-white);
+		color: var(--color-black);
 
-    .cta-component-investors--button {
-      background-color: var(--color-black);
-      color: var(--color-white);
+		@extend .global-padding-left-right;
 
-      &:hover {
-        color: var(--color-black);
-        background-color: var(--color-white);
-        border: 1px solid var(--color-black);
-      }
-    }
+		.cta-component-investors--button {
+			background-color: var(--color-black);
+			color: var(--color-white);
 
-    &--title {
-      font-family: $FONT_FAMILY;
-      font-weight: $FONT_WEIGHT_XXNORMAL;
-      font-size: $FONT_SIZE_SLARGE;
-      line-height: $LINE_HEIGHT_XNORMAL;
+			&:hover {
+				color: var(--color-black);
+				background-color: var(--color-white);
+				border: 1px solid var(--color-black);
+			}
+		}
 
-      @include mobile {
-        width: 300px;
-        margin-top: $UNIT * 4;
-      }
-    }
-  }
+		&--title {
+			font-family: $FONT_FAMILY;
+			font-weight: $FONT_WEIGHT_XXNORMAL;
+			font-size: $FONT_SIZE_SLARGE;
+			line-height: $LINE_HEIGHT_XNORMAL;
 
-  &--title-row {
-    margin-top: 50px;
-  }
+			@include mobile {
+				width: 300px;
+				margin-top: $UNIT * 4;
+			}
+		}
+	}
 
-  &--logo-column {
-    @include tablet {
-      margin-top: 20px;
-      flex-basis: 40%;
-    }
-  }
+	&--title-row {
+		margin-top: 50px;
+	}
 
-  &--logo-row {
-    margin-top: 50px;
-    align-items: center;
-    @include mobile {
-      margin-top: 70px;
-      flex-direction: column;
-    }
+	&--logo-column {
+		@include tablet {
+			margin-top: 20px;
+			flex-basis: 40%;
+		}
+	}
 
-    a {
-      display: flex;
-      pointer-events: none;
-    }
-  }
+	&--logo-row {
+		margin-top: 50px;
 
-  &--logo {
-    height: 50px !important;
-    margin: 40px 40px 100px;
+		align-items: center;
+		justify-content: space-between;
+		@include mobile {
+			margin-top: 0px;
+			flex-direction: column;
+		}
 
-    img {
-      height: 50px !important;
-      width: auto !important;
-    }
+		a {
+			display: flex;
+			pointer-events: none;
+		}
+	}
 
-    @include mobile {
-      margin-bottom: 70px;
-      height: 30px !important;
-      img {
-        height: 30px !important;
-      }
-    }
-  }
+	&--logo {
+		height: 50px !important;
+		margin: 40px 40px 100px;
 
-  &--button.MuiButton-root {
-    width: 330px;
+		img {
+			height: 50px !important;
+			width: auto !important;
+		}
 
-    @include mobile {
-      margin-top: $UNIT * 4;
-      margin-bottom: $UNIT * 4;
-    }
-  }
+		@include mobile {
+			margin-bottom: 70px;
+			height: 30px !important;
+			img {
+				height: 30px !important;
+			}
+		}
+	}
+
+	&--button.MuiButton-root {
+		width: 330px;
+
+		@include mobile {
+			margin-top: $UNIT * 4;
+			margin-bottom: $UNIT * 4;
+		}
+	}
 }

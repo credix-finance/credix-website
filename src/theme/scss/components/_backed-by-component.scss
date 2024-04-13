@@ -1,52 +1,67 @@
 .backed-by-component {
-  background-color: var(--color-black);
-  min-height: 665px;
+	background-color: var(--color-black);
+	min-height: 665px;
 
-  @extend .global-padding-left-right;
+	@extend .global-padding-left-right;
 
-  @include mobile {
-    min-height: 400px;
-  }
+	@include mobile {
+		min-height: 400px;
+	}
 
-  &--title-row {
-    margin-top: 100px;
-  }
+	&--title-row {
+		margin-top: 100px;
+	}
 
-  &--logo-column {
-    @include tablet {
-      margin-top: 20px;
-      flex-basis: 40%;
-    }
-  }
+	&--logo-column {
+		@include tablet {
+			margin-top: 20px;
+			flex-basis: 40%;
+		}
+	}
 
-  &--logo-row {
-    margin-top: 100px;
-    align-items: center;
-    @include mobile {
-      margin-top: 70px;
-      flex-direction: column;
-    }
+	&--logo-row {
+		margin-top: 100px;
+		align-items: center;
+		@include mobile {
+			margin-top: 70px;
+			flex-direction: column;
+		}
 
-    a {
-      display: flex;
-    }
-  }
+		a {
+			display: flex;
+		}
+	}
 
-  &--logo {
-    height: 50px !important;
-    margin: 40px;
-    margin-bottom: 100px;
-    img {
-      height: 50px !important;
-      width: auto !important;
-    }
+	&--logo-big {
+		height: 75px !important;
+		margin: 40px;
+		margin-bottom: 100px;
+		img {
+			height: 75px !important;
+			width: auto !important;
+		}
 
-    @include mobile {
-      margin-bottom: 70px;
-      height: 30px !important;
-      img {
-        height: 30px !important;
-      }
-    }
-  }
+		@include mobile {
+			margin-top: 70px;
+			margin-bottom: 70px;
+		}
+	}
+
+	&--logo {
+		height: 50px !important;
+		margin: 40px;
+		margin-bottom: 100px;
+		img {
+			height: 50px !important;
+			width: auto !important;
+		}
+
+		@include mobile {
+			margin-bottom: 70px;
+			height: 30px !important;
+			img {
+				height: 30px !important;
+			}
+		}
+	}
 }

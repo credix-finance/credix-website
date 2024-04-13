@@ -17,6 +17,8 @@ import { MarqueeComponent } from "../components/shared/marquee/MarqueeComponent"
 import { CTAHomeComponent } from "../components/CTAHomeComponent";
 import { useEffect, useState } from "react";
 import { CookieBanner } from "../components/shared/cookies/CookieBanner";
+import { HomeComponentWhatWeDo } from "../components/HomeComponentWhatWeDo";
+import { InvestorsList } from "../components/investors/InvestorsList";
 
 const IndexPage = () => {
 	const { width, mobileWidth, getLightTheme } = useComponentProps();
@@ -120,15 +122,17 @@ const IndexPage = () => {
 							setLightTheme={setLightTheme}
 						/>
 						<HomeComponent isMobile={!!width && width < mobileWidth} />
+						<HomeComponentWhatWeDo isMobile={!!width && width < mobileWidth} />
 						<CTACredipayComponent isMobile={!!width && width < mobileWidth} />
 						<ParallaxComponent
 							isMobile={!!width && width < mobileWidth}
 							isLightTheme={isLightTheme}
 						/>
-						<BackersBorrowersComponent />
-						<CoreTeamComponent isLightTheme={isLightTheme} />
+						{/* <BackersBorrowersComponent /> */}
+						<InvestorsList isLightTheme={isLightTheme} />
+						{/* <CoreTeamComponent isLightTheme={isLightTheme} /> */}
 						<CTATeamComponent />
-						<CTAHomeComponent />
+						{/* <CTAHomeComponent /> */}
 						<FooterComponent
 							isMobile={!!width && width < mobileWidth}
 							isLightTheme={isLightTheme}

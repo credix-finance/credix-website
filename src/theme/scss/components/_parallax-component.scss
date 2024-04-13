@@ -1,20 +1,35 @@
+.parallax-component-item {
+	width: 30vw;
+	margin-bottom: 50px;
+
+	@include mobile {
+		width: 100%;
+	}
+}
+
 .parallax-component {
 	padding-top: 100px;
-	height: 800px;
+	height: 500px;
 	background: var(--color-background-home);
 	// overflow-y: hidden;
 	color: var(--font-default-color);
+	// display: flex;
+	// flex-direction: row !important;
+
 	@extend .global-padding-left-right;
 
 	@include mobile {
 		height: initial;
-		padding-bottom: 175px;
+		padding-top: 0;
+		// padding-bottom: 175px;
 	}
 
 	&--wrapper {
 		height: 700px;
 		// overflow: hidden;
+		width: 100%;
 		padding-top: 0px;
+		flex-direction: row !important;
 	}
 
 	&--spacing {
@@ -23,8 +38,10 @@
 
 	&--child-scroll {
 		height: fit-content;
-		width: 45%;
+		width: 100%;
 		margin: 50px 0 100px;
+		flex-direction: row !important;
+		justify-content: space-between;
 
 		&--title {
 			font-size: $FONT_SIZE_SLARGE;

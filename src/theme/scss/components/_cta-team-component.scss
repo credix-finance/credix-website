@@ -1,5 +1,5 @@
 .cta-team-component {
-	min-height: 350px;
+	min-height: 500px;
 	background: var(--color-background-cta-team);
 	color: var(--font-default-color);
 
@@ -12,7 +12,7 @@
 	}
 
 	&--row {
-		margin-top: 80px;
+		margin-top: 150px;
 		border: 1px solid var(--color-background-cta-team-border);
 		padding: 45px;
 		@include mobile {

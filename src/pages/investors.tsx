@@ -119,10 +119,10 @@ const InvestorsPage = () => {
 					</Location>
 					<InvestorsHomeComponent isMobile={!!width && width < mobileWidth} />
 					<InvestorsCTAComponent />
-					<InvestorsList
+					{/* <InvestorsList
 						isMobile={!!width && width < mobileWidth}
 						isLightTheme={isLightTheme}
-					/>
+					/> */}
 					<FooterComponent
 						isMobile={!!width && width < mobileWidth}
 						isLightTheme={isLightTheme}
