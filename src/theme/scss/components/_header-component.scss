@@ -18,6 +18,7 @@
 	&--link {
 		color: var(--font-default-color);
 		text-decoration: none;
+		margin-left: 50px;
 		@extend .font-second;
 		cursor: pointer;
 
@@ -80,7 +81,7 @@
 	}
 
 	&--links {
-		width: 1000px;
+		// width: 1000px;
 		font-weight: $FONT_WEIGHT_XNORMAL;
 		font-size: $FONT_SIZE_NORMAL;
 
