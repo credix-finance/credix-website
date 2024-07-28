@@ -56,7 +56,7 @@ export const HeaderComponent = ({
 				>
 					CrediPay
 				</Link>
-				<div
+				{/* <div
 					className="header-component--link"
 					style={{
 						marginTop:
@@ -83,7 +83,7 @@ export const HeaderComponent = ({
 					{!isMobile && currentPage === EPage.BORROWERS && (
 						<div className="header-component--link--active" />
 					)}
-				</div>
+				</div> */}
 				<Link
 					className="header-component--link"
 					to={"https://medium.com/credix"}
@@ -107,14 +107,14 @@ export const HeaderComponent = ({
 				>
 					Careers
 				</Link>
-				<Link
+				{/* <Link
 					className="header-component--link"
 					to={"https://docs.credix.finance"}
 					target="_blank"
 				>
 					Docs
-				</Link>
-				<CredixButton
+				</Link> */}
+				{/* <CredixButton
 					className={`header--links--button ${
 						isLightTheme ? "h-color-white" : "h-color-black"
 					}`}
@@ -127,7 +127,7 @@ export const HeaderComponent = ({
 						isLightTheme={isLightTheme}
 						onChange={(bool) => setLightTheme && setLightTheme(bool)}
 					/>
-				)}
+				)} */}
 			</>
 		);
 	};
@@ -141,7 +141,7 @@ export const HeaderComponent = ({
 					color={isLightTheme ? SVG_COLORS.BLACK : SVG_COLORS.WHITE}
 					onClick={() => (window.location = ".." as unknown as Location)}
 				/>
-				<div className="h-flex-row h-flex-row--space-between h-flex-row--align-center header--links">
+				<div className="h-flex-row h-flex-row--flex-end h-flex-row--align-center header--links">
 					{isMobile ? (
 						<SvgIcon
 							icon={SVG_ICONS.HAMBURGER_MENU}
