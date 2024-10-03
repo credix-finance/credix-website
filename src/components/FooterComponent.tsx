@@ -54,23 +54,11 @@ export const FooterComponent = ({
 						/>
 					)}
 					<div className="h-flex-column footer-component--padding">
-						<Link
-							className="h-cursor-pointer footer-component--footer--link"
-							to={"/investors"}
-						>
-							Investors
-						</Link>
-						<Link
-							className="h-cursor-pointer footer-component--footer--link"
-							to={"/borrowers"}
-						>
-							Borrowers
-						</Link>
 						<span
 							className="h-cursor-pointer footer-component--footer--link"
-							onClick={() => openInNewTab("https://credix.gitbook.io/credix")}
+							onClick={() => openInNewTab("https://credipay.credix.finance")}
 						>
-							Documentation
+							CrediPay
 						</span>
 						<span
 							className="h-cursor-pointer footer-component--footer--link"
@@ -81,12 +69,6 @@ export const FooterComponent = ({
 							}
 						>
 							Careers
-						</span>
-						<span
-							className="h-cursor-pointer footer-component--footer--link"
-							onClick={() => openInNewTab("https://status.credix.finance")}
-						>
-							Status
 						</span>
 					</div>
 				</div>
@@ -121,16 +103,6 @@ export const FooterComponent = ({
 						/>
 					</div>
 					<div className="footer-component--mailchimp-row">
-						<div className="footer-component--mailchimp-sub--logo-row">
-							<span className="footer-component--footer--text">
-								<a
-									href="https://share-eu1.hsforms.com/1jAAAMPCdTpOl9Sx_K_7HrAfuste"
-									target="_blank"
-								>
-									✉️ Subscribe to investor updates ✉️
-								</a>
-							</span>
-						</div>
 						<div>
 							{isMobile && (
 								<div className="h-flex-row footer-component--footer">
