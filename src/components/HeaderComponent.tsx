@@ -122,12 +122,13 @@ export const HeaderComponent = ({
 				>
 					Invest
 				</CredixButton>
+				*/}
 				{!isMobile && (
 					<LightThemeButton
 						isLightTheme={isLightTheme}
 						onChange={(bool) => setLightTheme && setLightTheme(bool)}
 					/>
-				)} */}
+				)}
 			</>
 		);
 	};
