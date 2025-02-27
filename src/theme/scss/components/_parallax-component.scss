@@ -1,15 +1,17 @@
 .parallax-component-item {
 	width: 30vw;
 	margin-bottom: 50px;
+	padding: 50px;
 
 	@include mobile {
 		width: 100%;
+		padding: 0;
 	}
 }
 
 .parallax-component {
 	padding-top: 100px;
-	height: 500px;
+	height: 600px;
 	background: var(--color-background-home);
 	// overflow-y: hidden;
 	color: var(--font-default-color);

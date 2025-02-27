@@ -61,7 +61,7 @@ export const InvestorsList = ({ isMobile, isLightTheme }: IComponentProps) => (
 							)}
 						</a>
 					</div>
-					<div className="h-flex-row  investors-list-component--logo-row">
+					{/* <div className="h-flex-row  investors-list-component--logo-row">
 						<a target="_blank">
 							{!isLightTheme ? (
 								<StaticImage
@@ -107,7 +107,7 @@ export const InvestorsList = ({ isMobile, isLightTheme }: IComponentProps) => (
 								/>
 							)}
 						</a>
-					</div>
+					</div> */}
 				</div>
 			}
 		</div>

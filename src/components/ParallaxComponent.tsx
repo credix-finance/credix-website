@@ -80,13 +80,35 @@ export const ParallaxComponent = ({
 		<>
 			<div className="parallax-component-item">
 				<span className="parallax-component--child-scroll--title">
-					Credit & Capital Markets Infrastructure
+					Operational
+				</span>
+				<br></br>
+				<span className="parallax-component--child-scroll--title">
+					Efficiency
 				</span>
 				<hr className="solid" />
 				<span className="parallax-component--child-scroll--text">
-					Our next-generation platform, featuring AI and Blockchain, offers
-					flexible embedded financing options. We allow SMEs to pay on their own
-					terms while merchants are paid out right away
+					<b>Simple, fast API integration</b> that fits effortlessly into your
+					order flow.
+				</span>
+				<br></br>
+				<br></br>
+				<span className="parallax-component--child-scroll--text">
+					<b>Automated credit approvals</b> and real-time decisioning to
+					streamline operations.
+				</span>
+				<br></br>
+				<br></br>
+				<span className="parallax-component--child-scroll--text">
+					<b>End-to-end management:</b> We handle collections, risk assessment,
+					and payments. Transparent and efficient processes reduce manual work
+					and administrative overhead.
+				</span>
+				<br></br>
+				<br></br>
+				<span className="parallax-component--child-scroll--text">
+					<b>Transparent and efficient processes</b> reduce manual work and
+					administrative overhead.
 				</span>
 			</div>
 		</>
@@ -96,55 +118,69 @@ export const ParallaxComponent = ({
 		<>
 			<div className="parallax-component-item">
 				<span className="parallax-component--child-scroll--title">
-					Consumer Grade Experience
+					Increase
 				</span>
+				<br></br>
+				<span className="parallax-component--child-scroll--title">Sales</span>
 				<hr className="solid" />
 				<span className="parallax-component--child-scroll--text">
-					We offer a top-notch user experience and next-level customer
-					engagement. Our underwriting is instant, integration is seamless, and
-					capital settles in real-time.
+					<b>Offer net terms or installment options</b> to your customers,
+					driving higher order values.
+				</span>
+				<br></br>
+				<br></br>
+				<span className="parallax-component--child-scroll--text">
+					<b>Increase acceptance rates</b> with our market-leading credit and
+					fraud detection engines.
+				</span>
+				<br></br>
+				<br></br>
+				<span className="parallax-component--child-scroll--text">
+					<b>Boost purchasing power:</b> Enable your customers to buy more
+					without compromising your cash flow.
+				</span>
+				<br></br>
+				<br></br>
+				<span className="parallax-component--child-scroll--text">
+					<b>Accelerate growth</b> by removing payment barriers and enhancing
+					buyer flexibility.
 				</span>
 			</div>
-			{/* <span
-				className="parallax-component--child-scroll--cta-link"
-				onClick={() => openInNewTab("https://docs.credix.finance/")}
-			>
-				Read our documentation -{">"}
-			</span>
-			<br />
-			<CredixButton
-				className="cta-component--button cta-component--button--investor"
-				url={"https://app.credix.finance"}
-			>
-				Onboard as an investor
-			</CredixButton> */}
 		</>
 	);
 
 	const borrowerComponent = () => (
 		<>
-			<span className="parallax-component--child-scroll--title">
-				For Borrowers
-			</span>
-			<hr className="solid" />
-			<span className="parallax-component--child-scroll--text">
-				Credit fintechs and non-bank loan originators in emerging markets can
-				raise debt funding internationally with less friction and at attractive
-				rates.
-			</span>
-			<span
-				className="parallax-component--child-scroll--cta-link"
-				onClick={() => openInNewTab("https://docs.credix.finance/")}
-			>
-				Read our documentation -{">"}
-			</span>
-			<br />
-			<CredixButton
-				className="cta-component--button cta-component--button--investor"
-				url={"https://share-eu1.hsforms.com/13OiNrrgQT0Gv2AF1cV52Uwfuste"}
-			>
-				Register as a borrower
-			</CredixButton>
+			<div className="parallax-component-item">
+				<span className="parallax-component--child-scroll--title">
+					Minimize
+				</span>
+				<br></br>
+				<span className="parallax-component--child-scroll--title">Risk</span>
+				<hr className="solid" />
+				<span className="parallax-component--child-scroll--text">
+					<b>We assume the credit risk:</b> Receive payments upfront while we
+					manage collections.
+				</span>
+				<br></br>
+				<br></br>
+				<span className="parallax-component--child-scroll--text">
+					<b>Reduce Days Sales Outstanding (DSO)</b> and improve working capital
+					metrics.
+				</span>
+				<br></br>
+				<br></br>
+				<span className="parallax-component--child-scroll--text">
+					<b>Advanced credit models</b> ensure responsible lending and
+					high-quality risk management.
+				</span>
+				<br></br>
+				<br></br>
+				<span className="parallax-component--child-scroll--text">
+					<b>Fraud prevention, built-in</b> to protect your business from
+					potential losses.
+				</span>
+			</div>
 		</>
 	);
 
@@ -154,7 +190,7 @@ export const ParallaxComponent = ({
 				<div className="h-flex-column parallax-component--mobile">
 					{visionComponent()}
 					{investorsComponent()}
-					{/* {borrowerComponent()} */}
+					{borrowerComponent()}
 				</div>
 			) : (
 				<div
@@ -173,7 +209,7 @@ export const ParallaxComponent = ({
 						<span className="parallax-component--spacing" />
 						{investorsComponent()}
 						<span className="parallax-component--spacing" />
-						{/* {borrowerComponent()} */}
+						{borrowerComponent()}
 					</Parallax>
 					{/* <div className="parallax-component--image-scroll h-flex-column">
 						<div

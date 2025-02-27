@@ -19,6 +19,7 @@ import { useEffect, useState } from "react";
 import { CookieBanner } from "../components/shared/cookies/CookieBanner";
 import { HomeComponentWhatWeDo } from "../components/HomeComponentWhatWeDo";
 import { InvestorsList } from "../components/investors/InvestorsList";
+import { BorrowersCTAComponent } from "../components/borrowers/BorrowersCTAComponent";
 
 const IndexPage = () => {
 	const { width, mobileWidth, getLightTheme } = useComponentProps();
@@ -130,6 +131,7 @@ const IndexPage = () => {
 						/>
 						{/* <BackersBorrowersComponent /> */}
 						<InvestorsList isLightTheme={isLightTheme} />
+						<BorrowersCTAComponent />
 						{/* <CoreTeamComponent isLightTheme={isLightTheme} /> */}
 						<CTATeamComponent />
 						{/* <CTAHomeComponent /> */}

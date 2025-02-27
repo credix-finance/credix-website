@@ -11,12 +11,13 @@ export const HomeComponent = ({ isMobile }: IComponentProps) => {
 	const homeText = () => (
 		<div className="h-flex-column home-component--text">
 			<h1 className="cta-block--title">
-				We are the <br />
-				next generation <br />
-				credit network
+				Reimagine B2B credit. <br />
+				Drive sales, minimize risk, <br />
+				and boost efficiency.
 			</h1>
 			<span className="cta-block--text">
-				Growing businesses in Latin America
+				Flexible payment terms for your customers. <br /> Guaranteed payments
+				for you.
 			</span>
 			{/* <CredixButton
 				className="cta-block--button"
